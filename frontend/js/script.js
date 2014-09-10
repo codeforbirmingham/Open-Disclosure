@@ -1,19 +1,24 @@
 (function () {
-    var acmApp = angular.module('openDisclosure', ['ngRoute']);
+    var openDisclosure = angular.module('openDisclosure', ['ngRoute']);
 
-    acmApp.config(function ($routeProvider) {
+    openDisclosure.config(function ($routeProvider) {
         $routeProvider
             .when('/', {
                 templateUrl: 'partials/home.html',
                 controller: 'homeCtrl',
                 controllerAs: 'homeCtrl'
             })
+            .when('/candidate/:candidate', {
+                templateUrl: 'partials/candidate-profile.html',
+                controller: 'candidateProfileCtrl',
+                controllerAs: 'candidateProfileCtrl'
+            })
             .otherwise({
                 redirectTo: '/'
             });
     });
 
-    acmApp.controller('homeCtrl', function ($scope, $http, $rootScope, $location) {
+    openDisclosure.controller('homeCtrl', function ($scope, $http, $rootScope, $location) {
 
         var input;
         $.ajax({
@@ -41,6 +46,12 @@
             $scope.totals.expenditures += parseInt($scope.candidates[i].expenditures);
             $scope.totals.count += parseInt($scope.candidates[i].count);
         }
+    });
+    //$routeParams.blazerId;
+
+    openDisclosure.controller('candidateProfileCtrl', function ($scope, $routeParams, $http, $rootScope, $location) {
+        
+        $routeParams.candidate;
     });
 
 })();
