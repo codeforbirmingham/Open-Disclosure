@@ -51,7 +51,7 @@
 
     openDisclosure.controller('candidateProfileCtrl', function ($scope, $routeParams, $http, $rootScope, $location) {
         
-        $routeParams.candidate;
+        $scope.candidate = $routeParams.candidate;
     });
 
 })();

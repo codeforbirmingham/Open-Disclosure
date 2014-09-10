@@ -19,7 +19,7 @@
     </thead>
     <tbody>
         <tr ng-repeat="candidate in candidates | filter:searchText">
-            <td><a ng-href="https://www.google.com/search?q={{candidate.name}}">{{candidate.name}}</a></td>
+            <td><a ng-href="#/candidate/{{candidate.name}}">{{candidate.name}}</a></td>
             <td style="background-color: #EDEDED">{{candidate.contributions | currency:"$"}}</td>
             <td>{{candidate.expenditures | currency:"$"}}</td>
             <td>{{candidate.count}}</td>
