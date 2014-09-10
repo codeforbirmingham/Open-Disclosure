@@ -1,0 +1,8 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.nav li {
+    display:table-cell !important;
+}
