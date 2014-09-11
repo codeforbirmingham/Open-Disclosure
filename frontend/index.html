@@ -4,13 +4,24 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
     <title>Birmingham Open Disclosure</title>
-    <link href="bootstrap-3.1.1/css/bootstrap.css" rel="stylesheet">
+    <link href="libs/bootstrap-3.1.1/css/bootstrap.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <div ng-view></div>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-2">
+                List of candidates here
+            </div>
+            <div class="col-md-10">
+                <div ng-view></div>
+            </div>
+        </div>
+
+    </div>
 
     <script src="libs/jquery/jquery-1.11.0.min.js"></script>
     <script src="libs/jquery.csv-0.71.min.js"></script>
