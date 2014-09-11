@@ -2,7 +2,9 @@
     Config module for application wide information;
  */
 
-var config = {};
+
+var path = require('path'),
+    config = {};
 
 config.app = {
     name: 'OpenDisclosureBirmingham',
@@ -10,7 +12,8 @@ config.app = {
 };
 
 config.http = {
-    port: 8080
+    port: 8080,
+    view: path.join(__dirname, '..', '..', 'frontend')
 };
 
 module.exports = config;
