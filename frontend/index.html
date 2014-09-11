@@ -15,10 +15,11 @@
     </div>
 
     <div class="container-fluid">
-
         <div class="row">
             <div class="col-md-2">
-                List of candidates here
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="candidate in candidates">{{candidate.name}}</li>
+                </ul>
             </div>
             <div class="col-md-10">
                 <div ng-view></div>

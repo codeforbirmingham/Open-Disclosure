@@ -2,6 +2,9 @@ angular.module('openDisclosure')
     .controller('homeCtrl', function ($scope, $http, $rootScope, $location) {
 
         $scope.candidates = sampleData;
+        
+        //This is bad.  Let's maybe give the side bar its own controller
+        $rootScope.candidates = sampleData;
 
         $scope.totals = {
             contributions: 0,

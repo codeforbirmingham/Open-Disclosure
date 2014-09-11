@@ -1,26 +1,30 @@
 <bar></bar>
 <input ng-model="searchText" class="navbar" placeholder="Search" style="width: 100%; border-width: 1px; border-color: black;"></input>
 
-<table class="table table-hover" ts-wrapper>
-    <thead>
-        <tr>
-            <th ts-criteria="name" ts-default>Name</th>
-            <th ts-criteria="contributions">Total Raised</th>
-            <th ts-criteria="expenditures">Expenditures</th>
-            <th ts-criteria="count">Number of itemized contributions</th>
-            <th>Average of itemized contributions</th>
-        </tr>
-       
-    </thead>
-    <tbody>
-        <tr ng-repeat="candidate in candidates | filter:searchText | limitTo:candidatesDisplayed" ts-repeat>
-            <td><a ng-href="#/candidate/{{candidate.name}}">{{candidate.name}}</a></td>
-            <td>{{candidate.contributions | currency:"$"}}</td>
-            <td>{{candidate.expenditures | currency:"$"}}</td>
-            <td>{{candidate.count}}</td>
-            <td>{{((candidate.contributions / candidate.count) || 0) | currency:"$"}}</td>
-        </tr>
-    </tbody>
-</table>
+<div class="container-fluid">
+    <div class="row">
+        <table class="table table-hover" ts-wrapper>
+            <thead>
+                <tr>
+                    <th ts-criteria="name" ts-default>Name</th>
+                    <th ts-criteria="contributions">Total Raised</th>
+                    <th ts-criteria="expenditures">Expenditures</th>
+                    <th ts-criteria="count">Number of itemized contributions</th>
+                    <th>Average of itemized contributions</th>
+                </tr>
 
-<button class="btn btn-primary" ng-click="showMore()" style="width: 100%; border-width: 1px; border-color: black;" ng-hide="candidatesDisplayed > candidates.length">Show more</button>
+            </thead>
+            <tbody>
+                <tr ng-repeat="candidate in candidates | filter:searchText | limitTo:candidatesDisplayed" ts-repeat>
+                    <td><a ng-href="#/candidate/{{candidate.name}}">{{candidate.name}}</a>
+                    </td>
+                    <td>{{candidate.contributions | currency:"$"}}</td>
+                    <td>{{candidate.expenditures | currency:"$"}}</td>
+                    <td>{{candidate.count}}</td>
+                    <td>{{((candidate.contributions / candidate.count) || 0) | currency:"$"}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-primary" ng-click="showMore()" style="width: 100%; border-width: 1px; border-color: black;" ng-hide="candidatesDisplayed > candidates.length">Show more</button>
+    </div>
+</div>
