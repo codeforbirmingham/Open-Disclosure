@@ -14,6 +14,13 @@ angular.module('openDisclosure')
             $scope.totals.expenditures += parseInt($scope.candidates[i].expenditures);
             $scope.totals.count += parseInt($scope.candidates[i].count);
         }
+
+        $scope.candidatesDisplayed = 10;
+
+        $scope.showMore = function () {
+            $scope.candidatesDisplayed += 10;
+        };
+
     });
 
 var sampleData = [

@@ -13,7 +13,7 @@
        
     </thead>
     <tbody>
-        <tr ng-repeat="candidate in candidates | filter:searchText" ts-repeat>
+        <tr ng-repeat="candidate in candidates | filter:searchText | limitTo:candidatesDisplayed" ts-repeat>
             <td><a ng-href="#/candidate/{{candidate.name}}">{{candidate.name}}</a></td>
             <td>{{candidate.contributions | currency:"$"}}</td>
             <td>{{candidate.expenditures | currency:"$"}}</td>
@@ -22,3 +22,5 @@
         </tr>
     </tbody>
 </table>
+
+<button class="btn btn-primary" ng-click="showMore()" style="width: 100%; border-width: 1px; border-color: black;" ng-hide="candidatesDisplayed > candidates.length">Show more</button>
