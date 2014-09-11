@@ -10,9 +10,15 @@
                     <th ts-criteria="contributions" ts-default>Total Raised</th>
                     <th ts-criteria="expenditures">Expenditures</th>
                     <th ts-criteria="count">Number of itemized contributions</th>
-                    <th>Average of itemized contributions</th>
+                    <th ts-criteria="contributions / count">Average of itemized contributions</th>
                 </tr>
-
+                <tr>
+                    <th>Totals</th>
+                    <th>{{totals.contributions | currency:"$"}}</th>
+                    <th>{{totals.expenditures | currency:"$"}}</th>
+                    <th>{{totals.count}}</th>
+                    <th>{{((totals.contributions / totals.count) || 0) | currency:"$"}}</th>
+                </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="candidate in candidates | filter:searchText | limitTo:candidatesDisplayed" ts-repeat ng-click="visitProfile(candidate.name)">
