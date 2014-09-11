@@ -1,5 +1,5 @@
 /*
-
+    Setup API routes in an express Router object and export it.
  */
 
 var config = require('./config'),

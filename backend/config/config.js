@@ -1,5 +1,5 @@
 /*
-    Config module for application wide information;
+    Config module for application wide information.
  */
 
 

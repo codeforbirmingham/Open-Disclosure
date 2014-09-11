@@ -1,5 +1,6 @@
 /* 
-
+    Main backend application driver, setup /api calls and
+    serve static app content.
  */
 
 var config = require('./config/config'),
