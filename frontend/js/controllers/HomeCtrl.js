@@ -23,6 +23,11 @@ angular.module('openDisclosure')
         $scope.showMore = function () {
             $scope.candidatesDisplayed += 10;
         };
+        
+        $scope.visitProfile = function (name) {
+            console.log("called");
+            $location.path('/candidate/' + name);
+        };
 
     });
 

@@ -16,12 +16,14 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <ul class="list-group">
-                    <li class="list-group-item" ng-repeat="candidate in candidates">{{candidate.name}}</li>
+                    <a class="list-group-item" ng-repeat="candidate in candidates" ng-href="#/candidate/{{candidate.name}}">
+                        {{candidate.name}}
+                    </a>
                 </ul>
             </div>
-            <div class="col-md-10">
+            <div class="col-md-9">
                 <div ng-view></div>
             </div>
         </div>

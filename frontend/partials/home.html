@@ -6,8 +6,8 @@
         <table class="table table-hover" ts-wrapper>
             <thead>
                 <tr>
-                    <th ts-criteria="name" ts-default>Name</th>
-                    <th ts-criteria="contributions">Total Raised</th>
+                    <th ts-criteria="name">Name</th>
+                    <th ts-criteria="contributions" ts-default>Total Raised</th>
                     <th ts-criteria="expenditures">Expenditures</th>
                     <th ts-criteria="count">Number of itemized contributions</th>
                     <th>Average of itemized contributions</th>
@@ -15,9 +15,8 @@
 
             </thead>
             <tbody>
-                <tr ng-repeat="candidate in candidates | filter:searchText | limitTo:candidatesDisplayed" ts-repeat>
-                    <td><a ng-href="#/candidate/{{candidate.name}}">{{candidate.name}}</a>
-                    </td>
+                <tr ng-repeat="candidate in candidates | filter:searchText | limitTo:candidatesDisplayed" ts-repeat ng-click="visitProfile(candidate.name)">
+                    <td>{{candidate.name}}</td>
                     <td>{{candidate.contributions | currency:"$"}}</td>
                     <td>{{candidate.expenditures | currency:"$"}}</td>
                     <td>{{candidate.count}}</td>
