@@ -1,26 +1,21 @@
+<bar></bar>
 <input ng-model="searchText" class="navbar navbar-fixed-top" placeholder="Search" style="width: 100%; border-width: 1px; border-color: black;"></input>
 
-<table class="table table-hover">
+<table class="table table-hover" ts-wrapper>
     <thead>
         <tr>
-            <th>Name</th>
-            <th style="background-color: #EDEDED">Total Raised</th>
-            <th>Expenditures</th>
-            <th>Number of itemized contributions</th>
+            <th ts-criteria="name" ts-default>Name</th>
+            <th ts-criteria="contributions">Total Raised</th>
+            <th ts-criteria="expenditures">Expenditures</th>
+            <th ts-criteria="count">Number of itemized contributions</th>
             <th>Average of itemized contributions</th>
         </tr>
-        <tr>
-            <th>Totals</th>
-            <th style="background-color: #EDEDED">{{totals.contributions | currency:"$"}}</th>
-            <th>{{totals.expenditures | currency:"$"}}</th>
-            <th>{{totals.count}}</th>
-            <th>{{(totals.contributions / totals.count) | currency:"$"}}</th>
-        </tr>
+       
     </thead>
     <tbody>
-        <tr ng-repeat="candidate in candidates | filter:searchText">
+        <tr ng-repeat="candidate in candidates | filter:searchText" ts-repeat>
             <td><a ng-href="#/candidate/{{candidate.name}}">{{candidate.name}}</a></td>
-            <td style="background-color: #EDEDED">{{candidate.contributions | currency:"$"}}</td>
+            <td>{{candidate.contributions | currency:"$"}}</td>
             <td>{{candidate.expenditures | currency:"$"}}</td>
             <td>{{candidate.count}}</td>
             <td>{{((candidate.contributions / candidate.count) || 0) | currency:"$"}}</td>
