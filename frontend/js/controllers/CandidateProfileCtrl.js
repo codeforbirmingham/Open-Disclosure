@@ -1,5 +1,16 @@
 angular.module('openDisclosure')
-.controller('candidateProfileCtrl', function ($scope, $routeParams, $http, $rootScope, $location) {
+    .controller('candidateProfileCtrl', function ($scope, $routeParams, $http, $rootScope, $location) {
+
+        $scope.thingToRequest = $routeParams.candidate;
+        //make request to server
         
-        $scope.candidate = $routeParams.candidate;
+        //put results in this variable
+        $scope.candidate = {
+            name : "Test Name",
+            contributions: 100000,
+            expenditures: 50000,
+            count: 1234
+        };
+
+        
     });

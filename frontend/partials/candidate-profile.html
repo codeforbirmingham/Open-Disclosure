@@ -1,5 +1,31 @@
-<h1>{{candidate}}</h1>
-<div class="container">
+<h1>{{candidate.name}}</h1>
+<div class="container-fluid">
+    
+    <div class="row">
+        <div class="col-sm-3" style="background-color: #539137">
+            Total Contributions:
+            <br>
+            {{candidate.contributions | currency:"$"}}
+        </div>
+        <div class="col-sm-3" style="background-color: #539137">
+            Expenditures:
+            <br>
+            {{candidate.expenditures | currency:"$"}}
+        </div>
+        <div class="col-sm-3" style="background-color: #539137">
+            Available Balance:
+            <br>
+            {{candidate.contributions - candidate.expenditures | currency:"$"}}
+        </div>
+        <div class="col-sm-3" style="background-color: #ffdd1f">
+            No. Contributions:
+            <br>
+            {{candidate.count}}
+        </div>
+    </div>
+    
+    <br>
+    
     <div class="row">
         <div class="col-md-4">
             Image here
