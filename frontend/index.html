@@ -1,48 +1,44 @@
 <!DOCTYPE html>
 <html ng-app="openDisclosure">
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
-    <title>Birmingham Open Disclosure</title>
-    <link href="libs/bootstrap-3.1.1/css/bootstrap.css" rel="stylesheet">
-    <link href="libs/angular/tablesort/tablesort.css" rel="stylesheet">
-</head>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+        <title>Birmingham Open Disclosure</title>
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="bower_components/angular-tablesort/tablesort.css" rel="stylesheet">
+    </head>
 
-<body>
+    <body>
 
-    <div class="navbar navbar-static-top navbar-inverse">
-        <a class="navbar-brand" href="#">Birmingham Open Disclosure</a>
-    </div>
+        <div class="navbar navbar-static-top navbar-inverse">
+            <a class="navbar-brand" href="#">Birmingham Open Disclosure</a>
+        </div>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-3">
-                <ul class="list-group">
-                    <a class="list-group-item" ng-repeat="candidate in candidates" ng-href="#/candidate/{{candidate.name}}">
-                        {{candidate.name}}
-                    </a>
-                </ul>
-            </div>
-            <div class="col-md-9">
-                <div ng-view></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul class="list-group">
+                        <a class="list-group-item" ng-repeat="candidate in candidates" ng-href="#/candidate/{{candidate.name}}">
+                            {{candidate.name}}
+                        </a>
+                    </ul>
+                </div>
+                <div class="col-md-9">
+                    <div ng-view></div>
+                </div>
             </div>
         </div>
 
-    </div>
+        <script src="bower_components/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-tablesort/js/angular-tablesort.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/controllers/CandidateProfileCtrl.js"></script>
+        <script src="js/controllers/HomeCtrl.js"></script>
+        <script src="js/router.js"></script>
+        <script src="https://www.google.com/jsapi"></script>
 
-    <script src="libs/jquery/jquery-1.11.0.min.js"></script>
-    <script src="libs/jquery.csv-0.71.min.js"></script>
-    <script src="libs/bootstrap-3.1.1/js/bootstrap.min.js"></script>
-    <script src="libs/angular/angular.js"></script>
-    <script src="libs/angular/angular-route.js"></script>
-    <script src="libs/angular/tablesort/angular-tablesort.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/controllers/CandidateProfileCtrl.js"></script>
-    <script src="js/controllers/HomeCtrl.js"></script>
-    <script src="js/router.js"></script>
-    <script src="https://www.google.com/jsapi"></script>
-
-
-</body>
-
+    </body>
 </html>
