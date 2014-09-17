@@ -3,21 +3,33 @@
     "version": "0.0.0",
     "homepage": "https://github.com/CodeforBirmingham/Open-Disclosure",
     "authors": [
-    "Justin Harrison <justin.harrison1337@gmail.com>"
-  ],
+        {
+            "name": "Justin Harrison",
+            "email": "justin.harrison1337@gmail.com",
+            "homepage": "http://justinh.co"
+        },
+        {
+            "name": "Braden Groom",
+            "email": "braden.groom@gmail.com"
+        }
+    ],
     "description": "Front end for the Open Disclosure Project",
     "main": "/.",
     "moduleType": [
-    "globals"
-  ],
+        "globals"
+    ],
     "license": "MIT",
     "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/CodeforBirmingham/Open-Disclosure.git"
+    },
     "dependencies": {
         "jquery": "~1.9.0",
         "angular": "~1.2.24",
