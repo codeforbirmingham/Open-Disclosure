@@ -25,7 +25,6 @@ angular.module('openDisclosure')
         };
         
         $scope.visitProfile = function (name) {
-            console.log("called");
             $location.path('/candidate/' + name);
         };
 
