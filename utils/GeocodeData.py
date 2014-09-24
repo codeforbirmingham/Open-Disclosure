@@ -130,6 +130,8 @@ def process(records, columnIndex):
                 numAPIRequests += 1
                 if isinstance(result, str):
                     print('Error: ' + result)
+                    if result == 'REQUEST_DENIED':
+                        break # give up. API key issue maybe?
                 else:
                     newOrg['addr'] = result[1]
                     newOrg['coords'] = result[0]
