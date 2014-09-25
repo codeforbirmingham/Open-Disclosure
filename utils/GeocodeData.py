@@ -36,7 +36,7 @@ from urllib.parse import urlencode
 from time import sleep
 
 
-API_KEY = 'YOU_API_KEY_GOES_HERE'
+API_KEY = 'YOUR_API_KEY_GOES_HERE'
 MAX_API_REQUESTS = 2500 # per day
 # an estimated minimum bounding rectangle around Alabama
 ALABAMA_BOUNDS = '35.046674,-88.751659|30.077183,-84.687088'
@@ -46,7 +46,7 @@ DATAFILES = ['2014_CashContributionsExtract_fixed.csv',
              '2014_OtherReceiptsExtract.csv']
 OUTFILE = '2014_Geocoding.json'
 # the indices of important columns in the CSV files
-COLUMN_INDICES = {'2014_CashContributionsExtract_fixed.csv': {'OrgID': 0, 'LastName': 3, 'Address': 7, 'txID': 11, 'orgType': 3},
+COLUMN_INDICES = {'2014_CashContributionsExtract_fixed.csv': {'OrgID': 0, 'LastName': 3, 'Address': 7, 'txID': 11, 'orgType': 14},
                   '2014_ExpendituresExtract_fixed.csv': {'OrgID': 0, 'LastName': 3, 'Address': 7, 'txID': 12},
                   '2014_InKindContributionsExtract.csv': {'OrgID': 0, 'LastName': 3, 'Address': 7, 'txID': 11, 'orgType': 15},
                   '2014_OtherReceiptsExtract.csv': {'OrgID': 0, 'LastName': 3, 'Address': 7, 'txID': 11, 'orgType': 14}}
@@ -73,6 +73,7 @@ def main():
     with open('../data/' + OUTFILE, 'w') as output:
         json.dump(allOrganizations, output) 
 
+# this goes through all the records and attempts to geocode them
 def process(records, columnIndex):
     global allOrganizations
     global numAPIRequests
@@ -130,11 +131,11 @@ def process(records, columnIndex):
                 numAPIRequests += 1
                 if isinstance(result, str):
                     print('Error: ' + result)
-                    if result == 'REQUEST_DENIED':
-                        break # give up. API key issue maybe?
-                else:
-                    newOrg['addr'] = result[1]
-                    newOrg['coords'] = result[0]
+                    if result == 'REQUEST_DENIED' or result == 'OVER_QUERY_LIMIT':
+                        break # give up
+                else: # success
+                    newOrg['addr'] = result[1] # nicely formatted address
+                    newOrg['coords'] = result[0] # latitude and longitude
             allOrganizations[name] = newOrg
 
 # uses the Google Maps API to geocode an address
