@@ -3,10 +3,10 @@ angular.module('openDisclosure')
 
         $scope.thingToRequest = $routeParams.candidate;
         //make request to server
-        
+
         //put results in this variable. This is test data
         $scope.candidate = {
-            name : "Robert Bentley",
+            name: "Robert Bentley",
             contributions: 100000,
             expenditures: 50000,
             count: 1234,
@@ -15,5 +15,5 @@ angular.module('openDisclosure')
             contributors: ['test contributor', 'test contributor2', 'test contributor', 'test contributor2', 'test contributor', 'test contributor2', 'test contributor', 'test contributor2', 'test contributor', 'test contributor2', 'test contributor', 'test contributor2', 'test contributor', 'test contributor2', 'test contributor', 'test contributor2', 'test contributor', 'test contributor2', 'test contributor', 'test contributor2', 'test contributor', 'test contributor2', 'test contributor', 'test contributor2', 'test contributor', 'test contributor2', 'test contributor', 'test contributor2', 'test contributor', 'test contributor2', 'test contributor', 'test contributor2', 'test contributor', 'test contributor2', 'test contributor', 'test contributor2', 'test contributor', 'test contributor2', 'test contributor']
         };
 
-        
+
     });
