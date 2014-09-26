@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
     <title>Birmingham Open Disclosure</title>
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="bower_components/angular-tablesort/tablesort.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <nav class="navbar-custom navbar navbar-default" role="navigation">
+    <div class="navbar-custom navbar navbar-default" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-menu">
@@ -33,23 +32,21 @@
                 </ul>
             </div>
         </div>
-    </nav>
-
-    <div class="container">
-        <div ng-view></div>
     </div>
-    
+
+    <div ng-view></div>
+
     <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
-    <script src="bower_components/angular-tablesort/js/angular-tablesort.js"></script>
+    
     <script src="js/script.js"></script>
-    <script src="js/controllers/CandidateProfileCtrl.js"></script>
-    <script src="js/controllers/HomeCtrl.js"></script>
+    <script src="js/controllers/homeCtrl.js"></script>
+    <script src="js/controllers/candidatesCtrl.js"></script>
+    <script src="js/controllers/committeesCtrl.js"></script>
+    <script src="js/controllers/statsCtrl.js"></script>
     <script src="js/router.js"></script>
-    <script src="https://www.google.com/jsapi"></script>
-
 </body>
 
 </html>

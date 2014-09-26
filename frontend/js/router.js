@@ -1,15 +1,25 @@
 angular.module('openDisclosure')
-.config(function ($routeProvider) {
+    .config(function ($routeProvider) {
         $routeProvider
             .when('/', {
                 templateUrl: 'partials/home.html',
                 controller: 'homeCtrl',
                 controllerAs: 'homeCtrl'
             })
-            .when('/candidate/:candidate', {
-                templateUrl: 'partials/candidate-profile.html',
-                controller: 'candidateProfileCtrl',
-                controllerAs: 'candidateProfileCtrl'
+            .when('/candidates', {
+                templateUrl: 'partials/candidates.html',
+                controller: 'candidatesCtrl',
+                controllerAs: 'candidatesCtrl'
+            })
+            .when('/committees', {
+                templateUrl: 'partials/committees.html',
+                controller: 'committeesCtrl',
+                controllerAs: 'committeesCtrl'
+            })
+            .when('/stats', {
+                templateUrl: 'partials/stats.html',
+                controller: 'statsCtrl',
+                controllerAs: 'statsCtrl'
             })
             .otherwise({
                 redirectTo: '/'
