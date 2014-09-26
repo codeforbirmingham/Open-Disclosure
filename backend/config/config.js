@@ -16,4 +16,9 @@ config.http = {
     view: path.join(__dirname, '..', '..', 'frontend')
 };
 
+config.docs = {
+    route: '/docs',
+    view: path.join(__dirname, '..', 'apidocs')
+}
+
 module.exports = config;

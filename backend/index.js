@@ -18,6 +18,7 @@ app.use(bodyParser.urlencoded({
 
 console.log(config.http.view);
 app.use('/', express.static(config.http.view));
+app.use(config.docs.route, express.static(config.docs.view));
 app.use('/api', require('./config/routes'));
 
 var server = app.listen(config.http.port, function () {
