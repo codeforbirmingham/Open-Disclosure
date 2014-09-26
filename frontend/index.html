@@ -9,7 +9,7 @@
 </head>
 
 <body>
-
+    <!-- Let's make the menu a directive -->
     <div class="navbar-custom navbar navbar-default" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -24,10 +24,20 @@
             <div class="collapse navbar-collapse pull-right" id="collapsable-menu">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">Candidates</a>
+                        <a href="#home">Home</a>
                     </li>
                     <li>
-                        <a href="#contributors">Contributors</a>
+                        <a href="#candidates">Candidates</a>
+                    </li>
+                    <li>
+                        <a href="#committees">Committees</a>
+                    </li>
+                    <li>
+                        <a href="#stats">Stats</a>
+                    </li>
+                    <li>
+                        <!-- I believe that we decided to make this a modal-->
+                        <a>About</a>
                     </li>
                 </ul>
             </div>
@@ -40,7 +50,7 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
-    
+
     <script src="js/script.js"></script>
     <script src="js/controllers/homeCtrl.js"></script>
     <script src="js/controllers/candidatesCtrl.js"></script>
