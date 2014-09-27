@@ -1,2 +1,4 @@
 angular.module('openDisclosure')
-    .controller('candidatesCtrl', function ($scope) {});
+    .controller('candidatesCtrl', ['$scope', 'Api', function ($scope, Api) {
+    
+    }]);
