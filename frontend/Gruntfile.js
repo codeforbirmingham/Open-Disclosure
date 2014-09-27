@@ -6,7 +6,8 @@ module.exports = function (grunt) {
 
         clean: [
             "build/",
-            "annotated/"
+            "annotated/",
+            "index.html"
         ],
 
         ngAnnotate: {
