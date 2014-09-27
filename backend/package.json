@@ -13,5 +13,8 @@
     "cors": "^2.4.1",
     "express": "^4.9.0",
     "morgan": "^1.3.0"
+  },
+  "devDependencies": {
+    "apidoc": "^0.7.2"
   }
 }

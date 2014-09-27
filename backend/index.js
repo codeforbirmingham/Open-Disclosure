@@ -18,8 +18,8 @@ app.use(bodyParser.urlencoded({
 
 console.log(config.http.view);
 app.use('/', express.static(config.http.view));
-app.use(config.docs.route, express.static(config.docs.view));
-app.use('/api', require('./config/routes'));
+app.use('/api/docs', express.static(config.docs.view));
+app.use('/api/v1/', require('./config/routes'));
 
 var server = app.listen(config.http.port, function () {
     console.log('Server listening on port: ' + config.http.port);
