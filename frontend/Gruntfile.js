@@ -50,13 +50,29 @@ module.exports = function (grunt) {
                 src: 'build/js/production.js',
                 dest: 'build/js/production.min.js'
             }
+        },
+
+        targethtml: {
+            dev: {
+                files: {
+                    'index.html': 'index.html'
+                }
+            },
+            dist: {
+                files: {
+                    'index.html': 'index.html'
+                }
+            }
         }
+
     });
 
     grunt.loadNpmTasks('grunt-ng-annotate');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-targethtml');
 
-    grunt.registerTask('default', ['ngAnnotate', 'concat', 'uglify']);
+    grunt.registerTask('dev', ['targethtml:dev']);
+    grunt.registerTask('dist', ['ngAnnotate', 'concat', 'uglify', 'targethtml:dist']);
 }
