@@ -2,6 +2,7 @@
 
 /**
  * Module containing district routes
+ * @author CodeForBirmingham
  * @module backend/lib/districts
  */
 

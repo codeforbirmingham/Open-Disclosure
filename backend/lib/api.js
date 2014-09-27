@@ -2,6 +2,7 @@
 
 /**
  * Module containing transactions routes
+ * @author CodeForBirmingham
  * @module backend/lib/transactions
  */
 

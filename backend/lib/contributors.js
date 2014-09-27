@@ -2,6 +2,7 @@
 
 /**
  * Module containing contributor routes
+ * @author CodeForBirmingham
  * @module backend/lib/contributors
  */
 

@@ -2,6 +2,7 @@
 
 /**
  * Module containing organization routes
+ * @author CodeForBirmingham
  * @module backend/lib/organizations
  */
 

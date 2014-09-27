@@ -2,6 +2,7 @@
 
 /**
  * Main OpenDisclosure Express Driver
+ * @author CodeForBirmingham
  * @module backend/index.js
  */
 

@@ -2,6 +2,7 @@
 
 /**
  * Module containing payee routes
+ * @author CodeForBirmingham
  * @module backend/lib/payees
  */
 
