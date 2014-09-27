@@ -1,10 +1,11 @@
+'use strict';
+
 /**
- * App REST API Route settings.
- * @author CodeForBirmingham
- * @module backend/config/routes
+ * Module containing organization routes
+ * @module backend/lib/organizations
  */
 
-var config = require('./config'),
+var config = require('./../config/config'),
     express = require('express'),
     router = express.Router();
 
@@ -15,19 +16,6 @@ function dummyResponse(req, res, next) {
 }
 
 module.exports = function (db) {
-    /**
-     * @api {get} / Get Service information
-     * @apiName GetAppInfo
-     * @apiGroup API
-     *
-     * @apiDescription Get basic information about the api.
-     *
-     * @apiSuccess {Object} JSON Object containing API information
-     */
-    router.get('/', function (req, res, next) {
-        res.json(config.app);
-    });
-
     /**
      * @api {get} /:year/organizations Get Organizations
      * @apiName GetOrganizations
@@ -157,109 +145,6 @@ module.exports = function (db) {
      */
     router.get('/:year/organizations/committees/featured', dummyResponse);
 
-    /**
-     * @api {get} /:year/transactions Get Transactions
-     * @apiName GetTransactions
-     * @apiGroup Transactions
-     *
-     * @apiParam {Date} year
-     *
-     * @apiDescription Get information on all available transactions.
-     */
-    router.get('/:year/transactions', dummyResponse);
-
-    /**
-     * @api {get} /:year/transactions/type/:type Get Contribution Transactions By Type
-     * @apiName GetContributionTransactionsByType
-     * @apiGroup Transactions
-     *
-     * @apiParam {Date} year
-     * @apiParam {String} type One of four possible transaction types (cash, inkind, receipt, expenditure);
-     *
-     * @apiDescription Get information on all available cash contribution transactions.
-     */
-    router.get('/:year/transactions/type/:type', dummyResponse);
-
-    /**
-     * @api {get} /:year/transactions/:ids Get Specific Transactions
-     * @apiName GetSpecificTransactions
-     * @apiGroup Transactions
-     *
-     * @apiParam {Date} year
-     * @apiParam {String} ids single or comma separated list of ids.
-     *
-     * @apiDescription Get information on a list of specific transactions.
-     */
-    router.get('/:year/transactions/:ids', dummyResponse);
-
-    /**
-     * @api {get} /:year/payees Get Payees
-     * @apiName GetPayees
-     * @apiGroup Payees
-     *
-     * @apiParam {Date} year
-     *
-     * @apiDescription Get information on all available payees.
-     */
-    router.get('/:year/payees', dummyResponse);
-
-    /**
-     * @api {get} /:year/payees/:ids Get Specific Payees
-     * @apiName GetPayees
-     * @apiGroup Payees
-     *
-     * @apiParam {Date} year
-     * @apiParam {String} ids single or comma separated list of ids.
-     *
-     * @apiDescription Get information on specific payees.
-     */
-    router.get('/:year/payees/:ids', dummyResponse);
-
-    /**
-     * @api {get} /:year/contributors Get Contributors
-     * @apiName GetContributors
-     * @apiGroup Contributors
-     *
-     * @apiParam {Date} year
-     *
-     * @apiDescription Get information on all available payees.
-     */
-    router.get('/:year/contributors', dummyResponse);
-
-    /**
-     * @api {get} /:year/contributors/:ids Get Specific Contributors
-     * @apiName GetSpecificContributors
-     * @apiGroup Contributors
-     *
-     * @apiParam {Date} year
-     * @apiParam {String} ids single or comma separated list of ids.
-     *
-     * @apiDescription Get information on specific contributors.
-     */
-    router.get('/:year/contributors/:ids', dummyResponse);
-
-    /**
-     * @api {get} /:year/districts Get Districts
-     * @apiName GetDistricts
-     * @apiGroup Districts
-     *
-     * @apiParam {Date} year
-     *
-     * @apiDescription Get information on all available districts.
-     */
-    router.get('/:year/districts', dummyResponse);
-
-    /**
-     * @api {get} /:year/districts/:ids Get Specific Districts
-     * @apiName GetSpecificDistricts
-     * @apiGroup Districts
-     *
-     * @apiParam {Date} year
-     * @apiParam {String} ids single or comma separated list of ids.
-     *
-     * @apiDescription Get information on specific contributors.
-     */
-    router.get('/:year/districts/:ids', dummyResponse);
-
     return router;
-}
+};
+

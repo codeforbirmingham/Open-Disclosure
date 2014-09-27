@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Main OpenDisclosure Express Driver
  * @module backend/index.js
@@ -25,9 +27,11 @@ mongoClient.connect(config.mongo.url, function (err, db) {
         extended: true
     }));
 
+    // Serve frontend static content
     app.use('/', express.static(config.http.view));
-    app.use('/api/docs', express.static(config.docs.view));
-    app.use('/api/v1/', require('./config/routes')(db));
+
+    // Load API Routes
+    require('./config/api_routes')(app, db);
 
     var server = app.listen(config.http.port, function () {
         console.log('Server listening on port: ' + config.http.port);
