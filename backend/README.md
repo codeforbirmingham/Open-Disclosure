@@ -32,11 +32,6 @@ To generate REST API documentation (generated from route.js):
 apidoc -i config/ -o apidocs/
 ```
 
-To generate module documentation:
-```
-jsdoc README.md lib/* -p -d docs
-```
-
 To view it for local use, first install http-server:
 ```
 sudo npm install -g http-server
@@ -47,4 +42,7 @@ Then simply execute it in the docs or apidocs directory:
 cd apidocs/
 http-server
 ```
+
 And connect to localhost:8080 to view the documentation
+
+Alternatively, you can just start the server and view the apps at 'yourserver.com/api/docs'.
