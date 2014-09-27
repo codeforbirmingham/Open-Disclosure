@@ -11,8 +11,6 @@ var config = require('./config'),
 module.exports = function (app, db) {
     app.use('/api/docs', express.static(config.docs.view));
 
-
-
     // Load API Router Modules
     app.use('/api', require('./../lib/api')(db));
     app.use('/api', require('./../lib/contributors')(db));
