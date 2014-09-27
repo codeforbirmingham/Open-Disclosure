@@ -8,19 +8,24 @@ var config = require('./config/config'),
     morgan = require('morgan'),
     bodyParser = require('body-parser'),
     express = require('express'),
+    mongoClient = require ('mongodb').MongoClient,
     app = express();
 
-app.use(morgan('dev'));
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
+mongoClient.connect(config.mongo.url, function (err, db) {
+    if (err) {
+        throw err;
+    }
 
+    app.use(morgan('dev'));
+    app.use(bodyParser.urlencoded({
+        extended: true
+    }));
 
-console.log(config.http.view);
-app.use('/', express.static(config.http.view));
-app.use('/api/docs', express.static(config.docs.view));
-app.use('/api/v1/', require('./config/routes'));
+    app.use('/', express.static(config.http.view));
+    app.use('/api/docs', express.static(config.docs.view));
+    app.use('/api/v1/', require('./config/routes')(db));
 
-var server = app.listen(config.http.port, function () {
-    console.log('Server listening on port: ' + config.http.port);
+    var server = app.listen(config.http.port, function () {
+        console.log('Server listening on port: ' + config.http.port);
+    });
 });
