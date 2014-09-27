@@ -43,6 +43,6 @@ cd apidocs/
 http-server
 ```
 
-And connect to localhost:8080 to view the documentation
+And connect to localhost:8080 to view the documentation.
 
 Alternatively, you can just start the server and view the apps at 'yourserver.com/api/docs'.
