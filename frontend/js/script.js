@@ -1,1 +1,1 @@
-angular.module('openDisclosure', ['ngRoute', 'tableSort']);
+angular.module('openDisclosure', ['ngRoute']);

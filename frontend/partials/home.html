@@ -1,30 +1,5 @@
 <link href="css/home.css" rel="stylesheet">
 
-<input ng-model="searchText" class="navbar" placeholder="Search" style="width: 100%; border-width: 1px; border-color: black;"></input>
-
-<div class="container-fluid">
-    <div ng-repeat="candidate in candidates | filter:searchText | orderBy:'name'" ng-href="#candidate/{{candidate.name}}" class="row">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <div class="panel-img hidden-xs col-md-1">
-                    <img src="http://lorempixel.com/100/100" />
-                </div>
-                <div class="col-md-3 col-sm-4 col-xs-6">
-                    <strong>{{candidate.name}}</strong>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <strong><p>No. of Contributions</p></strong>
-                    <p>{{candidate.count}}</p>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <strong><p>Contributions</p></strong>
-                    <p>{{candidate.contributions}}</p>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <strong><p>Expenditures</p></strong>
-                    <p>{{candidate.expenditures}}</p>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="jumbotron">
+  <h1>Open Disclosure Birmingham</h1>
 </div>
