@@ -1,7 +1,8 @@
-/*
-    Config module for application wide information.
+/**
+ * Configuration module for app wide information
+ * @author CodeForBirmingham
+ * @module backend/config/routes
  */
-
 
 var path = require('path'),
     config = {};

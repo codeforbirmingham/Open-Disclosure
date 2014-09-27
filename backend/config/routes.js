@@ -1,5 +1,7 @@
-/*
-    Setup API routes in an express Router object and export it.
+/**
+ * App REST API Route settings.
+ * @author CodeForBirmingham
+ * @module backend/config/routes
  */
 
 var config = require('./config'),
@@ -226,7 +228,7 @@ module.exports = function (db) {
 
     /**
      * @api {get} /:year/contributors/:ids Get Specific Contributors
-     * @apiName GetPayees
+     * @apiName GetSpecificContributors
      * @apiGroup Contributors
      *
      * @apiParam {Date} year
@@ -235,6 +237,29 @@ module.exports = function (db) {
      * @apiDescription Get information on specific contributors.
      */
     router.get('/:year/contributors/:ids', dummyResponse);
+
+    /**
+     * @api {get} /:year/districts Get Districts
+     * @apiName GetDistricts
+     * @apiGroup Districts
+     *
+     * @apiParam {Date} year
+     *
+     * @apiDescription Get information on all available districts.
+     */
+    router.get('/:year/districts', dummyResponse);
+
+    /**
+     * @api {get} /:year/districts/:ids Get Specific Districts
+     * @apiName GetSpecificDistricts
+     * @apiGroup Districts
+     *
+     * @apiParam {Date} year
+     * @apiParam {String} ids single or comma separated list of ids.
+     *
+     * @apiDescription Get information on specific contributors.
+     */
+    router.get('/:year/districts/:ids', dummyResponse);
 
     return router;
 }
