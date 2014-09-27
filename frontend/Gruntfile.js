@@ -55,12 +55,12 @@ module.exports = function (grunt) {
         targethtml: {
             dev: {
                 files: {
-                    'index.html': 'index.html'
+                    'index.html': 'index.template'
                 }
             },
             dist: {
                 files: {
-                    'index.html': 'index.html'
+                    'index.html': 'index.template'
                 }
             }
         }
