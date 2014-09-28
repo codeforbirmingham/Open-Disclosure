@@ -37,7 +37,7 @@ module.exports = function (grunt) {
                     "libs/bootstrap/dist/js/bootstrap.min.js",
                     "libs/angular/angular.min.js",
                     "libs/angular-route/angular-route.min.js",
-                    "annotated/js/script.js",
+                    "annotated/js/app.js",
                     "annotated/js/controllers/*.js",
                     "annotated/js/directives/*.js",
                     "annotated/js/factories/*.js",
