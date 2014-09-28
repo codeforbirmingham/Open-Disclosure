@@ -7,7 +7,8 @@ module.exports = function (grunt) {
         clean: [
             "build/",
             "annotated/",
-            "index.html"
+            "index.html",
+            "js/modules/config.js"
         ],
 
         ngAnnotate: {
@@ -40,7 +41,7 @@ module.exports = function (grunt) {
                     "annotated/js/controllers/*.js",
                     "annotated/js/directives/*.js",
                     "annotated/js/factories/*.js",
-                    "annotated/js/router.js"
+                    "annotated/js/modules/*.js",
                 ],
                 dest: 'build/js/production.js',
             }
@@ -64,7 +65,17 @@ module.exports = function (grunt) {
                     'index.html': 'index.template'
                 }
             }
-        }
+        },
+
+        ngconstant: {
+            options: {
+                dest: 'js/modules/config.js',
+                name: 'config',
+            },
+            dist: {
+                constants: 'config.json'
+            }
+        },
 
     });
 
@@ -73,7 +84,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-targethtml');
+    grunt.loadNpmTasks('grunt-ng-constant');
 
-    grunt.registerTask('dev', ['targethtml:dev']);
-    grunt.registerTask('dist', ['ngAnnotate', 'concat', 'uglify', 'targethtml:dist']);
+    grunt.registerTask('dev', ['ngconstant', 'targethtml:dev']);
+    grunt.registerTask('dist', ['ngconstant', 'ngAnnotate', 'concat', 'uglify', 'targethtml:dist']);
 }
