@@ -4,4 +4,6 @@ angular.module('config', [])
 
 .constant('about', 'Put a description here')
 
+.constant('logo', '../img/logo.png')
+
 ;
