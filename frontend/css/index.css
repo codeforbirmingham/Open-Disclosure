@@ -1,3 +1,79 @@
+body, html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background-color: #f2f2f2;
+	font-family: "Roboto";
+	font-weight: 300;
+	font-size: 15px;
+	color: #555;
+	padding-top: 93px;
+
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
+}
+
+/* Titles */
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Roboto";
+	font-weight: 700;
+	color: #333;
+}
+
+/* Navbar styling */
 .navbar-custom {
+	padding: 20px 0 20px 0;
     border-radius: 0;
+    margin: 0;
+    background-color: #fff;
+    background: ###;
+}
+
+.navbar-custom .nav > li > a {
+	color:#7b7b7b;
+	text-decoration: none;
+	border-radius:0px;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: transparent;
+	background-color: transparent !important;
+
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.navbar-custom .nav > .active > a,
+.navbar-custom .nav > li > a:hover {
+	color:#4285f4;
+	border-bottom-color: #4285f4;
+	background-color: transparent;
+}
+
+.navbar-brand {
+	padding: 0;
+	color: #4285f4;
+}
+
+.navbar-brand img {
+	width: auto;
+	height: 100%;
+}
+
+.navbar-toggle{
+	border:1px solid #4285f4;
+	border-radius:0;
+}
+
+.icon-bar {
+	background:#4285f4;
+}
+
+@media (max-width: 767px) {
+	.nav > li > a {
+			border: none !important;
+	}
 }
