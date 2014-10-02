@@ -1,5 +1,5 @@
 <div ng-controller="menuCtrl">
-    <div class="navbar-custom navbar" role="navigation">
+    <div class="navbar-custom navbar navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-menu">
@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                    <img src="img/logo.png"></img>{{name}}
+                    <img ng-src="{{logo}}"></img>{{name}}
                 </a>
             </div>
 
@@ -33,7 +33,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- About Modal -->
     <div class="modal fade" id="aboutModal" role="dialog">

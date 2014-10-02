@@ -3,4 +3,6 @@ angular.module('openDisclosure', ['ngRoute', 'config'])
 
         $rootScope.name = name;
         $rootScope.about = about;
+        $rootScope.logo = logo;
+        
     });
