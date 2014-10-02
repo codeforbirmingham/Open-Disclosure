@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: #333;
 }
 
-/* Navbar styling */
+/*  Start navbar styling */
 .navbar-custom {
 	padding: 20px 0 20px 0;
     border-radius: 0;
@@ -76,4 +76,13 @@ h1, h2, h3, h4, h5, h6 {
 	.nav > li > a {
 			border: none !important;
 	}
+}
+/* End navbar styling */
+
+.card {
+	padding:1.5rem;
+	margin:0 1rem 1rem;
+  	box-shadow:0 1px 2px #aaa;
+	background: #fff;
+	border-radius: 3px;
 }
