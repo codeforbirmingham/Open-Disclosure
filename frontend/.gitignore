@@ -3,3 +3,4 @@ node_modules/
 annotated/
 build/
 index.html
+js/modules/config.js
