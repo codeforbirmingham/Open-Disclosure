@@ -3,7 +3,7 @@
 ###################################################################
 #
 # File: FindUniqueOrganizations.py
-# Last Edit: 9.29.14
+# Last Edit: 10.05.14
 # Author: Matthew Leeds
 # Purpose: This script reads the four CSV files from
 # http://fcpa.alabamavotes.gov/PublicSite/DataDownload.aspx
@@ -25,7 +25,7 @@ DATAFILES = ['2014_CashContributionsExtract_fixed.csv',
              '2014_ExpendituresExtract_fixed.csv',
              '2014_InKindContributionsExtract.csv',
              '2014_OtherReceiptsExtract.csv']
-OUTFILE = '2014_Organizations.json'
+OUTFILE = '2014_Organizations_new.json'
 
 def main():
     global listOfOrgIDs
@@ -53,8 +53,15 @@ def getOrgs(records):
             if record[OrgIDColumn] not in listOfOrgIDs:
                 listOfOrgIDs.append(record[OrgIDColumn])
                 thisOrg = {} 
-                thisOrg['id'] = record[OrgIDColumn]
-                thisOrg['type'] = record[CommitteeTypeColumn]
+                thisOrg['_id'] = record[OrgIDColumn]
+                if record[CommitteeTypeColumn] == 'Political Action Committee':
+                    thisOrg['type'] = 'PAC'
+                elif record[CommitteeTypeColumn] == 'Principal Campaign Committee':
+                    thisOrg['type'] = 'Candidate'
+                else:
+                    print('Error: Unknown group type: ' + record[CommitteeTypeColumn])
+                    print('Quitting')
+                    break
                 if len(record[CommitteeNameColumn]) > 1:
                     rawName = record[CommitteeNameColumn]
                     # fix capitalization
