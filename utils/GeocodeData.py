@@ -3,7 +3,7 @@
 ############################################################################
 #
 # File: GeocodeData.py
-# Last Edit: 9.28.2014
+# Last Edit: 10.05.2014
 # Author: Matthew Leeds
 # Purpose: This script reads the four CSV files from
 # http://fcpa.alabamavotes.gov/PublicSite/DataDownload.aspx
@@ -42,9 +42,9 @@ from urllib.parse import urlencode
 from time import sleep
 
 # email address parameter for OSM
-EMAIL_ADDRESS='mwl458@gmail.com'
+EMAIL_ADDRESS = 'YOUR_EMAIL'
 # google API Key
-API_KEY = 'AIzaSyB9GfdNHxIyC17SbmEVGDyhAUPoK5_P4GQ'
+API_KEY = 'YOUR_API_KEY'
 MAX_API_REQUESTS = 2500 # per day
 # an estimated minimum bounding rectangle around Alabama formatted for Google
 ALABAMA_BOUNDS = '35.046674,-88.751659|30.077183,-84.687088'
@@ -154,7 +154,7 @@ def process(records, columnIndex):
             newOrg['coords'] = ''
             # try to determine if it's worth geocoding
             if len(address) > 0 and checkString(address, BAD_ADDRESSES):
-                print('Geocoding: ' + address)
+                print('Geocoding row ' + str(i) + ': ' + address)
                 result = geocodeGoogle(address) # make the request to Google 
                 #result = geocodeOSM(address) # make the request to OSM
                 numAPIRequests += 1

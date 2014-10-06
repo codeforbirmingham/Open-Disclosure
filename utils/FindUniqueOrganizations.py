@@ -25,7 +25,7 @@ DATAFILES = ['2014_CashContributionsExtract_fixed.csv',
              '2014_ExpendituresExtract_fixed.csv',
              '2014_InKindContributionsExtract.csv',
              '2014_OtherReceiptsExtract.csv']
-OUTFILE = '2014_Organizations_new.json'
+OUTFILE = '2014_Organizations.json'
 
 def main():
     global listOfOrgIDs
