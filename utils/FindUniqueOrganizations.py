@@ -1,19 +1,22 @@
 #!/usr/bin/python3
 
-##################################################################
+###################################################################
 #
 # File: FindUniqueOrganizations.py
-# Last Edit: 9.14.14
+# Last Edit: 9.29.14
 # Author: Matthew Leeds
 # Purpose: This script reads the four CSV files from
 # http://fcpa.alabamavotes.gov/PublicSite/DataDownload.aspx
 # and finds each unique organization that's recieving donations,
 # which are political candidates and political action committees,
-# and exports that data to "YEAR_Organizations.json". If the data
-# is formatted similarly next year, you should only have to change
-# the DATAFILES and OUTFILE constants.
+# and exports that data to "YEAR_Organizations.json" in the format:
+# [{"name": "Candidate or PAC Name",
+#   "type": "PAC/PCC",
+#   "id":  "OrgID"}, ...]
+# If the data is formatted similarly next year, you should only 
+# have to change the DATAFILES and OUTFILE constants.
 #
-##################################################################
+###################################################################
 
 import csv
 import json
@@ -53,9 +56,12 @@ def getOrgs(records):
                 thisOrg['id'] = record[OrgIDColumn]
                 thisOrg['type'] = record[CommitteeTypeColumn]
                 if len(record[CommitteeNameColumn]) > 1:
-                    thisOrg['name'] = record[CommitteeNameColumn]
+                    rawName = record[CommitteeNameColumn]
+                    # fix capitalization
+                    thisOrg['name'] = rawName.title().replace('Pac', 'PAC').replace('"', '').strip()
                 else:
-                    thisOrg['name'] = record[CandidateNameColumn]
+                    rawName = record[CandidateNameColumn]
+                    thisOrg['name'] = rawName.title().replace('Ii', 'II').replace('Iii', 'III').replace('"', '').strip()
                 listOfOrgs.append(thisOrg)
 
 if __name__=='__main__':

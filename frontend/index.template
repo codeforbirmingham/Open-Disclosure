@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="openDisclosure">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>{{name}}</title>
+    <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <main-menu></main-menu>
+
+    <div ng-view></div>
+
+    <!--(if target dev)><!-->
+    <script src="libs/jquery/jquery.min.js"></script>
+    <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/angular-route/angular-route.min.js"></script>
+
+    <script src="js/app.js"></script>
+
+    <script src="js/controllers/homeCtrl.js"></script>
+    <script src="js/controllers/candidatesCtrl.js"></script>
+    <script src="js/controllers/committeesCtrl.js"></script>
+    <script src="js/controllers/statsCtrl.js"></script>
+    <script src="js/controllers/menuCtrl.js"></script>
+
+    <script src="js/directives/mainMenu.js"></script>
+
+    <script src="js/factories/api.js"></script>
+    
+    <script src="js/modules/config.js"></script>
+    <script src="js/modules/router.js"></script>
+    <!--<!(endif)-->
+
+    <!--(if target dist)><!-->
+    <script src="build/js/production.min.js" /></script>
+    <!--<!(endif)-->
+
+</body>
+
+</html>

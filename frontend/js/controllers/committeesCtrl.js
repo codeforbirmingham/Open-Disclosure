@@ -1,2 +1,2 @@
 angular.module('openDisclosure')
-    .controller('committeesCtrl', function ($scope) {});
+    .controller('committeesCtrl', ['$scope', 'Api', function ($scope, Api) {}]);

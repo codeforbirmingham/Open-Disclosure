@@ -1,2 +1,4 @@
 angular.module('openDisclosure')
-    .controller('homeCtrl', function ($scope) {});
+    .controller('homeCtrl', ['$scope', 'Api', function ($scope, Api) {
+        
+    }]);
