@@ -1,16 +1,18 @@
 <div ng-controller="menuCtrl">
-    <div class="navbar-custom navbar navbar-default" role="navigation">
-        <div class="container-fluid">
+    <div class="navbar-custom navbar navbar-fixed-top" role="navigation">
+        <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-menu">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Birmingham Open Disclosure</a>
+                <a class="navbar-brand" href="#">
+                    <img ng-src="{{logo}}"></img>{{name}}
+                </a>
             </div>
 
-            <div class="collapse navbar-collapse pull-right" id="collapsable-menu">
+            <div class="collapse navbar-collapse navbar-right" id="collapsable-menu">
                 <ul class="nav navbar-nav">
                     <li ng-class="{ active: isActive('/')}">
                         <a href="#home">Home</a>
@@ -31,23 +33,23 @@
             </div>
         </div>
     </div>
-</div>
 
-<!-- About Modal -->
-<div class="modal fade" id="aboutModal" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
-                    <span>&times;</span>
-                </button>
-                <h4 class="modal-title">About Open Disclosure</h4>
-            </div>
-            <div class="modal-body">
-                Put a description here.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <!-- About Modal -->
+    <div class="modal fade" id="aboutModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                    <h4 class="modal-title">About {{name}}</h4>
+                </div>
+                <div class="modal-body">
+                    {{about}}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
