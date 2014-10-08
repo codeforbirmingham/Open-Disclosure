@@ -146,6 +146,7 @@ def process(records, columnIndex):
         # otherwise make a new record and geocode the address
         else:
             newOrg = {}
+            #TODO: create a unique ID and store it in _id
             newOrg['orgType'] = orgtype
             newOrg[idColName] = [txid]
             newOrg['associatedWith'] = [orgid]
