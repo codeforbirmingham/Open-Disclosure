@@ -4,7 +4,7 @@
 #
 # File: FindUniqueOrganizations.py
 # Last Edit: 10.05.14
-# Author: Matthew Leeds
+# Author: Matthew Leeds <mwl458@gmail.com>
 # Purpose: This script reads the four CSV files from
 # http://fcpa.alabamavotes.gov/PublicSite/DataDownload.aspx
 # and finds each unique organization that's recieving donations,

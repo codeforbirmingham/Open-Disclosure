@@ -4,7 +4,7 @@
 #
 # File: GeocodeData.py
 # Last Edit: 10.05.2014
-# Author: Matthew Leeds
+# Author: Matthew Leeds <mwl458@gmail.com>
 # Purpose: This script reads the four CSV files from
 # http://fcpa.alabamavotes.gov/PublicSite/DataDownload.aspx
 # and sends the addresses of each contributor/payee to the 
@@ -80,6 +80,7 @@ def main():
         # for each file, process all the records
         with open('../data/' + filename, 'r', errors='ignore', newline='') as csvfile:
             try:
+                #TODO: check if process succeeds
                 process(csv.reader(csvfile), COLUMN_INDICES[filename])
             except Exception as e:
                 print('Caught error:\n' + str(e))
@@ -165,6 +166,7 @@ def process(records, columnIndex):
                         break # give up
                 else: # success
                     newOrg['addr'] = result[1] # nicely formatted address
+                    #TODO: round numbers to 6 decimal places (0.1m precision)
                     newOrg['coords'] = result[0] # latitude and longitude
             allOrganizations[name] = newOrg
 
