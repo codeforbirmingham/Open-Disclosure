@@ -3,14 +3,15 @@
 ############################################################################
 #
 # File: GeocodeData.py
-# Last Edit: 10.05.2014
+# Last Edit: 10.15.2014
 # Author: Matthew Leeds <mwl458@gmail.com>
 # Purpose: This script reads the four CSV files from
 # http://fcpa.alabamavotes.gov/PublicSite/DataDownload.aspx
 # and sends the addresses of each contributor/payee to the 
 # Google Maps API for geocoding (conversion to lat/long coords).
 # The output is YEAR_Geocoding.json in the format:
-# {"Organization Name": {"orgType": "Individual/PAC/Business",
+# {"Organization Name": {"_id": 123456,
+#                        "orgType": "Individual/PAC/Business",
 #                        "addr": "Street address",
 #                        "coords": {'lat': -123, 'lng': 456},
 #                        "ReceiptIDs": [txID, ...],
@@ -72,16 +73,20 @@ def main():
     try:
         with open('../data/' + OUTFILE) as lastOutput:
             allOrganizations = json.load(lastOutput)
-    except:
+    except Exception:
         pass
+    global maxID
+    maxID = 0
+    if len(allOrganizations) > 0:
+        maxID = findMaxID(allOrganizations)
     global numAPIRequests
     numAPIRequests = 0 # keep track so we don't exceed usage limits
     for filename in DATAFILES:
         # for each file, process all the records
         with open('../data/' + filename, 'r', errors='ignore', newline='') as csvfile:
             try:
-                #TODO: check if process succeeds
-                process(csv.reader(csvfile), COLUMN_INDICES[filename])
+                if not process(csv.reader(csvfile), COLUMN_INDICES[filename]):
+                    break # failure
             except Exception as e:
                 print('Caught error:\n' + str(e))
                 break
@@ -89,8 +94,17 @@ def main():
     with open('../data/' + OUTFILE, 'w') as output:
         json.dump(allOrganizations, output) 
 
+# find the max value for the '_id' field in the existing data
+def findMaxID(allOrgs):
+    currentMaxID = 0
+    for key in allOrgs:
+        if allOrgs[key]['_id'] > currentMaxID:
+            currentMaxID = allOrgs[key]['_id'] 
+    return currentMaxID
+
 # this goes through all the records and attempts to geocode them
 def process(records, columnIndex):
+    success = True # return value
     global allOrganizations
     global numAPIRequests
     # calculate columns (array indices) in the data
@@ -118,6 +132,7 @@ def process(records, columnIndex):
             continue
         if numAPIRequests >= MAX_API_REQUESTS:
             print('Error: Exceeded Google Maps API Usage limits. Run this again in 24 hours.')
+            success = False
             break
         name = record[lastNameCol] + ' ' + record[firstNameCol] + ' ' + record[MICol] + ' ' + record[suffixCol]
         name = name.strip().title() # so organizations don't have trailing spaces and aren't ALL CAPS
@@ -147,7 +162,9 @@ def process(records, columnIndex):
         # otherwise make a new record and geocode the address
         else:
             newOrg = {}
-            #TODO: create a unique ID and store it in _id
+            # create a unique ID
+            maxID += 1
+            newOrg['_id'] = maxID
             newOrg['orgType'] = orgtype
             newOrg[idColName] = [txid]
             newOrg['associatedWith'] = [orgid]
@@ -163,12 +180,15 @@ def process(records, columnIndex):
                 if isinstance(result, str):
                     print('Error: ' + result)
                     if result == 'REQUEST_DENIED' or result == 'OVER_QUERY_LIMIT':
+                        success = False
                         break # give up
                 else: # success
                     newOrg['addr'] = result[1] # nicely formatted address
-                    #TODO: round numbers to 6 decimal places (0.1m precision)
-                    newOrg['coords'] = result[0] # latitude and longitude
+                    # round coordinates to 6 decimal places (~0.1m precision)
+                    newOrg['coords'] = {'lat': round(result[0]['lat'], 6),
+                                        'lng': round(result[0]['lng'], 6)}
             allOrganizations[name] = newOrg
+    return success
 
 # uses the Google Maps API to geocode an address
 # on success: returns a tuple with the coordinates and the formatted address
