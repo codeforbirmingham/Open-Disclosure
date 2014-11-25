@@ -1,1 +1,3157 @@
-[{"_id": "25409", "type": "PAC", "name": "State Employees Association Political Action Committee"}, {"_id": "25012", "type": "Candidate", "name": "Gerald Allen"}, {"_id": "25087", "type": "Candidate", "name": "Lesley Vance"}, {"_id": "24996", "type": "Candidate", "name": "John H Merrill"}, {"_id": "25183", "type": "Candidate", "name": "Priscilla P Dunn"}, {"_id": "25075", "type": "Candidate", "name": "Gerald Dial"}, {"_id": "25266", "type": "Candidate", "name": "Bayless Lynn Greer"}, {"_id": "25125", "type": "Candidate", "name": "Phillip Wayne Williams Jr."}, {"_id": "24964", "type": "Candidate", "name": "Tom Whatley"}, {"_id": "25231", "type": "Candidate", "name": "Joseph Lister Hubbard Jr."}, {"_id": "25204", "type": "Candidate", "name": "James M. Patterson Jr."}, {"_id": "25032", "type": "Candidate", "name": "Michael G. Hubbard"}, {"_id": "25276", "type": "Candidate", "name": "Dan Williams"}, {"_id": "25400", "type": "Candidate", "name": "Justin Barkley"}, {"_id": "25168", "type": "Candidate", "name": "Tim Sprayberry"}, {"_id": "25595", "type": "Candidate", "name": "David Lawrence Faulkner Jr."}, {"_id": "25341", "type": "Candidate", "name": "Paul Harris Garner"}, {"_id": "25345", "type": "Candidate", "name": "Kerry Rich"}, {"_id": "24940", "type": "Candidate", "name": "Phil Williams"}, {"_id": "25122", "type": "Candidate", "name": "Merika Coleman"}, {"_id": "25030", "type": "Candidate", "name": "John Daniel Garrett"}, {"_id": "25141", "type": "Candidate", "name": "John F Knight Jr."}, {"_id": "25001", "type": "PAC", "name": "Alabama Optometric Political Action Committee"}, {"_id": "24922", "type": "PAC", "name": "Alabama Restaurant Association PAC"}, {"_id": "25314", "type": "Candidate", "name": "Collins Pettaway Jr."}, {"_id": "25430", "type": "Candidate", "name": "Kevin Matthew Gentry"}, {"_id": "25155", "type": "Candidate", "name": "Barbara Bigsby Boyd"}, {"_id": "25002", "type": "Candidate", "name": "Jeremy H. Oden"}, {"_id": "25210", "type": "Candidate", "name": "David Sessions"}, {"_id": "25297", "type": "Candidate", "name": "Bobby D Singleton"}, {"_id": "25338", "type": "Candidate", "name": "Alan C Boothe"}, {"_id": "25105", "type": "Candidate", "name": "Jon Craig Ford"}, {"_id": "25172", "type": "Candidate", "name": "Pebblin Walker Warren"}, {"_id": "25350", "type": "Candidate", "name": "Donnie Chesteen"}, {"_id": "25375", "type": "Candidate", "name": "Randy Price"}, {"_id": "25162", "type": "Candidate", "name": "Mac Mccutcheon"}, {"_id": "25247", "type": "Candidate", "name": "Paul Wesley Lee"}, {"_id": "25442", "type": "Candidate", "name": "Roderick Hampton Scott"}, {"_id": "25056", "type": "Candidate", "name": "Jerry L Fielding"}, {"_id": "25352", "type": "Candidate", "name": "Micky Ray Hammon"}, {"_id": "25054", "type": "Candidate", "name": "James T Waggoner Jr."}, {"_id": "25354", "type": "Candidate", "name": "John Wesley Rogers Jr."}, {"_id": "25365", "type": "Candidate", "name": "Buford Cliff Mann"}, {"_id": "24915", "type": "Candidate", "name": "Elaine Beech"}, {"_id": "25433", "type": "Candidate", "name": "Clyde Chambliss Jr."}, {"_id": "25429", "type": "Candidate", "name": "James C Fields Jr."}, {"_id": "24942", "type": "Candidate", "name": "Mike Ball"}, {"_id": "24941", "type": "Candidate", "name": "Mary Scott Hunter"}, {"_id": "25294", "type": "Candidate", "name": "Julia Margaret Wilcox"}, {"_id": "25053", "type": "Candidate", "name": "Reese Howell Mckinney Jr."}, {"_id": "25280", "type": "Candidate", "name": "Darius Foster"}, {"_id": "25336", "type": "Candidate", "name": "Chris Seibert"}, {"_id": "25269", "type": "Candidate", "name": "Stanley Kyle Cooke"}, {"_id": "25310", "type": "Candidate", "name": "Richard Glo Baughn"}, {"_id": "24965", "type": "Candidate", "name": "Robert Bentley"}, {"_id": "25124", "type": "Candidate", "name": "Samuel A Harper"}, {"_id": "25312", "type": "Candidate", "name": "William E Henry"}, {"_id": "24907", "type": "PAC", "name": "Alabama Trucking Association"}, {"_id": "25034", "type": "PAC", "name": "Archipac"}, {"_id": "24883", "type": "PAC", "name": "Coalbed Methane Association Of Alabama PAC"}, {"_id": "24882", "type": "PAC", "name": "Forestry Political Action Committee"}, {"_id": "25224", "type": "PAC", "name": "Franklin PAC"}, {"_id": "24888", "type": "PAC", "name": "Progresspac"}, {"_id": "25009", "type": "PAC", "name": "Retailers Of Alabama"}, {"_id": "25080", "type": "PAC", "name": "Trust Representing Involved Alabama Lawyers"}, {"_id": "24947", "type": "PAC", "name": "Wlpa PAC"}, {"_id": "25265", "type": "Candidate", "name": "Paul Sanford"}, {"_id": "25300", "type": "Candidate", "name": "James Darrell Turner"}, {"_id": "25435", "type": "Candidate", "name": "William J Ainsworth"}, {"_id": "25093", "type": "Candidate", "name": "Jim H Mcclendon"}, {"_id": "25146", "type": "Candidate", "name": "Harry Shiver"}, {"_id": "25071", "type": "Candidate", "name": "Rodger Mell Smitherman"}, {"_id": "25232", "type": "Candidate", "name": "Aubrey Kurt Wallace"}, {"_id": "25236", "type": "Candidate", "name": "Richard J. Lindsey"}, {"_id": "25036", "type": "Candidate", "name": "Koven L. Brown"}, {"_id": "25403", "type": "Candidate", "name": "Jim Hill"}, {"_id": "25373", "type": "Candidate", "name": "Patrick David Pinkston"}, {"_id": "25154", "type": "Candidate", "name": "Paul Lepage Beckman Jr."}, {"_id": "25491", "type": "Candidate", "name": "Max Michael IIi"}, {"_id": "24943", "type": "Candidate", "name": "April C Weaver"}, {"_id": "25466", "type": "Candidate", "name": "Melody Walker"}, {"_id": "24994", "type": "Candidate", "name": "William Poole IIi"}, {"_id": "24925", "type": "Candidate", "name": "James Howard Sanderford"}, {"_id": "25197", "type": "Candidate", "name": "Johnny Mack Morrow"}, {"_id": "24884", "type": "Candidate", "name": "Adam Thompson"}, {"_id": "25079", "type": "Candidate", "name": "Thomas E Action Jackson"}, {"_id": "24927", "type": "PAC", "name": "Aba Ii PAC"}, {"_id": "24929", "type": "PAC", "name": "Aba PAC"}, {"_id": "25028", "type": "PAC", "name": "Alabama Power Company Employees State Political Action Committee"}, {"_id": "24885", "type": "PAC", "name": "Alabama Republican Executive Committee"}, {"_id": "25132", "type": "PAC", "name": "First Citizens Bank"}, {"_id": "24917", "type": "Candidate", "name": "William Alfred Roberts"}, {"_id": "25353", "type": "Candidate", "name": "Mary Ann Moore"}, {"_id": "25038", "type": "Candidate", "name": "Mack Newman Butler"}, {"_id": "25428", "type": "Candidate", "name": "Cynthia Mccarty"}, {"_id": "25346", "type": "Candidate", "name": "Adline Cecelia Clarke"}, {"_id": "25547", "type": "Candidate", "name": "Patrick James Ballard"}, {"_id": "25420", "type": "Candidate", "name": "Robert Reed Ingram"}, {"_id": "25425", "type": "Candidate", "name": "Arnold G Mooney II"}, {"_id": "25332", "type": "Candidate", "name": "Stephen Patrick Carr II"}, {"_id": "25411", "type": "Candidate", "name": "Wesley Scott Mobley"}, {"_id": "25389", "type": "Candidate", "name": "Thad Mcclammy"}, {"_id": "25418", "type": "Candidate", "name": "Robert Herman Fincher"}, {"_id": "25419", "type": "Candidate", "name": "Amie Beth Shaver"}, {"_id": "25074", "type": "Candidate", "name": "Arthur Orr"}, {"_id": "25322", "type": "Candidate", "name": "Henry Sanders"}, {"_id": "25448", "type": "Candidate", "name": "Juandalynn D Givan"}, {"_id": "25118", "type": "Candidate", "name": "Kay E. Ivey"}, {"_id": "25229", "type": "Candidate", "name": "Gregory K Burdine"}, {"_id": "25144", "type": "Candidate", "name": "Marvin Mcdaniel Buttram"}, {"_id": "25145", "type": "Candidate", "name": "Stephen A. Mcmillan"}, {"_id": "25061", "type": "Candidate", "name": "John Mcmillan"}, {"_id": "25189", "type": "Candidate", "name": "Randall (Randy) M Davis"}, {"_id": "25096", "type": "Candidate", "name": "Terri Collins"}, {"_id": "25085", "type": "Candidate", "name": "Paul Bussman"}, {"_id": "25328", "type": "Candidate", "name": "Mike Holmes"}, {"_id": "25070", "type": "Candidate", "name": "Victor Gaston"}, {"_id": "25209", "type": "Candidate", "name": "Michael L Jones Jr."}, {"_id": "24995", "type": "Candidate", "name": "Roger H Bedford Jr."}, {"_id": "25097", "type": "Candidate", "name": "Christopher John England"}, {"_id": "25412", "type": "Candidate", "name": "Michael Millican"}, {"_id": "25025", "type": "Candidate", "name": "Linda Coleman"}, {"_id": "25291", "type": "Candidate", "name": "Jimmy W. Holley"}, {"_id": "25323", "type": "Candidate", "name": "Benjamin Allen Treadaway"}, {"_id": "25057", "type": "Candidate", "name": "Steve Clouse"}, {"_id": "25094", "type": "Candidate", "name": "David William Wheeler"}, {"_id": "25401", "type": "Candidate", "name": "Charles Fredrick Joly"}, {"_id": "25512", "type": "Candidate", "name": "Otis Lee Patterson"}, {"_id": "25377", "type": "Candidate", "name": "Melinda Mcclendon"}, {"_id": "25413", "type": "Candidate", "name": "Harry Mcleod D'Olive Jr."}, {"_id": "25313", "type": "Candidate", "name": "Nathaniel David Ledbetter"}, {"_id": "25436", "type": "Candidate", "name": "Corey P Harbison"}, {"_id": "24900", "type": "Candidate", "name": "Luther J. Strange IIi"}, {"_id": "25295", "type": "Candidate", "name": "Brenda S. Stedham"}, {"_id": "24892", "type": "PAC", "name": "Abc Merit PAC"}, {"_id": "25340", "type": "PAC", "name": "Abc Of North Alabama Merit PAC"}, {"_id": "25000", "type": "PAC", "name": "Alabama Commissioners United Political Action Committee"}, {"_id": "25190", "type": "PAC", "name": "Alabama Dental Political Action Committee"}, {"_id": "24903", "type": "PAC", "name": "Alabama Grocers Association"}, {"_id": "25064", "type": "PAC", "name": "Coca-Cola Refreshments Inc Usa, Inc. Nonpartisan Political Action Committee For Good Government"}, {"_id": "24982", "type": "PAC", "name": "Farm PAC - The Political Action Committee Of The Alabama Farmers Federation"}, {"_id": "25275", "type": "PAC", "name": "Madison County Republican Executive Committee"}, {"_id": "24902", "type": "PAC", "name": "Sahr PAC"}, {"_id": "25095", "type": "Candidate", "name": "Anthony Daniels Jr."}, {"_id": "25357", "type": "Candidate", "name": "Tammy L. Irons"}, {"_id": "25284", "type": "Candidate", "name": "Benjamin Rusty N Glover IIi"}, {"_id": "25450", "type": "Candidate", "name": "George Tootie Bandy"}, {"_id": "25024", "type": "Candidate", "name": "David Standridge"}, {"_id": "25208", "type": "Candidate", "name": "Jim Carns"}, {"_id": "25214", "type": "Candidate", "name": "Stephen (Steve) Wilcox Hurst"}, {"_id": "25398", "type": "Candidate", "name": "Stephen Paul French"}, {"_id": "25163", "type": "Candidate", "name": "Becky Nordgren"}, {"_id": "25192", "type": "Candidate", "name": "Quinton T Ross Jr."}, {"_id": "25159", "type": "Candidate", "name": "Dick L. Brewbaker"}, {"_id": "25059", "type": "Candidate", "name": "Tijuanna Adetunji"}, {"_id": "25026", "type": "Candidate", "name": "Brent M Craig"}, {"_id": "25456", "type": "Candidate", "name": "Randal Forrest Cavnar"}, {"_id": "25205", "type": "Candidate", "name": "Greg J Reed"}, {"_id": "25156", "type": "Candidate", "name": "James Edward Buskey"}, {"_id": "25237", "type": "Candidate", "name": "Jack Williams"}, {"_id": "25195", "type": "Candidate", "name": "Artis J Mccampbell"}, {"_id": "25372", "type": "Candidate", "name": "Allen Farley"}, {"_id": "25007", "type": "Candidate", "name": "Cam Ward"}, {"_id": "25342", "type": "Candidate", "name": "Marcel Black"}, {"_id": "24930", "type": "PAC", "name": "Alabama 2014 PAC"}, {"_id": "25207", "type": "PAC", "name": "Alabama Beef Political Action Committee"}, {"_id": "25339", "type": "PAC", "name": "Cullman County Repbubican Party"}, {"_id": "25006", "type": "PAC", "name": "Petroleum & Convenience Marketers Of Alabama PAC"}, {"_id": "25176", "type": "PAC", "name": "Tucker PAC"}, {"_id": "25119", "type": "Candidate", "name": "Napoleon Bracy Jr."}, {"_id": "25376", "type": "Candidate", "name": "Ronald G Johnson"}, {"_id": "25166", "type": "Candidate", "name": "Oliver Leon Robinson Jr."}, {"_id": "25107", "type": "Candidate", "name": "Laura V Hall"}, {"_id": "25278", "type": "Candidate", "name": "Carl D Sherrod"}, {"_id": "25329", "type": "Candidate", "name": "William Isaac Whorton"}, {"_id": "25467", "type": "Candidate", "name": "Chris Pringle"}, {"_id": "25727", "type": "Candidate", "name": "Lawrence Mcadory"}, {"_id": "25246", "type": "Candidate", "name": "Jennifer Signe Marsden"}, {"_id": "25489", "type": "Candidate", "name": "Phillip Ross Mcglaughn"}, {"_id": "25367", "type": "Candidate", "name": "Suzelle Marie Josey"}, {"_id": "25055", "type": "Candidate", "name": "Robert Theodore Russ Bailey"}, {"_id": "25347", "type": "Candidate", "name": "Anthony Alann Johnson"}, {"_id": "25351", "type": "Candidate", "name": "Steve Livingston"}, {"_id": "25286", "type": "Candidate", "name": "Ray Bryan"}, {"_id": "25287", "type": "Candidate", "name": "Alan Wayne Baker"}, {"_id": "25458", "type": "Candidate", "name": "Steve Flowers"}, {"_id": "25184", "type": "PAC", "name": "Alabama Economic Development PAC"}, {"_id": "25099", "type": "PAC", "name": "Branch Bank And Trust Alabama PAC"}, {"_id": "24910", "type": "PAC", "name": "Move Birmingham Forward PAC"}, {"_id": "25169", "type": "PAC", "name": "Sheet Metal Workers Local 441"}, {"_id": "25201", "type": "PAC", "name": "South Al PAC For Higher Education"}, {"_id": "24905", "type": "PAC", "name": "Talladega County Republican Party"}, {"_id": "25385", "type": "Candidate", "name": "Joshua Pipkin"}, {"_id": "24997", "type": "Candidate", "name": "Matthew David Fridy"}, {"_id": "25422", "type": "Candidate", "name": "David Colston"}, {"_id": "25496", "type": "Candidate", "name": "Suzanne Childers"}, {"_id": "25318", "type": "Candidate", "name": "Del Marsh"}, {"_id": "25220", "type": "Candidate", "name": "Rich Allen Wingo"}, {"_id": "25460", "type": "Candidate", "name": "Perryn Carroll"}, {"_id": "25017", "type": "Candidate", "name": "Todd Greeson"}, {"_id": "25239", "type": "Candidate", "name": "Felix Barry Moore"}, {"_id": "24906", "type": "PAC", "name": "Alabama Action Committee For Rural Electrification"}, {"_id": "25092", "type": "PAC", "name": "Alabama Realtors Political Action Committee"}, {"_id": "25014", "type": "PAC", "name": "Alabama Senate Democratic Caucus PAC"}, {"_id": "25077", "type": "PAC", "name": "Bankpac"}, {"_id": "25262", "type": "PAC", "name": "Conservatives For Good Government"}, {"_id": "25446", "type": "PAC", "name": "Green PAC"}, {"_id": "24894", "type": "Candidate", "name": "Peggy P Miller Lacher"}, {"_id": "25221", "type": "Candidate", "name": "Donald Michael Rainey"}, {"_id": "25293", "type": "Candidate", "name": "John Amari"}, {"_id": "24998", "type": "Candidate", "name": "William L Holtzclaw"}, {"_id": "25315", "type": "Candidate", "name": "Harri Anne Smith"}, {"_id": "25142", "type": "Candidate", "name": "Mike Hill"}, {"_id": "25268", "type": "Candidate", "name": "Mark Mcdonnell Tuggle"}, {"_id": "25588", "type": "Candidate", "name": "Wyndall A. Ivey"}, {"_id": "25126", "type": "Candidate", "name": "Vivian Davis Figures"}, {"_id": "25013", "type": "Candidate", "name": "Bill Hightower"}, {"_id": "24936", "type": "Candidate", "name": "Wayne Johnson"}, {"_id": "25086", "type": "Candidate", "name": "Jimmy Bryan Pool"}, {"_id": "25292", "type": "Candidate", "name": "Jimmy Collier"}, {"_id": "25188", "type": "Candidate", "name": "Teddy Joe Faust Sr."}, {"_id": "25421", "type": "Candidate", "name": "Thomas O. Moore"}, {"_id": "25010", "type": "Candidate", "name": "Young J Boozer IIi"}, {"_id": "25140", "type": "Candidate", "name": "William C. Bill Thompson"}, {"_id": "25331", "type": "Candidate", "name": "Joseph Whitcomb Sedinger"}, {"_id": "25533", "type": "Candidate", "name": "Lillie Jones-Osborne"}, {"_id": "25023", "type": "Candidate", "name": "Jim Perdue"}, {"_id": "25572", "type": "Candidate", "name": "Arthur Shores Lee"}, {"_id": "25652", "type": "Candidate", "name": "Hilda J Etienne"}, {"_id": "24986", "type": "PAC", "name": "Al.Nursing Home Association Care PAC"}, {"_id": "25253", "type": "PAC", "name": "Alabama Hospital Association Political Action Committee"}, {"_id": "25215", "type": "PAC", "name": "Central Alabama Republican Council"}, {"_id": "25397", "type": "Candidate", "name": "Phillip H Brown"}, {"_id": "24890", "type": "PAC", "name": "Alabama Academy Of Ophthalmology"}, {"_id": "25069", "type": "PAC", "name": "Blount County Republican Party"}, {"_id": "25395", "type": "PAC", "name": "Cullman County Democrat Party"}, {"_id": "24980", "type": "PAC", "name": "Walker County Republican Party PAC"}, {"_id": "25106", "type": "Candidate", "name": "Charles O. Newton"}, {"_id": "25058", "type": "Candidate", "name": "Clay Daniel Scofield"}, {"_id": "25040", "type": "Candidate", "name": "Miranda Karrine Joseph"}, {"_id": "25233", "type": "Candidate", "name": "John Michael Mastin"}, {"_id": "25325", "type": "PAC", "name": "Ala-Crna"}, {"_id": "25285", "type": "Candidate", "name": "William Dexter Grimsley"}, {"_id": "25165", "type": "Candidate", "name": "Berry Forte"}, {"_id": "25301", "type": "Candidate", "name": "William M Billy Beasley"}, {"_id": "25037", "type": "Candidate", "name": "Randy Wood"}, {"_id": "25072", "type": "Candidate", "name": "Mary B Windom"}, {"_id": "25213", "type": "Candidate", "name": "Greg Shaw"}, {"_id": "24939", "type": "Candidate", "name": "Darrio Melton"}, {"_id": "25307", "type": "Candidate", "name": "Douglas Curtis Clark"}, {"_id": "25250", "type": "Candidate", "name": "Stacy Lee George"}, {"_id": "25505", "type": "Candidate", "name": "David Montgomery Blair"}, {"_id": "25585", "type": "Candidate", "name": "Orlando Ray Whitehead Sr."}, {"_id": "25469", "type": "Candidate", "name": "Elizabeth Beth Kellum"}, {"_id": "25580", "type": "Candidate", "name": "Wesley Jaron Hodges"}, {"_id": "25308", "type": "Candidate", "name": "Trip Pittman"}, {"_id": "25417", "type": "Candidate", "name": "Randy Vest"}, {"_id": "25363", "type": "Candidate", "name": "Tim Wadsworth"}, {"_id": "25399", "type": "Candidate", "name": "Kenneth Lynn Bailey"}, {"_id": "25060", "type": "Candidate", "name": "Chris Chip Beeker Jr."}, {"_id": "25167", "type": "Candidate", "name": "Jay A. York"}, {"_id": "25471", "type": "Candidate", "name": "William Joshua Burns"}, {"_id": "25227", "type": "Candidate", "name": "William Scott Donaldson"}, {"_id": "25299", "type": "PAC", "name": "Calhoun County Republican Executive Committee"}, {"_id": "25216", "type": "PAC", "name": "Citizens For A Better Alabama"}, {"_id": "24958", "type": "PAC", "name": "Jeffco"}, {"_id": "25230", "type": "PAC", "name": "Jefferson County Republican Party"}, {"_id": "25148", "type": "PAC", "name": "Lawrence County Republican Party"}, {"_id": "24924", "type": "PAC", "name": "Republican Women Of Huntsville"}, {"_id": "25751", "type": "PAC", "name": "Shelby County Republican Party"}, {"_id": "25303", "type": "PAC", "name": "South Huntsville Civic Association"}, {"_id": "25063", "type": "PAC", "name": "T-Town PAC Ii"}, {"_id": "25153", "type": "PAC", "name": "Vpac"}, {"_id": "25370", "type": "Candidate", "name": "Kyle South"}, {"_id": "25507", "type": "Candidate", "name": "Morris David Cummings Jr."}, {"_id": "25556", "type": "Candidate", "name": "Robert Kevin Bass"}, {"_id": "25530", "type": "Candidate", "name": "Christopher Lee Byrd"}, {"_id": "25808", "type": "PAC", "name": "Alabama American Physical Therapy Association Political Action Committee"}, {"_id": "25083", "type": "PAC", "name": "Covington County Gop Executive Committee"}, {"_id": "25101", "type": "PAC", "name": "Lauderdale County Republican Executive Committee"}, {"_id": "25487", "type": "PAC", "name": "Washington County Democratic Executive Committee"}, {"_id": "24938", "type": "Candidate", "name": "J.R. Gaines"}, {"_id": "25423", "type": "Candidate", "name": "Carolyn Wallace"}, {"_id": "25483", "type": "Candidate", "name": "Shanta Craig Owens"}, {"_id": "25502", "type": "Candidate", "name": "Daniel A. Crowson"}, {"_id": "25206", "type": "PAC", "name": "Al Association Of Insurance & Financial Advisors PAC"}, {"_id": "25381", "type": "PAC", "name": "Alabama Veterinary Medical Association PAC"}, {"_id": "24934", "type": "PAC", "name": "Aliant PAC"}, {"_id": "24976", "type": "PAC", "name": "Edpac"}, {"_id": "25114", "type": "PAC", "name": "Good PAC"}, {"_id": "25406", "type": "PAC", "name": "Marshall County Republican Party"}, {"_id": "25042", "type": "PAC", "name": "Medical Assurance Society Political Action Committee"}, {"_id": "25067", "type": "PAC", "name": "Protective Life Corporation State Political Action Committee"}, {"_id": "25383", "type": "PAC", "name": "More Jobs Alabama PAC"}, {"_id": "24970", "type": "PAC", "name": "Newpac"}, {"_id": "25473", "type": "Candidate", "name": "Robert W. Green"}, {"_id": "25492", "type": "Candidate", "name": "Tammy Jackson Montgomery"}, {"_id": "25427", "type": "Candidate", "name": "Danny Brock Joyner"}, {"_id": "24919", "type": "PAC", "name": "House Democratic Caucus Campaign Fund"}, {"_id": "25288", "type": "Candidate", "name": "Michelle M Thomason"}, {"_id": "24886", "type": "PAC", "name": "Goodwyn, Mills & Cawood PAC"}, {"_id": "25534", "type": "Candidate", "name": "Tanya Tolbert Roberts"}, {"_id": "25260", "type": "PAC", "name": "Valley Young Republicans"}, {"_id": "25461", "type": "PAC", "name": "Allied Women PAC"}, {"_id": "25584", "type": "Candidate", "name": "Amanda G Scott"}, {"_id": "25581", "type": "Candidate", "name": "Tracy Leon Hawsey"}, {"_id": "25501", "type": "Candidate", "name": "Theodore A Copland II"}, {"_id": "25499", "type": "Candidate", "name": "Hobby Walker"}, {"_id": "24992", "type": "PAC", "name": "Concrete PAC"}, {"_id": "25081", "type": "PAC", "name": "Fight Back For Justice Fund"}, {"_id": "25762", "type": "PAC", "name": "Marshall Co. Democratic Ex. Committee"}, {"_id": "25546", "type": "Candidate", "name": "Don Word"}, {"_id": "25517", "type": "Candidate", "name": "James Gilbert Berryman"}, {"_id": "25577", "type": "Candidate", "name": "John Adams"}, {"_id": "25511", "type": "Candidate", "name": "Robert Mckay"}, {"_id": "25041", "type": "PAC", "name": "Alabama Cpa PAC"}, {"_id": "25202", "type": "PAC", "name": "Alabama Medical PAC"}, {"_id": "25045", "type": "PAC", "name": "Alabamafirst Political Action C Ommittee"}, {"_id": "24897", "type": "PAC", "name": "Subcontractors Association Of Alabama"}, {"_id": "25593", "type": "Candidate", "name": "Joel Blankenship"}, {"_id": "25004", "type": "PAC", "name": "Friends Of Retirees/Employees"}, {"_id": "25594", "type": "Candidate", "name": "Jimmie L Benison Sr."}, {"_id": "25104", "type": "PAC", "name": "Coosa County Republican Party"}, {"_id": "25196", "type": "Candidate", "name": "Phillip Ralph Andrews"}, {"_id": "25482", "type": "Candidate", "name": "Samuel Martin Cochran"}, {"_id": "25440", "type": "Candidate", "name": "Ron Abernathy"}, {"_id": "25603", "type": "Candidate", "name": "Beau Robert Marland Doolittle II"}, {"_id": "25173", "type": "PAC", "name": "Republicans For The Future PAC"}, {"_id": "25068", "type": "PAC", "name": "State Farm Agents And Associates Of Alabama PAC"}, {"_id": "25721", "type": "Candidate", "name": "Ron Steven Crumpton"}, {"_id": "25548", "type": "Candidate", "name": "Michael Johnson"}, {"_id": "25481", "type": "Candidate", "name": "Jeffrey Scott Chunn"}, {"_id": "25199", "type": "PAC", "name": "Al Afl-Cio PAC"}, {"_id": "24993", "type": "PAC", "name": "Alabama Manufactured Housing Institute"}, {"_id": "25134", "type": "PAC", "name": "Designing For America Political Action Committee"}, {"_id": "25103", "type": "PAC", "name": "Property Casualty Insurers Association Of America Political Account Ii"}, {"_id": "25390", "type": "PAC", "name": "Alabamians For Economic Development"}, {"_id": "24914", "type": "PAC", "name": "Boilermakers Local Lodge No. 108 PAC"}, {"_id": "24893", "type": "PAC", "name": "Alabama Builders Political Action Committee"}, {"_id": "25003", "type": "PAC", "name": "Alabama Voice Of Teachers For Education"}, {"_id": "25160", "type": "PAC", "name": "Apac Alabama PAC"}, {"_id": "24898", "type": "PAC", "name": "At&T Alabama Political Action Committee"}, {"_id": "25334", "type": "PAC", "name": "Big I PAC"}, {"_id": "24926", "type": "PAC", "name": "Cdg PAC"}, {"_id": "25130", "type": "PAC", "name": "Constitution Party Of Alabama"}, {"_id": "25100", "type": "PAC", "name": "Cwa 3902 Birmingham PAC"}, {"_id": "25182", "type": "PAC", "name": "Enpac"}, {"_id": "25270", "type": "PAC", "name": "Escambia County Republican Executive Committee"}, {"_id": "25110", "type": "PAC", "name": "Iron Workers Local 92 PAC"}, {"_id": "25133", "type": "PAC", "name": "Jobs PAC"}, {"_id": "24911", "type": "PAC", "name": "Liberty Political Action Committee"}, {"_id": "24932", "type": "PAC", "name": "Nucor Political Action Committee Of Alabama"}, {"_id": "25279", "type": "PAC", "name": "Roadpac"}, {"_id": "24891", "type": "PAC", "name": "United Transportation Union"}, {"_id": "25290", "type": "PAC", "name": "Wells Fargo & Company Alabama Employees Good Government Fund"}, {"_id": "24979", "type": "Candidate", "name": "Mark Slade Blackwell"}, {"_id": "25600", "type": "Candidate", "name": "Charles Leon Ellis Jr."}, {"_id": "25374", "type": "Candidate", "name": "Willie A Casey"}, {"_id": "25578", "type": "Candidate", "name": "James Macdonald Russell Jr."}, {"_id": "25665", "type": "Candidate", "name": "Anthony Avon Clarkbanks"}, {"_id": "25273", "type": "Candidate", "name": "Heather Sellers"}, {"_id": "25713", "type": "Candidate", "name": "Mary Betty E Peters"}, {"_id": "24937", "type": "Candidate", "name": "Alison Austin"}, {"_id": "25597", "type": "Candidate", "name": "William Henry Stricklend IIi"}, {"_id": "25706", "type": "Candidate", "name": "Lowell Adam Hadder"}, {"_id": "25066", "type": "PAC", "name": "Auto-PAC"}, {"_id": "25046", "type": "PAC", "name": "Bizpac"}, {"_id": "25008", "type": "PAC", "name": "Comp PAC"}, {"_id": "25569", "type": "PAC", "name": "Professional Fire Fighters Of Alabama"}, {"_id": "25649", "type": "Candidate", "name": "Stephanie E. Engle"}, {"_id": "25667", "type": "Candidate", "name": "Dennis Franklin Meeks"}, {"_id": "25720", "type": "Candidate", "name": "Vj Vivian Ford"}, {"_id": "25589", "type": "Candidate", "name": "Lucie Mclemore"}, {"_id": "25245", "type": "Candidate", "name": "Randall Shedd"}, {"_id": "25361", "type": "Candidate", "name": "Cheryl Ringuette Ciamarra"}, {"_id": "25626", "type": "Candidate", "name": "Patricia Mcgriff"}, {"_id": "25620", "type": "Candidate", "name": "Ralph Charles Carmichael Sr."}, {"_id": "25613", "type": "Candidate", "name": "John William Cole"}, {"_id": "24923", "type": "PAC", "name": "Lamar County Democratic Executive Committee"}, {"_id": "25642", "type": "Candidate", "name": "Everett W. Wess"}, {"_id": "25602", "type": "Candidate", "name": "Donald Edward Barnwell"}, {"_id": "25674", "type": "Candidate", "name": "Steven Duane Guede"}, {"_id": "25320", "type": "Candidate", "name": "James Jamey Howard Clements Jr."}, {"_id": "25562", "type": "Candidate", "name": "Gregory Lamar Albritton"}, {"_id": "25702", "type": "Candidate", "name": "Jonathan A Brown"}, {"_id": "25598", "type": "Candidate", "name": "Barry Scott Willingham"}, {"_id": "25699", "type": "Candidate", "name": "Andrew E Betterton"}, {"_id": "25728", "type": "Candidate", "name": "Arthur Shores Lee"}, {"_id": "25027", "type": "Candidate", "name": "Roy D. Jackson"}, {"_id": "25542", "type": "Candidate", "name": "Bobby Lewis"}, {"_id": "25015", "type": "PAC", "name": "Troy University Political Action Committee"}, {"_id": "25609", "type": "Candidate", "name": "Tillman Pugh"}, {"_id": "25147", "type": "Candidate", "name": "Patricia Ann Todd"}, {"_id": "25612", "type": "Candidate", "name": "Victor Phillips Poole Jr."}, {"_id": "25715", "type": "Candidate", "name": "Charles H. Boohaker"}, {"_id": "25675", "type": "Candidate", "name": "Joseph Lister Hubbard Jr."}, {"_id": "25679", "type": "Candidate", "name": "Lamar Heath Jones"}, {"_id": "25784", "type": "Candidate", "name": "Thomas Sloan"}, {"_id": "25771", "type": "Candidate", "name": "Jerry Alan Mcgilvray"}, {"_id": "25693", "type": "PAC", "name": "Coffee County Republican Committee"}, {"_id": "25529", "type": "Candidate", "name": "Wilson Edward Rowell"}, {"_id": "25684", "type": "Candidate", "name": "Michael Adam Hutchins"}, {"_id": "25686", "type": "Candidate", "name": "Chris Sells"}, {"_id": "25691", "type": "Candidate", "name": "Latunja Adams Caster"}, {"_id": "25527", "type": "Candidate", "name": "Albert David Johnson"}, {"_id": "25553", "type": "Candidate", "name": "Kenneth Mikeal Parsons"}, {"_id": "25682", "type": "Candidate", "name": "Meredith Peters"}, {"_id": "25700", "type": "Candidate", "name": "Mary Ann Dees"}, {"_id": "25654", "type": "Candidate", "name": "Wayne E Biggs"}, {"_id": "25394", "type": "Candidate", "name": "Joseph E Freeman Jr."}, {"_id": "25722", "type": "Candidate", "name": "Joel Lee Williams"}, {"_id": "25632", "type": "Candidate", "name": "Kelvin J Lawrence"}, {"_id": "25677", "type": "Candidate", "name": "James Anthony Zachero Jr."}, {"_id": "25668", "type": "Candidate", "name": "Jeffrey Rex Mclaughlin"}, {"_id": "25643", "type": "Candidate", "name": "Adam Glenn Ritch"}, {"_id": "25736", "type": "Candidate", "name": "Ginger Poynter"}, {"_id": "25636", "type": "Candidate", "name": "William A Barnes"}, {"_id": "25777", "type": "Candidate", "name": "Steve Small Jr."}, {"_id": "25644", "type": "Candidate", "name": "Martin E Weinberg"}, {"_id": "25617", "type": "Candidate", "name": "James Thomas Hanes Jr."}, {"_id": "25688", "type": "Candidate", "name": "Lesa Griffith Keith"}, {"_id": "25601", "type": "Candidate", "name": "Garry Robert Marchman"}, {"_id": "25614", "type": "Candidate", "name": "Stanley Gene Hill"}, {"_id": "25637", "type": "Candidate", "name": "Rex Cheatham"}, {"_id": "25663", "type": "Candidate", "name": "Jim Griggs"}, {"_id": "25571", "type": "Candidate", "name": "Timothy David Roper"}, {"_id": "25629", "type": "Candidate", "name": "Larry Means"}, {"_id": "25618", "type": "Candidate", "name": "John W Williams Sr."}, {"_id": "25681", "type": "Candidate", "name": "Miranda Schrubbe"}, {"_id": "25714", "type": "Candidate", "name": "Shay Wesley Shelnutt"}, {"_id": "25703", "type": "Candidate", "name": "Shirley A Scott-Harris"}, {"_id": "25019", "type": "PAC", "name": "Gc PAC"}, {"_id": "24921", "type": "Candidate", "name": "Gregory D Wren"}, {"_id": "25671", "type": "Candidate", "name": "Barbara Drummond"}, {"_id": "25186", "type": "Candidate", "name": "Chad Austin Fincher"}, {"_id": "25494", "type": "Candidate", "name": "Thomas Bryant Whaley"}, {"_id": "25659", "type": "Candidate", "name": "Brett Ashley King"}, {"_id": "25656", "type": "Candidate", "name": "Donald Ray Murphy"}, {"_id": "25646", "type": "Candidate", "name": "Mike Curtis"}, {"_id": "25651", "type": "Candidate", "name": "Gary Dobbs Head Sr."}, {"_id": "25756", "type": "Candidate", "name": "John Bahakel"}, {"_id": "25143", "type": "Candidate", "name": "Daniel H Boman"}, {"_id": "25241", "type": "PAC", "name": "Mobile Auto-PAC"}, {"_id": "25687", "type": "Candidate", "name": "Phillip J Pettus"}, {"_id": "25685", "type": "Candidate", "name": "Regina Harris Mcdonald"}, {"_id": "25610", "type": "Candidate", "name": "Hobbie Leonard Sealy"}, {"_id": "25039", "type": "Candidate", "name": "Jim Green Sr."}, {"_id": "25695", "type": "Candidate", "name": "Jody Trautwein"}, {"_id": "25108", "type": "PAC", "name": "Jpac"}, {"_id": "25378", "type": "Candidate", "name": "C. Terry Jones"}, {"_id": "25716", "type": "Candidate", "name": "Denise Humburg"}, {"_id": "25319", "type": "Candidate", "name": "Jonathan O Barbee"}, {"_id": "25742", "type": "Candidate", "name": "Cynthia A. Bell"}, {"_id": "25666", "type": "Candidate", "name": "David Beddingfield"}, {"_id": "25605", "type": "Candidate", "name": "Jonathan Berryhill"}, {"_id": "25488", "type": "Candidate", "name": "Terry Dunn"}, {"_id": "25616", "type": "Candidate", "name": "Connie Cooner Rowe"}, {"_id": "25696", "type": "Candidate", "name": "William Mccall Harris Jr."}, {"_id": "25697", "type": "Candidate", "name": "Parker Griffith"}, {"_id": "25586", "type": "Candidate", "name": "James M Martin"}, {"_id": "25379", "type": "Candidate", "name": "Gerald C Wallace"}, {"_id": "24895", "type": "PAC", "name": "Bradley Arant Boult Cummings Llp State Political Action Committee"}, {"_id": "25615", "type": "Candidate", "name": "Bruce Whitlock"}, {"_id": "25639", "type": "Candidate", "name": "Linda W. H. Henderson"}, {"_id": "25257", "type": "Candidate", "name": "Steve Dean"}, {"_id": "25193", "type": "PAC", "name": "Alabamians For Fair Utility Rates"}, {"_id": "25640", "type": "Candidate", "name": "Sonya Patterson"}, {"_id": "25302", "type": "Candidate", "name": "Henry Allred"}, {"_id": "25599", "type": "Candidate", "name": "Sharon Maxwell"}, {"_id": "25673", "type": "Candidate", "name": "James S Roberts Jr."}, {"_id": "25582", "type": "Candidate", "name": "Barry Ramon Sadler Sr."}, {"_id": "25532", "type": "Candidate", "name": "Jane Smith"}, {"_id": "25701", "type": "Candidate", "name": "William Jeffery Peacock"}, {"_id": "25749", "type": "Candidate", "name": "Lawrence Conaway"}, {"_id": "25388", "type": "PAC", "name": "Tuscaloosa County Republican Executive Committee"}, {"_id": "25194", "type": "Candidate", "name": "Dimitri Polizos"}, {"_id": "25694", "type": "Candidate", "name": "Deborah Hill Biggers"}, {"_id": "25514", "type": "Candidate", "name": "Michael Lynn Williams"}, {"_id": "25622", "type": "Candidate", "name": "Timothy Ivan Melson"}, {"_id": "25521", "type": "Candidate", "name": "Martha Barber Humphrey"}, {"_id": "25368", "type": "Candidate", "name": "Ralph Anthony Howard"}, {"_id": "25662", "type": "Candidate", "name": "Henry Abdul Haseeb"}, {"_id": "24978", "type": "PAC", "name": "Bipac"}, {"_id": "24974", "type": "PAC", "name": "Fgapac"}, {"_id": "24973", "type": "PAC", "name": "Impac"}, {"_id": "24968", "type": "PAC", "name": "Telpac"}, {"_id": "25717", "type": "Candidate", "name": "Gwendolyn B Kelley"}, {"_id": "25326", "type": "Candidate", "name": "James Horace Clemmons Jr."}, {"_id": "25327", "type": "Candidate", "name": "James (Ron) Wilson IIi"}, {"_id": "25718", "type": "Candidate", "name": "John E. Amari"}, {"_id": "24881", "type": "PAC", "name": "Al Political Action Committee"}, {"_id": "24878", "type": "PAC", "name": "Awba PAC"}, {"_id": "24876", "type": "PAC", "name": "Sixpac"}, {"_id": "24879", "type": "PAC", "name": "Speed PAC"}, {"_id": "24880", "type": "PAC", "name": "T PAC"}, {"_id": "25737", "type": "Candidate", "name": "Richard Keith Coates"}, {"_id": "25650", "type": "Candidate", "name": "Alan Bryant Graben"}, {"_id": "25653", "type": "Candidate", "name": "Terry Duane Mcgee"}, {"_id": "24933", "type": "PAC", "name": "A Hero Political Action Committee"}, {"_id": "25404", "type": "Candidate", "name": "Jared Freeman"}, {"_id": "25660", "type": "Candidate", "name": "Dennis W Stephens"}, {"_id": "25664", "type": "Candidate", "name": "John Anderson Carter Sr."}, {"_id": "25579", "type": "Candidate", "name": "Charlie L Staten Sr."}, {"_id": "25123", "type": "PAC", "name": "Hawk PAC"}, {"_id": "25076", "type": "PAC", "name": "State Democratic Executive Commitee"}, {"_id": "25414", "type": "Candidate", "name": "William Garreth Moore"}, {"_id": "25748", "type": "Candidate", "name": "Jason Spencer Black"}, {"_id": "25540", "type": "Candidate", "name": "Travis Derel Colquett"}, {"_id": "25555", "type": "Candidate", "name": "Bobby Wayne Jackson"}, {"_id": "25552", "type": "Candidate", "name": "Ritchie Aaron Whorton"}, {"_id": "25631", "type": "Candidate", "name": "Ginger Fletcher"}, {"_id": "25788", "type": "Candidate", "name": "Bill Fuller"}, {"_id": "25102", "type": "PAC", "name": "Future PAC"}, {"_id": "25732", "type": "Candidate", "name": "Frank Williamson"}, {"_id": "25503", "type": "Candidate", "name": "Donald Royce Mitchell"}, {"_id": "25712", "type": "Candidate", "name": "John Hardy"}, {"_id": "25743", "type": "Candidate", "name": "Ellene Schell Brown"}, {"_id": "24896", "type": "PAC", "name": "Alabama Wholesale Distributors Association"}, {"_id": "25710", "type": "Candidate", "name": "Jeremy Heath Jackson"}, {"_id": "25407", "type": "Candidate", "name": "Charles Randal Brock"}, {"_id": "25335", "type": "Candidate", "name": "Joe E Basenberg"}, {"_id": "25382", "type": "PAC", "name": "Gulf PAC"}, {"_id": "25062", "type": "PAC", "name": "Pride PAC Ii"}, {"_id": "25733", "type": "Candidate", "name": "Lateefah Muhammad"}, {"_id": "25730", "type": "Candidate", "name": "Shadrack Mcgill"}, {"_id": "25750", "type": "Candidate", "name": "Heather Sellers"}, {"_id": "25240", "type": "Candidate", "name": "Ken Cleo Johnson Sr."}, {"_id": "25705", "type": "Candidate", "name": "John Ralph Saunders"}, {"_id": "25519", "type": "Candidate", "name": "David Bert Young Jr."}, {"_id": "25638", "type": "Candidate", "name": "Joe Cottle"}, {"_id": "25661", "type": "Candidate", "name": "Gayle Haywood Gear"}, {"_id": "25670", "type": "Candidate", "name": "Jim Murphree"}, {"_id": "25746", "type": "Candidate", "name": "Rick Needham"}, {"_id": "25645", "type": "Candidate", "name": "Richard J Cochran"}, {"_id": "24983", "type": "Candidate", "name": "John Robinson"}, {"_id": "25021", "type": "PAC", "name": "Alabama Credit Union Legislative Action Council"}, {"_id": "24977", "type": "PAC", "name": "Canpac"}, {"_id": "25047", "type": "PAC", "name": "Cra Political Action Committee"}, {"_id": "25048", "type": "PAC", "name": "Fair Political Action Committee"}, {"_id": "25049", "type": "PAC", "name": "First Decade Political Action Committee"}, {"_id": "25050", "type": "PAC", "name": "Free Enterprise Political Action Committee"}, {"_id": "25051", "type": "PAC", "name": "Mainstream Political Action Committee"}, {"_id": "24944", "type": "PAC", "name": "North Alabama Leadership PAC"}, {"_id": "25052", "type": "PAC", "name": "United Political Action Committee"}, {"_id": "25648", "type": "Candidate", "name": "Walter Don Hembree Jr."}, {"_id": "25606", "type": "Candidate", "name": "Sheri Wood Carver"}, {"_id": "25608", "type": "Candidate", "name": "William Taylor Stewart"}, {"_id": "25158", "type": "PAC", "name": "David Volkert & Associates, Inc Holding Company PAC"}, {"_id": "25647", "type": "Candidate", "name": "Jim Zeigler"}, {"_id": "25575", "type": "Candidate", "name": "Joseph Bryan D'Angelo"}, {"_id": "25655", "type": "Candidate", "name": "Walton Ward Hickman"}, {"_id": "25509", "type": "Candidate", "name": "Jim Barton"}, {"_id": "25330", "type": "PAC", "name": "Summit PAC"}, {"_id": "25744", "type": "Candidate", "name": "Larry Collins Stutts"}, {"_id": "25711", "type": "Candidate", "name": "Steven Lamar Whitmire II"}, {"_id": "25073", "type": "PAC", "name": "Hol PAC"}, {"_id": "25416", "type": "PAC", "name": "Agriculture PAC"}, {"_id": "25747", "type": "PAC", "name": "Alabama Forward Political Action Committee, Inc."}, {"_id": "25415", "type": "PAC", "name": "Citizens For Victory PAC"}, {"_id": "25259", "type": "PAC", "name": "Field PAC"}, {"_id": "25500", "type": "Candidate", "name": "Darren L Flott"}, {"_id": "25139", "type": "Candidate", "name": "Billy Alfred Hodges"}, {"_id": "25692", "type": "Candidate", "name": "Handley Jeff Hardy"}, {"_id": "25729", "type": "Candidate", "name": "Fred S Toomer II"}, {"_id": "25474", "type": "Candidate", "name": "Pamela Blackmore-Jenkins"}, {"_id": "25480", "type": "Candidate", "name": "Warren Glea Sarrell Jr."}, {"_id": "25735", "type": "PAC", "name": "Stop Common Core Political Action Committee"}, {"_id": "25493", "type": "Candidate", "name": "Jimmy Leon Bell"}, {"_id": "25393", "type": "PAC", "name": "Alabama Poultry Trust"}, {"_id": "25258", "type": "PAC", "name": "Duck PAC"}, {"_id": "25243", "type": "PAC", "name": "Timber Political Action Committee"}, {"_id": "25760", "type": "Candidate", "name": "Angelo Doc2565 Mancuso"}, {"_id": "25316", "type": "PAC", "name": "Al Group PAC"}, {"_id": "25084", "type": "PAC", "name": "Prosperitypac"}, {"_id": "25725", "type": "Candidate", "name": "Patrick Sellers"}, {"_id": "25573", "type": "Candidate", "name": "Bobby Gene Humphryes Jr."}, {"_id": "25773", "type": "Candidate", "name": "George C Barry"}, {"_id": "25738", "type": "Candidate", "name": "David Alan Copeland"}, {"_id": "25765", "type": "Candidate", "name": "Matthew Allen Massey"}, {"_id": "24984", "type": "PAC", "name": "Alabama Beverage Association Political Action Committee"}, {"_id": "25755", "type": "Candidate", "name": "Katy S Campbell"}, {"_id": "25619", "type": "Candidate", "name": "Mitchell John Howie"}, {"_id": "25764", "type": "PAC", "name": "Alabama State Uaw PAC"}, {"_id": "25752", "type": "Candidate", "name": "Jackie Mark Yarbrough"}, {"_id": "25611", "type": "Candidate", "name": "Alex Balkcum"}, {"_id": "25731", "type": "PAC", "name": "Clean Sweep PAC"}, {"_id": "25766", "type": "PAC", "name": "Good And Ethical Leadership PAC"}, {"_id": "25033", "type": "PAC", "name": "Storming The State House Political Action Committee"}, {"_id": "25680", "type": "Candidate", "name": "George Chuck Leonard Patterson Jr."}, {"_id": "25759", "type": "Candidate", "name": "Christopher Scott Mcneil"}, {"_id": "24901", "type": "Candidate", "name": "Bryan Mcdaniel Taylor"}, {"_id": "25763", "type": "Candidate", "name": "Douglas L Neighbors Jr."}, {"_id": "24971", "type": "PAC", "name": "Maxpac"}, {"_id": "25724", "type": "Candidate", "name": "Sterling Josh Statom Sr."}, {"_id": "25402", "type": "Candidate", "name": "Leigh Lachine"}, {"_id": "25634", "type": "Candidate", "name": "Hugh M Dudley Jr."}, {"_id": "25625", "type": "Candidate", "name": "Mary Kathy Peterson"}, {"_id": "25767", "type": "PAC", "name": "The Innovation PAC"}, {"_id": "25786", "type": "Candidate", "name": "Ronnie Reed"}, {"_id": "25753", "type": "PAC", "name": "Calhoun County Democratic Executive Committee"}, {"_id": "25043", "type": "PAC", "name": "Southern Strategy Group PAC"}, {"_id": "25171", "type": "PAC", "name": "Republican Club Of Central Alabama Political Action Committee"}, {"_id": "25115", "type": "PAC", "name": "May PAC"}, {"_id": "25774", "type": "PAC", "name": "National Association Of Realtors Fund"}, {"_id": "25179", "type": "PAC", "name": "Associated General Contractors - PAC"}, {"_id": "25769", "type": "PAC", "name": "Dale County Political Action Committee"}, {"_id": "25785", "type": "PAC", "name": "Southern States Bank PAC"}, {"_id": "25311", "type": "Candidate", "name": "Michael Jason Gladden"}, {"_id": "25758", "type": "PAC", "name": "Alabama Federation For Children PAC"}, {"_id": "25178", "type": "Candidate", "name": "Stephen Sexton"}, {"_id": "25235", "type": "PAC", "name": "Seapac"}, {"_id": "25779", "type": "Candidate", "name": "Bryan Earl Morgan"}, {"_id": "25635", "type": "Candidate", "name": "Brian Keith Foley"}, {"_id": "25734", "type": "Candidate", "name": "James William Bonner"}, {"_id": "25090", "type": "Candidate", "name": "Carmen Bosch"}, {"_id": "25359", "type": "PAC", "name": "Political Animal PAC"}, {"_id": "25683", "type": "Candidate", "name": "Melvin Hasting"}, {"_id": "25768", "type": "PAC", "name": "Alabama Leadership Now"}, {"_id": "25761", "type": "Candidate", "name": "Curtis Harvey"}, {"_id": "25669", "type": "Candidate", "name": "John D. James"}, {"_id": "25778", "type": "Candidate", "name": "April Lancaster Logan-Russell"}, {"_id": "25065", "type": "PAC", "name": "Mpac"}, {"_id": "25776", "type": "PAC", "name": "Citizens For A Chilton County Hospital"}, {"_id": "25549", "type": "Candidate", "name": "Monica Angelisa Swiger"}, {"_id": "25590", "type": "Candidate", "name": "Henry A White"}, {"_id": "24912", "type": "PAC", "name": "Alabama Engineers PAC"}, {"_id": "25380", "type": "PAC", "name": "Csg PAC"}, {"_id": "25091", "type": "PAC", "name": "Republican State Leadership Committee - Individual Donors Account"}, {"_id": "25283", "type": "Candidate", "name": "Johnny Hardwick"}, {"_id": "25131", "type": "PAC", "name": "Eagle PAC"}, {"_id": "25444", "type": "PAC", "name": "Vision PAC"}, {"_id": "24954", "type": "PAC", "name": "First Financial Bank PAC"}, {"_id": "25793", "type": "Candidate", "name": "Susan Elaine Smith"}, {"_id": "25757", "type": "Candidate", "name": "James Berry Shannon Jr."}, {"_id": "25274", "type": "PAC", "name": "Fairness PAC, Inc."}, {"_id": "24908", "type": "PAC", "name": "Acpa-Al Political Action Committee"}, {"_id": "25116", "type": "PAC", "name": "Conservative Action Fund-Alabama State PAC"}, {"_id": "25113", "type": "PAC", "name": "G PAC"}, {"_id": "24988", "type": "PAC", "name": "Elder PAC"}, {"_id": "25306", "type": "PAC", "name": "H.I.S.PAC"}, {"_id": "24959", "type": "PAC", "name": "Stay"}, {"_id": "24975", "type": "PAC", "name": "Faxpac"}, {"_id": "24972", "type": "PAC", "name": "Legpac"}, {"_id": "24969", "type": "PAC", "name": "Savepac"}, {"_id": "25624", "type": "Candidate", "name": "Rodger Dale Peterson"}, {"_id": "25775", "type": "PAC", "name": "Baker Donelson PAC"}, {"_id": "25798", "type": "PAC", "name": "Alabama Consumer Finance Association Political Action Committee"}, {"_id": "24935", "type": "PAC", "name": "Alabama Trooper PAC"}, {"_id": "25791", "type": "PAC", "name": "Coastal PAC"}, {"_id": "25800", "type": "Candidate", "name": "John Anthony Savage"}, {"_id": "25799", "type": "PAC", "name": "River PAC"}, {"_id": "25805", "type": "Candidate", "name": "Louise Unita Alexander"}, {"_id": "25781", "type": "Candidate", "name": "Tonta Draper"}, {"_id": "25790", "type": "Candidate", "name": "Angela Lareese Fears"}, {"_id": "25810", "type": "PAC", "name": "Marion County Republican Executive Committee"}, {"_id": "25770", "type": "Candidate", "name": "Brian Douglas Brooks"}, {"_id": "24904", "type": "PAC", "name": "Backing Alabama Conservatives Political Action Committee"}, {"_id": "25811", "type": "Candidate", "name": "Bryan Bennett"}, {"_id": "24889", "type": "PAC", "name": "South Alabamians For Good Government"}, {"_id": "25809", "type": "Candidate", "name": "John J Letson"}, {"_id": "25477", "type": "Candidate", "name": "Eugene Reese"}, {"_id": "25267", "type": "PAC", "name": "Alabama Automotive Aftermarket Committee For Free Enterprise"}, {"_id": "25185", "type": "Candidate", "name": "Charlotte Borden Meadows"}, {"_id": "25391", "type": "Candidate", "name": "Jeshua D Screws"}, {"_id": "25298", "type": "Candidate", "name": "Scott Beason"}, {"_id": "25355", "type": "Candidate", "name": "Frank Bertarelli"}, {"_id": "24981", "type": "PAC", "name": "Creola Opportunity Association PAC"}, {"_id": "25349", "type": "PAC", "name": "Dekalb County Republican Party"}, {"_id": "25362", "type": "PAC", "name": "Westpac"}, {"_id": "25424", "type": "Candidate", "name": "John Wayne Young"}, {"_id": "25305", "type": "Candidate", "name": "Susan B Hightower"}, {"_id": "25175", "type": "Candidate", "name": "Dickie Drake"}, {"_id": "25447", "type": "PAC", "name": "The Committee For Good Government"}, {"_id": "25044", "type": "PAC", "name": "Capitol Resources PAC"}, {"_id": "25564", "type": "PAC", "name": "Anniston Fire Fighters Association PAC"}, {"_id": "25516", "type": "Candidate", "name": "James Fletcher Hughey IIi"}, {"_id": "25111", "type": "PAC", "name": "Al Affordable Housing PAC"}, {"_id": "24991", "type": "PAC", "name": "Future PAC"}, {"_id": "25200", "type": "PAC", "name": "Public Affairs Strategies PAC"}, {"_id": "24989", "type": "PAC", "name": "Secure PAC"}, {"_id": "25531", "type": "Candidate", "name": "Schuyler H. Richardson IIi"}, {"_id": "25479", "type": "Candidate", "name": "Tommy Elias Bryan"}, {"_id": "25478", "type": "Candidate", "name": "Jacquelyn Lyn Stuart"}, {"_id": "25452", "type": "Candidate", "name": "Dale W. Strong"}, {"_id": "25218", "type": "PAC", "name": "New Education Leadership"}, {"_id": "25457", "type": "Candidate", "name": "Mitchell Scott Floyd"}, {"_id": "25438", "type": "Candidate", "name": "Liles Clifton Burke"}, {"_id": "25485", "type": "Candidate", "name": "Jamie Ison"}, {"_id": "25219", "type": "PAC", "name": "Parents Involved In Education Revitalization"}, {"_id": "24875", "type": "PAC", "name": "Wdpac"}, {"_id": "25560", "type": "Candidate", "name": "William A. Shashy"}, {"_id": "25309", "type": "Candidate", "name": "Jay Kenneth Love"}, {"_id": "25476", "type": "Candidate", "name": "Brad Mendheim"}, {"_id": "25410", "type": "Candidate", "name": "Jeffrey T Brock"}, {"_id": "25149", "type": "PAC", "name": "Ala Biz PAC"}, {"_id": "25150", "type": "PAC", "name": "Bes PAC"}, {"_id": "25151", "type": "PAC", "name": "Highland PAC"}, {"_id": "25152", "type": "PAC", "name": "Horizon PAC"}, {"_id": "25490", "type": "Candidate", "name": "Jenifer C Holt"}, {"_id": "25486", "type": "Candidate", "name": "Charles Bernard Langham"}, {"_id": "25537", "type": "Candidate", "name": "James F Robinson Jr."}, {"_id": "25022", "type": "PAC", "name": "House Democratic Caucus"}, {"_id": "25520", "type": "Candidate", "name": "Chuck Malone"}, {"_id": "25271", "type": "PAC", "name": "First Bank Of Jasper PAC"}, {"_id": "25112", "type": "Candidate", "name": "John Henry England Jr."}, {"_id": "25454", "type": "Candidate", "name": "James Glenn Goggans"}, {"_id": "25198", "type": "PAC", "name": "Wallace, Jordan, Ratliff, Brandt"}, {"_id": "25238", "type": "Candidate", "name": "Robert Lake Minor"}, {"_id": "25484", "type": "Candidate", "name": "Bradley R. Byrne"}, {"_id": "25098", "type": "Candidate", "name": "J Langford Floyd"}, {"_id": "25472", "type": "Candidate", "name": "Gregory M Williams"}, {"_id": "25089", "type": "PAC", "name": "Citizens Are Responsible For Education"}, {"_id": "25333", "type": "Candidate", "name": "Howard Hawk"}, {"_id": "25565", "type": "Candidate", "name": "Michael G Mike Graffeo"}, {"_id": "25455", "type": "Candidate", "name": "Alan Mann"}, {"_id": "24920", "type": "PAC", "name": "Elmore County Republican Executive Committee"}, {"_id": "25535", "type": "Candidate", "name": "Joe Neal Howell"}, {"_id": "25510", "type": "Candidate", "name": "Jim Barton"}, {"_id": "25464", "type": "Candidate", "name": "Joseph Louis Boohaker"}, {"_id": "25434", "type": "PAC", "name": "Cable PAC"}, {"_id": "25604", "type": "Candidate", "name": "Franklin W Chandler Jr."}, {"_id": "25591", "type": "Candidate", "name": "William Stanley Garner Jr."}, {"_id": "25583", "type": "Candidate", "name": "Thomas Gene Farmer"}, {"_id": "25566", "type": "Candidate", "name": "M. Ryan Rumsey"}, {"_id": "25741", "type": "Candidate", "name": "Dylan Van Oliver"}, {"_id": "25621", "type": "Candidate", "name": "S. Phillip Bahakel"}, {"_id": "25392", "type": "PAC", "name": "Partnership PAC"}, {"_id": "25633", "type": "Candidate", "name": "William Davis Lawley Jr."}, {"_id": "25739", "type": "Candidate", "name": "Chad A Laqua"}, {"_id": "25698", "type": "Candidate", "name": "Marc Keahey"}, {"_id": "25678", "type": "Candidate", "name": "Terry Wayne Hendrix"}, {"_id": "25545", "type": "Candidate", "name": "Joseph Mitchell"}, {"_id": "25344", "type": "PAC", "name": "American Apparel, Inc. Readiness PAC"}, {"_id": "25432", "type": "PAC", "name": "Cullman County Republican Women"}, {"_id": "25719", "type": "Candidate", "name": "Edwin Eugene Price"}, {"_id": "24990", "type": "PAC", "name": "Vote 98"}, {"_id": "25296", "type": "Candidate", "name": "John B. Bush"}, {"_id": "25405", "type": "Candidate", "name": "Robert L. Broussard"}, {"_id": "25088", "type": "PAC", "name": "Alabama Young Democrats"}, {"_id": "25317", "type": "Candidate", "name": "Shadrack Dwight Mcgill"}, {"_id": "24961", "type": "PAC", "name": "C/Ts State PAC"}, {"_id": "25138", "type": "PAC", "name": "Jen PAC"}, {"_id": "25035", "type": "PAC", "name": "Alabama Civil Justice Reform Committee PAC"}, {"_id": "25222", "type": "PAC", "name": "Ecodev PAC"}, {"_id": "25523", "type": "Candidate", "name": "Christopher Michael Mcintyre"}, {"_id": "25078", "type": "PAC", "name": "Alabama Bankers Association PAC"}, {"_id": "24877", "type": "PAC", "name": "Casepac"}, {"_id": "25740", "type": "Candidate", "name": "Randy Thomas Hester"}, {"_id": "25136", "type": "PAC", "name": "Al PAC"}, {"_id": "25137", "type": "PAC", "name": "Inpac"}, {"_id": "25282", "type": "PAC", "name": "H.I.M. PAC"}, {"_id": "25127", "type": "PAC", "name": "Penny PAC"}, {"_id": "25544", "type": "Candidate", "name": "Arthur L Crawfod Sr."}, {"_id": "25011", "type": "Candidate", "name": "Paul John Demarco"}, {"_id": "25244", "type": "PAC", "name": "Alabama Utility Contractors Association PAC"}, {"_id": "25321", "type": "PAC", "name": "North Alabama Economic Development PAC"}, {"_id": "25796", "type": "Candidate", "name": "Guy Kelly"}, {"_id": "25772", "type": "PAC", "name": "Raga Alabama PAC"}, {"_id": "25242", "type": "PAC", "name": "Good Government Political Action Committee"}, {"_id": "24955", "type": "PAC", "name": "Childrens PAC"}, {"_id": "24956", "type": "PAC", "name": "Tough On Crime"}, {"_id": "24957", "type": "PAC", "name": "Transportation, Economics, And Commerce"}, {"_id": "25225", "type": "PAC", "name": "Alabez PAC"}, {"_id": "24952", "type": "PAC", "name": "Citizens For Progressive Leadership PAC"}, {"_id": "24945", "type": "PAC", "name": "Citizens For Quality Leadership PAC"}, {"_id": "25797", "type": "PAC", "name": "Henry County Republican Party"}, {"_id": "25536", "type": "Candidate", "name": "Steven D. King"}, {"_id": "25223", "type": "Candidate", "name": "Oliver Wesley Long"}, {"_id": "25304", "type": "PAC", "name": "Republican Women Of Coffee County"}, {"_id": "25539", "type": "Candidate", "name": "Scott Parker Taylor"}, {"_id": "25803", "type": "PAC", "name": "Waller PAC"}, {"_id": "24948", "type": "PAC", "name": "Support For Economic Development PAC"}, {"_id": "25437", "type": "PAC", "name": "Nationwide Alabama Political Participation Fund"}, {"_id": "25384", "type": "PAC", "name": "Occupational Therapy Political Action Committee"}, {"_id": "25443", "type": "PAC", "name": "Mdm27 PAC"}, {"_id": "25439", "type": "PAC", "name": "Alavoice"}, {"_id": "25261", "type": "PAC", "name": "Committee For Economic Development"}, {"_id": "25016", "type": "PAC", "name": "The Arbor Committee"}, {"_id": "24950", "type": "PAC", "name": "Friends For Good Leadership PAC"}, {"_id": "25504", "type": "Candidate", "name": "Karen Kimbrell Hall"}, {"_id": "25212", "type": "PAC", "name": "Sound Economy PAC"}, {"_id": "24953", "type": "PAC", "name": "Citizens For Good Leadership PAC"}, {"_id": "25526", "type": "Candidate", "name": "Braxton Paul Sherling"}, {"_id": "25164", "type": "PAC", "name": "Fund For Alabama'S Children & Education"}, {"_id": "25453", "type": "Candidate", "name": "Timothy Alton Evans"}, {"_id": "25180", "type": "PAC", "name": "Alabama Christian Alliance"}, {"_id": "25029", "type": "PAC", "name": "Environmental Campaign Fund"}, {"_id": "25181", "type": "PAC", "name": "Familiesala"}, {"_id": "24966", "type": "PAC", "name": "Trupac"}]
+[{
+    "_id": "25409",
+    "type": "PAC",
+    "name": "State Employees Association Political Action Committee"
+}, {
+    "_id": "25012",
+    "type": "Candidate",
+    "name": "Gerald Allen"
+}, {
+    "_id": "25087",
+    "type": "Candidate",
+    "name": "Lesley Vance"
+}, {
+    "_id": "24996",
+    "type": "Candidate",
+    "name": "John H Merrill"
+}, {
+    "_id": "25183",
+    "type": "Candidate",
+    "name": "Priscilla P Dunn"
+}, {
+    "_id": "25075",
+    "type": "Candidate",
+    "name": "Gerald Dial"
+}, {
+    "_id": "25266",
+    "type": "Candidate",
+    "name": "Bayless Lynn Greer"
+}, {
+    "_id": "25125",
+    "type": "Candidate",
+    "name": "Phillip Wayne Williams Jr."
+}, {
+    "_id": "24964",
+    "type": "Candidate",
+    "name": "Tom Whatley"
+}, {
+    "_id": "25231",
+    "type": "Candidate",
+    "name": "Joseph Lister Hubbard Jr."
+}, {
+    "_id": "25204",
+    "type": "Candidate",
+    "name": "James M. Patterson Jr."
+}, {
+    "_id": "25032",
+    "type": "Candidate",
+    "name": "Michael G. Hubbard"
+}, {
+    "_id": "25276",
+    "type": "Candidate",
+    "name": "Dan Williams"
+}, {
+    "_id": "25400",
+    "type": "Candidate",
+    "name": "Justin Barkley"
+}, {
+    "_id": "25168",
+    "type": "Candidate",
+    "name": "Tim Sprayberry"
+}, {
+    "_id": "25595",
+    "type": "Candidate",
+    "name": "David Lawrence Faulkner Jr."
+}, {
+    "_id": "25341",
+    "type": "Candidate",
+    "name": "Paul Harris Garner"
+}, {
+    "_id": "25345",
+    "type": "Candidate",
+    "name": "Kerry Rich"
+}, {
+    "_id": "24940",
+    "type": "Candidate",
+    "name": "Phil Williams"
+}, {
+    "_id": "25122",
+    "type": "Candidate",
+    "name": "Merika Coleman"
+}, {
+    "_id": "25030",
+    "type": "Candidate",
+    "name": "John Daniel Garrett"
+}, {
+    "_id": "25141",
+    "type": "Candidate",
+    "name": "John F Knight Jr."
+}, {
+    "_id": "25001",
+    "type": "PAC",
+    "name": "Alabama Optometric Political Action Committee"
+}, {
+    "_id": "24922",
+    "type": "PAC",
+    "name": "Alabama Restaurant Association PAC"
+}, {
+    "_id": "25314",
+    "type": "Candidate",
+    "name": "Collins Pettaway Jr."
+}, {
+    "_id": "25430",
+    "type": "Candidate",
+    "name": "Kevin Matthew Gentry"
+}, {
+    "_id": "25155",
+    "type": "Candidate",
+    "name": "Barbara Bigsby Boyd"
+}, {
+    "_id": "25002",
+    "type": "Candidate",
+    "name": "Jeremy H. Oden"
+}, {
+    "_id": "25210",
+    "type": "Candidate",
+    "name": "David Sessions"
+}, {
+    "_id": "25297",
+    "type": "Candidate",
+    "name": "Bobby D Singleton"
+}, {
+    "_id": "25338",
+    "type": "Candidate",
+    "name": "Alan C Boothe"
+}, {
+    "_id": "25105",
+    "type": "Candidate",
+    "name": "Jon Craig Ford"
+}, {
+    "_id": "25172",
+    "type": "Candidate",
+    "name": "Pebblin Walker Warren"
+}, {
+    "_id": "25350",
+    "type": "Candidate",
+    "name": "Donnie Chesteen"
+}, {
+    "_id": "25375",
+    "type": "Candidate",
+    "name": "Randy Price"
+}, {
+    "_id": "25162",
+    "type": "Candidate",
+    "name": "Mac Mccutcheon"
+}, {
+    "_id": "25247",
+    "type": "Candidate",
+    "name": "Paul Wesley Lee"
+}, {
+    "_id": "25442",
+    "type": "Candidate",
+    "name": "Roderick Hampton Scott"
+}, {
+    "_id": "25056",
+    "type": "Candidate",
+    "name": "Jerry L Fielding"
+}, {
+    "_id": "25352",
+    "type": "Candidate",
+    "name": "Micky Ray Hammon"
+}, {
+    "_id": "25054",
+    "type": "Candidate",
+    "name": "James T Waggoner Jr."
+}, {
+    "_id": "25354",
+    "type": "Candidate",
+    "name": "John Wesley Rogers Jr."
+}, {
+    "_id": "25365",
+    "type": "Candidate",
+    "name": "Buford Cliff Mann"
+}, {
+    "_id": "24915",
+    "type": "Candidate",
+    "name": "Elaine Beech"
+}, {
+    "_id": "25433",
+    "type": "Candidate",
+    "name": "Clyde Chambliss Jr."
+}, {
+    "_id": "25429",
+    "type": "Candidate",
+    "name": "James C Fields Jr."
+}, {
+    "_id": "24942",
+    "type": "Candidate",
+    "name": "Mike Ball"
+}, {
+    "_id": "24941",
+    "type": "Candidate",
+    "name": "Mary Scott Hunter"
+}, {
+    "_id": "25294",
+    "type": "Candidate",
+    "name": "Julia Margaret Wilcox"
+}, {
+    "_id": "25053",
+    "type": "Candidate",
+    "name": "Reese Howell Mckinney Jr."
+}, {
+    "_id": "25280",
+    "type": "Candidate",
+    "name": "Darius Foster"
+}, {
+    "_id": "25336",
+    "type": "Candidate",
+    "name": "Chris Seibert"
+}, {
+    "_id": "25269",
+    "type": "Candidate",
+    "name": "Stanley Kyle Cooke"
+}, {
+    "_id": "25310",
+    "type": "Candidate",
+    "name": "Richard Glo Baughn"
+}, {
+    "_id": "24965",
+    "type": "Candidate",
+    "name": "Robert Bentley"
+}, {
+    "_id": "25124",
+    "type": "Candidate",
+    "name": "Samuel A Harper"
+}, {
+    "_id": "25312",
+    "type": "Candidate",
+    "name": "William E Henry"
+}, {
+    "_id": "24907",
+    "type": "PAC",
+    "name": "Alabama Trucking Association"
+}, {
+    "_id": "25034",
+    "type": "PAC",
+    "name": "Archipac"
+}, {
+    "_id": "24883",
+    "type": "PAC",
+    "name": "Coalbed Methane Association Of Alabama PAC"
+}, {
+    "_id": "24882",
+    "type": "PAC",
+    "name": "Forestry Political Action Committee"
+}, {
+    "_id": "25224",
+    "type": "PAC",
+    "name": "Franklin PAC"
+}, {
+    "_id": "24888",
+    "type": "PAC",
+    "name": "Progresspac"
+}, {
+    "_id": "25009",
+    "type": "PAC",
+    "name": "Retailers Of Alabama"
+}, {
+    "_id": "25080",
+    "type": "PAC",
+    "name": "Trust Representing Involved Alabama Lawyers"
+}, {
+    "_id": "24947",
+    "type": "PAC",
+    "name": "Wlpa PAC"
+}, {
+    "_id": "25265",
+    "type": "Candidate",
+    "name": "Paul Sanford"
+}, {
+    "_id": "25300",
+    "type": "Candidate",
+    "name": "James Darrell Turner"
+}, {
+    "_id": "25435",
+    "type": "Candidate",
+    "name": "William J Ainsworth"
+}, {
+    "_id": "25093",
+    "type": "Candidate",
+    "name": "Jim H Mcclendon"
+}, {
+    "_id": "25146",
+    "type": "Candidate",
+    "name": "Harry Shiver"
+}, {
+    "_id": "25071",
+    "type": "Candidate",
+    "name": "Rodger Mell Smitherman"
+}, {
+    "_id": "25232",
+    "type": "Candidate",
+    "name": "Aubrey Kurt Wallace"
+}, {
+    "_id": "25236",
+    "type": "Candidate",
+    "name": "Richard J. Lindsey"
+}, {
+    "_id": "25036",
+    "type": "Candidate",
+    "name": "Koven L. Brown"
+}, {
+    "_id": "25403",
+    "type": "Candidate",
+    "name": "Jim Hill"
+}, {
+    "_id": "25373",
+    "type": "Candidate",
+    "name": "Patrick David Pinkston"
+}, {
+    "_id": "25154",
+    "type": "Candidate",
+    "name": "Paul Lepage Beckman Jr."
+}, {
+    "_id": "25491",
+    "type": "Candidate",
+    "name": "Max Michael IIi"
+}, {
+    "_id": "24943",
+    "type": "Candidate",
+    "name": "April C Weaver"
+}, {
+    "_id": "25466",
+    "type": "Candidate",
+    "name": "Melody Walker"
+}, {
+    "_id": "24994",
+    "type": "Candidate",
+    "name": "William Poole IIi"
+}, {
+    "_id": "24925",
+    "type": "Candidate",
+    "name": "James Howard Sanderford"
+}, {
+    "_id": "25197",
+    "type": "Candidate",
+    "name": "Johnny Mack Morrow"
+}, {
+    "_id": "24884",
+    "type": "Candidate",
+    "name": "Adam Thompson"
+}, {
+    "_id": "25079",
+    "type": "Candidate",
+    "name": "Thomas E Action Jackson"
+}, {
+    "_id": "24927",
+    "type": "PAC",
+    "name": "Aba Ii PAC"
+}, {
+    "_id": "24929",
+    "type": "PAC",
+    "name": "Aba PAC"
+}, {
+    "_id": "25028",
+    "type": "PAC",
+    "name": "Alabama Power Company Employees State Political Action Committee"
+}, {
+    "_id": "24885",
+    "type": "PAC",
+    "name": "Alabama Republican Executive Committee"
+}, {
+    "_id": "25132",
+    "type": "PAC",
+    "name": "First Citizens Bank"
+}, {
+    "_id": "24917",
+    "type": "Candidate",
+    "name": "William Alfred Roberts"
+}, {
+    "_id": "25353",
+    "type": "Candidate",
+    "name": "Mary Ann Moore"
+}, {
+    "_id": "25038",
+    "type": "Candidate",
+    "name": "Mack Newman Butler"
+}, {
+    "_id": "25428",
+    "type": "Candidate",
+    "name": "Cynthia Mccarty"
+}, {
+    "_id": "25346",
+    "type": "Candidate",
+    "name": "Adline Cecelia Clarke"
+}, {
+    "_id": "25547",
+    "type": "Candidate",
+    "name": "Patrick James Ballard"
+}, {
+    "_id": "25420",
+    "type": "Candidate",
+    "name": "Robert Reed Ingram"
+}, {
+    "_id": "25425",
+    "type": "Candidate",
+    "name": "Arnold G Mooney II"
+}, {
+    "_id": "25332",
+    "type": "Candidate",
+    "name": "Stephen Patrick Carr II"
+}, {
+    "_id": "25411",
+    "type": "Candidate",
+    "name": "Wesley Scott Mobley"
+}, {
+    "_id": "25389",
+    "type": "Candidate",
+    "name": "Thad Mcclammy"
+}, {
+    "_id": "25418",
+    "type": "Candidate",
+    "name": "Robert Herman Fincher"
+}, {
+    "_id": "25419",
+    "type": "Candidate",
+    "name": "Amie Beth Shaver"
+}, {
+    "_id": "25074",
+    "type": "Candidate",
+    "name": "Arthur Orr"
+}, {
+    "_id": "25322",
+    "type": "Candidate",
+    "name": "Henry Sanders"
+}, {
+    "_id": "25448",
+    "type": "Candidate",
+    "name": "Juandalynn D Givan"
+}, {
+    "_id": "25118",
+    "type": "Candidate",
+    "name": "Kay E. Ivey"
+}, {
+    "_id": "25229",
+    "type": "Candidate",
+    "name": "Gregory K Burdine"
+}, {
+    "_id": "25144",
+    "type": "Candidate",
+    "name": "Marvin Mcdaniel Buttram"
+}, {
+    "_id": "25145",
+    "type": "Candidate",
+    "name": "Stephen A. Mcmillan"
+}, {
+    "_id": "25061",
+    "type": "Candidate",
+    "name": "John Mcmillan"
+}, {
+    "_id": "25189",
+    "type": "Candidate",
+    "name": "Randall (Randy) M Davis"
+}, {
+    "_id": "25096",
+    "type": "Candidate",
+    "name": "Terri Collins"
+}, {
+    "_id": "25085",
+    "type": "Candidate",
+    "name": "Paul Bussman"
+}, {
+    "_id": "25328",
+    "type": "Candidate",
+    "name": "Mike Holmes"
+}, {
+    "_id": "25070",
+    "type": "Candidate",
+    "name": "Victor Gaston"
+}, {
+    "_id": "25209",
+    "type": "Candidate",
+    "name": "Michael L Jones Jr."
+}, {
+    "_id": "24995",
+    "type": "Candidate",
+    "name": "Roger H Bedford Jr."
+}, {
+    "_id": "25097",
+    "type": "Candidate",
+    "name": "Christopher John England"
+}, {
+    "_id": "25412",
+    "type": "Candidate",
+    "name": "Michael Millican"
+}, {
+    "_id": "25025",
+    "type": "Candidate",
+    "name": "Linda Coleman"
+}, {
+    "_id": "25291",
+    "type": "Candidate",
+    "name": "Jimmy W. Holley"
+}, {
+    "_id": "25323",
+    "type": "Candidate",
+    "name": "Benjamin Allen Treadaway"
+}, {
+    "_id": "25057",
+    "type": "Candidate",
+    "name": "Steve Clouse"
+}, {
+    "_id": "25094",
+    "type": "Candidate",
+    "name": "David William Wheeler"
+}, {
+    "_id": "25401",
+    "type": "Candidate",
+    "name": "Charles Fredrick Joly"
+}, {
+    "_id": "25512",
+    "type": "Candidate",
+    "name": "Otis Lee Patterson"
+}, {
+    "_id": "25377",
+    "type": "Candidate",
+    "name": "Melinda Mcclendon"
+}, {
+    "_id": "25413",
+    "type": "Candidate",
+    "name": "Harry Mcleod D'Olive Jr."
+}, {
+    "_id": "25313",
+    "type": "Candidate",
+    "name": "Nathaniel David Ledbetter"
+}, {
+    "_id": "25436",
+    "type": "Candidate",
+    "name": "Corey P Harbison"
+}, {
+    "_id": "24900",
+    "type": "Candidate",
+    "name": "Luther J. Strange IIi"
+}, {
+    "_id": "25295",
+    "type": "Candidate",
+    "name": "Brenda S. Stedham"
+}, {
+    "_id": "24892",
+    "type": "PAC",
+    "name": "Abc Merit PAC"
+}, {
+    "_id": "25340",
+    "type": "PAC",
+    "name": "Abc Of North Alabama Merit PAC"
+}, {
+    "_id": "25000",
+    "type": "PAC",
+    "name": "Alabama Commissioners United Political Action Committee"
+}, {
+    "_id": "25190",
+    "type": "PAC",
+    "name": "Alabama Dental Political Action Committee"
+}, {
+    "_id": "24903",
+    "type": "PAC",
+    "name": "Alabama Grocers Association"
+}, {
+    "_id": "25064",
+    "type": "PAC",
+    "name": "Coca-Cola Refreshments Inc Usa, Inc. Nonpartisan Political Action Committee For Good Government"
+}, {
+    "_id": "24982",
+    "type": "PAC",
+    "name": "Farm PAC - The Political Action Committee Of The Alabama Farmers Federation"
+}, {
+    "_id": "25275",
+    "type": "PAC",
+    "name": "Madison County Republican Executive Committee"
+}, {
+    "_id": "24902",
+    "type": "PAC",
+    "name": "Sahr PAC"
+}, {
+    "_id": "25095",
+    "type": "Candidate",
+    "name": "Anthony Daniels Jr."
+}, {
+    "_id": "25357",
+    "type": "Candidate",
+    "name": "Tammy L. Irons"
+}, {
+    "_id": "25284",
+    "type": "Candidate",
+    "name": "Benjamin Rusty N Glover IIi"
+}, {
+    "_id": "25450",
+    "type": "Candidate",
+    "name": "George Tootie Bandy"
+}, {
+    "_id": "25024",
+    "type": "Candidate",
+    "name": "David Standridge"
+}, {
+    "_id": "25208",
+    "type": "Candidate",
+    "name": "Jim Carns"
+}, {
+    "_id": "25214",
+    "type": "Candidate",
+    "name": "Stephen (Steve) Wilcox Hurst"
+}, {
+    "_id": "25398",
+    "type": "Candidate",
+    "name": "Stephen Paul French"
+}, {
+    "_id": "25163",
+    "type": "Candidate",
+    "name": "Becky Nordgren"
+}, {
+    "_id": "25192",
+    "type": "Candidate",
+    "name": "Quinton T Ross Jr."
+}, {
+    "_id": "25159",
+    "type": "Candidate",
+    "name": "Dick L. Brewbaker"
+}, {
+    "_id": "25059",
+    "type": "Candidate",
+    "name": "Tijuanna Adetunji"
+}, {
+    "_id": "25026",
+    "type": "Candidate",
+    "name": "Brent M Craig"
+}, {
+    "_id": "25456",
+    "type": "Candidate",
+    "name": "Randal Forrest Cavnar"
+}, {
+    "_id": "25205",
+    "type": "Candidate",
+    "name": "Greg J Reed"
+}, {
+    "_id": "25156",
+    "type": "Candidate",
+    "name": "James Edward Buskey"
+}, {
+    "_id": "25237",
+    "type": "Candidate",
+    "name": "Jack Williams"
+}, {
+    "_id": "25195",
+    "type": "Candidate",
+    "name": "Artis J Mccampbell"
+}, {
+    "_id": "25372",
+    "type": "Candidate",
+    "name": "Allen Farley"
+}, {
+    "_id": "25007",
+    "type": "Candidate",
+    "name": "Cam Ward"
+}, {
+    "_id": "25342",
+    "type": "Candidate",
+    "name": "Marcel Black"
+}, {
+    "_id": "24930",
+    "type": "PAC",
+    "name": "Alabama 2014 PAC"
+}, {
+    "_id": "25207",
+    "type": "PAC",
+    "name": "Alabama Beef Political Action Committee"
+}, {
+    "_id": "25339",
+    "type": "PAC",
+    "name": "Cullman County Repbubican Party"
+}, {
+    "_id": "25006",
+    "type": "PAC",
+    "name": "Petroleum & Convenience Marketers Of Alabama PAC"
+}, {
+    "_id": "25176",
+    "type": "PAC",
+    "name": "Tucker PAC"
+}, {
+    "_id": "25119",
+    "type": "Candidate",
+    "name": "Napoleon Bracy Jr."
+}, {
+    "_id": "25376",
+    "type": "Candidate",
+    "name": "Ronald G Johnson"
+}, {
+    "_id": "25166",
+    "type": "Candidate",
+    "name": "Oliver Leon Robinson Jr."
+}, {
+    "_id": "25107",
+    "type": "Candidate",
+    "name": "Laura V Hall"
+}, {
+    "_id": "25278",
+    "type": "Candidate",
+    "name": "Carl D Sherrod"
+}, {
+    "_id": "25329",
+    "type": "Candidate",
+    "name": "William Isaac Whorton"
+}, {
+    "_id": "25467",
+    "type": "Candidate",
+    "name": "Chris Pringle"
+}, {
+    "_id": "25727",
+    "type": "Candidate",
+    "name": "Lawrence Mcadory"
+}, {
+    "_id": "25246",
+    "type": "Candidate",
+    "name": "Jennifer Signe Marsden"
+}, {
+    "_id": "25489",
+    "type": "Candidate",
+    "name": "Phillip Ross Mcglaughn"
+}, {
+    "_id": "25367",
+    "type": "Candidate",
+    "name": "Suzelle Marie Josey"
+}, {
+    "_id": "25055",
+    "type": "Candidate",
+    "name": "Robert Theodore Russ Bailey"
+}, {
+    "_id": "25347",
+    "type": "Candidate",
+    "name": "Anthony Alann Johnson"
+}, {
+    "_id": "25351",
+    "type": "Candidate",
+    "name": "Steve Livingston"
+}, {
+    "_id": "25286",
+    "type": "Candidate",
+    "name": "Ray Bryan"
+}, {
+    "_id": "25287",
+    "type": "Candidate",
+    "name": "Alan Wayne Baker"
+}, {
+    "_id": "25458",
+    "type": "Candidate",
+    "name": "Steve Flowers"
+}, {
+    "_id": "25184",
+    "type": "PAC",
+    "name": "Alabama Economic Development PAC"
+}, {
+    "_id": "25099",
+    "type": "PAC",
+    "name": "Branch Bank And Trust Alabama PAC"
+}, {
+    "_id": "24910",
+    "type": "PAC",
+    "name": "Move Birmingham Forward PAC"
+}, {
+    "_id": "25169",
+    "type": "PAC",
+    "name": "Sheet Metal Workers Local 441"
+}, {
+    "_id": "25201",
+    "type": "PAC",
+    "name": "South Al PAC For Higher Education"
+}, {
+    "_id": "24905",
+    "type": "PAC",
+    "name": "Talladega County Republican Party"
+}, {
+    "_id": "25385",
+    "type": "Candidate",
+    "name": "Joshua Pipkin"
+}, {
+    "_id": "24997",
+    "type": "Candidate",
+    "name": "Matthew David Fridy"
+}, {
+    "_id": "25422",
+    "type": "Candidate",
+    "name": "David Colston"
+}, {
+    "_id": "25496",
+    "type": "Candidate",
+    "name": "Suzanne Childers"
+}, {
+    "_id": "25318",
+    "type": "Candidate",
+    "name": "Del Marsh"
+}, {
+    "_id": "25220",
+    "type": "Candidate",
+    "name": "Rich Allen Wingo"
+}, {
+    "_id": "25460",
+    "type": "Candidate",
+    "name": "Perryn Carroll"
+}, {
+    "_id": "25017",
+    "type": "Candidate",
+    "name": "Todd Greeson"
+}, {
+    "_id": "25239",
+    "type": "Candidate",
+    "name": "Felix Barry Moore"
+}, {
+    "_id": "24906",
+    "type": "PAC",
+    "name": "Alabama Action Committee For Rural Electrification"
+}, {
+    "_id": "25092",
+    "type": "PAC",
+    "name": "Alabama Realtors Political Action Committee"
+}, {
+    "_id": "25014",
+    "type": "PAC",
+    "name": "Alabama Senate Democratic Caucus PAC"
+}, {
+    "_id": "25077",
+    "type": "PAC",
+    "name": "Bankpac"
+}, {
+    "_id": "25262",
+    "type": "PAC",
+    "name": "Conservatives For Good Government"
+}, {
+    "_id": "25446",
+    "type": "PAC",
+    "name": "Green PAC"
+}, {
+    "_id": "24894",
+    "type": "Candidate",
+    "name": "Peggy P Miller Lacher"
+}, {
+    "_id": "25221",
+    "type": "Candidate",
+    "name": "Donald Michael Rainey"
+}, {
+    "_id": "25293",
+    "type": "Candidate",
+    "name": "John Amari"
+}, {
+    "_id": "24998",
+    "type": "Candidate",
+    "name": "William L Holtzclaw"
+}, {
+    "_id": "25315",
+    "type": "Candidate",
+    "name": "Harri Anne Smith"
+}, {
+    "_id": "25142",
+    "type": "Candidate",
+    "name": "Mike Hill"
+}, {
+    "_id": "25268",
+    "type": "Candidate",
+    "name": "Mark Mcdonnell Tuggle"
+}, {
+    "_id": "25588",
+    "type": "Candidate",
+    "name": "Wyndall A. Ivey"
+}, {
+    "_id": "25126",
+    "type": "Candidate",
+    "name": "Vivian Davis Figures"
+}, {
+    "_id": "25013",
+    "type": "Candidate",
+    "name": "Bill Hightower"
+}, {
+    "_id": "24936",
+    "type": "Candidate",
+    "name": "Wayne Johnson"
+}, {
+    "_id": "25086",
+    "type": "Candidate",
+    "name": "Jimmy Bryan Pool"
+}, {
+    "_id": "25292",
+    "type": "Candidate",
+    "name": "Jimmy Collier"
+}, {
+    "_id": "25188",
+    "type": "Candidate",
+    "name": "Teddy Joe Faust Sr."
+}, {
+    "_id": "25421",
+    "type": "Candidate",
+    "name": "Thomas O. Moore"
+}, {
+    "_id": "25010",
+    "type": "Candidate",
+    "name": "Young J Boozer IIi"
+}, {
+    "_id": "25140",
+    "type": "Candidate",
+    "name": "William C. Bill Thompson"
+}, {
+    "_id": "25331",
+    "type": "Candidate",
+    "name": "Joseph Whitcomb Sedinger"
+}, {
+    "_id": "25533",
+    "type": "Candidate",
+    "name": "Lillie Jones-Osborne"
+}, {
+    "_id": "25023",
+    "type": "Candidate",
+    "name": "Jim Perdue"
+}, {
+    "_id": "25572",
+    "type": "Candidate",
+    "name": "Arthur Shores Lee"
+}, {
+    "_id": "25652",
+    "type": "Candidate",
+    "name": "Hilda J Etienne"
+}, {
+    "_id": "24986",
+    "type": "PAC",
+    "name": "Al.Nursing Home Association Care PAC"
+}, {
+    "_id": "25253",
+    "type": "PAC",
+    "name": "Alabama Hospital Association Political Action Committee"
+}, {
+    "_id": "25215",
+    "type": "PAC",
+    "name": "Central Alabama Republican Council"
+}, {
+    "_id": "25397",
+    "type": "Candidate",
+    "name": "Phillip H Brown"
+}, {
+    "_id": "24890",
+    "type": "PAC",
+    "name": "Alabama Academy Of Ophthalmology"
+}, {
+    "_id": "25069",
+    "type": "PAC",
+    "name": "Blount County Republican Party"
+}, {
+    "_id": "25395",
+    "type": "PAC",
+    "name": "Cullman County Democrat Party"
+}, {
+    "_id": "24980",
+    "type": "PAC",
+    "name": "Walker County Republican Party PAC"
+}, {
+    "_id": "25106",
+    "type": "Candidate",
+    "name": "Charles O. Newton"
+}, {
+    "_id": "25058",
+    "type": "Candidate",
+    "name": "Clay Daniel Scofield"
+}, {
+    "_id": "25040",
+    "type": "Candidate",
+    "name": "Miranda Karrine Joseph"
+}, {
+    "_id": "25233",
+    "type": "Candidate",
+    "name": "John Michael Mastin"
+}, {
+    "_id": "25325",
+    "type": "PAC",
+    "name": "Ala-Crna"
+}, {
+    "_id": "25285",
+    "type": "Candidate",
+    "name": "William Dexter Grimsley"
+}, {
+    "_id": "25165",
+    "type": "Candidate",
+    "name": "Berry Forte"
+}, {
+    "_id": "25301",
+    "type": "Candidate",
+    "name": "William M Billy Beasley"
+}, {
+    "_id": "25037",
+    "type": "Candidate",
+    "name": "Randy Wood"
+}, {
+    "_id": "25072",
+    "type": "Candidate",
+    "name": "Mary B Windom"
+}, {
+    "_id": "25213",
+    "type": "Candidate",
+    "name": "Greg Shaw"
+}, {
+    "_id": "24939",
+    "type": "Candidate",
+    "name": "Darrio Melton"
+}, {
+    "_id": "25307",
+    "type": "Candidate",
+    "name": "Douglas Curtis Clark"
+}, {
+    "_id": "25250",
+    "type": "Candidate",
+    "name": "Stacy Lee George"
+}, {
+    "_id": "25505",
+    "type": "Candidate",
+    "name": "David Montgomery Blair"
+}, {
+    "_id": "25585",
+    "type": "Candidate",
+    "name": "Orlando Ray Whitehead Sr."
+}, {
+    "_id": "25469",
+    "type": "Candidate",
+    "name": "Elizabeth Beth Kellum"
+}, {
+    "_id": "25580",
+    "type": "Candidate",
+    "name": "Wesley Jaron Hodges"
+}, {
+    "_id": "25308",
+    "type": "Candidate",
+    "name": "Trip Pittman"
+}, {
+    "_id": "25417",
+    "type": "Candidate",
+    "name": "Randy Vest"
+}, {
+    "_id": "25363",
+    "type": "Candidate",
+    "name": "Tim Wadsworth"
+}, {
+    "_id": "25399",
+    "type": "Candidate",
+    "name": "Kenneth Lynn Bailey"
+}, {
+    "_id": "25060",
+    "type": "Candidate",
+    "name": "Chris Chip Beeker Jr."
+}, {
+    "_id": "25167",
+    "type": "Candidate",
+    "name": "Jay A. York"
+}, {
+    "_id": "25471",
+    "type": "Candidate",
+    "name": "William Joshua Burns"
+}, {
+    "_id": "25227",
+    "type": "Candidate",
+    "name": "William Scott Donaldson"
+}, {
+    "_id": "25299",
+    "type": "PAC",
+    "name": "Calhoun County Republican Executive Committee"
+}, {
+    "_id": "25216",
+    "type": "PAC",
+    "name": "Citizens For A Better Alabama"
+}, {
+    "_id": "24958",
+    "type": "PAC",
+    "name": "Jeffco"
+}, {
+    "_id": "25230",
+    "type": "PAC",
+    "name": "Jefferson County Republican Party"
+}, {
+    "_id": "25148",
+    "type": "PAC",
+    "name": "Lawrence County Republican Party"
+}, {
+    "_id": "24924",
+    "type": "PAC",
+    "name": "Republican Women Of Huntsville"
+}, {
+    "_id": "25751",
+    "type": "PAC",
+    "name": "Shelby County Republican Party"
+}, {
+    "_id": "25303",
+    "type": "PAC",
+    "name": "South Huntsville Civic Association"
+}, {
+    "_id": "25063",
+    "type": "PAC",
+    "name": "T-Town PAC Ii"
+}, {
+    "_id": "25153",
+    "type": "PAC",
+    "name": "Vpac"
+}, {
+    "_id": "25370",
+    "type": "Candidate",
+    "name": "Kyle South"
+}, {
+    "_id": "25507",
+    "type": "Candidate",
+    "name": "Morris David Cummings Jr."
+}, {
+    "_id": "25556",
+    "type": "Candidate",
+    "name": "Robert Kevin Bass"
+}, {
+    "_id": "25530",
+    "type": "Candidate",
+    "name": "Christopher Lee Byrd"
+}, {
+    "_id": "25808",
+    "type": "PAC",
+    "name": "Alabama American Physical Therapy Association Political Action Committee"
+}, {
+    "_id": "25083",
+    "type": "PAC",
+    "name": "Covington County Gop Executive Committee"
+}, {
+    "_id": "25101",
+    "type": "PAC",
+    "name": "Lauderdale County Republican Executive Committee"
+}, {
+    "_id": "25487",
+    "type": "PAC",
+    "name": "Washington County Democratic Executive Committee"
+}, {
+    "_id": "24938",
+    "type": "Candidate",
+    "name": "J.R. Gaines"
+}, {
+    "_id": "25423",
+    "type": "Candidate",
+    "name": "Carolyn Wallace"
+}, {
+    "_id": "25483",
+    "type": "Candidate",
+    "name": "Shanta Craig Owens"
+}, {
+    "_id": "25502",
+    "type": "Candidate",
+    "name": "Daniel A. Crowson"
+}, {
+    "_id": "25206",
+    "type": "PAC",
+    "name": "Al Association Of Insurance & Financial Advisors PAC"
+}, {
+    "_id": "25381",
+    "type": "PAC",
+    "name": "Alabama Veterinary Medical Association PAC"
+}, {
+    "_id": "24934",
+    "type": "PAC",
+    "name": "Aliant PAC"
+}, {
+    "_id": "24976",
+    "type": "PAC",
+    "name": "Edpac"
+}, {
+    "_id": "25114",
+    "type": "PAC",
+    "name": "Good PAC"
+}, {
+    "_id": "25406",
+    "type": "PAC",
+    "name": "Marshall County Republican Party"
+}, {
+    "_id": "25042",
+    "type": "PAC",
+    "name": "Medical Assurance Society Political Action Committee"
+}, {
+    "_id": "25067",
+    "type": "PAC",
+    "name": "Protective Life Corporation State Political Action Committee"
+}, {
+    "_id": "25383",
+    "type": "PAC",
+    "name": "More Jobs Alabama PAC"
+}, {
+    "_id": "24970",
+    "type": "PAC",
+    "name": "Newpac"
+}, {
+    "_id": "25473",
+    "type": "Candidate",
+    "name": "Robert W. Green"
+}, {
+    "_id": "25492",
+    "type": "Candidate",
+    "name": "Tammy Jackson Montgomery"
+}, {
+    "_id": "25427",
+    "type": "Candidate",
+    "name": "Danny Brock Joyner"
+}, {
+    "_id": "24919",
+    "type": "PAC",
+    "name": "House Democratic Caucus Campaign Fund"
+}, {
+    "_id": "25288",
+    "type": "Candidate",
+    "name": "Michelle M Thomason"
+}, {
+    "_id": "24886",
+    "type": "PAC",
+    "name": "Goodwyn, Mills & Cawood PAC"
+}, {
+    "_id": "25534",
+    "type": "Candidate",
+    "name": "Tanya Tolbert Roberts"
+}, {
+    "_id": "25260",
+    "type": "PAC",
+    "name": "Valley Young Republicans"
+}, {
+    "_id": "25461",
+    "type": "PAC",
+    "name": "Allied Women PAC"
+}, {
+    "_id": "25584",
+    "type": "Candidate",
+    "name": "Amanda G Scott"
+}, {
+    "_id": "25581",
+    "type": "Candidate",
+    "name": "Tracy Leon Hawsey"
+}, {
+    "_id": "25501",
+    "type": "Candidate",
+    "name": "Theodore A Copland II"
+}, {
+    "_id": "25499",
+    "type": "Candidate",
+    "name": "Hobby Walker"
+}, {
+    "_id": "24992",
+    "type": "PAC",
+    "name": "Concrete PAC"
+}, {
+    "_id": "25081",
+    "type": "PAC",
+    "name": "Fight Back For Justice Fund"
+}, {
+    "_id": "25762",
+    "type": "PAC",
+    "name": "Marshall Co. Democratic Ex. Committee"
+}, {
+    "_id": "25546",
+    "type": "Candidate",
+    "name": "Don Word"
+}, {
+    "_id": "25517",
+    "type": "Candidate",
+    "name": "James Gilbert Berryman"
+}, {
+    "_id": "25577",
+    "type": "Candidate",
+    "name": "John Adams"
+}, {
+    "_id": "25511",
+    "type": "Candidate",
+    "name": "Robert Mckay"
+}, {
+    "_id": "25041",
+    "type": "PAC",
+    "name": "Alabama Cpa PAC"
+}, {
+    "_id": "25202",
+    "type": "PAC",
+    "name": "Alabama Medical PAC"
+}, {
+    "_id": "25045",
+    "type": "PAC",
+    "name": "Alabamafirst Political Action C Ommittee"
+}, {
+    "_id": "24897",
+    "type": "PAC",
+    "name": "Subcontractors Association Of Alabama"
+}, {
+    "_id": "25593",
+    "type": "Candidate",
+    "name": "Joel Blankenship"
+}, {
+    "_id": "25004",
+    "type": "PAC",
+    "name": "Friends Of Retirees/Employees"
+}, {
+    "_id": "25594",
+    "type": "Candidate",
+    "name": "Jimmie L Benison Sr."
+}, {
+    "_id": "25104",
+    "type": "PAC",
+    "name": "Coosa County Republican Party"
+}, {
+    "_id": "25196",
+    "type": "Candidate",
+    "name": "Phillip Ralph Andrews"
+}, {
+    "_id": "25482",
+    "type": "Candidate",
+    "name": "Samuel Martin Cochran"
+}, {
+    "_id": "25440",
+    "type": "Candidate",
+    "name": "Ron Abernathy"
+}, {
+    "_id": "25603",
+    "type": "Candidate",
+    "name": "Beau Robert Marland Doolittle II"
+}, {
+    "_id": "25173",
+    "type": "PAC",
+    "name": "Republicans For The Future PAC"
+}, {
+    "_id": "25068",
+    "type": "PAC",
+    "name": "State Farm Agents And Associates Of Alabama PAC"
+}, {
+    "_id": "25721",
+    "type": "Candidate",
+    "name": "Ron Steven Crumpton"
+}, {
+    "_id": "25548",
+    "type": "Candidate",
+    "name": "Michael Johnson"
+}, {
+    "_id": "25481",
+    "type": "Candidate",
+    "name": "Jeffrey Scott Chunn"
+}, {
+    "_id": "25199",
+    "type": "PAC",
+    "name": "Al Afl-Cio PAC"
+}, {
+    "_id": "24993",
+    "type": "PAC",
+    "name": "Alabama Manufactured Housing Institute"
+}, {
+    "_id": "25134",
+    "type": "PAC",
+    "name": "Designing For America Political Action Committee"
+}, {
+    "_id": "25103",
+    "type": "PAC",
+    "name": "Property Casualty Insurers Association Of America Political Account Ii"
+}, {
+    "_id": "25390",
+    "type": "PAC",
+    "name": "Alabamians For Economic Development"
+}, {
+    "_id": "24914",
+    "type": "PAC",
+    "name": "Boilermakers Local Lodge No. 108 PAC"
+}, {
+    "_id": "24893",
+    "type": "PAC",
+    "name": "Alabama Builders Political Action Committee"
+}, {
+    "_id": "25003",
+    "type": "PAC",
+    "name": "Alabama Voice Of Teachers For Education"
+}, {
+    "_id": "25160",
+    "type": "PAC",
+    "name": "Apac Alabama PAC"
+}, {
+    "_id": "24898",
+    "type": "PAC",
+    "name": "At&T Alabama Political Action Committee"
+}, {
+    "_id": "25334",
+    "type": "PAC",
+    "name": "Big I PAC"
+}, {
+    "_id": "24926",
+    "type": "PAC",
+    "name": "Cdg PAC"
+}, {
+    "_id": "25130",
+    "type": "PAC",
+    "name": "Constitution Party Of Alabama"
+}, {
+    "_id": "25100",
+    "type": "PAC",
+    "name": "Cwa 3902 Birmingham PAC"
+}, {
+    "_id": "25182",
+    "type": "PAC",
+    "name": "Enpac"
+}, {
+    "_id": "25270",
+    "type": "PAC",
+    "name": "Escambia County Republican Executive Committee"
+}, {
+    "_id": "25110",
+    "type": "PAC",
+    "name": "Iron Workers Local 92 PAC"
+}, {
+    "_id": "25133",
+    "type": "PAC",
+    "name": "Jobs PAC"
+}, {
+    "_id": "24911",
+    "type": "PAC",
+    "name": "Liberty Political Action Committee"
+}, {
+    "_id": "24932",
+    "type": "PAC",
+    "name": "Nucor Political Action Committee Of Alabama"
+}, {
+    "_id": "25279",
+    "type": "PAC",
+    "name": "Roadpac"
+}, {
+    "_id": "24891",
+    "type": "PAC",
+    "name": "United Transportation Union"
+}, {
+    "_id": "25290",
+    "type": "PAC",
+    "name": "Wells Fargo & Company Alabama Employees Good Government Fund"
+}, {
+    "_id": "24979",
+    "type": "Candidate",
+    "name": "Mark Slade Blackwell"
+}, {
+    "_id": "25600",
+    "type": "Candidate",
+    "name": "Charles Leon Ellis Jr."
+}, {
+    "_id": "25374",
+    "type": "Candidate",
+    "name": "Willie A Casey"
+}, {
+    "_id": "25578",
+    "type": "Candidate",
+    "name": "James Macdonald Russell Jr."
+}, {
+    "_id": "25665",
+    "type": "Candidate",
+    "name": "Anthony Avon Clarkbanks"
+}, {
+    "_id": "25273",
+    "type": "Candidate",
+    "name": "Heather Sellers"
+}, {
+    "_id": "25713",
+    "type": "Candidate",
+    "name": "Mary Betty E Peters"
+}, {
+    "_id": "24937",
+    "type": "Candidate",
+    "name": "Alison Austin"
+}, {
+    "_id": "25597",
+    "type": "Candidate",
+    "name": "William Henry Stricklend IIi"
+}, {
+    "_id": "25706",
+    "type": "Candidate",
+    "name": "Lowell Adam Hadder"
+}, {
+    "_id": "25066",
+    "type": "PAC",
+    "name": "Auto-PAC"
+}, {
+    "_id": "25046",
+    "type": "PAC",
+    "name": "Bizpac"
+}, {
+    "_id": "25008",
+    "type": "PAC",
+    "name": "Comp PAC"
+}, {
+    "_id": "25569",
+    "type": "PAC",
+    "name": "Professional Fire Fighters Of Alabama"
+}, {
+    "_id": "25649",
+    "type": "Candidate",
+    "name": "Stephanie E. Engle"
+}, {
+    "_id": "25667",
+    "type": "Candidate",
+    "name": "Dennis Franklin Meeks"
+}, {
+    "_id": "25720",
+    "type": "Candidate",
+    "name": "Vj Vivian Ford"
+}, {
+    "_id": "25589",
+    "type": "Candidate",
+    "name": "Lucie Mclemore"
+}, {
+    "_id": "25245",
+    "type": "Candidate",
+    "name": "Randall Shedd"
+}, {
+    "_id": "25361",
+    "type": "Candidate",
+    "name": "Cheryl Ringuette Ciamarra"
+}, {
+    "_id": "25626",
+    "type": "Candidate",
+    "name": "Patricia Mcgriff"
+}, {
+    "_id": "25620",
+    "type": "Candidate",
+    "name": "Ralph Charles Carmichael Sr."
+}, {
+    "_id": "25613",
+    "type": "Candidate",
+    "name": "John William Cole"
+}, {
+    "_id": "24923",
+    "type": "PAC",
+    "name": "Lamar County Democratic Executive Committee"
+}, {
+    "_id": "25642",
+    "type": "Candidate",
+    "name": "Everett W. Wess"
+}, {
+    "_id": "25602",
+    "type": "Candidate",
+    "name": "Donald Edward Barnwell"
+}, {
+    "_id": "25674",
+    "type": "Candidate",
+    "name": "Steven Duane Guede"
+}, {
+    "_id": "25320",
+    "type": "Candidate",
+    "name": "James Jamey Howard Clements Jr."
+}, {
+    "_id": "25562",
+    "type": "Candidate",
+    "name": "Gregory Lamar Albritton"
+}, {
+    "_id": "25702",
+    "type": "Candidate",
+    "name": "Jonathan A Brown"
+}, {
+    "_id": "25598",
+    "type": "Candidate",
+    "name": "Barry Scott Willingham"
+}, {
+    "_id": "25699",
+    "type": "Candidate",
+    "name": "Andrew E Betterton"
+}, {
+    "_id": "25728",
+    "type": "Candidate",
+    "name": "Arthur Shores Lee"
+}, {
+    "_id": "25027",
+    "type": "Candidate",
+    "name": "Roy D. Jackson"
+}, {
+    "_id": "25542",
+    "type": "Candidate",
+    "name": "Bobby Lewis"
+}, {
+    "_id": "25015",
+    "type": "PAC",
+    "name": "Troy University Political Action Committee"
+}, {
+    "_id": "25609",
+    "type": "Candidate",
+    "name": "Tillman Pugh"
+}, {
+    "_id": "25147",
+    "type": "Candidate",
+    "name": "Patricia Ann Todd"
+}, {
+    "_id": "25612",
+    "type": "Candidate",
+    "name": "Victor Phillips Poole Jr."
+}, {
+    "_id": "25715",
+    "type": "Candidate",
+    "name": "Charles H. Boohaker"
+}, {
+    "_id": "25675",
+    "type": "Candidate",
+    "name": "Joseph Lister Hubbard Jr."
+}, {
+    "_id": "25679",
+    "type": "Candidate",
+    "name": "Lamar Heath Jones"
+}, {
+    "_id": "25784",
+    "type": "Candidate",
+    "name": "Thomas Sloan"
+}, {
+    "_id": "25771",
+    "type": "Candidate",
+    "name": "Jerry Alan Mcgilvray"
+}, {
+    "_id": "25693",
+    "type": "PAC",
+    "name": "Coffee County Republican Committee"
+}, {
+    "_id": "25529",
+    "type": "Candidate",
+    "name": "Wilson Edward Rowell"
+}, {
+    "_id": "25684",
+    "type": "Candidate",
+    "name": "Michael Adam Hutchins"
+}, {
+    "_id": "25686",
+    "type": "Candidate",
+    "name": "Chris Sells"
+}, {
+    "_id": "25691",
+    "type": "Candidate",
+    "name": "Latunja Adams Caster"
+}, {
+    "_id": "25527",
+    "type": "Candidate",
+    "name": "Albert David Johnson"
+}, {
+    "_id": "25553",
+    "type": "Candidate",
+    "name": "Kenneth Mikeal Parsons"
+}, {
+    "_id": "25682",
+    "type": "Candidate",
+    "name": "Meredith Peters"
+}, {
+    "_id": "25700",
+    "type": "Candidate",
+    "name": "Mary Ann Dees"
+}, {
+    "_id": "25654",
+    "type": "Candidate",
+    "name": "Wayne E Biggs"
+}, {
+    "_id": "25394",
+    "type": "Candidate",
+    "name": "Joseph E Freeman Jr."
+}, {
+    "_id": "25722",
+    "type": "Candidate",
+    "name": "Joel Lee Williams"
+}, {
+    "_id": "25632",
+    "type": "Candidate",
+    "name": "Kelvin J Lawrence"
+}, {
+    "_id": "25677",
+    "type": "Candidate",
+    "name": "James Anthony Zachero Jr."
+}, {
+    "_id": "25668",
+    "type": "Candidate",
+    "name": "Jeffrey Rex Mclaughlin"
+}, {
+    "_id": "25643",
+    "type": "Candidate",
+    "name": "Adam Glenn Ritch"
+}, {
+    "_id": "25736",
+    "type": "Candidate",
+    "name": "Ginger Poynter"
+}, {
+    "_id": "25636",
+    "type": "Candidate",
+    "name": "William A Barnes"
+}, {
+    "_id": "25777",
+    "type": "Candidate",
+    "name": "Steve Small Jr."
+}, {
+    "_id": "25644",
+    "type": "Candidate",
+    "name": "Martin E Weinberg"
+}, {
+    "_id": "25617",
+    "type": "Candidate",
+    "name": "James Thomas Hanes Jr."
+}, {
+    "_id": "25688",
+    "type": "Candidate",
+    "name": "Lesa Griffith Keith"
+}, {
+    "_id": "25601",
+    "type": "Candidate",
+    "name": "Garry Robert Marchman"
+}, {
+    "_id": "25614",
+    "type": "Candidate",
+    "name": "Stanley Gene Hill"
+}, {
+    "_id": "25637",
+    "type": "Candidate",
+    "name": "Rex Cheatham"
+}, {
+    "_id": "25663",
+    "type": "Candidate",
+    "name": "Jim Griggs"
+}, {
+    "_id": "25571",
+    "type": "Candidate",
+    "name": "Timothy David Roper"
+}, {
+    "_id": "25629",
+    "type": "Candidate",
+    "name": "Larry Means"
+}, {
+    "_id": "25618",
+    "type": "Candidate",
+    "name": "John W Williams Sr."
+}, {
+    "_id": "25681",
+    "type": "Candidate",
+    "name": "Miranda Schrubbe"
+}, {
+    "_id": "25714",
+    "type": "Candidate",
+    "name": "Shay Wesley Shelnutt"
+}, {
+    "_id": "25703",
+    "type": "Candidate",
+    "name": "Shirley A Scott-Harris"
+}, {
+    "_id": "25019",
+    "type": "PAC",
+    "name": "Gc PAC"
+}, {
+    "_id": "24921",
+    "type": "Candidate",
+    "name": "Gregory D Wren"
+}, {
+    "_id": "25671",
+    "type": "Candidate",
+    "name": "Barbara Drummond"
+}, {
+    "_id": "25186",
+    "type": "Candidate",
+    "name": "Chad Austin Fincher"
+}, {
+    "_id": "25494",
+    "type": "Candidate",
+    "name": "Thomas Bryant Whaley"
+}, {
+    "_id": "25659",
+    "type": "Candidate",
+    "name": "Brett Ashley King"
+}, {
+    "_id": "25656",
+    "type": "Candidate",
+    "name": "Donald Ray Murphy"
+}, {
+    "_id": "25646",
+    "type": "Candidate",
+    "name": "Mike Curtis"
+}, {
+    "_id": "25651",
+    "type": "Candidate",
+    "name": "Gary Dobbs Head Sr."
+}, {
+    "_id": "25756",
+    "type": "Candidate",
+    "name": "John Bahakel"
+}, {
+    "_id": "25143",
+    "type": "Candidate",
+    "name": "Daniel H Boman"
+}, {
+    "_id": "25241",
+    "type": "PAC",
+    "name": "Mobile Auto-PAC"
+}, {
+    "_id": "25687",
+    "type": "Candidate",
+    "name": "Phillip J Pettus"
+}, {
+    "_id": "25685",
+    "type": "Candidate",
+    "name": "Regina Harris Mcdonald"
+}, {
+    "_id": "25610",
+    "type": "Candidate",
+    "name": "Hobbie Leonard Sealy"
+}, {
+    "_id": "25039",
+    "type": "Candidate",
+    "name": "Jim Green Sr."
+}, {
+    "_id": "25695",
+    "type": "Candidate",
+    "name": "Jody Trautwein"
+}, {
+    "_id": "25108",
+    "type": "PAC",
+    "name": "Jpac"
+}, {
+    "_id": "25378",
+    "type": "Candidate",
+    "name": "C. Terry Jones"
+}, {
+    "_id": "25716",
+    "type": "Candidate",
+    "name": "Denise Humburg"
+}, {
+    "_id": "25319",
+    "type": "Candidate",
+    "name": "Jonathan O Barbee"
+}, {
+    "_id": "25742",
+    "type": "Candidate",
+    "name": "Cynthia A. Bell"
+}, {
+    "_id": "25666",
+    "type": "Candidate",
+    "name": "David Beddingfield"
+}, {
+    "_id": "25605",
+    "type": "Candidate",
+    "name": "Jonathan Berryhill"
+}, {
+    "_id": "25488",
+    "type": "Candidate",
+    "name": "Terry Dunn"
+}, {
+    "_id": "25616",
+    "type": "Candidate",
+    "name": "Connie Cooner Rowe"
+}, {
+    "_id": "25696",
+    "type": "Candidate",
+    "name": "William Mccall Harris Jr."
+}, {
+    "_id": "25697",
+    "type": "Candidate",
+    "name": "Parker Griffith"
+}, {
+    "_id": "25586",
+    "type": "Candidate",
+    "name": "James M Martin"
+}, {
+    "_id": "25379",
+    "type": "Candidate",
+    "name": "Gerald C Wallace"
+}, {
+    "_id": "24895",
+    "type": "PAC",
+    "name": "Bradley Arant Boult Cummings Llp State Political Action Committee"
+}, {
+    "_id": "25615",
+    "type": "Candidate",
+    "name": "Bruce Whitlock"
+}, {
+    "_id": "25639",
+    "type": "Candidate",
+    "name": "Linda W. H. Henderson"
+}, {
+    "_id": "25257",
+    "type": "Candidate",
+    "name": "Steve Dean"
+}, {
+    "_id": "25193",
+    "type": "PAC",
+    "name": "Alabamians For Fair Utility Rates"
+}, {
+    "_id": "25640",
+    "type": "Candidate",
+    "name": "Sonya Patterson"
+}, {
+    "_id": "25302",
+    "type": "Candidate",
+    "name": "Henry Allred"
+}, {
+    "_id": "25599",
+    "type": "Candidate",
+    "name": "Sharon Maxwell"
+}, {
+    "_id": "25673",
+    "type": "Candidate",
+    "name": "James S Roberts Jr."
+}, {
+    "_id": "25582",
+    "type": "Candidate",
+    "name": "Barry Ramon Sadler Sr."
+}, {
+    "_id": "25532",
+    "type": "Candidate",
+    "name": "Jane Smith"
+}, {
+    "_id": "25701",
+    "type": "Candidate",
+    "name": "William Jeffery Peacock"
+}, {
+    "_id": "25749",
+    "type": "Candidate",
+    "name": "Lawrence Conaway"
+}, {
+    "_id": "25388",
+    "type": "PAC",
+    "name": "Tuscaloosa County Republican Executive Committee"
+}, {
+    "_id": "25194",
+    "type": "Candidate",
+    "name": "Dimitri Polizos"
+}, {
+    "_id": "25694",
+    "type": "Candidate",
+    "name": "Deborah Hill Biggers"
+}, {
+    "_id": "25514",
+    "type": "Candidate",
+    "name": "Michael Lynn Williams"
+}, {
+    "_id": "25622",
+    "type": "Candidate",
+    "name": "Timothy Ivan Melson"
+}, {
+    "_id": "25521",
+    "type": "Candidate",
+    "name": "Martha Barber Humphrey"
+}, {
+    "_id": "25368",
+    "type": "Candidate",
+    "name": "Ralph Anthony Howard"
+}, {
+    "_id": "25662",
+    "type": "Candidate",
+    "name": "Henry Abdul Haseeb"
+}, {
+    "_id": "24978",
+    "type": "PAC",
+    "name": "Bipac"
+}, {
+    "_id": "24974",
+    "type": "PAC",
+    "name": "Fgapac"
+}, {
+    "_id": "24973",
+    "type": "PAC",
+    "name": "Impac"
+}, {
+    "_id": "24968",
+    "type": "PAC",
+    "name": "Telpac"
+}, {
+    "_id": "25717",
+    "type": "Candidate",
+    "name": "Gwendolyn B Kelley"
+}, {
+    "_id": "25326",
+    "type": "Candidate",
+    "name": "James Horace Clemmons Jr."
+}, {
+    "_id": "25327",
+    "type": "Candidate",
+    "name": "James (Ron) Wilson IIi"
+}, {
+    "_id": "25718",
+    "type": "Candidate",
+    "name": "John E. Amari"
+}, {
+    "_id": "24881",
+    "type": "PAC",
+    "name": "Al Political Action Committee"
+}, {
+    "_id": "24878",
+    "type": "PAC",
+    "name": "Awba PAC"
+}, {
+    "_id": "24876",
+    "type": "PAC",
+    "name": "Sixpac"
+}, {
+    "_id": "24879",
+    "type": "PAC",
+    "name": "Speed PAC"
+}, {
+    "_id": "24880",
+    "type": "PAC",
+    "name": "T PAC"
+}, {
+    "_id": "25737",
+    "type": "Candidate",
+    "name": "Richard Keith Coates"
+}, {
+    "_id": "25650",
+    "type": "Candidate",
+    "name": "Alan Bryant Graben"
+}, {
+    "_id": "25653",
+    "type": "Candidate",
+    "name": "Terry Duane Mcgee"
+}, {
+    "_id": "24933",
+    "type": "PAC",
+    "name": "A Hero Political Action Committee"
+}, {
+    "_id": "25404",
+    "type": "Candidate",
+    "name": "Jared Freeman"
+}, {
+    "_id": "25660",
+    "type": "Candidate",
+    "name": "Dennis W Stephens"
+}, {
+    "_id": "25664",
+    "type": "Candidate",
+    "name": "John Anderson Carter Sr."
+}, {
+    "_id": "25579",
+    "type": "Candidate",
+    "name": "Charlie L Staten Sr."
+}, {
+    "_id": "25123",
+    "type": "PAC",
+    "name": "Hawk PAC"
+}, {
+    "_id": "25076",
+    "type": "PAC",
+    "name": "State Democratic Executive Commitee"
+}, {
+    "_id": "25414",
+    "type": "Candidate",
+    "name": "William Garreth Moore"
+}, {
+    "_id": "25748",
+    "type": "Candidate",
+    "name": "Jason Spencer Black"
+}, {
+    "_id": "25540",
+    "type": "Candidate",
+    "name": "Travis Derel Colquett"
+}, {
+    "_id": "25555",
+    "type": "Candidate",
+    "name": "Bobby Wayne Jackson"
+}, {
+    "_id": "25552",
+    "type": "Candidate",
+    "name": "Ritchie Aaron Whorton"
+}, {
+    "_id": "25631",
+    "type": "Candidate",
+    "name": "Ginger Fletcher"
+}, {
+    "_id": "25788",
+    "type": "Candidate",
+    "name": "Bill Fuller"
+}, {
+    "_id": "25102",
+    "type": "PAC",
+    "name": "Future PAC"
+}, {
+    "_id": "25732",
+    "type": "Candidate",
+    "name": "Frank Williamson"
+}, {
+    "_id": "25503",
+    "type": "Candidate",
+    "name": "Donald Royce Mitchell"
+}, {
+    "_id": "25712",
+    "type": "Candidate",
+    "name": "John Hardy"
+}, {
+    "_id": "25743",
+    "type": "Candidate",
+    "name": "Ellene Schell Brown"
+}, {
+    "_id": "24896",
+    "type": "PAC",
+    "name": "Alabama Wholesale Distributors Association"
+}, {
+    "_id": "25710",
+    "type": "Candidate",
+    "name": "Jeremy Heath Jackson"
+}, {
+    "_id": "25407",
+    "type": "Candidate",
+    "name": "Charles Randal Brock"
+}, {
+    "_id": "25335",
+    "type": "Candidate",
+    "name": "Joe E Basenberg"
+}, {
+    "_id": "25382",
+    "type": "PAC",
+    "name": "Gulf PAC"
+}, {
+    "_id": "25062",
+    "type": "PAC",
+    "name": "Pride PAC Ii"
+}, {
+    "_id": "25733",
+    "type": "Candidate",
+    "name": "Lateefah Muhammad"
+}, {
+    "_id": "25730",
+    "type": "Candidate",
+    "name": "Shadrack Mcgill"
+}, {
+    "_id": "25750",
+    "type": "Candidate",
+    "name": "Heather Sellers"
+}, {
+    "_id": "25240",
+    "type": "Candidate",
+    "name": "Ken Cleo Johnson Sr."
+}, {
+    "_id": "25705",
+    "type": "Candidate",
+    "name": "John Ralph Saunders"
+}, {
+    "_id": "25519",
+    "type": "Candidate",
+    "name": "David Bert Young Jr."
+}, {
+    "_id": "25638",
+    "type": "Candidate",
+    "name": "Joe Cottle"
+}, {
+    "_id": "25661",
+    "type": "Candidate",
+    "name": "Gayle Haywood Gear"
+}, {
+    "_id": "25670",
+    "type": "Candidate",
+    "name": "Jim Murphree"
+}, {
+    "_id": "25746",
+    "type": "Candidate",
+    "name": "Rick Needham"
+}, {
+    "_id": "25645",
+    "type": "Candidate",
+    "name": "Richard J Cochran"
+}, {
+    "_id": "24983",
+    "type": "Candidate",
+    "name": "John Robinson"
+}, {
+    "_id": "25021",
+    "type": "PAC",
+    "name": "Alabama Credit Union Legislative Action Council"
+}, {
+    "_id": "24977",
+    "type": "PAC",
+    "name": "Canpac"
+}, {
+    "_id": "25047",
+    "type": "PAC",
+    "name": "Cra Political Action Committee"
+}, {
+    "_id": "25048",
+    "type": "PAC",
+    "name": "Fair Political Action Committee"
+}, {
+    "_id": "25049",
+    "type": "PAC",
+    "name": "First Decade Political Action Committee"
+}, {
+    "_id": "25050",
+    "type": "PAC",
+    "name": "Free Enterprise Political Action Committee"
+}, {
+    "_id": "25051",
+    "type": "PAC",
+    "name": "Mainstream Political Action Committee"
+}, {
+    "_id": "24944",
+    "type": "PAC",
+    "name": "North Alabama Leadership PAC"
+}, {
+    "_id": "25052",
+    "type": "PAC",
+    "name": "United Political Action Committee"
+}, {
+    "_id": "25648",
+    "type": "Candidate",
+    "name": "Walter Don Hembree Jr."
+}, {
+    "_id": "25606",
+    "type": "Candidate",
+    "name": "Sheri Wood Carver"
+}, {
+    "_id": "25608",
+    "type": "Candidate",
+    "name": "William Taylor Stewart"
+}, {
+    "_id": "25158",
+    "type": "PAC",
+    "name": "David Volkert & Associates, Inc Holding Company PAC"
+}, {
+    "_id": "25647",
+    "type": "Candidate",
+    "name": "Jim Zeigler"
+}, {
+    "_id": "25575",
+    "type": "Candidate",
+    "name": "Joseph Bryan D'Angelo"
+}, {
+    "_id": "25655",
+    "type": "Candidate",
+    "name": "Walton Ward Hickman"
+}, {
+    "_id": "25509",
+    "type": "Candidate",
+    "name": "Jim Barton"
+}, {
+    "_id": "25330",
+    "type": "PAC",
+    "name": "Summit PAC"
+}, {
+    "_id": "25744",
+    "type": "Candidate",
+    "name": "Larry Collins Stutts"
+}, {
+    "_id": "25711",
+    "type": "Candidate",
+    "name": "Steven Lamar Whitmire II"
+}, {
+    "_id": "25073",
+    "type": "PAC",
+    "name": "Hol PAC"
+}, {
+    "_id": "25416",
+    "type": "PAC",
+    "name": "Agriculture PAC"
+}, {
+    "_id": "25747",
+    "type": "PAC",
+    "name": "Alabama Forward Political Action Committee, Inc."
+}, {
+    "_id": "25415",
+    "type": "PAC",
+    "name": "Citizens For Victory PAC"
+}, {
+    "_id": "25259",
+    "type": "PAC",
+    "name": "Field PAC"
+}, {
+    "_id": "25500",
+    "type": "Candidate",
+    "name": "Darren L Flott"
+}, {
+    "_id": "25139",
+    "type": "Candidate",
+    "name": "Billy Alfred Hodges"
+}, {
+    "_id": "25692",
+    "type": "Candidate",
+    "name": "Handley Jeff Hardy"
+}, {
+    "_id": "25729",
+    "type": "Candidate",
+    "name": "Fred S Toomer II"
+}, {
+    "_id": "25474",
+    "type": "Candidate",
+    "name": "Pamela Blackmore-Jenkins"
+}, {
+    "_id": "25480",
+    "type": "Candidate",
+    "name": "Warren Glea Sarrell Jr."
+}, {
+    "_id": "25735",
+    "type": "PAC",
+    "name": "Stop Common Core Political Action Committee"
+}, {
+    "_id": "25493",
+    "type": "Candidate",
+    "name": "Jimmy Leon Bell"
+}, {
+    "_id": "25393",
+    "type": "PAC",
+    "name": "Alabama Poultry Trust"
+}, {
+    "_id": "25258",
+    "type": "PAC",
+    "name": "Duck PAC"
+}, {
+    "_id": "25243",
+    "type": "PAC",
+    "name": "Timber Political Action Committee"
+}, {
+    "_id": "25760",
+    "type": "Candidate",
+    "name": "Angelo Doc2565 Mancuso"
+}, {
+    "_id": "25316",
+    "type": "PAC",
+    "name": "Al Group PAC"
+}, {
+    "_id": "25084",
+    "type": "PAC",
+    "name": "Prosperitypac"
+}, {
+    "_id": "25725",
+    "type": "Candidate",
+    "name": "Patrick Sellers"
+}, {
+    "_id": "25573",
+    "type": "Candidate",
+    "name": "Bobby Gene Humphryes Jr."
+}, {
+    "_id": "25773",
+    "type": "Candidate",
+    "name": "George C Barry"
+}, {
+    "_id": "25738",
+    "type": "Candidate",
+    "name": "David Alan Copeland"
+}, {
+    "_id": "25765",
+    "type": "Candidate",
+    "name": "Matthew Allen Massey"
+}, {
+    "_id": "24984",
+    "type": "PAC",
+    "name": "Alabama Beverage Association Political Action Committee"
+}, {
+    "_id": "25755",
+    "type": "Candidate",
+    "name": "Katy S Campbell"
+}, {
+    "_id": "25619",
+    "type": "Candidate",
+    "name": "Mitchell John Howie"
+}, {
+    "_id": "25764",
+    "type": "PAC",
+    "name": "Alabama State Uaw PAC"
+}, {
+    "_id": "25752",
+    "type": "Candidate",
+    "name": "Jackie Mark Yarbrough"
+}, {
+    "_id": "25611",
+    "type": "Candidate",
+    "name": "Alex Balkcum"
+}, {
+    "_id": "25731",
+    "type": "PAC",
+    "name": "Clean Sweep PAC"
+}, {
+    "_id": "25766",
+    "type": "PAC",
+    "name": "Good And Ethical Leadership PAC"
+}, {
+    "_id": "25033",
+    "type": "PAC",
+    "name": "Storming The State House Political Action Committee"
+}, {
+    "_id": "25680",
+    "type": "Candidate",
+    "name": "George Chuck Leonard Patterson Jr."
+}, {
+    "_id": "25759",
+    "type": "Candidate",
+    "name": "Christopher Scott Mcneil"
+}, {
+    "_id": "24901",
+    "type": "Candidate",
+    "name": "Bryan Mcdaniel Taylor"
+}, {
+    "_id": "25763",
+    "type": "Candidate",
+    "name": "Douglas L Neighbors Jr."
+}, {
+    "_id": "24971",
+    "type": "PAC",
+    "name": "Maxpac"
+}, {
+    "_id": "25724",
+    "type": "Candidate",
+    "name": "Sterling Josh Statom Sr."
+}, {
+    "_id": "25402",
+    "type": "Candidate",
+    "name": "Leigh Lachine"
+}, {
+    "_id": "25634",
+    "type": "Candidate",
+    "name": "Hugh M Dudley Jr."
+}, {
+    "_id": "25625",
+    "type": "Candidate",
+    "name": "Mary Kathy Peterson"
+}, {
+    "_id": "25767",
+    "type": "PAC",
+    "name": "The Innovation PAC"
+}, {
+    "_id": "25786",
+    "type": "Candidate",
+    "name": "Ronnie Reed"
+}, {
+    "_id": "25753",
+    "type": "PAC",
+    "name": "Calhoun County Democratic Executive Committee"
+}, {
+    "_id": "25043",
+    "type": "PAC",
+    "name": "Southern Strategy Group PAC"
+}, {
+    "_id": "25171",
+    "type": "PAC",
+    "name": "Republican Club Of Central Alabama Political Action Committee"
+}, {
+    "_id": "25115",
+    "type": "PAC",
+    "name": "May PAC"
+}, {
+    "_id": "25774",
+    "type": "PAC",
+    "name": "National Association Of Realtors Fund"
+}, {
+    "_id": "25179",
+    "type": "PAC",
+    "name": "Associated General Contractors - PAC"
+}, {
+    "_id": "25769",
+    "type": "PAC",
+    "name": "Dale County Political Action Committee"
+}, {
+    "_id": "25785",
+    "type": "PAC",
+    "name": "Southern States Bank PAC"
+}, {
+    "_id": "25311",
+    "type": "Candidate",
+    "name": "Michael Jason Gladden"
+}, {
+    "_id": "25758",
+    "type": "PAC",
+    "name": "Alabama Federation For Children PAC"
+}, {
+    "_id": "25178",
+    "type": "Candidate",
+    "name": "Stephen Sexton"
+}, {
+    "_id": "25235",
+    "type": "PAC",
+    "name": "Seapac"
+}, {
+    "_id": "25779",
+    "type": "Candidate",
+    "name": "Bryan Earl Morgan"
+}, {
+    "_id": "25635",
+    "type": "Candidate",
+    "name": "Brian Keith Foley"
+}, {
+    "_id": "25734",
+    "type": "Candidate",
+    "name": "James William Bonner"
+}, {
+    "_id": "25090",
+    "type": "Candidate",
+    "name": "Carmen Bosch"
+}, {
+    "_id": "25359",
+    "type": "PAC",
+    "name": "Political Animal PAC"
+}, {
+    "_id": "25683",
+    "type": "Candidate",
+    "name": "Melvin Hasting"
+}, {
+    "_id": "25768",
+    "type": "PAC",
+    "name": "Alabama Leadership Now"
+}, {
+    "_id": "25761",
+    "type": "Candidate",
+    "name": "Curtis Harvey"
+}, {
+    "_id": "25669",
+    "type": "Candidate",
+    "name": "John D. James"
+}, {
+    "_id": "25778",
+    "type": "Candidate",
+    "name": "April Lancaster Logan-Russell"
+}, {
+    "_id": "25065",
+    "type": "PAC",
+    "name": "Mpac"
+}, {
+    "_id": "25776",
+    "type": "PAC",
+    "name": "Citizens For A Chilton County Hospital"
+}, {
+    "_id": "25549",
+    "type": "Candidate",
+    "name": "Monica Angelisa Swiger"
+}, {
+    "_id": "25590",
+    "type": "Candidate",
+    "name": "Henry A White"
+}, {
+    "_id": "24912",
+    "type": "PAC",
+    "name": "Alabama Engineers PAC"
+}, {
+    "_id": "25380",
+    "type": "PAC",
+    "name": "Csg PAC"
+}, {
+    "_id": "25091",
+    "type": "PAC",
+    "name": "Republican State Leadership Committee - Individual Donors Account"
+}, {
+    "_id": "25283",
+    "type": "Candidate",
+    "name": "Johnny Hardwick"
+}, {
+    "_id": "25131",
+    "type": "PAC",
+    "name": "Eagle PAC"
+}, {
+    "_id": "25444",
+    "type": "PAC",
+    "name": "Vision PAC"
+}, {
+    "_id": "24954",
+    "type": "PAC",
+    "name": "First Financial Bank PAC"
+}, {
+    "_id": "25793",
+    "type": "Candidate",
+    "name": "Susan Elaine Smith"
+}, {
+    "_id": "25757",
+    "type": "Candidate",
+    "name": "James Berry Shannon Jr."
+}, {
+    "_id": "25274",
+    "type": "PAC",
+    "name": "Fairness PAC, Inc."
+}, {
+    "_id": "24908",
+    "type": "PAC",
+    "name": "Acpa-Al Political Action Committee"
+}, {
+    "_id": "25116",
+    "type": "PAC",
+    "name": "Conservative Action Fund-Alabama State PAC"
+}, {
+    "_id": "25113",
+    "type": "PAC",
+    "name": "G PAC"
+}, {
+    "_id": "24988",
+    "type": "PAC",
+    "name": "Elder PAC"
+}, {
+    "_id": "25306",
+    "type": "PAC",
+    "name": "H.I.S.PAC"
+}, {
+    "_id": "24959",
+    "type": "PAC",
+    "name": "Stay"
+}, {
+    "_id": "24975",
+    "type": "PAC",
+    "name": "Faxpac"
+}, {
+    "_id": "24972",
+    "type": "PAC",
+    "name": "Legpac"
+}, {
+    "_id": "24969",
+    "type": "PAC",
+    "name": "Savepac"
+}, {
+    "_id": "25624",
+    "type": "Candidate",
+    "name": "Rodger Dale Peterson"
+}, {
+    "_id": "25775",
+    "type": "PAC",
+    "name": "Baker Donelson PAC"
+}, {
+    "_id": "25798",
+    "type": "PAC",
+    "name": "Alabama Consumer Finance Association Political Action Committee"
+}, {
+    "_id": "24935",
+    "type": "PAC",
+    "name": "Alabama Trooper PAC"
+}, {
+    "_id": "25791",
+    "type": "PAC",
+    "name": "Coastal PAC"
+}, {
+    "_id": "25800",
+    "type": "Candidate",
+    "name": "John Anthony Savage"
+}, {
+    "_id": "25799",
+    "type": "PAC",
+    "name": "River PAC"
+}, {
+    "_id": "25805",
+    "type": "Candidate",
+    "name": "Louise Unita Alexander"
+}, {
+    "_id": "25781",
+    "type": "Candidate",
+    "name": "Tonta Draper"
+}, {
+    "_id": "25790",
+    "type": "Candidate",
+    "name": "Angela Lareese Fears"
+}, {
+    "_id": "25810",
+    "type": "PAC",
+    "name": "Marion County Republican Executive Committee"
+}, {
+    "_id": "25770",
+    "type": "Candidate",
+    "name": "Brian Douglas Brooks"
+}, {
+    "_id": "24904",
+    "type": "PAC",
+    "name": "Backing Alabama Conservatives Political Action Committee"
+}, {
+    "_id": "25811",
+    "type": "Candidate",
+    "name": "Bryan Bennett"
+}, {
+    "_id": "24889",
+    "type": "PAC",
+    "name": "South Alabamians For Good Government"
+}, {
+    "_id": "25809",
+    "type": "Candidate",
+    "name": "John J Letson"
+}, {
+    "_id": "25477",
+    "type": "Candidate",
+    "name": "Eugene Reese"
+}, {
+    "_id": "25267",
+    "type": "PAC",
+    "name": "Alabama Automotive Aftermarket Committee For Free Enterprise"
+}, {
+    "_id": "25185",
+    "type": "Candidate",
+    "name": "Charlotte Borden Meadows"
+}, {
+    "_id": "25391",
+    "type": "Candidate",
+    "name": "Jeshua D Screws"
+}, {
+    "_id": "25298",
+    "type": "Candidate",
+    "name": "Scott Beason"
+}, {
+    "_id": "25355",
+    "type": "Candidate",
+    "name": "Frank Bertarelli"
+}, {
+    "_id": "24981",
+    "type": "PAC",
+    "name": "Creola Opportunity Association PAC"
+}, {
+    "_id": "25349",
+    "type": "PAC",
+    "name": "Dekalb County Republican Party"
+}, {
+    "_id": "25362",
+    "type": "PAC",
+    "name": "Westpac"
+}, {
+    "_id": "25424",
+    "type": "Candidate",
+    "name": "John Wayne Young"
+}, {
+    "_id": "25305",
+    "type": "Candidate",
+    "name": "Susan B Hightower"
+}, {
+    "_id": "25175",
+    "type": "Candidate",
+    "name": "Dickie Drake"
+}, {
+    "_id": "25447",
+    "type": "PAC",
+    "name": "The Committee For Good Government"
+}, {
+    "_id": "25044",
+    "type": "PAC",
+    "name": "Capitol Resources PAC"
+}, {
+    "_id": "25564",
+    "type": "PAC",
+    "name": "Anniston Fire Fighters Association PAC"
+}, {
+    "_id": "25516",
+    "type": "Candidate",
+    "name": "James Fletcher Hughey IIi"
+}, {
+    "_id": "25111",
+    "type": "PAC",
+    "name": "Al Affordable Housing PAC"
+}, {
+    "_id": "24991",
+    "type": "PAC",
+    "name": "Future PAC"
+}, {
+    "_id": "25200",
+    "type": "PAC",
+    "name": "Public Affairs Strategies PAC"
+}, {
+    "_id": "24989",
+    "type": "PAC",
+    "name": "Secure PAC"
+}, {
+    "_id": "25531",
+    "type": "Candidate",
+    "name": "Schuyler H. Richardson IIi"
+}, {
+    "_id": "25479",
+    "type": "Candidate",
+    "name": "Tommy Elias Bryan"
+}, {
+    "_id": "25478",
+    "type": "Candidate",
+    "name": "Jacquelyn Lyn Stuart"
+}, {
+    "_id": "25452",
+    "type": "Candidate",
+    "name": "Dale W. Strong"
+}, {
+    "_id": "25218",
+    "type": "PAC",
+    "name": "New Education Leadership"
+}, {
+    "_id": "25457",
+    "type": "Candidate",
+    "name": "Mitchell Scott Floyd"
+}, {
+    "_id": "25438",
+    "type": "Candidate",
+    "name": "Liles Clifton Burke"
+}, {
+    "_id": "25485",
+    "type": "Candidate",
+    "name": "Jamie Ison"
+}, {
+    "_id": "25219",
+    "type": "PAC",
+    "name": "Parents Involved In Education Revitalization"
+}, {
+    "_id": "24875",
+    "type": "PAC",
+    "name": "Wdpac"
+}, {
+    "_id": "25560",
+    "type": "Candidate",
+    "name": "William A. Shashy"
+}, {
+    "_id": "25309",
+    "type": "Candidate",
+    "name": "Jay Kenneth Love"
+}, {
+    "_id": "25476",
+    "type": "Candidate",
+    "name": "Brad Mendheim"
+}, {
+    "_id": "25410",
+    "type": "Candidate",
+    "name": "Jeffrey T Brock"
+}, {
+    "_id": "25149",
+    "type": "PAC",
+    "name": "Ala Biz PAC"
+}, {
+    "_id": "25150",
+    "type": "PAC",
+    "name": "Bes PAC"
+}, {
+    "_id": "25151",
+    "type": "PAC",
+    "name": "Highland PAC"
+}, {
+    "_id": "25152",
+    "type": "PAC",
+    "name": "Horizon PAC"
+}, {
+    "_id": "25490",
+    "type": "Candidate",
+    "name": "Jenifer C Holt"
+}, {
+    "_id": "25486",
+    "type": "Candidate",
+    "name": "Charles Bernard Langham"
+}, {
+    "_id": "25537",
+    "type": "Candidate",
+    "name": "James F Robinson Jr."
+}, {
+    "_id": "25022",
+    "type": "PAC",
+    "name": "House Democratic Caucus"
+}, {
+    "_id": "25520",
+    "type": "Candidate",
+    "name": "Chuck Malone"
+}, {
+    "_id": "25271",
+    "type": "PAC",
+    "name": "First Bank Of Jasper PAC"
+}, {
+    "_id": "25112",
+    "type": "Candidate",
+    "name": "John Henry England Jr."
+}, {
+    "_id": "25454",
+    "type": "Candidate",
+    "name": "James Glenn Goggans"
+}, {
+    "_id": "25198",
+    "type": "PAC",
+    "name": "Wallace, Jordan, Ratliff, Brandt"
+}, {
+    "_id": "25238",
+    "type": "Candidate",
+    "name": "Robert Lake Minor"
+}, {
+    "_id": "25484",
+    "type": "Candidate",
+    "name": "Bradley R. Byrne"
+}, {
+    "_id": "25098",
+    "type": "Candidate",
+    "name": "J Langford Floyd"
+}, {
+    "_id": "25472",
+    "type": "Candidate",
+    "name": "Gregory M Williams"
+}, {
+    "_id": "25089",
+    "type": "PAC",
+    "name": "Citizens Are Responsible For Education"
+}, {
+    "_id": "25333",
+    "type": "Candidate",
+    "name": "Howard Hawk"
+}, {
+    "_id": "25565",
+    "type": "Candidate",
+    "name": "Michael G Mike Graffeo"
+}, {
+    "_id": "25455",
+    "type": "Candidate",
+    "name": "Alan Mann"
+}, {
+    "_id": "24920",
+    "type": "PAC",
+    "name": "Elmore County Republican Executive Committee"
+}, {
+    "_id": "25535",
+    "type": "Candidate",
+    "name": "Joe Neal Howell"
+}, {
+    "_id": "25510",
+    "type": "Candidate",
+    "name": "Jim Barton"
+}, {
+    "_id": "25464",
+    "type": "Candidate",
+    "name": "Joseph Louis Boohaker"
+}, {
+    "_id": "25434",
+    "type": "PAC",
+    "name": "Cable PAC"
+}, {
+    "_id": "25604",
+    "type": "Candidate",
+    "name": "Franklin W Chandler Jr."
+}, {
+    "_id": "25591",
+    "type": "Candidate",
+    "name": "William Stanley Garner Jr."
+}, {
+    "_id": "25583",
+    "type": "Candidate",
+    "name": "Thomas Gene Farmer"
+}, {
+    "_id": "25566",
+    "type": "Candidate",
+    "name": "M. Ryan Rumsey"
+}, {
+    "_id": "25741",
+    "type": "Candidate",
+    "name": "Dylan Van Oliver"
+}, {
+    "_id": "25621",
+    "type": "Candidate",
+    "name": "S. Phillip Bahakel"
+}, {
+    "_id": "25392",
+    "type": "PAC",
+    "name": "Partnership PAC"
+}, {
+    "_id": "25633",
+    "type": "Candidate",
+    "name": "William Davis Lawley Jr."
+}, {
+    "_id": "25739",
+    "type": "Candidate",
+    "name": "Chad A Laqua"
+}, {
+    "_id": "25698",
+    "type": "Candidate",
+    "name": "Marc Keahey"
+}, {
+    "_id": "25678",
+    "type": "Candidate",
+    "name": "Terry Wayne Hendrix"
+}, {
+    "_id": "25545",
+    "type": "Candidate",
+    "name": "Joseph Mitchell"
+}, {
+    "_id": "25344",
+    "type": "PAC",
+    "name": "American Apparel, Inc. Readiness PAC"
+}, {
+    "_id": "25432",
+    "type": "PAC",
+    "name": "Cullman County Republican Women"
+}, {
+    "_id": "25719",
+    "type": "Candidate",
+    "name": "Edwin Eugene Price"
+}, {
+    "_id": "24990",
+    "type": "PAC",
+    "name": "Vote 98"
+}, {
+    "_id": "25296",
+    "type": "Candidate",
+    "name": "John B. Bush"
+}, {
+    "_id": "25405",
+    "type": "Candidate",
+    "name": "Robert L. Broussard"
+}, {
+    "_id": "25088",
+    "type": "PAC",
+    "name": "Alabama Young Democrats"
+}, {
+    "_id": "25317",
+    "type": "Candidate",
+    "name": "Shadrack Dwight Mcgill"
+}, {
+    "_id": "24961",
+    "type": "PAC",
+    "name": "C/Ts State PAC"
+}, {
+    "_id": "25138",
+    "type": "PAC",
+    "name": "Jen PAC"
+}, {
+    "_id": "25035",
+    "type": "PAC",
+    "name": "Alabama Civil Justice Reform Committee PAC"
+}, {
+    "_id": "25222",
+    "type": "PAC",
+    "name": "Ecodev PAC"
+}, {
+    "_id": "25523",
+    "type": "Candidate",
+    "name": "Christopher Michael Mcintyre"
+}, {
+    "_id": "25078",
+    "type": "PAC",
+    "name": "Alabama Bankers Association PAC"
+}, {
+    "_id": "24877",
+    "type": "PAC",
+    "name": "Casepac"
+}, {
+    "_id": "25740",
+    "type": "Candidate",
+    "name": "Randy Thomas Hester"
+}, {
+    "_id": "25136",
+    "type": "PAC",
+    "name": "Al PAC"
+}, {
+    "_id": "25137",
+    "type": "PAC",
+    "name": "Inpac"
+}, {
+    "_id": "25282",
+    "type": "PAC",
+    "name": "H.I.M. PAC"
+}, {
+    "_id": "25127",
+    "type": "PAC",
+    "name": "Penny PAC"
+}, {
+    "_id": "25544",
+    "type": "Candidate",
+    "name": "Arthur L Crawfod Sr."
+}, {
+    "_id": "25011",
+    "type": "Candidate",
+    "name": "Paul John Demarco"
+}, {
+    "_id": "25244",
+    "type": "PAC",
+    "name": "Alabama Utility Contractors Association PAC"
+}, {
+    "_id": "25321",
+    "type": "PAC",
+    "name": "North Alabama Economic Development PAC"
+}, {
+    "_id": "25796",
+    "type": "Candidate",
+    "name": "Guy Kelly"
+}, {
+    "_id": "25772",
+    "type": "PAC",
+    "name": "Raga Alabama PAC"
+}, {
+    "_id": "25242",
+    "type": "PAC",
+    "name": "Good Government Political Action Committee"
+}, {
+    "_id": "24955",
+    "type": "PAC",
+    "name": "Childrens PAC"
+}, {
+    "_id": "24956",
+    "type": "PAC",
+    "name": "Tough On Crime"
+}, {
+    "_id": "24957",
+    "type": "PAC",
+    "name": "Transportation, Economics, And Commerce"
+}, {
+    "_id": "25225",
+    "type": "PAC",
+    "name": "Alabez PAC"
+}, {
+    "_id": "24952",
+    "type": "PAC",
+    "name": "Citizens For Progressive Leadership PAC"
+}, {
+    "_id": "24945",
+    "type": "PAC",
+    "name": "Citizens For Quality Leadership PAC"
+}, {
+    "_id": "25797",
+    "type": "PAC",
+    "name": "Henry County Republican Party"
+}, {
+    "_id": "25536",
+    "type": "Candidate",
+    "name": "Steven D. King"
+}, {
+    "_id": "25223",
+    "type": "Candidate",
+    "name": "Oliver Wesley Long"
+}, {
+    "_id": "25304",
+    "type": "PAC",
+    "name": "Republican Women Of Coffee County"
+}, {
+    "_id": "25539",
+    "type": "Candidate",
+    "name": "Scott Parker Taylor"
+}, {
+    "_id": "25803",
+    "type": "PAC",
+    "name": "Waller PAC"
+}, {
+    "_id": "24948",
+    "type": "PAC",
+    "name": "Support For Economic Development PAC"
+}, {
+    "_id": "25437",
+    "type": "PAC",
+    "name": "Nationwide Alabama Political Participation Fund"
+}, {
+    "_id": "25384",
+    "type": "PAC",
+    "name": "Occupational Therapy Political Action Committee"
+}, {
+    "_id": "25443",
+    "type": "PAC",
+    "name": "Mdm27 PAC"
+}, {
+    "_id": "25439",
+    "type": "PAC",
+    "name": "Alavoice"
+}, {
+    "_id": "25261",
+    "type": "PAC",
+    "name": "Committee For Economic Development"
+}, {
+    "_id": "25016",
+    "type": "PAC",
+    "name": "The Arbor Committee"
+}, {
+    "_id": "24950",
+    "type": "PAC",
+    "name": "Friends For Good Leadership PAC"
+}, {
+    "_id": "25504",
+    "type": "Candidate",
+    "name": "Karen Kimbrell Hall"
+}, {
+    "_id": "25212",
+    "type": "PAC",
+    "name": "Sound Economy PAC"
+}, {
+    "_id": "24953",
+    "type": "PAC",
+    "name": "Citizens For Good Leadership PAC"
+}, {
+    "_id": "25526",
+    "type": "Candidate",
+    "name": "Braxton Paul Sherling"
+}, {
+    "_id": "25164",
+    "type": "PAC",
+    "name": "Fund For Alabama'S Children & Education"
+}, {
+    "_id": "25453",
+    "type": "Candidate",
+    "name": "Timothy Alton Evans"
+}, {
+    "_id": "25180",
+    "type": "PAC",
+    "name": "Alabama Christian Alliance"
+}, {
+    "_id": "25029",
+    "type": "PAC",
+    "name": "Environmental Campaign Fund"
+}, {
+    "_id": "25181",
+    "type": "PAC",
+    "name": "Familiesala"
+}, {
+    "_id": "24966",
+    "type": "PAC",
+    "name": "Trupac"
+}]
