@@ -15,6 +15,30 @@ body {
 	-webkit-overflow-scrolling: touch;
 }
 
+.containercard {
+    padding-top:5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.candimage {
+    background-color: #565656;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline;
+    margin: 5px;
+}
+.candname {
+    margin: 0, auto;
+    display: inline;
+}
+.candpos {
+    margin-top: 0;
+}
+    
+
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Roboto";
