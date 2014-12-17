@@ -35,9 +35,9 @@ bower install
 
 That's it! You should now have all dependencies necessary to run the frontend of Open Disclosure.
 
-### Preparing Your Environment
+## Preparing Your Environment
 
-#### Development
+### Development
 
 You can prepare a development environment by running this:
 
@@ -45,7 +45,7 @@ You can prepare a development environment by running this:
 grunt dev
 ```
 
-#### Production
+### Production
 
 You can prepare a production environment by running this:
 
@@ -60,3 +60,13 @@ You can clean your environment by running this:
 ```
 grunt clean
 ```
+
+## See Your Progress
+
+You'll want to run a webserver on localhost to serve the files. The simplest way to do this is to run this from the frontend directory:
+
+```
+python -m SimpleHTTPServer
+```
+
+Now you can go to 0.0.0.0:8000 in a browser.
