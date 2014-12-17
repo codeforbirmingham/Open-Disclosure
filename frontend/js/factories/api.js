@@ -88,7 +88,7 @@ var mockData = [
             cashContributions: 200000,
             expenditures: 100000,
             inKindContributions: 100000,
-            name: "Test Candidate 1"
+            name: "Test Candidate1"
         },
         {
             orgId: 2,
@@ -97,7 +97,7 @@ var mockData = [
             cashContributions: 200000,
             expenditures: 100000,
             inKindContributions: 100000,
-            name: "Test Candidate 2"
+            name: "Test Candidate2"
         },
         {
             orgId: 3,
@@ -106,7 +106,7 @@ var mockData = [
             cashContributions: 200000,
             expenditures: 100000,
             inKindContributions: 100000,
-            name: "Test Candidate 3"
+            name: "Test Candidate3"
         },
         {
             orgId: 4,
@@ -115,7 +115,7 @@ var mockData = [
             cashContributions: 200000,
             expenditures: 100000,
             inKindContributions: 100000,
-            name: "Test Candidate 4"
+            name: "Test Candidate4"
         },
         {
             orgId: 5,
@@ -124,7 +124,7 @@ var mockData = [
             cashContributions: 200000,
             expenditures: 100000,
             inKindContributions: 100000,
-            name: "Test Candidate 5"
+            name: "Test Candidate5"
         },
         {
             orgId: 6,
@@ -133,7 +133,7 @@ var mockData = [
             cashContributions: 200000,
             expenditures: 100000,
             inKindContributions: 100000,
-            name: "Test Candidate 6"
+            name: "Test Candidate6"
         },
         {
             orgId: 7,
@@ -142,7 +142,7 @@ var mockData = [
             cashContributions: 200000,
             expenditures: 100000,
             inKindContributions: 100000,
-            name: "Test Candidate 7"
+            name: "Test Candidate7"
         },
         {
             orgId: 8,
@@ -151,7 +151,7 @@ var mockData = [
             cashContributions: 200000,
             expenditures: 100000,
             inKindContributions: 100000,
-            name: "Test Candidate 8"
+            name: "Test Candidate8"
         },
         {
             orgId: 9,
@@ -160,7 +160,7 @@ var mockData = [
             cashContributions: 200000,
             expenditures: 100000,
             inKindContributions: 100000,
-            name: "Test Candidate 9"
+            name: "Test Candidate9"
         },
         {
             orgId: 10,
@@ -169,6 +169,6 @@ var mockData = [
             cashContributions: 200000,
             expenditures: 100000,
             inKindContributions: 100000,
-            name: "Test Candidate 10"
+            name: "Test Candidate10"
         },
     ];

@@ -29,6 +29,8 @@ body {
     border-radius: 50%;
     display: inline;
     margin: 5px;
+    color: #fff;
+    font-size: 14px;
 }
 .candname {
     margin: 0, auto;
