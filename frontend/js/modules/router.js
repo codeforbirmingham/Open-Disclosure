@@ -16,6 +16,11 @@ angular.module('openDisclosure')
                 controller: 'committeesCtrl',
                 controllerAs: 'committeesCtrl'
             })
+            .when('/contributors', {
+                templateUrl: 'partials/contributors.html',
+                controller: 'contributorsCtrl',
+                controllerAs: 'contributorsCtrl'
+            })
             .when('/stats', {
                 templateUrl: 'partials/stats.html',
                 controller: 'statsCtrl',

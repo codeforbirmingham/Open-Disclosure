@@ -3,3 +3,5 @@ angular.module('openDisclosure')
     
         $scope.candidates = Api.getCandidates(2014);
     }]);
+
+
