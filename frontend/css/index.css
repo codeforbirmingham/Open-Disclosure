@@ -112,3 +112,9 @@ h1, h2, h3, h4, h5, h6 {
 	background: #fff;
 	border-radius: 3px;
 }
+
+/* Fix dotted lines around link elements. */
+
+a {
+	outline: 0 !important;
+}
