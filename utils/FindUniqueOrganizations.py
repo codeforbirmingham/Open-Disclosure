@@ -38,7 +38,7 @@ def main():
             getOrgs(csv.reader(csvfile))
     # export the data in json format
     with open('../data/' + OUTFILE, 'w') as output:
-        json.dump(listOfOrgs, output) 
+        json.dump(listOfOrgs, output, sort_keys=True, indent=4, separators=(',', ': '))
 
 def getOrgs(records):
     # iterate over the records looking for new information

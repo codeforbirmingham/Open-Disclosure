@@ -79,7 +79,7 @@ def main():
                         break
             results[g[entity]['_id']] = newEntity
     with (open('../data/' + OUT_FILE, 'w')) as f:
-        json.dump(results, f)
+        json.dump(results, f, sort_keys=True, indent=4, separators=(',', ': '))
 
 if __name__=='__main__':
     main()

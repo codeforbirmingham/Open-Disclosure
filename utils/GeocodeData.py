@@ -92,7 +92,7 @@ def main():
                 break
     # export the data in json format
     with open('../data/' + OUTFILE, 'w') as output:
-        json.dump(allOrganizations, output) 
+        json.dump(allOrganizations, output, sort_keys=True, indent=4, separators=(',', ': '))
 
 # find the max value for the '_id' field in the existing data
 def findMaxID(allOrgs):
