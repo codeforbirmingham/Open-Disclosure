@@ -1,13 +1,18 @@
-<link href="css/candidates.css" rel="stylesheet">
 
 <div ng-controller="candidatesCtrl" class="container">
+
 <div class="row">
-<div ng-repeat="candidate in candidates" class="containercard col-xs-5 col-xs-offset-1">
+<div ng-repeat="candidate in candidates" class="containercard col-md-5 col-md-offset-1 col-xs-12 collapse-group">
+    <div class="row" style="padding-bottom: 1rem;">
+        <div class="col-xs-2">
+        <img src="http://governor.alabama.gov/assets/2013/06/Governor-Robert-Bentley.jpg" alt="bentley" class="img-circle img-responsive"></div>
+        <div class="col-xs-5"><h4 class="candname">{{candidate.name}}</h4><br><h6 class="candpos">{{candidate.position}}</h6></div>
+        <div class="col-xs-5"><h6 class="racepos">{{candidate.pollpos + '%'}}</h6></div>
+    </div>   
     <div class="row">
-    <p class="candimage col-xs-2"></p>
-    <h4 class="candname col-xs-8">{{candidate.name}}</h4><h6 class="candpos col-xs-8">{{candidate.position}}</h6>
-    <canvas class="candgraph"></canvas>
+        <button class="toggle pull-right" data-toggle="collapse" data-target="#viewdetails">More Info</button>
     </div>
 </div>
 </div>
 </div>
+

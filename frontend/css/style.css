@@ -20,8 +20,10 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: #fff;
-    border-radius: 5px;
+    background-color: #fff;
+    border-radius: 12px;
 }
+
 .candimage {
     background-color: #565656;
     width: 40px;
