@@ -68,15 +68,11 @@
     {
         "_id": "25266",
         "district": "House District 2",
-        "email": "lynn.greer@alhouse.gov",
         "name": "Greer, Bayless",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7576",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/greer_l.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd002.html"
+        "type": "Candidate"
     },
     {
         "_id": "25125",
@@ -110,16 +106,14 @@
     {
         "_id": "25231",
         "district": "House District 74",
-        "email": "dimitri.polizos@alhouse.gov",
-        "facebookID": "DimitriPolizos",
+        "email": "joe@hubbardcoleman.com",
         "name": "Hubbard, Joseph",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7600",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/Polizos_D.jpg",
+        "phone": "(334) 242-7707",
         "status": "Dissolved",
         "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd074.html"
+        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd073.html"
     },
     {
         "_id": "25204",
@@ -163,51 +157,38 @@
     {
         "_id": "25400",
         "district": "House District 46",
-        "email": "paul@pljpc.com",
         "name": "Barkley, Justin",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7667",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd046.html"
+        "type": "Candidate"
     },
     {
         "_id": "25168",
         "district": "Senate District 13",
-        "email": "gerald_dial@yahoo.com",
         "name": "Sprayberry, Tim",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7874",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/dial_g.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd013.html"
+        "type": "Candidate"
     },
     {
         "_id": "25595",
         "district": "House District 46",
-        "email": "paul@pljpc.com",
         "name": "Faulkner, David",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7667",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd046.html"
+        "type": "Candidate"
     },
     {
         "_id": "25341",
         "district": "Senate District 30",
-        "email": "bryan.taylor@alsenate.gov",
         "name": "Garner, Paul",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7883",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd030.html"
+        "type": "Candidate"
     },
     {
         "_id": "25345",
@@ -253,14 +234,11 @@
     {
         "_id": "25030",
         "district": "House District 44",
-        "email": "arthur.payne@alhouse.gov",
         "name": "Garrett, John",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7753",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd044.html"
+        "type": "Candidate"
     },
     {
         "_id": "25141",
@@ -370,16 +348,11 @@
     {
         "_id": "25105",
         "district": "House District 28",
-        "email": "craig.ford@alhouse.org",
-        "facebookID": "RepCraigFord",
         "name": "Ford, Jon",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7690",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/ford_c.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd028.html"
+        "type": "Candidate"
     },
     {
         "_id": "25172",
@@ -411,14 +384,11 @@
     {
         "_id": "25375",
         "district": "House District 38",
-        "email": "duwayne.bridges@alhouse.gov",
         "name": "Price, Randy",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7708",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd038.html"
+        "type": "Candidate"
     },
     {
         "_id": "25162",
@@ -538,14 +508,11 @@
     {
         "_id": "25433",
         "district": "Senate District 30",
-        "email": "bryan.taylor@alsenate.gov",
         "name": "Chambliss, Clyde",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7883",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd030.html"
+        "type": "Candidate"
     },
     {
         "_id": "25429",
@@ -580,15 +547,11 @@
     {
         "_id": "25294",
         "district": "House District 104",
-        "email": "margie.wilcox@alhouse.gov",
         "name": "Wilcox, Julia",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7600",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/wilcox_m.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd104.html"
+        "type": "Candidate"
     },
     {
         "_id": "25053",
@@ -601,26 +564,20 @@
     {
         "_id": "25280",
         "district": "House District 56",
-        "email": "lawrencemcadory@bham.rr.com",
         "name": "Foster, Darius",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7702",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd056.html"
+        "type": "Candidate"
     },
     {
         "_id": "25336",
         "district": "Senate District 1",
-        "email": "tammy@ironslawfirm.com",
         "name": "Seibert, Chris",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7888",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd001.html"
+        "type": "Candidate"
     },
     {
         "_id": "25269",
@@ -657,28 +614,20 @@
     {
         "_id": "25124",
         "district": "House District 61",
-        "email": "salanharper@gmail.com",
         "name": "Harper, Samuel",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7732",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/harper_a.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd061.html"
+        "type": "Candidate"
     },
     {
         "_id": "25312",
         "district": "House District 9",
-        "email": "ed.henry@alhouse.gov",
         "name": "Henry, William",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7736",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/henry_e.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd009.html"
+        "type": "Candidate"
     },
     {
         "_id": "24907",
@@ -741,39 +690,29 @@
     {
         "_id": "25300",
         "district": "Senate District 13",
-        "email": "gerald_dial@yahoo.com",
         "name": "Turner, James",
         "office": "State Senator",
         "party": "Democrat",
-        "phone": "(334) 242-7874",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/dial_g.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd013.html"
+        "type": "Candidate"
     },
     {
         "_id": "25435",
         "district": "House District 27",
-        "email": "weslong@mclo.org",
         "name": "Ainsworth, William",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7511",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd027.html"
+        "type": "Candidate"
     },
     {
         "_id": "25093",
         "district": "Senate District 11",
-        "email": "jerry.fielding@alsenate.gov",
         "name": "Mcclendon, Jim",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7898",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd011.html"
+        "type": "Candidate"
     },
     {
         "_id": "25146",
@@ -830,27 +769,20 @@
     {
         "_id": "25036",
         "district": "House District 40",
-        "email": "klbrown@cableone.net",
         "name": "Brown, Koven",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-1778",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/brown_kl.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd040.html"
+        "type": "Candidate"
     },
     {
         "_id": "25403",
         "district": "House District 50",
-        "email": "jimmcc@windstream.net",
         "name": "Hill, Jim",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7768",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd050.html"
+        "type": "Candidate"
     },
     {
         "_id": "25373",
@@ -924,15 +856,11 @@
     {
         "_id": "24925",
         "district": "House District 20",
-        "email": "howard.sanderford@alhouse.org",
         "name": "Sanderford, James",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-4368",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/sanderford_h.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd020.html"
+        "type": "Candidate"
     },
     {
         "_id": "25197",
@@ -1076,27 +1004,20 @@
     {
         "_id": "25425",
         "district": "House District 43",
-        "email": "marysue.mcclurkin@alhouse.gov",
         "name": "Mooney, Arnold",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7682",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd043.html"
+        "type": "Candidate"
     },
     {
         "_id": "25332",
         "district": "House District 104",
-        "email": "margie.wilcox@alhouse.gov",
         "name": "Carr, Stephen",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7600",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/wilcox_m.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd104.html"
+        "type": "Candidate"
     },
     {
         "_id": "25411",
@@ -1125,26 +1046,20 @@
     {
         "_id": "25418",
         "district": "House District 37",
-        "email": "rjlsr@teleclipse.net",
         "name": "Fincher, Robert",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7744",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd037.html"
+        "type": "Candidate"
     },
     {
         "_id": "25419",
         "district": "House District 43",
-        "email": "marysue.mcclurkin@alhouse.gov",
         "name": "Shaver, Amie Beth",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7682",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd043.html"
+        "type": "Candidate"
     },
     {
         "_id": "25074",
@@ -1393,15 +1308,11 @@
     {
         "_id": "25323",
         "district": "House District 51",
-        "email": "bsketa@aol.com",
         "name": "Treadaway, Benjamin",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7685",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/treadaway_a.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd051.html"
+        "type": "Candidate"
     },
     {
         "_id": "25057",
@@ -1419,29 +1330,20 @@
     {
         "_id": "25094",
         "district": "House District 47",
-        "email": "jack@jackwilliams.org",
         "name": "Wheeler, David",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7779",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/williams_j.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd047.html"
+        "type": "Candidate"
     },
     {
         "_id": "25401",
         "district": "House District 3",
-        "email": "marcel.black@alhouse.org",
-        "facebookID": "marcel.black.77",
         "name": "Joly, Fred",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7686",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/black_m.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd003.html"
+        "type": "Candidate"
     },
     {
         "_id": "25512",
@@ -1455,51 +1357,38 @@
     {
         "_id": "25377",
         "district": "Senate District 29",
-        "email": "harriannesmith@graceba.net",
         "name": "Mcclendon, Melinda",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7879",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/smith_ha.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd029.html"
+        "type": "Candidate"
     },
     {
         "_id": "25413",
         "district": "Senate District 22",
-        "email": "SenatorKeahey@gmail.com",
         "name": "D'Olive, Harry",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7843",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd022.html"
+        "type": "Candidate"
     },
     {
         "_id": "25313",
         "district": "House District 24",
-        "email": "greeson@yahoo.com",
         "name": "Ledbetter, Nathaniel",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7743",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd024.html"
+        "type": "Candidate"
     },
     {
         "_id": "25436",
         "district": "House District 12",
-        "email": "mbuttram@att.net",
         "name": "Harbison, Corey",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7775",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd012.html"
+        "type": "Candidate"
     },
     {
         "_id": "24900",
@@ -1570,14 +1459,11 @@
     {
         "_id": "25095",
         "district": "House District 53",
-        "email": "anthony.a.johonson@gmail.com",
         "name": "Daniels, Anthony",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7546",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd053.html"
+        "type": "Candidate"
     },
     {
         "_id": "25357",
@@ -1594,15 +1480,11 @@
     {
         "_id": "25284",
         "district": "Senate District 34",
-        "email": "kay.dierlam@alsenate.gov",
         "name": "Glover, Benjamin",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7886",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/glover_r.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd034.html"
+        "type": "Candidate"
     },
     {
         "_id": "25450",
@@ -1647,27 +1529,20 @@
     {
         "_id": "25214",
         "district": "House District 35",
-        "email": "stever.hurst@alhouse.gov",
         "name": "Hurst, Stephen (Steve)",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 353-9215",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/hurst_s.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd035.html"
+        "type": "Candidate"
     },
     {
         "_id": "25398",
         "district": "House District 46",
-        "email": "paul@pljpc.com",
         "name": "French, Stephen",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7667",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd046.html"
+        "type": "Candidate"
     },
     {
         "_id": "25163",
@@ -1712,15 +1587,11 @@
     {
         "_id": "25059",
         "district": "House District 78",
-        "email": "alvin.holmes@alhouse.gov",
         "name": "Adetunji, Tijuanna",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7706",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/holmes.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd078.html"
+        "type": "Candidate"
     },
     {
         "_id": "25026",
@@ -1922,40 +1793,29 @@
     {
         "_id": "25278",
         "district": "House District 28",
-        "email": "craig.ford@alhouse.org",
-        "facebookID": "RepCraigFord",
         "name": "Sherrod, Carl",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7690",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/ford_c.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd028.html"
+        "type": "Candidate"
     },
     {
         "_id": "25329",
         "district": "House District 38",
-        "email": "duwayne.bridges@alhouse.gov",
         "name": "Whorton, William",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7708",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd038.html"
+        "type": "Candidate"
     },
     {
         "_id": "25467",
         "district": "House District 101",
-        "email": "jamie.ison@alhouse.gov",
         "name": "Pringle, Chris",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7265",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd001.html"
+        "type": "Candidate"
     },
     {
         "_id": "25727",
@@ -1972,15 +1832,11 @@
     {
         "_id": "25246",
         "district": "House District 93",
-        "email": "steve.clouse@alhouse.gov",
         "name": "Marsden, Jennifer",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7717",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/clouse_s.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd093.html"
+        "type": "Candidate"
     },
     {
         "_id": "25489",
@@ -1994,14 +1850,11 @@
     {
         "_id": "25367",
         "district": "Senate District 30",
-        "email": "bryan.taylor@alsenate.gov",
         "name": "Josey, Suzelle",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7883",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd030.html"
+        "type": "Candidate"
     },
     {
         "_id": "25055",
@@ -2027,14 +1880,11 @@
     {
         "_id": "25351",
         "district": "Senate District 8",
-        "email": "shadrack.mcgill@alsenate.gov",
         "name": "Livingston, Steve",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7858",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd008.html"
+        "type": "Candidate"
     },
     {
         "_id": "25286",
@@ -2099,28 +1949,20 @@
     {
         "_id": "25385",
         "district": "House District 91",
-        "email": "barry@barrymooreindustries.com",
         "name": "Pipkin, Joshua",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7773",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/moore_b.jpg",
         "status": "Active",
-        "twitterID": "RepBarryMoore",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd091.html"
+        "type": "Candidate"
     },
     {
         "_id": "24997",
         "district": "House District 73",
-        "email": "joe@hubbardcoleman.com",
         "name": "Fridy, Matthew",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7707",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd073.html"
+        "type": "Candidate"
     },
     {
         "_id": "25422",
@@ -2147,29 +1989,20 @@
     {
         "_id": "25318",
         "district": "Senate District 12",
-        "email": "del.marsh@alsenate.gov",
-        "facebookID": "senatordelmarsh",
         "name": "Marsh, Del",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7877",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/marsh_d.jpeg",
         "status": "Active",
-        "twitterID": "SenatorDelMarsh",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd012.html"
+        "type": "Candidate"
     },
     {
         "_id": "25220",
         "district": "House District 62",
-        "email": "john@tuscaloosagop.org",
         "name": "Wingo, Rich",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7554",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd062.html"
+        "type": "Candidate"
     },
     {
         "_id": "25460",
@@ -2184,28 +2017,20 @@
     {
         "_id": "25017",
         "district": "Senate District 8",
-        "email": "shadrack.mcgill@alsenate.gov",
         "name": "Greeson, Todd",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7858",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd008.html"
+        "type": "Candidate"
     },
     {
         "_id": "25239",
         "district": "House District 91",
-        "email": "barry@barrymooreindustries.com",
         "name": "Moore, Felix",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7773",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/moore_b.jpg",
         "status": "Active",
-        "twitterID": "RepBarryMoore",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd091.html"
+        "type": "Candidate"
     },
     {
         "_id": "24906",
@@ -2258,14 +2083,11 @@
     {
         "_id": "25293",
         "district": "House District 44",
-        "email": "arthur.payne@alhouse.gov",
         "name": "Amari, John",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7753",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd044.html"
+        "type": "Candidate"
     },
     {
         "_id": "24998",
@@ -2382,42 +2204,29 @@
     {
         "_id": "25292",
         "district": "House District 31",
-        "email": "mike.holmes@alhouse.gov",
         "name": "Collier, Jimmy",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7600",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/Holmes_m.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd031.html"
+        "type": "Candidate"
     },
     {
         "_id": "25188",
         "district": "House District 94",
-        "email": "jfaust@co.baldwin.al.us",
         "name": "Faust, Teddy",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7699",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/faust_j.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd094.html"
+        "type": "Candidate"
     },
     {
         "_id": "25421",
         "district": "House District 72",
-        "email": "ralph.howard@alhouse.gov",
-        "facebookID": "ralph.howard.5203",
         "name": "Moore, Thomas",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7759",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/howard_r.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd072.html"
+        "type": "Candidate"
     },
     {
         "_id": "25010",
@@ -2470,14 +2279,11 @@
     {
         "_id": "25572",
         "district": "House District 53",
-        "email": "anthony.a.johonson@gmail.com",
         "name": "Lee, Arthur",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7546",
         "status": "Dissolved",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd053.html"
+        "type": "Candidate"
     },
     {
         "_id": "25652",
@@ -2583,16 +2389,11 @@
     {
         "_id": "25285",
         "district": "House District 85",
-        "email": "wlmdex@hotmail.com",
-        "facebookID": "dexter.grimsley",
         "name": "Grimsley, William",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7740",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/grimsley_d.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd085.html"
+        "type": "Candidate"
     },
     {
         "_id": "25165",
@@ -2667,14 +2468,11 @@
     {
         "_id": "25307",
         "district": "House District 43",
-        "email": "marysue.mcclurkin@alhouse.gov",
         "name": "Clark, Douglas",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7682",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd043.html"
+        "type": "Candidate"
     },
     {
         "_id": "25250",
@@ -2687,15 +2485,11 @@
     {
         "_id": "25505",
         "district": "Senate District 7",
-        "email": "paul.sanford@alsenate.gov",
         "name": "Blair, David",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7867",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/sanford_p.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd007.html"
+        "type": "Candidate"
     },
     {
         "_id": "25585",
@@ -2718,16 +2512,11 @@
     {
         "_id": "25580",
         "district": "House District 71",
-        "email": "artis.mccampbell@alhouse.gov",
-        "facebookID": "artis.mccampbell",
         "name": "Hodges, Wesley",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7747",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/mccampbell_aj.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd071.html"
+        "type": "Candidate"
     },
     {
         "_id": "25308",
@@ -2754,13 +2543,11 @@
     {
         "_id": "25363",
         "district": "House District 14",
-        "email": "rgbups@gmail.com",
         "name": "Wadsworth, Tim",
         "office": "State Representative",
         "party": "Republican",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd014.html"
+        "type": "Candidate"
     },
     {
         "_id": "25399",
@@ -2793,14 +2580,11 @@
     {
         "_id": "25471",
         "district": "House District 37",
-        "email": "rjlsr@teleclipse.net",
         "name": "Burns, William",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7744",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd037.html"
+        "type": "Candidate"
     },
     {
         "_id": "25227",
@@ -2864,15 +2648,11 @@
     {
         "_id": "25370",
         "district": "House District 16",
-        "email": "daniel_boman@thebomanfirm.com",
         "name": "South, Kyle",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7494",
         "status": "Active",
-        "twitterID": "RepBoman",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd016.html"
+        "type": "Candidate"
     },
     {
         "_id": "25507",
@@ -3014,11 +2794,8 @@
         "name": "Green, Robert",
         "office": "State Senator",
         "party": "Democrat",
-        "phone": "(334) 242-7860",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/sanders_h.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd023.html"
+        "type": "Candidate"
     },
     {
         "_id": "25492",
@@ -3033,14 +2810,11 @@
     {
         "_id": "25427",
         "district": "Senate District 22",
-        "email": "SenatorKeahey@gmail.com",
         "name": "Joyner, Danny",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7843",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd022.html"
+        "type": "Candidate"
     },
     {
         "_id": "24919",
@@ -3084,11 +2858,14 @@
     {
         "_id": "25584",
         "district": "Morgan County",
+        "email": "mcch@co.morgan.al.us",
         "name": "Scott, Amanda",
         "office": "Revenue Commissioner",
         "party": "Republican",
+        "phone": "(256) 351-4690",
         "status": "Active",
-        "type": "Candidate"
+        "type": "Candidate",
+        "url": "http://www.morgancountyrevenue.com/"
     },
     {
         "_id": "25581",
@@ -3102,15 +2879,11 @@
     {
         "_id": "25501",
         "district": "House District 40",
-        "email": "klbrown@cableone.net",
         "name": "Copland, Theodore",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-1778",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/brown_kl.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd040.html"
+        "type": "Candidate"
     },
     {
         "_id": "25499",
@@ -3167,15 +2940,11 @@
     {
         "_id": "25511",
         "district": "House District 30",
-        "email": "mack.butler@alhouse.gov",
         "name": "Mckay, Robert",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7446",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/Butler2_M.jpg",
         "status": "Dissolved",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd030.html"
+        "type": "Candidate"
     },
     {
         "_id": "25041",
@@ -3217,6 +2986,7 @@
         "name": "Benison, Jimmie",
         "office": "Sheriff",
         "party": "Democrat",
+        "phone": "(205) 372-3242",
         "status": "Active",
         "type": "Candidate"
     },
@@ -3237,11 +3007,15 @@
     {
         "_id": "25482",
         "district": "Mobile County",
+        "facebookID": "57193583190",
         "name": "Cochran, Samuel",
         "office": "Sheriff",
         "party": "Republican",
+        "phone": "(251) 574-2423",
         "status": "Active",
-        "type": "Candidate"
+        "twitterID": "team_sheriff",
+        "type": "Candidate",
+        "url": "http://www.mobileso.com/"
     },
     {
         "_id": "25440",
@@ -3255,17 +3029,11 @@
     {
         "_id": "25603",
         "district": "Senate District 35",
-        "email": "bill.hightower@alsenate.gov",
-        "facebookID": "314564311991547",
         "name": "Doolittle, Beau",
         "office": "State Senator",
         "party": "Democrat",
-        "phone": "(334) 242-7882",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/hightower_b.jpeg",
         "status": "Active",
-        "twitterID": "hightower_bill",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd035.html"
+        "type": "Candidate"
     },
     {
         "_id": "25173",
@@ -3280,14 +3048,11 @@
     {
         "_id": "25721",
         "district": "Senate District 11",
-        "email": "jerry.fielding@alsenate.gov",
         "name": "Crumpton, Ron",
         "office": "State Senator",
         "party": "Democrat",
-        "phone": "(334) 242-7898",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd011.html"
+        "type": "Candidate"
     },
     {
         "_id": "25548",
@@ -3301,11 +3066,14 @@
     {
         "_id": "25481",
         "district": "Morgan County",
+        "email": "jchunn@co.morgan.al.us",
         "name": "Chunn, Jeffrey",
         "office": "County Coroner",
         "party": "Republican",
+        "phone": "(256) 560-6084",
         "status": "Active",
-        "type": "Candidate"
+        "type": "Candidate",
+        "url": "http://www.co.morgan.al.us/coronerindex.html"
     },
     {
         "_id": "25199",
@@ -3448,14 +3216,11 @@
     {
         "_id": "25374",
         "district": "House District 53",
-        "email": "anthony.a.johonson@gmail.com",
         "name": "Casey, Willie",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7546",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd053.html"
+        "type": "Candidate"
     },
     {
         "_id": "25578",
@@ -3470,28 +3235,20 @@
     {
         "_id": "25665",
         "district": "House District 102",
-        "email": "chad.fincher@alhouse.gov",
         "name": "Clarkbanks, Anthony",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7576",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd002.html"
+        "type": "Candidate"
     },
     {
         "_id": "25273",
         "district": "House District 74",
-        "email": "dimitri.polizos@alhouse.gov",
-        "facebookID": "DimitriPolizos",
         "name": "Sellers, Heather",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7600",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/Polizos_D.jpg",
         "status": "Dissolved",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd074.html"
+        "type": "Candidate"
     },
     {
         "_id": "25713",
@@ -3552,15 +3309,11 @@
     {
         "_id": "25649",
         "district": "House District 35",
-        "email": "stever.hurst@alhouse.gov",
         "name": "Engle, Stephanie",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 353-9215",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/hurst_s.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd035.html"
+        "type": "Candidate"
     },
     {
         "_id": "25667",
@@ -3606,14 +3359,11 @@
     {
         "_id": "25361",
         "district": "House District 43",
-        "email": "marysue.mcclurkin@alhouse.gov",
         "name": "Ciamarra, Cheryl",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7682",
         "status": "Dissolved",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd043.html"
+        "type": "Candidate"
     },
     {
         "_id": "25626",
@@ -3627,14 +3377,11 @@
     {
         "_id": "25620",
         "district": "House District 103",
-        "email": "joseph.mitchell@alhouse.gov",
         "name": "Carmichael, Ralph",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7686",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd003.html"
+        "type": "Candidate"
     },
     {
         "_id": "25613",
@@ -3664,54 +3411,38 @@
     {
         "_id": "25602",
         "district": "House District 17",
-        "email": "mike.millican@alhouse.gov",
         "name": "Barnwell, Donald",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7534",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/millican_m.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd017.html"
+        "type": "Candidate"
     },
     {
         "_id": "25674",
         "district": "Senate District 12",
-        "email": "del.marsh@alsenate.gov",
-        "facebookID": "senatordelmarsh",
         "name": "Guede, Steven",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7877",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/marsh_d.jpeg",
         "status": "Active",
-        "twitterID": "SenatorDelMarsh",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd012.html"
+        "type": "Candidate"
     },
     {
         "_id": "25320",
         "district": "House District 62",
-        "email": "john@tuscaloosagop.org",
         "name": "Clements, James",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7554",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd062.html"
+        "type": "Candidate"
     },
     {
         "_id": "25562",
         "district": "Senate District 22",
-        "email": "SenatorKeahey@gmail.com",
         "name": "Albritton, Gregory",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7843",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd022.html"
+        "type": "Candidate"
     },
     {
         "_id": "25702",
@@ -3726,63 +3457,51 @@
     {
         "_id": "25598",
         "district": "Cullman County",
+        "email": "bwillingham@co.cullman.al.us",
+        "facebookID": "149958715073181",
         "name": "Willingham, Barry",
         "office": "Revenue Commissioner",
         "party": "Republican",
+        "phone": "(256) 775-4862",
         "status": "Active",
-        "type": "Candidate"
+        "type": "Candidate",
+        "url": "http://www.cullmanrevenuecommissioner.com/"
     },
     {
         "_id": "25699",
         "district": "House District 2",
-        "email": "lynn.greer@alhouse.gov",
         "name": "Betterton, Andrew",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7576",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/greer_l.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd002.html"
+        "type": "Candidate"
     },
     {
         "_id": "25728",
         "district": "House District 60",
-        "email": "3007j@att.net",
         "name": "Lee, Arthur",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7684",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/givan_j.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd060.html"
+        "type": "Candidate"
     },
     {
         "_id": "25027",
         "district": "House District 12",
-        "email": "mbuttram@att.net",
         "name": "Jackson, Roy",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7775",
         "status": "Dissolved",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd012.html"
+        "type": "Candidate"
     },
     {
         "_id": "25542",
         "district": "House District 85",
-        "email": "wlmdex@hotmail.com",
-        "facebookID": "dexter.grimsley",
         "name": "Lewis, Bobby",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7740",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/grimsley_d.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd085.html"
+        "type": "Candidate"
     },
     {
         "_id": "25015",
@@ -3792,15 +3511,11 @@
     {
         "_id": "25609",
         "district": "House District 80",
-        "email": "lesley.vance@alhouse.gov",
         "name": "Pugh, Tillman",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7687",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/vance_l.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd080.html"
+        "type": "Candidate"
     },
     {
         "_id": "25147",
@@ -3818,16 +3533,11 @@
     {
         "_id": "25612",
         "district": "Senate District 21",
-        "email": "gerald.allen@alsenate.gov",
         "name": "Poole, Victor",
         "office": "State Senator",
         "party": "Democrat",
-        "phone": "(334) 242-7889",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/allen_g.jpeg",
         "status": "Active",
-        "twitterID": "SenGeraldAllen",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd021.html"
+        "type": "Candidate"
     },
     {
         "_id": "25715",
@@ -3850,16 +3560,11 @@
     {
         "_id": "25679",
         "district": "House District 39",
-        "email": "richard.lindsey@alhouse.gov",
-        "facebookID": "richard.lindsey.397",
         "name": "Jones, Heath",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7713",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/lindsey_r.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd039.html"
+        "type": "Candidate"
     },
     {
         "_id": "25784",
@@ -3873,16 +3578,11 @@
     {
         "_id": "25771",
         "district": "House District 84",
-        "email": "berry.forte@alhouse.gov",
-        "facebookID": "berry.forte",
         "name": "Mcgilvray, Jerry",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7553",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/forte_b.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd084.html"
+        "type": "Candidate"
     },
     {
         "_id": "25693",
@@ -3910,14 +3610,11 @@
     {
         "_id": "25686",
         "district": "House District 90",
-        "email": "charles.newton@alhouse.gov",
         "name": "Sells, Chris",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-4460",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd090.html"
+        "type": "Candidate"
     },
     {
         "_id": "25691",
@@ -3968,90 +3665,65 @@
     {
         "_id": "25654",
         "district": "House District 98",
-        "email": "napoleon.bracy@alhouse.gov",
-        "facebookID": "napoleon.bracy",
         "name": "Biggs, Wayne",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7756",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/bracy_n.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd098.html"
+        "type": "Candidate"
     },
     {
         "_id": "25394",
         "district": "House District 44",
-        "email": "arthur.payne@alhouse.gov",
         "name": "Freeman, Joseph",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7753",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd044.html"
+        "type": "Candidate"
     },
     {
         "_id": "25722",
         "district": "House District 89",
-        "email": "alan.boothe@alhouse.gov",
         "name": "Williams, Joel",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7710",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/boothe_a.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd089.html"
+        "type": "Candidate"
     },
     {
         "_id": "25632",
         "district": "House District 69",
-        "email": "asthp20@yahoo.com",
         "name": "Lawrence, Kelvin",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7535",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd069.html"
+        "type": "Candidate"
     },
     {
         "_id": "25677",
         "district": "House District 33",
-        "email": "ronald.johnson@alhouse.gov",
         "name": "Zachero, James",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7777",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/johnson_r.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd033.html"
+        "type": "Candidate"
     },
     {
         "_id": "25668",
         "district": "House District 27",
-        "email": "weslong@mclo.org",
         "name": "Mclaughlin, Jeffrey",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7511",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd027.html"
+        "type": "Candidate"
     },
     {
         "_id": "25643",
         "district": "Senate District 17",
-        "email": "scott.beason@alsenate.gov",
         "name": "Ritch, Adam",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7794",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd017.html"
+        "type": "Candidate"
     },
     {
         "_id": "25736",
@@ -4066,15 +3738,11 @@
     {
         "_id": "25636",
         "district": "House District 59",
-        "email": "mamoor48@bellsouth.net",
         "name": "Barnes, William",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7608",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/moore_m.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd059.html"
+        "type": "Candidate"
     },
     {
         "_id": "25777",
@@ -4099,15 +3767,11 @@
     {
         "_id": "25617",
         "district": "House District 23",
-        "email": "john.robinson@alhouse.gov",
-        "facebookID": "profile.php",
         "name": "Hanes, James",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7728",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd023.html"
+        "type": "Candidate"
     },
     {
         "_id": "25688",
@@ -4140,15 +3804,11 @@
     {
         "_id": "25637",
         "district": "House District 8",
-        "email": "terri@terricollins.org",
         "name": "Cheatham, Rex",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7693",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/collins_t.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd008.html"
+        "type": "Candidate"
     },
     {
         "_id": "25663",
@@ -4172,28 +3832,20 @@
     {
         "_id": "25629",
         "district": "Senate District 10",
-        "email": "philw.williams@alsenate.gov",
         "name": "Means, Larry",
         "office": "State Senator",
         "party": "Democrat",
-        "phone": "(334) 242-7857",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/williams_p.jpg",
         "status": "Active",
-        "twitterID": "SenPhilWilliams",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd010.html"
+        "type": "Candidate"
     },
     {
         "_id": "25618",
         "district": "House District 102",
-        "email": "chad.fincher@alhouse.gov",
         "name": "Williams, John",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7576",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd002.html"
+        "type": "Candidate"
     },
     {
         "_id": "25681",
@@ -4207,27 +3859,20 @@
     {
         "_id": "25714",
         "district": "Senate District 17",
-        "email": "scott.beason@alsenate.gov",
         "name": "Shelnutt, Shay",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7794",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd017.html"
+        "type": "Candidate"
     },
     {
         "_id": "25703",
         "district": "House District 79",
-        "email": "mike.hubbard@alhouse.gov",
         "name": "Scott-Harris, Shirley",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7668",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/hubbard_m.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd079.html"
+        "type": "Candidate"
     },
     {
         "_id": "25019",
@@ -4246,14 +3891,11 @@
     {
         "_id": "25671",
         "district": "House District 103",
-        "email": "joseph.mitchell@alhouse.gov",
         "name": "Drummond, Barbara",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7686",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd003.html"
+        "type": "Candidate"
     },
     {
         "_id": "25186",
@@ -4270,76 +3912,56 @@
     {
         "_id": "25494",
         "district": "House District 37",
-        "email": "rjlsr@teleclipse.net",
         "name": "Whaley, Thomas",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7744",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd037.html"
+        "type": "Candidate"
     },
     {
         "_id": "25659",
         "district": "Senate District 17",
-        "email": "scott.beason@alsenate.gov",
         "name": "King, Brett",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7794",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd017.html"
+        "type": "Candidate"
     },
     {
         "_id": "25656",
         "district": "House District 43",
-        "email": "marysue.mcclurkin@alhouse.gov",
         "name": "Murphy, Donald",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7682",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd043.html"
+        "type": "Candidate"
     },
     {
         "_id": "25646",
         "district": "Senate District 1",
-        "email": "tammy@ironslawfirm.com",
         "name": "Curtis, Mike",
         "office": "State Senator",
         "party": "Democrat",
-        "phone": "(334) 242-7888",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd001.html"
+        "type": "Candidate"
     },
     {
         "_id": "25651",
         "district": "House District 83",
-        "email": "george.bandy@alhouse.gov",
-        "facebookID": "george.bandy.56",
         "name": "Head, Gary",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7721",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/bandy_g.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd083.html"
+        "type": "Candidate"
     },
     {
         "_id": "25756",
         "district": "House District 43",
-        "email": "marysue.mcclurkin@alhouse.gov",
         "name": "Bahakel, John",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7682",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd043.html"
+        "type": "Candidate"
     },
     {
         "_id": "25143",
@@ -4362,26 +3984,20 @@
     {
         "_id": "25687",
         "district": "House District 1",
-        "email": "greg.burdine@alhouse.gov",
         "name": "Pettus, Phillip",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7265",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd001.html"
+        "type": "Candidate"
     },
     {
         "_id": "25685",
         "district": "House District 43",
-        "email": "marysue.mcclurkin@alhouse.gov",
         "name": "Mcdonald, Regina",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7682",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd043.html"
+        "type": "Candidate"
     },
     {
         "_id": "25610",
@@ -4394,27 +4010,20 @@
     {
         "_id": "25039",
         "district": "House District 23",
-        "email": "john.robinson@alhouse.gov",
-        "facebookID": "profile.php",
         "name": "Green, Jim",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7728",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd023.html"
+        "type": "Candidate"
     },
     {
         "_id": "25695",
         "district": "House District 73",
-        "email": "joe@hubbardcoleman.com",
         "name": "Trautwein, Jody",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7707",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd073.html"
+        "type": "Candidate"
     },
     {
         "_id": "25108",
@@ -4424,15 +4033,11 @@
     {
         "_id": "25378",
         "district": "House District 21",
-        "email": "jimpattersonhd21@gmail.com",
         "name": "Jones, C.",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7531",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/patterson_j.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd021.html"
+        "type": "Candidate"
     },
     {
         "_id": "25716",
@@ -4455,39 +4060,29 @@
     {
         "_id": "25742",
         "district": "Senate District 16",
-        "email": "jabo.waggoner@alsenate.gov",
         "name": "Bell, Cynthia",
         "office": "State Senator",
         "party": "Democrat",
-        "phone": "(334) 242-7892",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/waggoner.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd016.html"
+        "type": "Candidate"
     },
     {
         "_id": "25666",
         "district": "House District 24",
-        "email": "greeson@yahoo.com",
         "name": "Beddingfield, David",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7743",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd024.html"
+        "type": "Candidate"
     },
     {
         "_id": "25605",
         "district": "Senate District 1",
-        "email": "tammy@ironslawfirm.com",
         "name": "Berryhill, Jonathan",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7888",
         "status": "Dissolved",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd001.html"
+        "type": "Candidate"
     },
     {
         "_id": "25488",
@@ -4501,26 +4096,20 @@
     {
         "_id": "25616",
         "district": "House District 13",
-        "email": "broberts1229@cs.com",
         "name": "Rowe, Connie",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7694",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd013.html"
+        "type": "Candidate"
     },
     {
         "_id": "25696",
         "district": "Senate District 30",
-        "email": "bryan.taylor@alsenate.gov",
         "name": "Harris, William",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7883",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd030.html"
+        "type": "Candidate"
     },
     {
         "_id": "25697",
@@ -4533,28 +4122,20 @@
     {
         "_id": "25586",
         "district": "House District 42",
-        "email": "representativewallace@gmail.com",
         "name": "Martin, James",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7772",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd042.html"
+        "type": "Candidate"
     },
     {
         "_id": "25379",
         "district": "House District 18",
-        "email": "johnny.morrow@alhouse.gov",
-        "facebookID": "johnnymackmorrow",
         "name": "Wallace, Gerald",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7698",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/morrow_j.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd018.html"
+        "type": "Candidate"
     },
     {
         "_id": "24895",
@@ -4564,15 +4145,11 @@
     {
         "_id": "25615",
         "district": "Senate District 4",
-        "email": "p_bussman@bellsouth.net",
         "name": "Whitlock, Bruce",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7855",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/bussman_p.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd004.html"
+        "type": "Candidate"
     },
     {
         "_id": "25639",
@@ -4587,15 +4164,11 @@
     {
         "_id": "25257",
         "district": "House District 35",
-        "email": "stever.hurst@alhouse.gov",
         "name": "Dean, Steve",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 353-9215",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/hurst_s.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd035.html"
+        "type": "Candidate"
     },
     {
         "_id": "25193",
@@ -4633,14 +4206,11 @@
     {
         "_id": "25673",
         "district": "Senate District 17",
-        "email": "scott.beason@alsenate.gov",
         "name": "Roberts, James",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7794",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd017.html"
+        "type": "Candidate"
     },
     {
         "_id": "25582",
@@ -4654,36 +4224,32 @@
     {
         "_id": "25532",
         "district": "Madison County",
+        "email": "jane.smith@alacourt.gov",
         "name": "Smith, Jane",
         "office": "Circuit Clerk",
         "party": "Republican",
+        "phone": "(256) 532-3380",
         "status": "Dissolved",
-        "type": "Candidate"
+        "type": "Candidate",
+        "url": "http://www.madisoncountycircuitclerk.org/"
     },
     {
         "_id": "25701",
         "district": "Senate District 22",
-        "email": "SenatorKeahey@gmail.com",
         "name": "Peacock, William",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7843",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd022.html"
+        "type": "Candidate"
     },
     {
         "_id": "25749",
         "district": "House District 54",
-        "email": "reptodd@gmail.com",
         "name": "Conaway, Lawrence",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7718",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/todd_p.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd054.html"
+        "type": "Candidate"
     },
     {
         "_id": "25388",
@@ -4726,14 +4292,11 @@
     {
         "_id": "25622",
         "district": "Senate District 1",
-        "email": "tammy@ironslawfirm.com",
         "name": "Melson, Timothy",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7888",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd001.html"
+        "type": "Candidate"
     },
     {
         "_id": "25521",
@@ -4761,16 +4324,11 @@
     {
         "_id": "25662",
         "district": "House District 99",
-        "email": "james.buskey@alhouse.gov",
-        "facebookID": "james.buskey.7",
         "name": "Haseeb, Henry",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7757",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/buskey_j.jpeg",
         "status": "Dissolved",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd099.html"
+        "type": "Candidate"
     },
     {
         "_id": "24978",
@@ -4804,28 +4362,20 @@
     {
         "_id": "25326",
         "district": "Senate District 8",
-        "email": "shadrack.mcgill@alsenate.gov",
         "name": "Clemmons, James",
         "office": "State Senator",
         "party": "Democrat",
-        "phone": "(334) 242-7858",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd008.html"
+        "type": "Candidate"
     },
     {
         "_id": "25327",
         "district": "House District 85",
-        "email": "wlmdex@hotmail.com",
-        "facebookID": "dexter.grimsley",
         "name": "Wilson, James",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7740",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/grimsley_d.jpg",
         "status": "Dissolved",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd085.html"
+        "type": "Candidate"
     },
     {
         "_id": "25718",
@@ -4897,53 +4447,38 @@
     {
         "_id": "25404",
         "district": "Senate District 30",
-        "email": "bryan.taylor@alsenate.gov",
         "name": "Freeman, Jared",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7883",
         "status": "Dissolved",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd030.html"
+        "type": "Candidate"
     },
     {
         "_id": "25660",
         "district": "House District 22",
-        "email": "waynejohnson259@yahoo.com",
         "name": "Stephens, Dennis",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7492",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd022.html"
+        "type": "Candidate"
     },
     {
         "_id": "25664",
         "district": "Senate District 27",
-        "email": "tom.whatley@alsenate.gov",
-        "facebookID": "259414953192",
         "name": "Carter, John",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7865",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/whatley_t.jpg",
         "status": "Active",
-        "twitterID": "SenTomWhatley",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd027.html"
+        "type": "Candidate"
     },
     {
         "_id": "25579",
         "district": "House District 103",
-        "email": "joseph.mitchell@alhouse.gov",
         "name": "Staten, Charlie",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7686",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd003.html"
+        "type": "Candidate"
     },
     {
         "_id": "25123",
@@ -4958,15 +4493,11 @@
     {
         "_id": "25414",
         "district": "Senate District 31",
-        "email": "jimmy.holley@alsenate.gov",
         "name": "Moore, William",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7845",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/holley_j.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd031.html"
+        "type": "Candidate"
     },
     {
         "_id": "25748",
@@ -4990,53 +4521,38 @@
     {
         "_id": "25555",
         "district": "House District 5",
-        "email": "white2431e@charter.net",
         "name": "Jackson, Bobby",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7741",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/williams_d.jpg",
         "status": "Dissolved",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd005.html"
+        "type": "Candidate"
     },
     {
         "_id": "25552",
         "district": "House District 22",
-        "email": "waynejohnson259@yahoo.com",
         "name": "Whorton, Ritchie",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7492",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd022.html"
+        "type": "Candidate"
     },
     {
         "_id": "25631",
         "district": "House District 26",
-        "email": "kerryrich@mclo.org",
         "name": "Fletcher, Ginger",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7538",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/rich_k.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd026.html"
+        "type": "Candidate"
     },
     {
         "_id": "25788",
         "district": "Senate District 13",
-        "email": "gerald_dial@yahoo.com",
         "name": "Fuller, Bill",
         "office": "State Senator",
         "party": "Independent",
-        "phone": "(334) 242-7874",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/dial_g.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd013.html"
+        "type": "Candidate"
     },
     {
         "_id": "25102",
@@ -5193,26 +4709,20 @@
     {
         "_id": "25661",
         "district": "Senate District 17",
-        "email": "scott.beason@alsenate.gov",
         "name": "Gear, Gayle",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7794",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd017.html"
+        "type": "Candidate"
     },
     {
         "_id": "25670",
         "district": "Senate District 17",
-        "email": "scott.beason@alsenate.gov",
         "name": "Murphree, Jim",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7794",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd017.html"
+        "type": "Candidate"
     },
     {
         "_id": "25746",
@@ -5226,14 +4736,11 @@
     {
         "_id": "25645",
         "district": "Senate District 17",
-        "email": "scott.beason@alsenate.gov",
         "name": "Cochran, Richard",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7794",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd017.html"
+        "type": "Candidate"
     },
     {
         "_id": "24983",
@@ -5296,14 +4803,11 @@
     {
         "_id": "25648",
         "district": "House District 101",
-        "email": "jamie.ison@alhouse.gov",
         "name": "Hembree, Walter",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7265",
         "status": "Dissolved",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd001.html"
+        "type": "Candidate"
     },
     {
         "_id": "25606",
@@ -5318,17 +4822,11 @@
     {
         "_id": "25608",
         "district": "Senate District 12",
-        "email": "del.marsh@alsenate.gov",
-        "facebookID": "senatordelmarsh",
         "name": "Stewart, William",
         "office": "State Senator",
         "party": "Democrat",
-        "phone": "(334) 242-7877",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/marsh_d.jpeg",
         "status": "Active",
-        "twitterID": "SenatorDelMarsh",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd012.html"
+        "type": "Candidate"
     },
     {
         "_id": "25158",
@@ -5356,29 +4854,20 @@
     {
         "_id": "25655",
         "district": "House District 90",
-        "email": "charles.newton@alhouse.gov",
         "name": "Hickman, Walton",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-4460",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd090.html"
+        "type": "Candidate"
     },
     {
         "_id": "25509",
         "district": "Senate District 35",
-        "email": "bill.hightower@alsenate.gov",
-        "facebookID": "314564311991547",
         "name": "Barton, Jim",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7882",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/hightower_b.jpeg",
         "status": "Active",
-        "twitterID": "hightower_bill",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd035.html"
+        "type": "Candidate"
     },
     {
         "_id": "25330",
@@ -5388,14 +4877,11 @@
     {
         "_id": "25744",
         "district": "Senate District 6",
-        "email": "senbedford@aol.com",
         "name": "Stutts, Larry",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7862",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd006.html"
+        "type": "Candidate"
     },
     {
         "_id": "25711",
@@ -5435,28 +4921,20 @@
     {
         "_id": "25500",
         "district": "House District 98",
-        "email": "napoleon.bracy@alhouse.gov",
-        "facebookID": "napoleon.bracy",
         "name": "Flott, Darren",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7756",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/bracy_n.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd098.html"
+        "type": "Candidate"
     },
     {
         "_id": "25139",
         "district": "House District 24",
-        "email": "greeson@yahoo.com",
         "name": "Hodges, Billy",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7743",
         "status": "Dissolved",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd024.html"
+        "type": "Candidate"
     },
     {
         "_id": "25692",
@@ -5470,27 +4948,20 @@
     {
         "_id": "25729",
         "district": "House District 79",
-        "email": "mike.hubbard@alhouse.gov",
         "name": "Toomer, Fred",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7668",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/hubbard_m.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd079.html"
+        "type": "Candidate"
     },
     {
         "_id": "25474",
         "district": "House District 46",
-        "email": "paul@pljpc.com",
         "name": "Blackmore-Jenkins, Pamela",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7667",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd046.html"
+        "type": "Candidate"
     },
     {
         "_id": "25480",
@@ -5513,6 +4984,7 @@
         "name": "Bell, Jimmy",
         "office": "Revenue Commissioner",
         "party": "Democrat",
+        "phone": "(251) 578-7019",
         "status": "Active",
         "type": "Candidate"
     },
@@ -5534,15 +5006,11 @@
     {
         "_id": "25760",
         "district": "Senate District 4",
-        "email": "p_bussman@bellsouth.net",
         "name": "Mancuso, Angelo",
         "office": "State Senator",
         "party": "Democrat",
-        "phone": "(334) 242-7855",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/bussman_p.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd004.html"
+        "type": "Candidate"
     },
     {
         "_id": "25316",
@@ -5557,41 +5025,29 @@
     {
         "_id": "25725",
         "district": "House District 52",
-        "email": "yke@cec.conteduc.uab.edu",
         "name": "Sellers, Patrick",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7761",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/rogers_j.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd052.html"
+        "type": "Candidate"
     },
     {
         "_id": "25573",
         "district": "House District 16",
-        "email": "daniel_boman@thebomanfirm.com",
         "name": "Humphryes, Bobby",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7494",
         "status": "Active",
-        "twitterID": "RepBoman",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd016.html"
+        "type": "Candidate"
     },
     {
         "_id": "25773",
         "district": "Senate District 2",
-        "email": "bill.holtzclaw@alsenate.gov",
         "name": "Barry, George",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7854",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/holtzclaw_b.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd002.html"
+        "type": "Candidate"
     },
     {
         "_id": "25738",
@@ -5629,15 +5085,11 @@
     {
         "_id": "25619",
         "district": "Senate District 7",
-        "email": "paul.sanford@alsenate.gov",
         "name": "Howie, Mitchell",
         "office": "State Senator",
         "party": "Democrat",
-        "phone": "(334) 242-7867",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/sanford_p.jpeg",
         "status": "Dissolved",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd007.html"
+        "type": "Candidate"
     },
     {
         "_id": "25764",
@@ -5656,15 +5108,11 @@
     {
         "_id": "25611",
         "district": "House District 80",
-        "email": "lesley.vance@alhouse.gov",
         "name": "Balkcum, Alex",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7687",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/vance_l.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd080.html"
+        "type": "Candidate"
     },
     {
         "_id": "25731",
@@ -5693,14 +5141,11 @@
     {
         "_id": "25759",
         "district": "House District 102",
-        "email": "chad.fincher@alhouse.gov",
         "name": "Mcneil, Christopher",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7576",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd002.html"
+        "type": "Candidate"
     },
     {
         "_id": "24901",
@@ -5731,41 +5176,29 @@
     {
         "_id": "25724",
         "district": "House District 1",
-        "email": "greg.burdine@alhouse.gov",
         "name": "Statom, Sterling",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7265",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd001.html"
+        "type": "Candidate"
     },
     {
         "_id": "25402",
         "district": "Senate District 20",
-        "email": "linda.coleman@alsenate.gov",
-        "facebookID": "linda.f.coleman",
         "name": "Lachine, Leigh",
         "office": "State Senator",
         "party": "Independent",
-        "phone": "(334) 242-7864",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/coleman_l.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd020.html"
+        "type": "Candidate"
     },
     {
         "_id": "25634",
         "district": "House District 80",
-        "email": "lesley.vance@alhouse.gov",
         "name": "Dudley, Hugh",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7687",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/vance_l.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd080.html"
+        "type": "Candidate"
     },
     {
         "_id": "25625",
@@ -5784,16 +5217,11 @@
     {
         "_id": "25786",
         "district": "House District 83",
-        "email": "george.bandy@alhouse.gov",
-        "facebookID": "george.bandy.56",
         "name": "Reed, Ronnie",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7721",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/bandy_g.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd083.html"
+        "type": "Candidate"
     },
     {
         "_id": "25753",
@@ -5838,15 +5266,11 @@
     {
         "_id": "25311",
         "district": "House District 29",
-        "email": "clearimagesal@earthlink.net",
         "name": "Gladden, Michael",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 353-9032",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/nordgren_b.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd029.html"
+        "type": "Candidate"
     },
     {
         "_id": "25758",
@@ -5856,14 +5280,11 @@
     {
         "_id": "25178",
         "district": "Senate District 22",
-        "email": "SenatorKeahey@gmail.com",
         "name": "Sexton, Stephen",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7843",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd022.html"
+        "type": "Candidate"
     },
     {
         "_id": "25235",
@@ -5873,40 +5294,29 @@
     {
         "_id": "25779",
         "district": "Senate District 30",
-        "email": "bryan.taylor@alsenate.gov",
         "name": "Morgan, Bryan",
         "office": "State Senator",
         "party": "Independent",
-        "phone": "(334) 242-7883",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd030.html"
+        "type": "Candidate"
     },
     {
         "_id": "25635",
         "district": "House District 61",
-        "email": "salanharper@gmail.com",
         "name": "Foley, Brian",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7732",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/harper_a.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd061.html"
+        "type": "Candidate"
     },
     {
         "_id": "25734",
         "district": "House District 17",
-        "email": "mike.millican@alhouse.gov",
         "name": "Bonner, James",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7534",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/millican_m.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd017.html"
+        "type": "Candidate"
     },
     {
         "_id": "25090",
@@ -5925,15 +5335,11 @@
     {
         "_id": "25683",
         "district": "House District 9",
-        "email": "ed.henry@alhouse.gov",
         "name": "Hasting, Melvin",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7736",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/henry_e.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd009.html"
+        "type": "Candidate"
     },
     {
         "_id": "25768",
@@ -5991,15 +5397,11 @@
     {
         "_id": "25590",
         "district": "House District 5",
-        "email": "white2431e@charter.net",
         "name": "White, Henry",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7741",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/williams_d.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd005.html"
+        "type": "Candidate"
     },
     {
         "_id": "24912",
@@ -6044,14 +5446,11 @@
     {
         "_id": "25793",
         "district": "Senate District 22",
-        "email": "SenatorKeahey@gmail.com",
         "name": "Smith, Susan",
         "office": "State Senator",
         "party": "Democrat",
-        "phone": "(334) 242-7843",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd022.html"
+        "type": "Candidate"
     },
     {
         "_id": "25757",
@@ -6144,15 +5543,11 @@
     {
         "_id": "25800",
         "district": "Senate District 28",
-        "email": "billy.beasley@alsenate.gov",
         "name": "Savage, John",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7868",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/beasley_b.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd028.html"
+        "type": "Candidate"
     },
     {
         "_id": "25799",
@@ -6162,14 +5557,11 @@
     {
         "_id": "25805",
         "district": "House District 56",
-        "email": "lawrencemcadory@bham.rr.com",
         "name": "Alexander, Louise",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7702",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd056.html"
+        "type": "Candidate"
     },
     {
         "_id": "25781",
@@ -6183,16 +5575,11 @@
     {
         "_id": "25790",
         "district": "House District 32",
-        "email": "babs_131@att.net",
-        "facebookID": "repbarbara.boyd",
         "name": "Fears, Angela",
         "office": "State Representative",
         "party": "Independent",
-        "phone": "(334) 242-7692",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/boyd_b.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd032.html"
+        "type": "Candidate"
     },
     {
         "_id": "25810",
@@ -6217,15 +5604,11 @@
     {
         "_id": "25811",
         "district": "Senate District 7",
-        "email": "paul.sanford@alsenate.gov",
         "name": "Bennett, Bryan",
         "office": "State Senator",
         "party": "Democrat",
-        "phone": "(334) 242-7867",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/sanford_p.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd007.html"
+        "type": "Candidate"
     },
     {
         "_id": "24889",
@@ -6235,15 +5618,11 @@
     {
         "_id": "25809",
         "district": "House District 7",
-        "email": "kenjohnsonrep@gmail.com",
         "name": "Letson, John",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7754",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/johnson_k.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd007.html"
+        "type": "Candidate"
     },
     {
         "_id": "25477",
@@ -6263,29 +5642,20 @@
     {
         "_id": "25185",
         "district": "House District 74",
-        "email": "dimitri.polizos@alhouse.gov",
-        "facebookID": "DimitriPolizos",
         "name": "Meadows, Charlotte",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7600",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/Polizos_D.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd074.html"
+        "type": "Candidate"
     },
     {
         "_id": "25391",
         "district": "House District 31",
-        "email": "mike.holmes@alhouse.gov",
         "name": "Screws, Jeshua",
         "office": "State Representative",
         "party": "Independent",
-        "phone": "(334) 242-7600",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/Holmes_m.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd031.html"
+        "type": "Candidate"
     },
     {
         "_id": "25298",
@@ -6302,15 +5672,11 @@
     {
         "_id": "25355",
         "district": "House District 31",
-        "email": "mike.holmes@alhouse.gov",
         "name": "Bertarelli, Frank",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7600",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/Holmes_m.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd031.html"
+        "type": "Candidate"
     },
     {
         "_id": "24981",
@@ -6330,27 +5696,20 @@
     {
         "_id": "25424",
         "district": "House District 27",
-        "email": "weslong@mclo.org",
         "name": "Young, John",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7511",
         "status": "Dissolved",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd027.html"
+        "type": "Candidate"
     },
     {
         "_id": "25305",
         "district": "House District 104",
-        "email": "margie.wilcox@alhouse.gov",
         "name": "Hightower, Susan",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7600",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/wilcox_m.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd104.html"
+        "type": "Candidate"
     },
     {
         "_id": "25175",
@@ -6441,11 +5800,14 @@
     {
         "_id": "25452",
         "district": "Madison County",
+        "email": "strongalabama@att.net",
         "name": "Strong, Dale",
         "office": "County Commission Chair",
         "party": "Republican",
+        "phone": "(256) 532-3795",
         "status": "Active",
-        "type": "Candidate"
+        "type": "Candidate",
+        "url": "http://www.madisoncountyal.gov/about/county/"
     },
     {
         "_id": "25218",
@@ -6506,16 +5868,11 @@
     {
         "_id": "25309",
         "district": "House District 74",
-        "email": "dimitri.polizos@alhouse.gov",
-        "facebookID": "DimitriPolizos",
         "name": "Love, Jay",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7600",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/Polizos_D.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd074.html"
+        "type": "Candidate"
     },
     {
         "_id": "25476",
@@ -6721,15 +6078,11 @@
     {
         "_id": "25510",
         "district": "House District 104",
-        "email": "margie.wilcox@alhouse.gov",
         "name": "Barton, Jim",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7600",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/wilcox_m.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd104.html"
+        "type": "Candidate"
     },
     {
         "_id": "25464",
@@ -6748,16 +6101,11 @@
     {
         "_id": "25604",
         "district": "Senate District 21",
-        "email": "gerald.allen@alsenate.gov",
         "name": "Chandler, Franklin",
         "office": "State Senator",
         "party": "Republican",
-        "phone": "(334) 242-7889",
-        "photoURL": "http://www.legislature.state.al.us/graphics/senatepics/allen_g.jpeg",
         "status": "Active",
-        "twitterID": "SenGeraldAllen",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/senate/senators/senatebios/sd021.html"
+        "type": "Candidate"
     },
     {
         "_id": "25591",
@@ -6791,28 +6139,20 @@
     {
         "_id": "25741",
         "district": "House District 81",
-        "email": "tughd81@gmail.com",
         "name": "Oliver, Dylan",
         "office": "State Representative",
         "party": "Democrat",
-        "phone": "(334) 242-7219",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/tuggle_m.jpg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd081.html"
+        "type": "Candidate"
     },
     {
         "_id": "25621",
         "district": "House District 52",
-        "email": "yke@cec.conteduc.uab.edu",
         "name": "Bahakel, S.",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7761",
-        "photoURL": "http://www.legislature.state.al.us/graphics/housepics/rogers_j.jpeg",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd052.html"
+        "type": "Candidate"
     },
     {
         "_id": "25392",
@@ -7005,9 +6345,11 @@
     {
         "_id": "25544",
         "district": "Hale County",
+        "email": "tgalbreathhaleco@bellsouth.net",
         "name": "Crawfod, Arthur",
         "office": "Probate Judge",
         "party": "Democrat",
+        "phone": "(334) 624-8740",
         "status": "Active",
         "type": "Candidate"
     },
@@ -7036,14 +6378,11 @@
     {
         "_id": "25796",
         "district": "House District 37",
-        "email": "rjlsr@teleclipse.net",
         "name": "Kelly, Guy",
         "office": "State Representative",
         "party": "Independent",
-        "phone": "(334) 242-7744",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd037.html"
+        "type": "Candidate"
     },
     {
         "_id": "25772",
@@ -7103,14 +6442,11 @@
     {
         "_id": "25223",
         "district": "House District 27",
-        "email": "weslong@mclo.org",
         "name": "Long, Oliver",
         "office": "State Representative",
         "party": "Republican",
-        "phone": "(334) 242-7511",
         "status": "Active",
-        "type": "Candidate",
-        "url": "http://www.legislature.state.al.us/house/representatives/housebios/hd027.html"
+        "type": "Candidate"
     },
     {
         "_id": "25304",

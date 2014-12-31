@@ -45,8 +45,13 @@ def main():
     global allParties
     allParties = [] # all PACs and Candidates
     # pull the party data into memory
-    with open('../data/import/' + PARTYFILE) as datafile:
-        allParties = json.load(datafile)
+    try:
+        with open('../data/import/' + PARTYFILE) as datafile:
+            allParties = json.load(datafile)
+    except IOError:
+        print('>> Error: ' + PARTYFILE + ' not found.')
+        print('>> Perhaps you should run GeneratePartyCollection.py first?')
+        raise
     global allOCDIDs
     allOCDIDs = []
     # pull the OCD IDs into memory
@@ -95,7 +100,12 @@ def makeAPIRequest(ocdID):
         reply = allResponses[ocdID]
     else:
         url = BASE_URL + quote_plus(ocdID) + '?key=' + API_KEY 
-        response = urlopen(url)
+        try:
+            response = urlopen(url)
+        except:
+            print('ocdID: ' + ocdID)
+            print('URL: ' + url)
+            raise
         sleep(0.1) # go easy on their servers
         rawReply = response.read()
         reply = json.loads(rawReply.decode('utf-8'))
@@ -107,19 +117,28 @@ def makeAPIRequest(ocdID):
 
 # process the reply we received, looking for officials in our database
 def processReply(reply, ocdID):
+    # we're about to use a lot of 'duct tape' to try to make Google's
+    # data look more like our data
     try:
         offices = reply['offices']
     except KeyError:
        return False 
     divisionName = reply['divisions'][ocdID]['name']
+    if 'Alabama State Senate district' in divisionName or \
+        'Alabama State House district' in divisionName:
+        divisionName = divisionName[14:].title() # normalize
     for office in offices:
         officeName = office['name']
+        if 'AL State Senate District' in officeName:
+            officeName = 'State Senator' # normalize
+        elif 'AL State House District' in officeName:
+            officeName = 'State Representative' # normalize
         for officialIndex in office['officialIndices']: 
             official = reply['officials'][officialIndex]
-            # normalize the data, but don't fail when the data isn't there
             originalName = HumanName(official['name'])
             normalName = str(originalName.last) + ', ' + str(originalName.first)
             official['name'] = normalName # so we scrape the formatted version
+            # Don't fail when the data isn't there
             try:
                 originalParty = official['party']
                 normalParty = ('Democrat' if originalParty == 'Democratic' else originalParty)
@@ -143,6 +162,8 @@ def processReply(reply, ocdID):
                     # try to match on name, party, office, phone, email, and district
                     # I wonder if we should weight these by different amounts using coefficients?
                     matchingRatios = []
+                    # weight name similarities heavily b/c different people run for the same office
+                    matchingRatios.append(fuzz.ratio(party['name'], normalName))
                     matchingRatios.append(fuzz.ratio(party['name'], normalName))
                     if 'party' in party:
                         matchingRatios.append(fuzz.ratio(party['party'], normalParty))
@@ -156,7 +177,7 @@ def processReply(reply, ocdID):
                         matchingRatios.append(fuzz.ratio(party['district'], divisionName))
                     # take a simple average
                     matchProbability = mean(matchingRatios)
-                    if matchProbability > 85: # arbitrary minimum threshold
+                    if matchProbability > 90: # arbitrary minimum threshold
                         possibleMatches[party['_id']] = matchProbability
             if len(possibleMatches) == 0:
                 continue # to next official
