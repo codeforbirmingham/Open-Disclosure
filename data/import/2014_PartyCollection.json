@@ -643,11 +643,16 @@
     },
     {
         "_id": "24965",
+        "facebookID": "RobertBentley2010",
         "name": "Bentley, Robert",
         "office": "Governor",
         "party": "Republican",
+        "phone": "(334) 242-7100",
+        "photoURL": "http://governor.alabama.gov/assets/2013/08/Robert-Bentley.jpg",
         "status": "Active",
-        "type": "Candidate"
+        "twitterID": "GovernorBentley",
+        "type": "Candidate",
+        "url": "http://governor.alabama.gov/"
     },
     {
         "_id": "25124",
@@ -1181,11 +1186,16 @@
     },
     {
         "_id": "25118",
+        "facebookID": "KayIveyAL",
         "name": "Ivey, Kay",
         "office": "Lt. Governor",
         "party": "Republican",
+        "phone": "(334) 242-7900",
+        "photoURL": "http://ltgov.alabama.gov/images/KayIveyBio-new.jpg",
         "status": "Active",
-        "type": "Candidate"
+        "twitterID": "LtGovIvey",
+        "type": "Candidate",
+        "url": "http://ltgov.alabama.gov/"
     },
     {
         "_id": "25229",
@@ -1226,11 +1236,14 @@
     },
     {
         "_id": "25061",
+        "email": "john.mcmillan@agi.alabama.gov",
         "name": "Mcmillan, John",
         "office": "Commissioner Of Agriculture & Industries",
         "party": "Republican",
+        "phone": "(334) 240-7100",
         "status": "Active",
-        "type": "Candidate"
+        "type": "Candidate",
+        "url": "http://agi.alabama.gov/"
     },
     {
         "_id": "25189",
@@ -1490,11 +1503,14 @@
     },
     {
         "_id": "24900",
+        "facebookID": "188648971170155",
         "name": "Strange, Luther",
         "office": "Attorney General",
         "party": "Republican",
+        "phone": "(334) 242-7300",
         "status": "Active",
-        "type": "Candidate"
+        "type": "Candidate",
+        "url": "http://ago.alabama.gov/"
     },
     {
         "_id": "25295",
@@ -2405,11 +2421,15 @@
     },
     {
         "_id": "25010",
+        "email": "alatreas@treasury.alabama.gov",
+        "facebookID": "164017117006358",
         "name": "Boozer, Young",
         "office": "State Treasurer",
         "party": "Republican",
+        "phone": "(334) 242-7500",
         "status": "Active",
-        "type": "Candidate"
+        "type": "Candidate",
+        "url": "http://www.treasury.state.al.us/"
     },
     {
         "_id": "25140",
