@@ -3,24 +3,33 @@
 ###################################################################
 #
 # File: GenerateContributorCollection.py
-# Last Edit: 2014-12-31
+# Last Edit: 2015-01-01
 # Author: Matthew Leeds <mwl458@gmail.com>
 # Purpose: This script uses the Geocoding and ContributorLocations
 # json files to generate data matching the 'Contributor' collection
-# in the data model. It could be made more efficient but it gets
-# the job done.
+# in the data model. It uses ContribPayeeIDs.json to separate
+# contributors from payees. It could be made more efficient
+# and elegant but it gets the job done.
 #
 ###################################################################
 
 import json
 
+CONTRIBPAYEEIDS = '2014_ContribPayeeIDs.json'
 GEOCODING = '2014_Geocoding.json'
-CONTRIBLOCATIONS = '2014_ContributorLocations.json'
+CONTRIBLOCATIONS = '2014_ContributorAndPayeeLocations.json'
 OUTFILE = '2014_ContributorCollection.json'
 
 def main():
     global allContributors
     allContributors = [] # master list of Contributors
+    global contributorIDs
+    contributorIDs = [] # _id values for contributors
+    # load the contributor IDs
+    print('>> Loading IDs from ' + CONTRIBPAYEEIDS)
+    with open('../data/' + CONTRIBPAYEEIDS) as datafile:
+        allIDs = json.load(datafile)
+        contributorIDs = allIDs['ContributorIDs'] 
     # start with the output from GeocodeData.py
     print('>> Loading data from ' + GEOCODING + '.')
     with open('../data/' + GEOCODING) as datafile:
@@ -41,11 +50,12 @@ def loadContributors(geocodings):
     # iterate over each organization and add them to allContributors,
     # formatting according to the data model
     global allContributors
+    global contributorIDs
     numOrgs = 0
     for orgName in geocodings:
-        if len(orgName) > 0:
+        oldOrg = geocodings[orgName]
+        if oldOrg['_id'] in contributorIDs and len(orgName) > 0:
             numOrgs += 1
-            oldOrg = geocodings[orgName]
             newOrg = {}
             newOrg['name'] = orgName
             newOrg['_id'] = oldOrg['_id']
