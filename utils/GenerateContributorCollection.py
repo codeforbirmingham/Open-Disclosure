@@ -17,7 +17,7 @@ import json
 
 CONTRIBPAYEEIDS = '2014_ContribPayeeIDs.json'
 GEOCODING = '2014_Geocoding.json'
-CONTRIBLOCATIONS = '2014_ContributorAndPayeeLocations.json'
+CONTRIBPAYEELOCATIONS = '2014_ContributorAndPayeeLocations.json'
 OUTFILE = '2014_ContributorCollection.json'
 
 def main():
@@ -35,8 +35,8 @@ def main():
     with open('../data/' + GEOCODING) as datafile:
        loadContributors(json.load(datafile))
     # add the geographic data from LocateContributors.py
-    print('>> Loading data from ' + CONTRIBLOCATIONS + '.')
-    with open('../data/' + CONTRIBLOCATIONS) as datafile:
+    print('>> Loading data from ' + CONTRIBPAYEELOCATIONS + '.')
+    with open('../data/' + CONTRIBPAYEELOCATIONS) as datafile:
         addLocationData(json.load(datafile))    
     # id 1 was assigned to nameless contributors
     allContributors.append({'_id':1,'name':'NO NAME'})
