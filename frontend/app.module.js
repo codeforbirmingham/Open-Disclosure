@@ -1,7 +1,8 @@
 angular.module('openDisclosure', [
-  'ngRoute',
-  'config'
-  
+    'ngRoute',
+    'ui.bootstrap',
+    'config'
+
   ])
     .run(function ($rootScope, name, about, logo) {
 

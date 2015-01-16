@@ -8,7 +8,7 @@ module.exports = function (grunt) {
             "build/",
             "annotated/",
             "index.html",
-            "js/modules/config.js"
+            "config.js"
         ],
 
         ngAnnotate: {
@@ -33,12 +33,10 @@ module.exports = function (grunt) {
             },
             dist: {
                 src: [
-                    "libs/jquery/jquery.min.js",
-                    "libs/bootstrap/dist/js/bootstrap.min.js",
-                    "libs/angular/angular.min.js",
-                    "libs/angular-route/angular-route.min.js",
-                    "libs/leaflet/dist/leaflet.js",
-                    "libs/angular-leaflet-directive/dist/angular-leaflet-directive.min.js",
+                    "assets/libs/bootstrap/dist/js/bootstrap.min.js",
+                    "assets/libs/angular/angular.min.js",
+                    "assets/libs/angular-route/angular-route.min.js",
+                    "assets/libs/angular-leaflet-directive/dist/angular-leaflet-directive.min.js",
                     "annotated/js/app.js",
                     "annotated/js/controllers/*.js",
                     "annotated/js/directives/*.js",
@@ -71,7 +69,7 @@ module.exports = function (grunt) {
 
         ngconstant: {
             options: {
-                dest: 'js/modules/config.js',
+                dest: 'config.js',
                 name: 'config',
             },
             dist: {

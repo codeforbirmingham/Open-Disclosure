@@ -24,29 +24,9 @@
                         <a href="#contributors">Contributors</a>
                     </li>
                     <li>
-                        <a data-toggle="modal" data-target="#aboutModal">About</a>
+                        <a ng-click="open()">About</a>
                     </li>
                 </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- About Modal -->
-    <div class="modal fade" id="aboutModal" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">
-                        <span>&times;</span>
-                    </button>
-                    <h4 class="modal-title">About {{name}}</h4>
-                </div>
-                <div class="modal-body">
-                    {{about}}
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
             </div>
         </div>
     </div>

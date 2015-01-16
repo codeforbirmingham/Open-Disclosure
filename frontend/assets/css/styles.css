@@ -20,10 +20,8 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: #fff;
-    background-color: #fff;
-    border-radius: 12px;
+    border-radius: 5px;
 }
-
 .candimage {
     background-color: #565656;
     width: 40px;
@@ -113,10 +111,4 @@ h1, h2, h3, h4, h5, h6 {
   	box-shadow:0 1px 2px #aaa;
 	background: #fff;
 	border-radius: 3px;
-}
-
-/* Fix dotted lines around link elements. */
-
-a {
-	outline: 0 !important;
 }
