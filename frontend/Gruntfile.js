@@ -37,6 +37,7 @@ module.exports = function (grunt) {
                     "assets/libs/angular/angular.min.js",
                     "assets/libs/angular-route/angular-route.min.js",
                     "assets/libs/angular-leaflet-directive/dist/angular-leaflet-directive.min.js",
+                    "assets/libs/angular-bootstrap/ui-bootstrap-tpls.min.js",
                     "annotated/js/app.js",
                     "annotated/js/controllers/*.js",
                     "annotated/js/directives/*.js",
