@@ -11,7 +11,7 @@ angular.module('openDisclosure').factory('Api', function () {
     Api.getCandidates = function (year) {
         return mockData;
     };
-
+    
     //GET /api/:year/organizations/committees/
     Api.getCommittees = function (year) {
 
@@ -88,7 +88,8 @@ var mockData = [
             cashContributions: 200000,
             expenditures: 100000,
             inKindContributions: 100000,
-            name: "Test Candidate1"
+            name: "Richard Shelby",
+            poll: 86
         },
         {
             orgId: 2,
@@ -97,7 +98,8 @@ var mockData = [
             cashContributions: 200000,
             expenditures: 100000,
             inKindContributions: 100000,
-            name: "Test Candidate2"
+            name: "Robert Bentley",
+            poll: 92
         },
         {
             orgId: 3,
@@ -106,7 +108,8 @@ var mockData = [
             cashContributions: 200000,
             expenditures: 100000,
             inKindContributions: 100000,
-            name: "Test Candidate3"
+            name: "Jeff Sessions",
+            poll: 21
         },
         {
             orgId: 4,
@@ -115,7 +118,8 @@ var mockData = [
             cashContributions: 200000,
             expenditures: 100000,
             inKindContributions: 100000,
-            name: "Test Candidate4"
+            name: "Luther Strange",
+            poll: 65
         },
         {
             orgId: 5,
@@ -124,7 +128,8 @@ var mockData = [
             cashContributions: 200000,
             expenditures: 100000,
             inKindContributions: 100000,
-            name: "Test Candidate5"
+            name: "Jim Hubbard",
+            poll: 32
         },
         {
             orgId: 6,
@@ -133,7 +138,8 @@ var mockData = [
             cashContributions: 200000,
             expenditures: 100000,
             inKindContributions: 100000,
-            name: "Test Candidate6"
+            name: "Gary Palmner",
+            poll: 65
         },
         {
             orgId: 7,
@@ -142,7 +148,8 @@ var mockData = [
             cashContributions: 200000,
             expenditures: 100000,
             inKindContributions: 100000,
-            name: "Test Candidate7"
+            name: "Bob Reiley",
+            poll: 65
         },
         {
             orgId: 8,
@@ -151,7 +158,8 @@ var mockData = [
             cashContributions: 200000,
             expenditures: 100000,
             inKindContributions: 100000,
-            name: "Test Candidate8"
+            name: "George Wallace",
+            poll: 65
         },
         {
             orgId: 9,
@@ -160,15 +168,7 @@ var mockData = [
             cashContributions: 200000,
             expenditures: 100000,
             inKindContributions: 100000,
-            name: "Test Candidate9"
-        },
-        {
-            orgId: 10,
-            position: "My Position",
-            district: "My District",
-            cashContributions: 200000,
-            expenditures: 100000,
-            inKindContributions: 100000,
-            name: "Test Candidate10"
-        },
+            name: "Condoleeza Rice",
+            poll: 65
+        }
     ];
