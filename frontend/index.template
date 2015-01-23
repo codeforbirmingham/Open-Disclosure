@@ -9,12 +9,12 @@
 </head>
 
 <body>
-
+    <div class="container-fluid">
     <main-menu></main-menu>
 
     <div ng-view></div>
 
-    
+    </div>
 
     <script src="assets/libs/angular/angular.min.js"></script>
     <script src="assets/libs/angular-route/angular-route.min.js"></script>
