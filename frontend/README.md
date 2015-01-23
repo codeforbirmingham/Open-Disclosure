@@ -18,7 +18,7 @@ Installing Bower is super simple. Bower requires [node.js and npm](http://nodejs
 Install bower with npm like this:
 
 ```
-npm install
+npm install -g bower
 ```
 
 Once we're done installing Bower, we can pull in our dependencies!
