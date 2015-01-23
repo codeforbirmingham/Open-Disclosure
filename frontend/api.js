@@ -9,7 +9,12 @@ angular.module('openDisclosure').factory('Api', function () {
 
     //GET /api/:year/organizations/candidates/
     Api.getCandidates = function (year) {
-        return mockData;
+        // Add computed grossGain and pctSpent to mock data.
+        return mockData.map(function (candidate) {
+            candidate.grossGain = candidate.cashContributions + candidate.inKindContributions;
+            candidate.pctSpent = candidate.expenditures / candidate.grossGain * 100;
+            return candidate;
+        });
     };
     
     //GET /api/:year/organizations/committees/

@@ -11,7 +11,7 @@ In order for the application to work, we need to pull in the dependencies if we'
 
 Dependencies in our frontend are managed by [npm](https://www.npmjs.org/) and [Bower](http://bower.io).
 
-### Installing Bower and Grunt tools
+### Installing Bower
 
 Installing Bower is super simple. Bower requires [node.js and npm](http://nodejs.org).
 
@@ -34,29 +34,3 @@ bower install
 ```
 
 That's it! You should now have all dependencies necessary to run the frontend of Open Disclosure.
-
-### Preparing Your Environment
-
-#### Development
-
-You can prepare a development environment by running this:
-
-```
-grunt dev
-```
-
-#### Production
-
-You can prepare a production environment by running this:
-
-```
-grunt dist
-```
-
-### Cleaning
-
-You can clean your environment by running this:
-
-```
-grunt clean
-```
