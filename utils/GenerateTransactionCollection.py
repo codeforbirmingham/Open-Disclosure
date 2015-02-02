@@ -3,7 +3,7 @@
 ########################################################################
 #
 # File: GenerateTransactionCollection.py
-# Last Edit: 2015-01-22
+# Last Edit: 2015-02-02
 # Author: Matthew Leeds <mwl458@gmail.com>
 # Purpose: This script uses the four data files from alabamavotes.gov
 # and the Geocoding file produced by GeocodeData.py to generate a JSON 
@@ -62,7 +62,7 @@ def scrapeTransactions(records):
             thisTransaction['transaction_type'] = record[columnHeaders.index(record_type + 'Type')].strip()
             name = record[3] + ' ' + record[4] + ' ' + record[5] + ' ' + record[6]
             name = name.strip().title() # so organizations don't have trailing spaces and aren't ALL CAPS
-            thisTransaction['name'] = name
+            if len(name) > 0: thisTransaction['name'] = name
             # find their record in the geocoding file and get the _id
             try:
                 thisTransaction['contributor_id'] = str(allGeocodings[name]['_id'])
@@ -70,17 +70,22 @@ def scrapeTransactions(records):
                 thisTransaction['contributor_id'] = '1'
             thisTransaction['party_id'] = record[0]
             partyTypeCol = columnHeaders.index('CommitteeType')
+            if record[partyTypeCol] == 'Political Action Committee':
+                thisTransaction['party_type'] = 'PAC'
+            elif record[partyTypeCol] == 'Principal Campaign Committee':
+                thisTransaction['party_type'] = 'Candidate'
             thisTransaction['party_type'] = record[partyTypeCol]
             if len(record[partyTypeCol + 1].strip()) > 0:
-                thisTransaction['party_name'] = record[partyTypeCol + 1]
+                rawName = record[partyTypeCol + 1]
             else:
-                thisTransaction['party_name'] = record[partyTypeCol + 2]
+                rawName = record[partyTypeCol + 2]
+            thisTransaction['party_name'] = rawName.title().strip().replace('Pac','PAC').replace('"','').replace('Ii','II').replace('Iii','III')
             thisTransaction['amount'] = record[1]
             thisTransaction['filed_date'] = record[columnHeaders.index('FiledDate')]
             if record_type == 'Expenditure':
-                thisTransaction['explanation'] = record[11]
+                if len(record[11]) > 0: thisTransaction['explanation'] = record[11].lower()
+                if len(record[14]) > 0: thisTransaction['purpose'] = record[14].lower()
                 thisTransaction['transaction_id'] = record[12]
-                thisTransaction['purpose'] = record[14]
             else:
                 thisTransaction['transaction_id'] = record[11]
                 thisTransaction['source_type'] = record[14]
