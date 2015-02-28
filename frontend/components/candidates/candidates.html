@@ -1,42 +1,56 @@
-<div ng-controller="candidatesCtrl" class="jumbotron">
-    <div class="row-fluid headr">
-        <h1>Candidates</h1>
-            <h2> updated on {{lastUpdate}}</h2>
+<div ng-controller="candidatesCtrl">
+  <div class="row headr">
+    <h1>Candidates</h1>
+    <h2> updated on {{lastUpdate}}</h2>
+  </div>
+  <div class="row sort-order">
+    <h2>Sort By:</h2>
+    <div class="row">
+      <button class="btn btn-default" ng-repeat="param in searchParams">{{param}}</button>
     </div>
-    <div class="row sort-order">
-        <h2>Sort By:</h2>
-        <div class="row">
-            <button class="btn btn-default" ng-repeat="param in searchParams">{{param}}</button>
+  </div>
+  <div ng-repeat="candidate in candidates">
+    <div class="candcards panel panel-default col-lg-4 col-md-6 col-xs-12">
+      <h4 class="candname col-xs-8 pull-left">
+        <img class="candimage" ng-src="{{candidate.image}}" /> {{candidate.name}}</h4>
+      <h3 class="candstat col-xs-2 pull-right">{{candidate.poll}}%</h3>
+      <div class="row">
+        <h5 class="candpos col-xs-8">{{candidate.position}}</h5>
+      </div>
+      <div class="row" collapse="isCollapsed">
+        <table>
+          <tr>Recent Contributor</tr>
+        </table>
+      </div>
+      <div class="row">
+        <h4 class="pull-right">{{candidate.cashContributions + candidate.inKindContributions}} raised (1st)</h4>
+        <div class="progress col-xs-12">
+          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;">
+            <span class="sr-only"></span>
+          </div>
         </div>
-    </div>
-    <div ng-repeat="candidate in candidates">
-        <div class="candcards panel panel-default col-lg-4 col-md-6 col-xs-12">
-            <p class="candimage col-xs-3 pull-left"></p>
-            <h4 class="candname col-xs-6">{{candidate.name}}</h4>
-            <h3 class="candstat col-xs-2 pull-right">{{candidate.poll}}%</h3>
-            <div class="row">
-                <h5 class="candpos col-xs-8">{{candidate.position}}</h5>
-            </div>
-            <div class="row" collapse="isCollapsed">
-                <table>
-                    <tr>Recent Contributor</tr>
-                </table>
-            </div>
-            <div class="row">
-                <h4 class="pull-right">{{candidate.cashContributions + candidate.inKindContributions}} raised (1st)</h4>
-                <div class="progress col-xs-12">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;">
-                        <span class="sr-only"></span>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="row" collapse="isCollapsed">
+        <h3>recent contributors</h3>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <span class="badge">14</span>
+            Contributor
+          </li>
+        </ul>
+      </div>
 
-            <div class="row" collapse="isCollapsed">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque mattis vulputate. Morbi vestibulum nisi et ex gravida malesuada. Suspendisse iaculis eros ac elit blandit, non placerat purus dictum. Sed nec nibh nec nibh blandit sagittis vel ut mi. Sed mollis et augue ut aliquam.</p>
-            </div>
-            <div class="row">
-                <button class="pull-right btn-primary" ng-click="isCollapsed = !isCollapsed">More Info</button>
-            </div>
-        </div>
+      <div class="row" collapse="isCollapsed">
+        <img id="almap" src="assets/img/blankal.jpg" />
+      </div>
+      <div class="row">
+        <button class="pull-right btn-primary" ng-click="isCollapsed = !isCollapsed">More Info</button>
+      </div>
     </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <leaflet geojson="geojson"></leaflet>
 </div>
