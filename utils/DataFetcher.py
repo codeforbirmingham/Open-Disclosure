@@ -16,11 +16,11 @@ class DataFetcher:
         """
         self.config = configparser.ConfigParser()
         self.config.read(config_file)
-        self.destination_dir = self.config["FETCHER"]["destination_dir"]
-        self.chunk_size = int(self.config["FETCHER"]["chunk_size"])
-        self.base_url = self.config["FETCHER"]["base_url"]
+        self.destination_dir = self.config["DATA_FETCHER"]["destination_dir"]
+        self.chunk_size = int(self.config["DATA_FETCHER"]["chunk_size"])
+        self.base_url = self.config["DATA_FETCHER"]["base_url"]
         self.year = str(year)
-        self.files = [ '_'.join([self.year, file_name]) for file_name in self.config["FETCHER"]["file_names"].split(',')]
+        self.files = [ '_'.join([self.year, file_name]) for file_name in self.config["DATA_FETCHER"]["file_names"].split(',')]
 
 
     def fetch_files(self):
