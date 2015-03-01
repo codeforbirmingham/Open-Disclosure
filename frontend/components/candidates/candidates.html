@@ -9,8 +9,7 @@
       <button class="btn btn-default" ng-repeat="param in searchParams">{{param}}</button>
     </div>
   </div>
-  <div ng-repeat="candidate in candidates">
-    <div class="candcards panel panel-default col-lg-4 col-md-6 col-xs-12">
+  <div ng-repeat="candidate in candidates" class="candcards panel panel-default col-lg-4 col-md-6 col-xs-12">
       <h4 class="candname col-xs-8 pull-left">
         <img class="candimage" ng-src="{{candidate.image}}" /> {{candidate.name}}</h4>
       <h3 class="candstat col-xs-2 pull-right">{{candidate.poll}}%</h3>
@@ -44,17 +43,14 @@
         <img id="almap" src="assets/img/blankal.jpg" />
       </div>
       <div class="row">
-        <button class="pull-right btn-primary" ng-click="isCollapsed = !isCollapsed">More Info</button>
+        <button class="btn pull-right btn-primary" ng-click="isCollapsed = !isCollapsed">More Info</button>
       </div>
     </div>
-<<<<<<< HEAD
-  </div>
 </div>
 
 
 <div class="row">
   <leaflet geojson="geojson"></leaflet>
-=======
+
     <leaflet center="center" geojson="geojson" width="640" height="400"></leaflet>
->>>>>>> cffdb82b1a43713d2c89dc258a3479c0150235d6
 </div>
