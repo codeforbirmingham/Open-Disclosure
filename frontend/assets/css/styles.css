@@ -38,3 +38,8 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #212121;
     color: #a8a8a8;
 }
+
+div.angular-leaflet-map {
+    width: 100%;
+    height: 100%;
+}
