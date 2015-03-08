@@ -18,7 +18,7 @@ import json
 CONTRIBPAYEEIDS = '2014_ContribPayeeIDs.json'
 GEOCODING = '2014_Geocoding.json'
 CONTRIBPAYEELOCATIONS = '2014_ContributorAndPayeeLocations.json'
-OUTFILE = '2014_ContributorCollection.json'
+OUTFILE = '2014_Contributors.json'
 
 def main():
     global allContributors
@@ -42,7 +42,7 @@ def main():
     allContributors.append({'_id':1,'name':'NO NAME'})
     # output the data to a file
     print('>> Writing ' + str(len(allContributors)) + ' records to ' + OUTFILE + '.')
-    with open('../data/import/' + OUTFILE, 'w') as datafile:
+    with open('../data/' + OUTFILE, 'w') as datafile:
         json.dump(allContributors, datafile, sort_keys=True, 
                   indent=4, separators=(',', ': '))
 

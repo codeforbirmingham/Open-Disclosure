@@ -27,7 +27,7 @@ DATAFILES = ['2014_CashContributionsExtract_fixed.csv',
              '2014_ExpendituresExtract_fixed.csv',
              '2014_InKindContributionsExtract.csv',
              '2014_OtherReceiptsExtract.csv']
-OUTFILE = '2014_TransactionCollection.json'
+OUTFILE = '2014_Transactions.json'
 
 def main():
     # Load the geocodings so we can get '_id' values for orgs.
@@ -43,7 +43,7 @@ def main():
             scrapeTransactions(csv.reader(datafile))
     # output the data to a file
     print('>> Writing ' + str(len(allTransactions)) + ' records to ' + OUTFILE + '.')
-    with open('../data/import/' + OUTFILE, 'w') as datafile:
+    with open('../data/' + OUTFILE, 'w') as datafile:
         json.dump(allTransactions, datafile, sort_keys=True, 
                   indent=4, separators=(',', ': '))
 

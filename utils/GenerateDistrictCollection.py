@@ -15,7 +15,7 @@ import os
 import csv
 
 OCDID_FILES = os.listdir('../data/ocdIDs/')
-OUTFILE = '2014_DistrictCollection.json'
+OUTFILE = '2014_Districts.json'
 
 def main():
     allOCDIDs = []
@@ -28,7 +28,7 @@ def main():
         thisDistrict['ocdID'] = ocdRecord[0]
         thisDistrict['name'] = ocdRecord[1]
         districts.append(thisDistrict)
-    with open('../data/import/' + OUTFILE, 'w') as datafile:
+    with open('../data/' + OUTFILE, 'w') as datafile:
         json.dump(districts, datafile, sort_keys=True, 
                   indent=4, separators=(',', ': '))
 

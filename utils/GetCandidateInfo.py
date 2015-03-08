@@ -35,7 +35,7 @@ from numpy import mean
 
 # constants
 OCDIDS = os.listdir('../data/ocdIDs/')
-PARTYFILE = '2014_PartyCollection.json'
+PARTYFILE = '2014_Parties.json'
 CACHEFILE = '.API_Responses_cache.json'
 API_KEY = 'YOUR_API_KEY'
 BASE_URL = 'https://www.googleapis.com/civicinfo/v2/representatives/'
@@ -46,7 +46,7 @@ def main():
     allParties = [] # all PACs and Candidates
     # pull the party data into memory
     try:
-        with open('../data/import/' + PARTYFILE) as datafile:
+        with open('../data/' + PARTYFILE) as datafile:
             allParties = json.load(datafile)
     except IOError:
         print('>> Error: ' + PARTYFILE + ' not found.')
@@ -86,7 +86,7 @@ def main():
     print('>> ' + str(numRequests) + ' requests made.')
     print('>> ' + str(numFailures) + ' requests failed.') 
     print('>> Writing party data to ' + PARTYFILE + '.')
-    with open('../data/import/' + PARTYFILE, 'w') as datafile:
+    with open('../data/' + PARTYFILE, 'w') as datafile:
         json.dump(allParties, datafile, sort_keys=True, 
                   indent=4, separators=(',', ': '))
     print('>> Writing a copy of API responses to ' + CACHEFILE + '.')
