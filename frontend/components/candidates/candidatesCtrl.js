@@ -5,9 +5,9 @@ angular.module('openDisclosure')
         $scope.searchParams = ["lastname","firstname", "totalSpent", "total spent (%)", "campaign"];
         $scope.isCollapsed = true;
         $scope.mapCenter = {
-            lat: 33.5250,
-            lng: -86.8130,
-            zoom: 5
+            lat: 32.91649,
+            lng: -86.79199,
+            zoom: 6
         };
    }]);
 
