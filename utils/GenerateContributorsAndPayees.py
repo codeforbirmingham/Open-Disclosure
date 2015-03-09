@@ -119,7 +119,7 @@ def locateContributorsAndPayees():
                     entity['in_state'] = 1
                     for countyName in Counties:
                         if Counties[countyName].contains(thisPoint):
-                            entity['county_district'] = countyName
+                            entity['county'] = countyName
                             break
                     for senateDistrictName in senateDistricts:
                         if senateDistricts[senateDistrictName].contains(thisPoint):
@@ -127,7 +127,7 @@ def locateContributorsAndPayees():
                             break
                     for houseDistrictName in houseDistricts:
                         if houseDistricts[houseDistrictName].contains(thisPoint):
-                            entity['house'] = houseDistrictName[15:]
+                            entity['house_district'] = houseDistrictName[15:]
                             break
     print('>> Modified ' + str(modifiedRecords) + ' records with location data.')
 
