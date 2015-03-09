@@ -9,7 +9,7 @@
       <button class="btn btn-default" ng-repeat="param in searchParams">{{param}}</button>
     </div>
   </div>
-  <div ng-repeat="candidate in candidates" ng-controller="candidateCtrl" class="candcards panel panel-default col-lg-4 col-md-6 col-xs-12">
+  <div ng-repeat="candidate in candidates" class="candcards panel panel-default col-lg-4 col-md-6 col-xs-12">
       <h4 class="candname col-xs-8 pull-left">
         <img class="candimage" ng-src="{{candidate.image}}" /> {{candidate.name}}</h4>
       <h3 class="candstat col-xs-2 pull-right">{{candidate.poll}}%</h3>
@@ -38,8 +38,8 @@
           </li>
         </ul>
       </div>
-      <div class="row" ng-if="!isCollapsed">
-        <leaflet id="map-{{candidate.orgId}}" center="mapCenter" geojson="mapOutline" height="400"></leaflet>
+      <div class="row" ng-controller="mapCtrl" ng-if="!isCollapsed">
+        <leaflet center="mapCenter" geojson="mapOutline" height="400"></leaflet>
       </div>
       <div class="row">
         <button class="btn pull-right btn-primary" ng-click="isCollapsed = !isCollapsed">More Info</button>
