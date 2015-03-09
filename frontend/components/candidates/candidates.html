@@ -38,12 +38,11 @@
           </li>
         </ul>
       </div>
-
-      <div class="row" collapse="isCollapsed">
+      <div class="row" ng-if="!isCollapsed">
         <leaflet id="map-{{candidate.orgId}}" center="mapCenter" geojson="mapOutline" height="400"></leaflet>
       </div>
       <div class="row">
         <button class="btn pull-right btn-primary" ng-click="isCollapsed = !isCollapsed">More Info</button>
       </div>
-    </div>
+  </div>
 </div>
