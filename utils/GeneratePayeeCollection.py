@@ -3,18 +3,16 @@
 ############################################################################
 #
 # File: GeneratePayeeCollection.py
-# Last Edit: 2015-01-01
+# Last Edit: 2015-03-08
 # Author: Matthew Leeds <mwl458@gmail.com>
 # Purpose: This script uses the Geocoding and ContributorandPayeeLocations
 # json files to generate data matching the 'Payee' collection
-# in the data model. It uses the ContribPayeeIDs.json file to pick out just
-# the payees from the data.
+# in the data model. 
 #
 ############################################################################
 
 import json
 
-CONTRIBPAYEEIDS = '2014_ContribPayeeIDs.json'
 GEOCODING = '2014_Geocoding.json'
 CONTRIBPAYEELOCATIONS = '2014_ContributorAndPayeeLocations.json'
 OUTFILE = '2014_Payees.json'
@@ -22,13 +20,6 @@ OUTFILE = '2014_Payees.json'
 def main():
     global allPayees
     allPayees = [] # master list of payees
-    global payeeIDs
-    payeeIDs = [] # _id values for payees
-    # load the payee IDs
-    print('>> Loading IDs from ' + CONTRIBPAYEEIDS)
-    with open('../data/' + CONTRIBPAYEEIDS) as datafile:
-        allIDs = json.load(datafile)
-        payeeIDs = allIDs['PayeeIDs'] 
     # start with the output from GeocodeData.py
     print('>> Loading data from ' + GEOCODING + '.')
     with open('../data/' + GEOCODING) as datafile:
@@ -52,8 +43,11 @@ def loadPayees(geocodings):
     global payeeIDs
     numOrgs = 0
     for orgName in geocodings:
+        if len(orgName) == 0:
+            continue
         oldOrg = geocodings[orgName]
-        if oldOrg['_id'] in payeeIDs and len(orgName) > 0:
+        # check if it's a payee not a contributor
+        if 'ExpenditureIDs' in oldOrg or 'ReceiptIDs' in oldOrg:
             numOrgs += 1
             newOrg = {}
             newOrg['name'] = orgName
