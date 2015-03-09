@@ -75,7 +75,7 @@ def main():
     try:
         with open(CACHEFILE) as datafile:
             allResponses = json.load(datafile)
-    except IOError:
+    except FileNotFoundError:
         pass
     # make API requests to Google for candidate info
     makeAPIRequests()
