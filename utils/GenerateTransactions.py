@@ -2,11 +2,11 @@
 
 ########################################################################
 #
-# File: GenerateTransactionCollection.py
-# Last Edit: 2015-02-02
+# File: GenerateTransactions.py
+# Last Edit: 2015-03-10
 # Author: Matthew Leeds <mwl458@gmail.com>
 # Purpose: This script uses the four data files from alabamavotes.gov
-# and the Geocoding file produced by GeocodeData.py to generate a JSON 
+# and the Geocoding file produced by GeocodeData.py to generate a 
 # file with every transaction formatted according to the data model.
 # The output should have party_id, party_type, party_name, amount, name, 
 # filed_date, type, transaction_type, transaction_id, contributor_id,
@@ -16,6 +16,7 @@
 # -InKind data will also have inkind_nature and source_type.
 # -Receipt data will also have endorsers and source_type.
 # Everything is a string except endorsers, which is a list.
+# Output can be in either JSON or CSV format.
 #
 ########################################################################
 
@@ -27,7 +28,11 @@ DATAFILES = ['2014_CashContributionsExtract_fixed.csv',
              '2014_ExpendituresExtract_fixed.csv',
              '2014_InKindContributionsExtract.csv',
              '2014_OtherReceiptsExtract.csv']
-OUTFILE = '2014_Transactions.json'
+OUTFILE = '2014_Transactions' # file extension will be added
+OUTPUT_JSON = False # otherwise output CSV
+PRETTY_PRINT = True # controls JSON output format
+OUTFILENAME = OUTFILE + ('.json' if OUTPUT_JSON else '.csv')
+HEADERS = ['type', 'transaction_type', 'name', 'contributor_id', 'party_id', 'party_type', 'party_name', 'amount', 'filed_date', 'explanation', 'purpose', 'transaction_id', 'source_type', 'amended', 'inkind_nature', 'endorsers']
 
 def main():
     # Load the geocodings so we can get '_id' values for orgs.
@@ -42,10 +47,19 @@ def main():
         with open('../data/' + filename, errors='replace', newline='') as datafile:
             scrapeTransactions(csv.reader(datafile))
     # output the data to a file
-    print('>> Writing ' + str(len(allTransactions)) + ' records to ' + OUTFILE + '.')
-    with open('../data/' + OUTFILE, 'w') as datafile:
-        json.dump(allTransactions, datafile, sort_keys=True, 
-                  indent=4, separators=(',', ': '))
+    print('>> Writing ' + str(len(allTransactions)) + ' records to ' + OUTFILENAME + '.')
+    if OUTPUT_JSON:
+        with open('../data/' + OUTFILENAME, 'w') as datafile:
+            if PRETTY_PRINT:
+                json.dump(allTransactions, datafile, sort_keys=True, 
+                          indent=4, separators=(',', ': '))
+            else:
+                json.dump(allTransactions, datafile)
+    else: # output CSV
+        with open('../data/' + OUTFILENAME, 'w', newline='') as datafile:
+            writer = csv.DictWriter(datafile, quoting=csv.QUOTE_ALL, fieldnames=HEADERS)
+            writer.writeheader()
+            writer.writerows(allTransactions)
 
 def scrapeTransactions(records):
     # initialize some variables up here so they have a wide enough scope

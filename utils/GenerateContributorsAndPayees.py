@@ -3,16 +3,17 @@
 ###################################################################
 #
 # File: GenerateContributorsAndPayees.py
-# Last Edit: 2015-03-08
+# Last Edit: 2015-03-10
 # Author: Matthew Leeds <mwl458@gmail.com>
 # Purpose: This script uses the Geocoding file and some Alabama
 # geographic data to locate contributors and payees (by county,
-# district, etc) and output the data to two files.
+# district, etc) and output the data to two files (JSON or CSV).
 #
 ###################################################################
 
-import json
 import sys
+import json
+import csv
 from shapely.geometry import Point, shape
 
 GEOCODING = '2014_Geocoding.json'
@@ -20,8 +21,12 @@ STATE_FILE = 'AL.geojson'
 COUNTIES_FILE = 'AL_Counties.geojson'
 UPPER_DISTRICTS = 'sldu-simple.json'
 LOWER_DISTRICTS = 'sldl-simple.json'
-CONTRIBS_OUTFILE = '2014_Contributors.json'
-PAYEES_OUTFILE = '2014_Payees.json'
+HEADERS = ['_id', 'name', 'organization_type', 'address', 'geo_data', 'in_state', 'county', 'senate_district', 'house_district']
+CONTRIBS_OUTFILE = '2014_Contributors' # file extension will be added
+PAYEES_OUTFILE = '2014_Payees' # file extension will be added
+OUTPUT_JSON = False # otherwise output CSV
+CONTRIBS_OUTFILENAME = CONTRIBS_OUTFILE + ('.json' if OUTPUT_JSON else '.csv')
+PAYEES_OUTFILENAME = PAYEES_OUTFILE + ('.json' if OUTPUT_JSON else '.csv')
 PRETTY_PRINT = True # controls JSON output formatting
 
 def main():
@@ -42,20 +47,32 @@ def main():
     # id 1 was assigned to nameless contributors
     allContributors.append({'_id':1,'name':'NO NAME'})
     # output the data to two files
-    print('>> Writing ' + str(len(allContributors)) + ' records to ' + CONTRIBS_OUTFILE + '.')
-    with open('../data/' + CONTRIBS_OUTFILE, 'w') as datafile:
-        if PRETTY_PRINT:
-            json.dump(allContributors, datafile, sort_keys=True, 
-                      indent=4, separators=(',', ': '))
-        else:
-            json.dump(allContributors, datafile)
-    print('>> Writing ' + str(len(allPayees)) + ' records to ' + PAYEES_OUTFILE + '.')
-    with open('../data/' + PAYEES_OUTFILE, 'w') as datafile:
-        if PRETTY_PRINT:
-            json.dump(allPayees, datafile, sort_keys=True, 
-                      indent=4, separators=(',', ': '))
-        else:
-            json.dump(allPayees, datafile)
+    print('>> Writing ' + str(len(allContributors)) + ' records to ' + CONTRIBS_OUTFILENAME + '.')
+    if OUTPUT_JSON:
+        with open('../data/' + CONTRIBS_OUTFILENAME, 'w') as datafile:
+            if PRETTY_PRINT:
+                json.dump(allContributors, datafile, sort_keys=True, 
+                          indent=4, separators=(',', ': '))
+            else:
+                json.dump(allContributors, datafile)
+    else: # output CSV
+        with open('../data/' + CONTRIBS_OUTFILENAME, 'w', newline='') as datafile:
+            writer = csv.DictWriter(datafile, quoting=csv.QUOTE_ALL, fieldnames=HEADERS)
+            writer.writeheader()
+            writer.writerows(allContributors)
+    print('>> Writing ' + str(len(allPayees)) + ' records to ' + PAYEES_OUTFILENAME + '.')
+    if OUTPUT_JSON:
+        with open('../data/' + PAYEES_OUTFILENAME, 'w') as datafile:
+            if PRETTY_PRINT:
+                json.dump(allPayees, datafile, sort_keys=True, 
+                          indent=4, separators=(',', ': '))
+            else:
+                json.dump(allPayees, datafile)
+    else: # output CSV
+        with open('../data/' + PAYEES_OUTFILENAME, 'w', newline='') as datafile:
+            writer = csv.DictWriter(datafile, quoting=csv.QUOTE_ALL, fieldnames=HEADERS)
+            writer.writeheader()
+            writer.writerows(allPayees)
 
 def loadEntities(geocodings):
     # iterate over each organization and add them to allContributors or allPayees
