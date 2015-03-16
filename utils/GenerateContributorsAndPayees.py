@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-###################################################################
+##############################################################################
 #
 # File: GenerateContributorsAndPayees.py
 # Last Edit: 2015-03-16
@@ -9,9 +9,12 @@
 # http://fcpa.alabamavotes.gov/PublicSite/DataDownload.aspx
 # and outputs lists of contributors and payees that can later
 # be geocoded. Sources of receipts are considered contributors.
+# The txIDs are the unique identifiers for rows in the data files,
+# so either ReceiptID, ExpenditureID, InKindContributionID, or ContributionID
+# depending on the file. They are only unique within their own file. 
 # The data format is documented on the GitHub wiki.
 #
-###################################################################
+##############################################################################
 
 import sys
 import json
