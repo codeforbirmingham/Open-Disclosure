@@ -18,12 +18,11 @@
 #
 ############################################################################
 
-
 import csv
 import json
 from urllib.request import urlopen
 from urllib.parse import urlencode
-from time import sleep
+from time import sleep, time
 from shapely.geometry import Point, shape
 
 # file names
@@ -191,12 +190,10 @@ def geocodeOSM(address):
 
 # takes in a string and a blacklist and returns false if there are any matches
 def checkString(string, blacklist):
-    isGood = True
     for phrase in blacklist:
         if phrase in string:
-            isGood = False
-            break
-    return isGood
+            return False
+    return True
 
 if __name__=='__main__':
     main()
