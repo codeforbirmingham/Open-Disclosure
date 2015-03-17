@@ -5,6 +5,7 @@
 # File: GenerateContributorsAndPayees.py
 # Last Edit: 2015-03-16
 # Author: Matthew Leeds <mwl458@gmail.com>
+# License: GNU GPL <http://www.gnu.org/licenses/gpl.html>
 # Purpose: This script reads the four data files from 
 # http://fcpa.alabamavotes.gov/PublicSite/DataDownload.aspx
 # and outputs lists of contributors and payees that can later

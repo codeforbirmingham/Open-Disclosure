@@ -5,6 +5,7 @@
 # File: GenerateTransactions.py
 # Last Edit: 2015-03-10
 # Author: Matthew Leeds <mwl458@gmail.com>
+# License: GNU GPL <http://www.gnu.org/licenses/gpl.html>
 # Purpose: This script uses the four data files from alabamavotes.gov
 # and the Geocoding file produced by GeocodeData.py to generate a 
 # file with every transaction formatted according to the data model.

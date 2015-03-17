@@ -5,6 +5,7 @@
 # File: GenerateParties.py
 # Last Edit: 2015-03-16
 # Author: Matthew Leeds <mwl458@gmail.com>
+# License: GNU GPL <http://www.gnu.org/licenses/gpl.html>
 # Purpose: This script reads the data files from alabamavotes.gov
 # and finds all the unique PACs & Candidates (by OrgID).
 # It also reads the Party information from that site, and

@@ -5,6 +5,7 @@
 # File: GenerateDistricts.py
 # Last Edit: 2015-03-10
 # Author: Matthew Leeds <mwl458@gmail.com>
+# License: GNU GPL <http://www.gnu.org/licenses/gpl.html>
 # Purpose: This script combines the files in data/ocdIDs so we
 # district information in either JSON or CSV format.
 #

@@ -5,6 +5,7 @@
 # File: CallCivicInfoAPI.py
 # Last Edit: 2015-03-17
 # Author: Matthew Leeds <mwl458@gmail.com>
+# License: GNU GPL <http://www.gnu.org/licenses/gpl.html>
 # Purpose: This script reads the output from GenerateParties.py
 # and makes calls to Google's Civic Information API for more
 # information (contact info, photo URL, etc.). This is added to

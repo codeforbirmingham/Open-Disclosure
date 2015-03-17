@@ -25,3 +25,17 @@ Here is a brief description of the scripts which are separated into categories b
 
 ## Next Steps ##
 At this point we need to do a lot of testing to ensure the scripts do what we think they do. Then we can upload the data to Socrata so we have an API for our frontend (and anyone else with a use for it).
+
+## Copyleft ##
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
