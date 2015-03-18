@@ -6,13 +6,13 @@
 # Last Edit: 2015-03-16
 # Author: Matthew Leeds <mwl458@gmail.com>
 # License: GNU GPL <http://www.gnu.org/licenses/gpl.html>
-# Purpose: This script reads the four data files from 
+# Purpose: This script reads the four data files from
 # http://fcpa.alabamavotes.gov/PublicSite/DataDownload.aspx
 # and outputs lists of contributors and payees that can later
 # be geocoded. Sources of receipts are considered contributors.
 # The txIDs are the unique identifiers for rows in the data files,
 # so either ReceiptID, ExpenditureID, InKindContributionID, or ContributionID
-# depending on the file. They are only unique within their own file. 
+# depending on the file. They are only unique within their own file.
 # The data format is documented on the GitHub wiki.
 #
 ##############################################################################
@@ -63,7 +63,7 @@ def main():
     if OUTPUT_JSON:
         with open('../data/' + CONTRIBS_OUTFILENAME, 'w') as datafile:
             if PRETTY_PRINT:
-                json.dump(allContributors, datafile, sort_keys=True, 
+                json.dump(allContributors, datafile, sort_keys=True,
                           indent=4, separators=(',', ': '))
             else:
                 json.dump(allContributors, datafile)
@@ -76,7 +76,7 @@ def main():
     if OUTPUT_JSON:
         with open('../data/' + PAYEES_OUTFILENAME, 'w') as datafile:
             if PRETTY_PRINT:
-                json.dump(allPayees, datafile, sort_keys=True, 
+                json.dump(allPayees, datafile, sort_keys=True,
                           indent=4, separators=(',', ': '))
             else:
                 json.dump(allPayees, datafile)
@@ -96,9 +96,9 @@ def process(records, colNames):
     orgTypeCol = colNames[1] # ContributorType for example
     for record in records:
         name = record['FirstName'] + ' ' + record['MI'] + ' ' + record['LastName'] + ' ' + record['Suffix']
-        name = name.strip().title().replace('Ii','II').replace('Iii','III') 
+        name = name.strip().title().replace('Ii','II').replace('Iii','III').replace('  ', ' ')
         address = record['Address1'] + ' ' + record['City'] + ' ' + record['State'] + ' ' + record['Zip']
-        address = address.strip()
+        address = address.strip().replace('  ',' ')
         txID = record[idCol]
         isContributor = True
         try:
@@ -127,11 +127,11 @@ def process(records, colNames):
             newOrg['_API_status'] = '' # will be used by geocoding script
             newOrg['organization_type'] = orgType
             newOrg[idType] = [txID]
-            newOrg['address'] = address 
+            newOrg['address'] = address
             if isContributor:
                 allContributors.append(newOrg)
             else:
                 allPayees.append(newOrg)
 
 if __name__=='__main__':
-    main() 
+    main()
