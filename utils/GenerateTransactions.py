@@ -36,7 +36,7 @@ OUTFILE = '2014_Transactions' # file extension will be added
 OUTPUT_JSON = True # otherwise output CSV
 PRETTY_PRINT = True # controls JSON output format
 OUTFILENAME = OUTFILE + ('.json' if OUTPUT_JSON else '.csv')
-HEADERS = ['type', 'transaction_type', 'name', 'contributor_id', 'payee_id', 'party_id', 'party_type', 'party_name', 'amount', 'filed_date', 'explanation', 'purpose', 'transaction_id', 'source_type', 'amended', 'inkind_nature', 'endorsers']
+HEADERS = ['type', 'transaction_type', 'name', 'contributor_id', 'payee_id', 'party_id', 'amount', 'filed_date', 'explanation', 'purpose', 'transaction_id', 'source_type', 'amended', 'inkind_nature', 'endorsers']
 
 def main():
     global allContributors
