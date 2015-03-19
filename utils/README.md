@@ -1,5 +1,5 @@
 # Open-Disclusure/utils #
-This is a collection of Python scripts that download, organize, and enhance data from alabamavotes.gov. 
+This is a collection of Python scripts that download, organize, and enhance data from alabamavotes.gov. They've all been written with a focus on readability over efficiency, so keep that in mind if you contribute.
 
 ## System Requirements ##
 * Python 3.4 or later
@@ -23,7 +23,7 @@ Here is a brief description of the scripts which are separated into categories b
 * CallGeocodingAPI.py: This calls Google's Geocoding API to convert street addresses to coordinates for all the contributors and payees, and locates them by district, county, etc. using the files in /data/map/.
 * CallCivicInfoAPI.py: This calls Google's Civic Information API to get information on each OCD ID in Alabama, adding to the existing data.
 
-## Step 4: Send the Data to Socrata ##
+### Step 4: Send the Data to Socrata ###
 Coming Soon...
 
 ## Next Steps ##
