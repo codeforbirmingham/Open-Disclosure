@@ -2,14 +2,15 @@
 
 ##############################################################################
 #
-# File: GenerateContributorsAndPayees.py
-# Last Edit: 2015-03-19
+# File: GenerateTransactees.py
+# Last Edit: 2015-03-20
 # Author: Matthew Leeds <mwl458@gmail.com>
 # License: GNU GPL <http://www.gnu.org/licenses/gpl.html>
 # Purpose: This script reads the four data files from
 # http://fcpa.alabamavotes.gov/PublicSite/DataDownload.aspx
-# and outputs lists of contributors and payees that can later
-# be geocoded. Sources of receipts are considered contributors.
+# and makes a list of transactees (contributors, payees, and receipt sources)
+# that can be geocoded. Transactees refer to people or organizations who do
+# business with (or contribute to) political parties (PACs/Candidates).
 # The txIDs are the unique identifiers for rows in the data files,
 # so either ReceiptID, ExpenditureID, InKindContributionID, or ContributionID
 # depending on the file. They are only unique within their own file.
@@ -26,30 +27,27 @@ DATAFILES = ['2014_CashContributionsExtract_fixed.csv',
              '2014_ExpendituresExtract_fixed.csv',
              '2014_InKindContributionsExtract.csv',
              '2014_OtherReceiptsExtract.csv']
-HEADERS = ['_id', '_API_status', 'name', 'organization_type', 'address']
-CONTRIBS_OUTFILE = '2014_Contributors' # file extension will be added
-PAYEES_OUTFILE = '2014_Payees' # file extension will be added
+HEADERS = ['_id', 'transactee_type', '_API_status', 'name', 'organization_type', 'address', 
+           'ContributionIDs', 'ExpenditureIDs', 'InKindContributionIDs', 'ReceiptIDs']
+OUTFILE = '2014_Transactees' # file extension will be added
 OUTPUT_JSON = True # otherwise output CSV
-CONTRIBS_OUTFILENAME = CONTRIBS_OUTFILE + ('.json' if OUTPUT_JSON else '.csv')
-PAYEES_OUTFILENAME = PAYEES_OUTFILE + ('.json' if OUTPUT_JSON else '.csv')
+OUTFILENAME = OUTFILE + ('.json' if OUTPUT_JSON else '.csv')
 PRETTY_PRINT = True # controls JSON output formatting
 
 def main():
-    global allContributors
-    allContributors = [] # master list of Contributors
-    global allPayees
-    allPayees = [] # master list of Payees
-    # hard code the ID and org type column names for each file type
-    colNames = {}
+    global allTransactees
+    allTransactees = [] # master list of Transactees
+    # hard code the ID column, org type column, and transactee type for each file
+    recordTypes = {}
     for filename in DATAFILES:
         if 'CashContribution' in filename:
-            colNames[filename] = ('ContributionID', 'ContributorType')
+            recordTypes[filename] = ('ContributionID', 'ContributorType', 'Contributor')
         elif 'Expenditure' in filename:
-            colNames[filename] = ('ExpenditureID', '')
+            recordTypes[filename] = ('ExpenditureID', '', 'Payee')
         elif 'InKindContribution' in filename:
-            colNames[filename] = ('InKindContributionID', 'ContributorType')
+            recordTypes[filename] = ('InKindContributionID', 'ContributorType', 'Contributor')
         elif 'OtherReceipts' in filename:
-            colNames[filename] = ('ReceiptID', 'ReceiptSourceType')
+            recordTypes[filename] = ('ReceiptID', 'ReceiptSourceType', 'ReceiptSource')
         else:
             print('>> Unrecognized filename: ' + filename + '. Quitting.')
             sys.exit(1)
@@ -57,64 +55,55 @@ def main():
     for filename in DATAFILES:
         print('>> Loading data from ' + filename + '.')
         with open('../data/' + filename, 'r', errors='ignore', newline='') as csvfile:
-            process(csv.DictReader(csvfile), colNames[filename])
-    # output the data to two files
-    print('>> Writing ' + str(len(allContributors)) + ' records to ' + CONTRIBS_OUTFILENAME + '.')
+            process(csv.DictReader(csvfile), recordTypes[filename])
+    print('>> Writing ' + str(len(allTransactees)) + ' records to ' + OUTFILENAME + '.')
     if OUTPUT_JSON:
-        with open('../data/' + CONTRIBS_OUTFILENAME, 'w') as datafile:
+        with open('../data/' + OUTFILENAME, 'w') as datafile:
             if PRETTY_PRINT:
-                json.dump(allContributors, datafile, sort_keys=True,
+                json.dump(allTransactees, datafile, sort_keys=True,
                           indent=4, separators=(',', ': '))
             else:
-                json.dump(allContributors, datafile)
+                json.dump(allTransactees, datafile)
     else: # output CSV
-        with open('../data/' + CONTRIBS_OUTFILENAME, 'w', newline='') as datafile:
+        with open('../data/' + OUTFILENAME, 'w', newline='') as datafile:
             writer = csv.DictWriter(datafile, quoting=csv.QUOTE_ALL, fieldnames=HEADERS)
             writer.writeheader()
-            writer.writerows(allContributors)
-    print('>> Writing ' + str(len(allPayees)) + ' records to ' + PAYEES_OUTFILENAME + '.')
-    if OUTPUT_JSON:
-        with open('../data/' + PAYEES_OUTFILENAME, 'w') as datafile:
-            if PRETTY_PRINT:
-                json.dump(allPayees, datafile, sort_keys=True,
-                          indent=4, separators=(',', ': '))
-            else:
-                json.dump(allPayees, datafile)
-    else: # output CSV
-        with open('../data/' + PAYEES_OUTFILENAME, 'w', newline='') as datafile:
-            writer = csv.DictWriter(datafile, quoting=csv.QUOTE_ALL, fieldnames=HEADERS)
-            writer.writeheader()
-            writer.writerows(allPayees)
+            writer.writerows(allTransactees)
 
-# process each record, adding to allContributors or allPayees
-# records is a csv.DictReader and colNames is (<id col name>, <org type col name>)
-def process(records, colNames):
-    global allContributors
-    global allPayees
+# process each record, adding it to allTransactees
+# records is a csv.DictReader and recordTypes is (<id col name>, <org type col name>, <transactee type>)
+def process(records, recordTypes):
+    global allTransactees
     # idCol = ContributionID, ExpenditureID, InKindContributionID, or ReceiptID
-    idCol = colNames[0]
+    idCol = recordTypes[0]
     idType = idCol + 's'
     # orgTypeCol = ContributorType,  ReceiptSourceType, or ''
-    orgTypeCol = colNames[1]
+    orgTypeCol = recordTypes[1]
+    # transacteeType = Contributor, Payee, or ReceiptSource
+    transacteeType = recordTypes[2]
+    # record the starting index for this type (for efficiency later)
+    startIndex = len(allTransactees)
     for record in records:
         name = record['FirstName'] + ' ' + record['MI'] + ' ' + record['LastName'] + ' ' + record['Suffix']
         name = name.strip().title().replace('Ii','II').replace('Iii','III').replace('  ', ' ')
+        if name[-3:].upper() == 'PAC':
+            name = name[:-3] + 'PAC'
         address = record['Address1'] + ' ' + record['City'] + ' ' + record['State'] + ' ' + record['Zip']
         address = address.strip().replace('  ',' ')
         txID = record[idCol]
-        isContributor = True
         try:
             orgType = record[orgTypeCol]
-        except KeyError: # must be expenditure data
+        except KeyError: # must be Expenditure data
             orgType = ''
-            isContributor = False
         isNew = True
         # treat each nameless person as unique
         if len(name) != 0:
-            # check if they're already in allContributors or allPayees
-            for record in (allContributors if isContributor else allPayees):
+            # check if they're already in allTransactees
+            for record in allTransactees[startIndex:]:
+                if record['transactee_type'] != transacteeType:
+                    print('WTF mate?')
                 if record['name'] == name and record['address'] == address:
-                    # if it's the same type of contributor, update it with this txID
+                    # if it's the same type of transactee, update it with this txID
                     try:
                         record[idType].append(txID)
                     # otherwise keep looking
@@ -123,19 +112,16 @@ def process(records, colNames):
                     record[idType] = list(set(record[idType])) # remove any dupes
                     isNew = False
                     break
-        # otherwise we haven't seen this yet
-        if isNew:
+        if isNew: # we haven't seen them yet
             newOrg = {}
             newOrg['name'] = name
+            newOrg['transactee_type'] = transacteeType
             newOrg['_id'] = str(uuid4()).upper() # random unique id
             newOrg['_API_status'] = '' # will be used by geocoding script
             newOrg['organization_type'] = orgType
             newOrg[idType] = [txID]
             newOrg['address'] = address
-            if isContributor:
-                allContributors.append(newOrg)
-            else:
-                allPayees.append(newOrg)
+            allTransactees.append(newOrg)
 
 if __name__=='__main__':
     main()

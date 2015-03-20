@@ -3,14 +3,14 @@
 ########################################################################
 #
 # File: GenerateTransactions.py
-# Last Edit: 2015-03-19
+# Last Edit: 2015-03-20
 # Author: Matthew Leeds <mwl458@gmail.com>
 # License: GNU GPL <http://www.gnu.org/licenses/gpl.html>
 # Purpose: This script uses the four data files from alabamavotes.gov
-# and the files produced by GenerateContributorsAndPayees.py (for IDs)
+# and the file produced by GenerateTransactees.py (for IDs)
 # to collect every transaction formatted according to the data model.
 # The output should have party_id, amount, filed_date, type,
-# transaction_type, transaction_id, contributor_id or payee_id, and
+# transaction_type, transaction_id, transactee_id, and
 # amended for all records.
 # -Expenditure data will also have explanation and purpose.
 # -InKind data will also have inkind_nature and source_type.
@@ -26,8 +26,7 @@ import json
 import csv
 from contextlib import suppress
 
-CONTRIBS_FILE = '2014_Contributors.json'
-PAYEES_FILE = '2014_Payees.json'
+TRANSACTEES_FILE = '2014_Transactees.json'
 DATAFILES = ['2014_CashContributionsExtract_fixed.csv',
              '2014_ExpendituresExtract_fixed.csv',
              '2014_InKindContributionsExtract.csv',
@@ -36,20 +35,15 @@ OUTFILE = '2014_Transactions' # file extension will be added
 OUTPUT_JSON = True # otherwise output CSV
 PRETTY_PRINT = True # controls JSON output format
 OUTFILENAME = OUTFILE + ('.json' if OUTPUT_JSON else '.csv')
-HEADERS = ['type', 'transaction_type', 'name', 'contributor_id', 'payee_id', 'party_id', 'amount', 'filed_date', 'explanation', 'purpose', 'transaction_id', 'source_type', 'amended', 'inkind_nature', 'endorsers']
+HEADERS = ['type', 'transaction_type', 'name', 'transactee_id', 'party_id', 'amount', 'filed_date', 'explanation', 'purpose', 'transaction_id', 'source_type', 'amended', 'inkind_nature', 'endorsers']
 
 def main():
-    global allContributors
-    allContributors = []
-    global allPayees
-    allPayees = []
-    # First load the Contributors and Payees
-    with open('../data/' + CONTRIBS_FILE) as datafile:
-        allContributors = json.load(datafile)
-    print('>> Loaded ' + str(len(allContributors)) + ' records from ' + CONTRIBS_FILE + '.')
-    with open('../data/' + PAYEES_FILE) as datafile:
-        allPayees = json.load(datafile)
-    print('>> Loaded ' + str(len(allPayees)) + ' records from ' + PAYEES_FILE + '.')
+    global allTransactees
+    allTransactees = []
+    # First load the Transactees
+    with open('../data/' + TRANSACTEES_FILE) as datafile:
+        allTransactees = json.load(datafile)
+    print('>> Loaded ' + str(len(allTransactees)) + ' records from ' + TRANSACTEES_FILE + '.')
     # hard code the values of record types for each file
     recordTypes = {}
     for filename in DATAFILES:
@@ -87,8 +81,7 @@ def main():
 
 def scrapeTransactions(records, recordType):
     global allTransactions
-    global allContributors
-    global allPayees
+    global allTransactees
     # idCol = ContributionID, ExpenditureID, InKindContributionID, or ReceiptID
     idCol = recordType + 'ID'
     # recordType = Contribution, Expenditure, or Receipt
@@ -97,19 +90,18 @@ def scrapeTransactions(records, recordType):
     # for each record, scrape the data and throw it in allTransactions
     for record in records:
         thisTransaction = {}
-        thisTransaction['type'] = recordType
+        thisTransaction['type'] = idCol[:-2] # cut off 'ID' part
         thisTransaction['transaction_type'] = record[recordType + 'Type'].strip()
-        # find their record in allContributors or allPayees and get the _id
-        idType = ('payee_id' if recordType == 'Expenditure' else 'contributor_id')
+        # find their record in allTransactees and get the _id
         foundMatch = False
-        for entry in (allPayees if recordType == 'Expenditure' else allContributors):
+        for entry in allTransactees:
             # if the txID's match, copy the UUID.
             if idCol + 's' in entry and record[idCol] in entry[idCol + 's']:
-                thisTransaction[idType] = entry['_id']
+                thisTransaction['transactee_id'] = entry['_id']
                 foundMatch = True
                 break
         if not foundMatch:
-            print('Error: No match found for ' + name + ' ' + address + ' in the contributors or payees files.')
+            print('Error: No match found for ' + name + ' ' + address + ' in the transactees file.')
         # add some general information
         thisTransaction['party_id'] = record['OrgID']
         thisTransaction['amount'] = record[recordType + 'Amount']
