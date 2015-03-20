@@ -100,8 +100,6 @@ def process(records, recordTypes):
         if len(name) != 0:
             # check if they're already in allTransactees
             for record in allTransactees[startIndex:]:
-                if record['transactee_type'] != transacteeType:
-                    print('WTF mate?')
                 if record['name'] == name and record['address'] == address:
                     # if it's the same type of transactee, update it with this txID
                     try:

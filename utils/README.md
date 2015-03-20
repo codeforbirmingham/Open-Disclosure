@@ -14,9 +14,9 @@ Here is a brief description of the scripts which are separated into categories b
 * PartyFetcher.py: This downloads two CSV files which have information for "Active" and "Dissolved" parties (political candidates).
 
 ### Step 2: Organize the Data ###
-* GenerateContributorsAndPayees.py: This looks at the four data files and identifies all the people transacting with the PACs and Candidates. For Expenditures, these are referred to as Payees. For all the other data files, they are referred to as Contributors.
+* GenerateTransactees.py: This looks at the four data files and identifies all the people transacting with the PACs and Candidates. For Expenditures, these are referred to as Payees. For Receipt data, they're ReceiptSources. For cash and in-kind contributions, they're Contributors. 
 * GenerateParties.py: This looks at all the data files including the Parties and finds all the unique PACs and Candidates (using their OrgIDs).
-* GenerateTransactions.py: This looks at the four data files and records every transaction. **This has to be run after GenerateContributorsAndPayees.py.**
+* GenerateTransactions.py: This looks at the four data files and records every transaction. **This has to be run after GenerateTransactees.py.**
 * GenerateDistricts.py: This looks at the Open Civic Data IDs in /data/ocdIDs/ and puts that in JSON format (matching each ID to its friendly name).
 
 ### Step 3: Add to the Data ###
@@ -27,7 +27,7 @@ Here is a brief description of the scripts which are separated into categories b
 Coming Soon...
 
 ## Next Steps ##
-At this point we need to do a lot of testing to ensure the scripts do what we think they do. Then we can upload the data to Socrata so we have an API for our frontend (and anyone else with a use for it).
+At this point we need to do a lot of testing to ensure the scripts do what we think they do. Then we can upload the data to Socrata so we have an API for our frontend (and anyone else with a use for it). We will also need to set up our server to run these scripts periodically.
 
 ## Copyleft ##
 This program is free software: you can redistribute it and/or modify
