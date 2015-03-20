@@ -3,7 +3,7 @@
 ########################################################################
 #
 # File: GenerateTransactions.py
-# Last Edit: 2015-03-17
+# Last Edit: 2015-03-19
 # Author: Matthew Leeds <mwl458@gmail.com>
 # License: GNU GPL <http://www.gnu.org/licenses/gpl.html>
 # Purpose: This script uses the four data files from alabamavotes.gov
@@ -99,16 +99,12 @@ def scrapeTransactions(records, recordType):
         thisTransaction = {}
         thisTransaction['type'] = recordType
         thisTransaction['transaction_type'] = record[recordType + 'Type'].strip()
-        # the method of cleaning up the name and address must be the same as in GenerateContributorsAndPayees.py
-        name = record['FirstName'] + ' ' + record['MI'] + ' ' + record['LastName'] + ' ' + record['Suffix']
-        name = name.strip().title().replace('Ii','II').replace('Iii','III').replace('  ',' ')
-        address = record['Address1'] + ' ' + record['City'] + ' ' + record['State'] + ' ' + record['Zip']
-        address = address.strip().replace('  ',' ')
         # find their record in allContributors or allPayees and get the _id
         idType = ('payee_id' if recordType == 'Expenditure' else 'contributor_id')
         foundMatch = False
         for entry in (allPayees if recordType == 'Expenditure' else allContributors):
-            if entry['name'] == name and entry['address'] == address:
+            # if the txID's match, copy the UUID.
+            if idCol + 's' in entry and record[idCol] in entry[idCol + 's']:
                 thisTransaction[idType] = entry['_id']
                 foundMatch = True
                 break

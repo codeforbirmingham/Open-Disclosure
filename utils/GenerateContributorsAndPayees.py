@@ -3,7 +3,7 @@
 ##############################################################################
 #
 # File: GenerateContributorsAndPayees.py
-# Last Edit: 2015-03-16
+# Last Edit: 2015-03-19
 # Author: Matthew Leeds <mwl458@gmail.com>
 # License: GNU GPL <http://www.gnu.org/licenses/gpl.html>
 # Purpose: This script reads the four data files from
@@ -91,9 +91,11 @@ def main():
 def process(records, colNames):
     global allContributors
     global allPayees
-    idCol = colNames[0] # ContributionID for example
-    idType = colNames[0] + 's' # ExpenditureIDs for example
-    orgTypeCol = colNames[1] # ContributorType for example
+    # idCol = ContributionID, ExpenditureID, InKindContributionID, or ReceiptID
+    idCol = colNames[0]
+    idType = idCol + 's'
+    # orgTypeCol = ContributorType,  ReceiptSourceType, or ''
+    orgTypeCol = colNames[1]
     for record in records:
         name = record['FirstName'] + ' ' + record['MI'] + ' ' + record['LastName'] + ' ' + record['Suffix']
         name = name.strip().title().replace('Ii','II').replace('Iii','III').replace('  ', ' ')
@@ -107,18 +109,20 @@ def process(records, colNames):
             orgType = ''
             isContributor = False
         isNew = True
-        # check if they're already in allContributors or allPayees
-        for record in (allContributors if isContributor else allPayees):
-            if record['name'] == name and record['address'] == address:
-                # if it's the same type of contributor, update it with this txID
-                try:
-                    record[idType].append(txID)
-                # otherwise keep looking
-                except KeyError:
-                    continue
-                record[idType] = list(set(record[idType])) # remove any dupes
-                isNew = False
-                break
+        # treat each nameless person as unique
+        if len(name) != 0:
+            # check if they're already in allContributors or allPayees
+            for record in (allContributors if isContributor else allPayees):
+                if record['name'] == name and record['address'] == address:
+                    # if it's the same type of contributor, update it with this txID
+                    try:
+                        record[idType].append(txID)
+                    # otherwise keep looking
+                    except KeyError:
+                        continue
+                    record[idType] = list(set(record[idType])) # remove any dupes
+                    isNew = False
+                    break
         # otherwise we haven't seen this yet
         if isNew:
             newOrg = {}
