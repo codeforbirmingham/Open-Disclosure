@@ -3,7 +3,7 @@
 ###################################################################
 #
 # File: CallCivicInfoAPI.py
-# Last Edit: 2015-03-17
+# Last Edit: 2015-03-27
 # Author: Matthew Leeds <mwl458@gmail.com>
 # License: GNU GPL <http://www.gnu.org/licenses/gpl.html>
 # Purpose: This script reads the output from GenerateParties.py
@@ -20,8 +20,6 @@
 # It also writes API responses to a file in case you have to 
 # run this multiple times due to request limits or errors.
 # 
-# This script requires Python 3.4 or later.
-#
 ###################################################################
 
 # system libraries
@@ -35,7 +33,6 @@ from urllib.parse import quote_plus
 from urllib.error import HTTPError
 from time import sleep, time
 from operator import itemgetter
-from contextlib import suppress
 
 # 3rd party libraries
 from fuzzywuzzy import fuzz
@@ -166,16 +163,24 @@ def processReply(reply, ocdID):
             originalName = HumanName(official['name'])
             normalName = str(originalName.last) + ', ' + str(originalName.first)
             official['name'] = normalName # so we scrape the formatted version
+            normalParty, originalParty = '', ''
             # Don't fail when the data isn't there
-            with suppress(KeyError):
-                normalParty, originalParty = '', ''
+            try:
                 originalParty = official['party']
-                normalParty = ('Democrat' if originalParty == 'Democratic' else originalParty)
-                official['party'] = normalParty # so we scrape the formatted version
-                officialPhone = ''
+            except KeyError:
+                pass
+            normalParty = ('Democrat' if originalParty == 'Democratic' else originalParty)
+            official['party'] = normalParty # so we scrape the formatted version
+            officialPhone = ''
+            try:
                 officialPhone = official['phones'][0]
-                officialEmail = ''
+            except KeyError:
+                pass
+            officialEmail = ''
+            try:
                 officialEmail = official['emails'][0]
+            except KeyError:
+                pass
             # look for a matching person with an orgID
             possibleMatches = {}
             for party in allParties:
@@ -215,20 +220,37 @@ def processReply(reply, ocdID):
 def scrapeData(official, candidateOrgID, ocdID):
     for party in allParties:
         if party['_id'] == candidateOrgID:
-            with suppress(KeyError):
-                party['_API_status'] = 'OK'
-                party['_API_timestamp'] = int(time())
-                party['ocdID'] = ocdID
+            party['_API_status'] = 'OK'
+            party['_API_timestamp'] = int(time())
+            party['ocdID'] = ocdID
+            try:
                 party['party'] = official['party']
+            except KeyError:
+                pass
+            try:
                 party['phone'] = official['phones'][0]
+            except KeyError:
+                pass
+            try:
                 party['email'] = official['emails'][0]
+            except KeyError:
+                pass
+            try:
                 party['url'] = official['urls'][0]
+            except KeyError:
+                pass
+            try:
                 party['photoURL'] = official['photoUrl']
+            except KeyError:
+                pass
+            try:
                 for channel in official['channels']:
                     if channel['type'] == 'Facebook':
                         party['facebookID'] = channel['id']
                     elif channel['type'] == 'Twitter':
                         party['twitterID'] = channel['id']
+            except KeyError:
+                pass
             break
 
 if __name__=='__main__':

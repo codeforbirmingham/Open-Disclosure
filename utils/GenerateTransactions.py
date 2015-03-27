@@ -3,7 +3,7 @@
 ########################################################################
 #
 # File: GenerateTransactions.py
-# Last Edit: 2015-03-20
+# Last Edit: 2015-03-27
 # Author: Matthew Leeds <mwl458@gmail.com>
 # License: GNU GPL <http://www.gnu.org/licenses/gpl.html>
 # Purpose: This script uses the four data files from alabamavotes.gov
@@ -18,13 +18,10 @@
 # Everything is a string except endorsers, which is a list.
 # Output can be in either JSON or CSV format.
 #
-# This script requires Python 3.4 or later.
-#
 ########################################################################
 
 import json
 import csv
-from contextlib import suppress
 
 TRANSACTEES_FILE = '2014_Transactees.json'
 DATAFILES = ['2014_CashContributionsExtract_fixed.csv',
@@ -115,11 +112,10 @@ def scrapeTransactions(records, recordType):
         elif recordType == 'Receipt':
             endorsers = []
             colNames = ['EndorserName', 'EndorserAddress', 'EndorserGuaranteedAMT']
-            with suppress(KeyError):
-                for val in ['1','2','3']:
-                    endorser = [record[colNames[0] + val], record[colNames[1] + val], record[colNames[2] + val]]
-                    if sum(len(field) for field in endorser) > 0:
-                        endorsers.append(endorser)
+            for val in ['1','2','3']:
+                endorser = [record[colNames[0] + val], record[colNames[1] + val], record[colNames[2] + val]]
+                if sum(len(field) for field in endorser) > 0:
+                    endorsers.append(endorser)
             if len(endorsers) > 0:
                 thisTransaction['endorsers'] = endorsers
         elif idCol.startswith('InKindContribution'):
