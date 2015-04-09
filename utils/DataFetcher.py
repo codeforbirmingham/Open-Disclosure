@@ -1,12 +1,17 @@
+#!/usr/bin/python3
 
-import configparser, datetime, os, urllib.request, zipfile
+import configparser 
+import datetime
+import os
+import urllib.request
+import zipfile
 
 class DataFetcher:
     """
     DataFetcher Object Responsible for downloading and extracting the Extract Files from the alabamavotes.gov website
     """
 
-    def __init__(self, config_file, year=datetime.date.today().year):
+    def __init__(self, config_file):
         """
         Create a new DataFetcher object. Uses the provided config file to load the base URL for the request and to read
         the base file names that can all be downloaded from that URL. These base_file names are then prepended with
@@ -19,7 +24,8 @@ class DataFetcher:
         self.destination_dir = self.config["DATA_FETCHER"]["destination_dir"]
         self.chunk_size = int(self.config["DATA_FETCHER"]["chunk_size"])
         self.base_url = self.config["DATA_FETCHER"]["base_url"]
-        self.year = str(year)
+        configYear = self.config["DATA_FETCHER"]["year"]
+        self.year = (configYear if len(configYear) > 0 else str(datetime.date.today().year))
         self.files = [ '_'.join([self.year, file_name]) for file_name in self.config["DATA_FETCHER"]["file_names"].split(',')]
 
 

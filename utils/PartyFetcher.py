@@ -1,6 +1,9 @@
+#!/usr/bin/python3
+
 __author__ = 'cfilby'
 
-import configparser, os
+import configparser
+import os
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
