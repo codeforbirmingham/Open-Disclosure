@@ -3,7 +3,7 @@
 ########################################################################
 #
 # File: GenerateTransactions.py
-# Last Edit: 2015-03-27
+# Last Edit: 2015-04-08
 # Author: Matthew Leeds <mwl458@gmail.com>
 # License: GNU GPL <http://www.gnu.org/licenses/gpl.html>
 # Purpose: This script uses the four data files from alabamavotes.gov
@@ -22,13 +22,15 @@
 
 import json
 import csv
+from datetime import datetime
 
-TRANSACTEES_FILE = '2014_Transactees.json'
-DATAFILES = ['2014_CashContributionsExtract_fixed.csv',
-             '2014_ExpendituresExtract_fixed.csv',
-             '2014_InKindContributionsExtract.csv',
-             '2014_OtherReceiptsExtract.csv']
-OUTFILE = '2014_Transactions' # file extension will be added
+YEAR = datetime.today().year
+DATAFILES = [YEAR + '_CashContributionsExtract.csv',
+             YEAR + '_ExpendituresExtract.csv',
+             YEAR + '_InKindContributionsExtract.csv',
+             YEAR + '_OtherReceiptsExtract.csv']
+TRANSACTEES_FILE = YEAR + '_Transactees.json'
+OUTFILE = YEAR + '_Transactions' # file extension will be added
 OUTPUT_JSON = True # otherwise output CSV
 PRETTY_PRINT = True # controls JSON output format
 OUTFILENAME = OUTFILE + ('.json' if OUTPUT_JSON else '.csv')
@@ -98,7 +100,7 @@ def scrapeTransactions(records, recordType):
                 foundMatch = True
                 break
         if not foundMatch:
-            print('Error: No match found for ' + name + ' ' + address + ' in the transactees file.')
+            print('Error: No match found for id ' + record[idCol] + ' in the transactees file.')
         # add some general information
         thisTransaction['party_id'] = record['OrgID']
         thisTransaction['amount'] = record[recordType + 'Amount']

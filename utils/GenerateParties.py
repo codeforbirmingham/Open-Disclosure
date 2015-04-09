@@ -3,7 +3,7 @@
 ###################################################################
 #
 # File: GenerateParties.py
-# Last Edit: 2015-03-16
+# Last Edit: 2015-04-08
 # Author: Matthew Leeds <mwl458@gmail.com>
 # License: GNU GPL <http://www.gnu.org/licenses/gpl.html>
 # Purpose: This script reads the data files from alabamavotes.gov
@@ -17,14 +17,15 @@
 
 import json
 import csv
+from datetime import datetime
 
-# constants
-DATAFILES = ['2014_CashContributionsExtract_fixed.csv',
-             '2014_ExpendituresExtract_fixed.csv',
-             '2014_InKindContributionsExtract.csv',
-             '2014_OtherReceiptsExtract.csv']
-PARTYINFO = ['2014_Parties_active_fixed.csv', '2014_Parties_dissolved.csv']
-OUTFILE = '2014_Parties' # file extension will be added
+YEAR = datetime.today().year
+DATAFILES = [YEAR + '_CashContributionsExtract.csv',
+             YEAR + '_ExpendituresExtract.csv',
+             YEAR + '_InKindContributionsExtract.csv',
+             YEAR + '_OtherReceiptsExtract.csv']
+PARTYINFO = 'Parties.csv'
+OUTFILE = 'Parties' # file extension will be added
 HEADERS = ['name', '_id', '_API_status', 'type', 'status', 'party', 'office', 'district', 'place']
 OUTPUT_JSON = True # otherwise CSV
 PRETTY_PRINT = True # controls whitespace in JSON
@@ -40,11 +41,9 @@ def main():
         with open('../data/' + filename, 'r', errors='replace', newline='') as csvfile:
             findUniqueOrgs(csv.DictReader(csvfile))
     print('>> Found ' + str(len(allParties)) + ' unique parties.')
-    numModified = 0
-    # add the info we have on each candidate from the Parties files
-    for filename in PARTYINFO:
-        with open('../data/' + filename) as datafile:
-            numModified += addPartyInfo(csv.DictReader(datafile))    
+    # add the info we have on each candidate from the Parties file
+    with open('../data/' + PARTYINFO) as datafile:
+        numModified = addPartyInfo(csv.DictReader(datafile))
     print('>> Modified ' + str(numModified) + ' party records with additional info.')
     print('>> Writing party data to ' + OUTFILENAME + '.')
     if OUTPUT_JSON:

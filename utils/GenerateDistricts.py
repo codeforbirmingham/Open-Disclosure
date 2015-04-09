@@ -3,7 +3,7 @@
 ###################################################################
 #
 # File: GenerateDistricts.py
-# Last Edit: 2015-03-10
+# Last Edit: 2015-04-08
 # Author: Matthew Leeds <mwl458@gmail.com>
 # License: GNU GPL <http://www.gnu.org/licenses/gpl.html>
 # Purpose: This script combines the files in data/ocdIDs so we
@@ -14,9 +14,11 @@
 import os
 import json
 import csv
+from datetime import datetime
 
+YEAR = datetime.today().year
 OCDID_FILES = os.listdir('../data/ocdIDs/')
-OUTFILE = '2014_Districts' # file extension will be added
+OUTFILE = YEAR + '_Districts' # file extension will be added
 HEADERS = ['ocdID', 'name']
 OUTPUT_JSON = False # otherwise CSV
 PRETTY_PRINT = True # controls whitespace in JSON output

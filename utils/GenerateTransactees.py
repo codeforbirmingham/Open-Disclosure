@@ -3,7 +3,7 @@
 ##############################################################################
 #
 # File: GenerateTransactees.py
-# Last Edit: 2015-03-20
+# Last Edit: 2015-04-08
 # Author: Matthew Leeds <mwl458@gmail.com>
 # License: GNU GPL <http://www.gnu.org/licenses/gpl.html>
 # Purpose: This script reads the four data files from
@@ -22,14 +22,16 @@ import sys
 import json
 import csv
 from uuid import uuid4
+from datetime import datetime
 
-DATAFILES = ['2014_CashContributionsExtract_fixed.csv',
-             '2014_ExpendituresExtract_fixed.csv',
-             '2014_InKindContributionsExtract.csv',
-             '2014_OtherReceiptsExtract.csv']
+YEAR = datetime.today().year
+DATAFILES = [YEAR + '_CashContributionsExtract.csv',
+             YEAR + '_ExpendituresExtract.csv',
+             YEAR + '_InKindContributionsExtract.csv',
+             YEAR + '_OtherReceiptsExtract.csv']
 HEADERS = ['_id', 'transactee_type', '_API_status', 'name', 'organization_type', 'address', 
            'ContributionIDs', 'ExpenditureIDs', 'InKindContributionIDs', 'ReceiptIDs']
-OUTFILE = '2014_Transactees' # file extension will be added
+OUTFILE = YEAR + '_Transactees' # file extension will be added
 OUTPUT_JSON = True # otherwise output CSV
 OUTFILENAME = OUTFILE + ('.json' if OUTPUT_JSON else '.csv')
 PRETTY_PRINT = True # controls JSON output formatting
