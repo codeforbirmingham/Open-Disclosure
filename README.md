@@ -1,14 +1,36 @@
-[![Stories in Ready](https://badge.waffle.io/codeforbirmingham/open-disclosure.png?label=ready&title=Ready)](https://waffle.io/codeforbirmingham/open-disclosure)
-
-Open-Disclosure
+Frontend
 ===============
 
-The goal of the Open Disclosure project is to provide an easy to use web interface for Alabama's publicly available campaign finance data. This will empower citizens to better understand the flow of money in their
-political system, and consequently allow them to hold their representatives more accountable. 
+__DO NOT__ commit the bower_components folder to version control!
 
-The project is modeled to expand on the [Open Oakland project](http://opendisclosure.io/) (Code found [here](https://github.com/openoakland/opendisclosure)). The Alabama version is intended to be immediately redeployable in other states. Additionally, it is designed with fuzzy campaign finance laws and practices in mind. 
+Here is some information about getting setup to develop and deploy the frontend of Open-Disclosure.
 
+## Installing Dependencies
 
-Data
-====
-The source data can be found here: http://fcpa.alabamavotes.gov/PublicSite/DataDownload.aspx
+In order for the application to work, we need to pull in the dependencies if we're setting up for the first time.
+
+Dependencies in our frontend are managed by [npm](https://www.npmjs.org/) and [Bower](http://bower.io).
+
+### Installing Bower
+
+Installing Bower is super simple. Bower requires [node.js and npm](http://nodejs.org).
+
+Install bower with npm like this:
+
+```
+npm install -g bower
+```
+
+Once we're done installing Bower, we can pull in our dependencies!
+
+### Using Bower to Install Dependencies
+
+Installing dependencies with Bower is super simple.
+
+First, make sure that you're in the `frontend` directory. Once you've confirmed that, install the frontend dependencies by running:
+
+```
+bower install
+```
+
+That's it! You should now have all dependencies necessary to run the frontend of Open Disclosure.

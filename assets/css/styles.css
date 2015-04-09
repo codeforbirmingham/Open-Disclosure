@@ -1,0 +1,65 @@
+body, html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+    margin: auto;
+    padding-top: 20rem;
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
+}
+.navbar .navbar-nav {
+	display: inline-block;
+	float: none;
+	vertical-align: top;
+}
+
+.candimage {
+    background-color: #7f8c8d;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline;
+    margin: 5px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.candpos {
+    margin-top: 0;
+}
+
+.candcards {
+    background-color: #fff;
+    margin-top: 3rem;
+		margin-left:1rem;
+		margin-right:1rem;
+}
+
+.headr {
+    background-color: #212121;
+    color: #a8a8a8;
+}
+.logo {
+	margin: 2rem;
+}
+
+.header {
+	margin-top:2rem;
+	color: #ececec;
+	font-size: 5.2rem;
+	letter-spacing: -0.1rem;
+}
+.navbuttons {
+	display: block;
+	margin: auto;
+	background-color: #dededb;
+}
+.navlinks {
+	color: #252525;
+}
+.subhead {
+	line-height: 0.7;
+	color: #747f80;
+}
