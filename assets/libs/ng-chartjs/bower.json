@@ -1,0 +1,29 @@
+{
+  "name": "ng-chartjs",
+  "version": "0.0.5",
+  "homepage": "https://github.com/petermelias/angular-chartjs",
+  "authors": [
+    "Peter M. Elias <petermelias@gmail.com>"
+  ],
+  "description": "Fully featured AngularJS bindings for ChartJS",
+  "main": "dist/angular-chartjs.min.js",
+  "keywords": [
+    "angularjs",
+    "chartjs"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Chart.js": ">=v1.0.1-beta.3",
+    "angular": "~1.2.21"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.21"
+  }
+}

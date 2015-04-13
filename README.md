@@ -1,8 +1,6 @@
 Frontend
 ===============
 
-__DO NOT__ commit the bower_components folder to version control!
-
 Here is some information about getting setup to develop and deploy the frontend of Open-Disclosure.
 
 ## Installing Dependencies
