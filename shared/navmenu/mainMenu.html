@@ -1,24 +1,26 @@
-  <nav class="navbar navbar-fixed-top navbar-inverse" ng-controller="menuCtrl" role="navigation">
-    <div class="sidebar-header col-xs-10">
-      <div class="col-xs-2">
+<div id="mainmenu" class="menu-container container-fluid">
+    <div class="sidebar-header col-xs-12">
+      <div class="col-md-2 col-xs-12">
         <a class="sidebar-brand" href="#">
           <img class="logo" src="assets/img/cfb-logo-sml.png">
         </a>
       </div>
-      <div class="sitetitle col-xs-10">
+      <div class="sitetitle col-xs-12 col-md-8">
         <h3 class="header">Open Disclosure Alabama</h3>
         <h4 class="subhead">A Code for Birmingham Project</h4>
       </div>
     </div>
-    <div class="col-xs-2">
-      <button type="button right" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-menu-1">
+</div>
+  <nav class="navbar navbar-inverse" ng-controller="menuCtrl" role="navigation">
+    <div class="col-xs-12">
+        <button ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed" type="button right" class="navbar-toggle collapsed">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
     </div>
     <div class="navbuttons col-md-12">
-    <div class="collapse navbar-collapse" id="collapse-menu-1">
+    <div collapse="navCollapsed" class="nav-collapse collapse navbar-responsive-collapse" id="collapse-menu-1">
       <ul class="nav navbar-nav navbar-center navlinks">
         <li ng-class="{ active: isActive('/')}">
           <a href="#home">Home</a>
