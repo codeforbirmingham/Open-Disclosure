@@ -24,7 +24,7 @@ import csv
 from uuid import uuid4
 from datetime import datetime
 
-YEAR = datetime.today().year
+YEAR = str(datetime.today().year)
 DATAFILES = [YEAR + '_CashContributionsExtract.csv',
              YEAR + '_ExpendituresExtract.csv',
              YEAR + '_InKindContributionsExtract.csv',
