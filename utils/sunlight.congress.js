@@ -1,13 +1,10 @@
- //c64b35691ccc4a36abe554dae025b73f
+// Tait Wayland
+// Code for Birmingham
 
- //Tait Wayland
- //Code for Birmingham
+// Documentation for Sunlight congress API at https://sunlightlabs.github.io/congress
+// For this to work you'll need to replace userKey with your API key.
 
- //Documentation for Sunlight congress API at https://sunlightlabs.github.io/congress
-
-
-
-var userKey = 'c64b35691ccc4a36abe554dae025b73f',
+var userKey = 'put-api-key-here',
 APIcall = 'https://congress.api.sunlightfoundation.com/',
 keyConfirm = '?apikey=[your_api_key]',
 keyConfirm = keyConfirm.replace("[your_api_key]", userKey);
