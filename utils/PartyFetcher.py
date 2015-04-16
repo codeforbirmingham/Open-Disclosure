@@ -7,6 +7,8 @@ import os
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from subprocess import Popen, DEVNULL
+from time import sleep
 
 class PartyFetcher:
     """
@@ -27,6 +29,8 @@ class PartyFetcher:
         self.config.read(config_file)
         self.destination_dir = self.config["PARTY_FETCHER"]["destination_dir"]
         self.destination_file = self.config["PARTY_FETCHER"]["destination_file"]
+        self.server = Popen("java -jar selenium-server-standalone-2.45.0.jar", shell=True, stdout=DEVNULL, stderr=DEVNULL)
+        sleep(5) # Wait for the server to start up before connecting to it.
         self.driver = webdriver.Remote(
             command_executor= self.config["PARTY_FETCHER"]["selenium_server"],
             desired_capabilities=DesiredCapabilities.HTMLUNITWITHJS
@@ -51,7 +55,6 @@ class PartyFetcher:
         self._write_csv_file(parties)
 
 
-
     def _write_csv_file(self, lines):
         """
         Given a list of lines without newline characters, write them as is to a file. The lines are assumed to be
@@ -66,8 +69,6 @@ class PartyFetcher:
         with open(self.destination_file, 'w', newline='') as file:
             for line in lines:
                 file.write(line + "\n")
-
-
 
 
     def _get_active_parties(self):
@@ -120,13 +121,13 @@ class PartyFetcher:
         return page_source.split('\r\n')
 
 
-    def close(self):
+    def __del__(self):
         """
         Close down the web driver.
         :return:
         """
         self.driver.close()
-
+        self.server.kill()
 
 
 def main():

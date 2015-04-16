@@ -24,7 +24,7 @@ import json
 import csv
 from datetime import datetime
 
-YEAR = datetime.today().year
+YEAR = str(datetime.today().year)
 DATAFILES = [YEAR + '_CashContributionsExtract.csv',
              YEAR + '_ExpendituresExtract.csv',
              YEAR + '_InKindContributionsExtract.csv',
@@ -40,7 +40,7 @@ def main():
     global allTransactees
     allTransactees = []
     # First load the Transactees
-    with open('../data/' + TRANSACTEES_FILE) as datafile:
+    with open('data/' + TRANSACTEES_FILE) as datafile:
         allTransactees = json.load(datafile)
     print('>> Loaded ' + str(len(allTransactees)) + ' records from ' + TRANSACTEES_FILE + '.')
     # hard code the values of record types for each file
@@ -61,19 +61,19 @@ def main():
     allTransactions = [] # master list of Transactions
     # Now load the transaction data from each file
     for filename in DATAFILES:
-        with open('../data/' + filename, errors='ignore', newline='') as datafile:
+        with open('data/' + filename, errors='ignore', newline='') as datafile:
             scrapeTransactions(csv.DictReader(datafile), recordTypes[filename])
     # output the data to a file
     print('>> Writing ' + str(len(allTransactions)) + ' records to ' + OUTFILENAME + '.')
     if OUTPUT_JSON:
-        with open('../data/' + OUTFILENAME, 'w') as datafile:
+        with open('data/' + OUTFILENAME, 'w') as datafile:
             if PRETTY_PRINT:
                 json.dump(allTransactions, datafile, sort_keys=True,
                           indent=4, separators=(',', ': '))
             else:
                 json.dump(allTransactions, datafile)
     else: # output CSV
-        with open('../data/' + OUTFILENAME, 'w', newline='') as datafile:
+        with open('data/' + OUTFILENAME, 'w', newline='') as datafile:
             writer = csv.DictWriter(datafile, quoting=csv.QUOTE_ALL, fieldnames=HEADERS)
             writer.writeheader()
             writer.writerows(allTransactions)

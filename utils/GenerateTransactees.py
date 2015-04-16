@@ -24,7 +24,7 @@ import csv
 from uuid import uuid4
 from datetime import datetime
 
-YEAR = datetime.today().year
+YEAR = str(datetime.today().year)
 DATAFILES = [YEAR + '_CashContributionsExtract.csv',
              YEAR + '_ExpendituresExtract.csv',
              YEAR + '_InKindContributionsExtract.csv',
@@ -56,18 +56,18 @@ def main():
     # load data from each source file
     for filename in DATAFILES:
         print('>> Loading data from ' + filename + '.')
-        with open('../data/' + filename, 'r', errors='ignore', newline='') as csvfile:
+        with open('data/' + filename, 'r', errors='ignore', newline='') as csvfile:
             process(csv.DictReader(csvfile), recordTypes[filename])
     print('>> Writing ' + str(len(allTransactees)) + ' records to ' + OUTFILENAME + '.')
     if OUTPUT_JSON:
-        with open('../data/' + OUTFILENAME, 'w') as datafile:
+        with open('data/' + OUTFILENAME, 'w') as datafile:
             if PRETTY_PRINT:
                 json.dump(allTransactees, datafile, sort_keys=True,
                           indent=4, separators=(',', ': '))
             else:
                 json.dump(allTransactees, datafile)
     else: # output CSV
-        with open('../data/' + OUTFILENAME, 'w', newline='') as datafile:
+        with open('data/' + OUTFILENAME, 'w', newline='') as datafile:
             writer = csv.DictWriter(datafile, quoting=csv.QUOTE_ALL, fieldnames=HEADERS)
             writer.writeheader()
             writer.writerows(allTransactees)

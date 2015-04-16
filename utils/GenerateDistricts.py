@@ -16,7 +16,7 @@ import json
 import csv
 from datetime import datetime
 
-YEAR = datetime.today().year
+YEAR = str(datetime.today().year)
 OCDID_FILES = os.listdir('../data/ocdIDs/')
 OUTFILE = YEAR + '_Districts' # file extension will be added
 HEADERS = ['ocdID', 'name']
@@ -27,7 +27,7 @@ OUTFILENAME = OUTFILE + ('.json' if OUTPUT_JSON else '.csv')
 def main():
     allOCDIDs = []
     for filename in OCDID_FILES:
-        with open('../data/ocdIDs/' + filename) as datafile:
+        with open('data/ocdIDs/' + filename) as datafile:
             allOCDIDs += csv.reader(datafile)
     districts = []
     for ocdRecord in allOCDIDs:
@@ -36,14 +36,14 @@ def main():
         thisDistrict['name'] = ocdRecord[1]
         districts.append(thisDistrict)
     if OUTPUT_JSON:
-        with open('../data/' + OUTFILENAME, 'w') as datafile:
+        with open('data/' + OUTFILENAME, 'w') as datafile:
             if PRETTY_PRINT:
                 json.dump(districts, datafile, sort_keys=True, 
                           indent=4, separators=(',', ': '))
             else:
                 json.dump(districts, datafile)
     else: # output CSV
-        with open('../data/' + OUTFILENAME, 'w') as datafile:
+        with open('data/' + OUTFILENAME, 'w') as datafile:
             writer = csv.DictWriter(datafile, quoting=csv.QUOTE_ALL, fieldnames=HEADERS)
             writer.writeheader()
             writer.writerows(districts)

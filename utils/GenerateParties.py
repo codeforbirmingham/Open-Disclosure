@@ -19,7 +19,7 @@ import json
 import csv
 from datetime import datetime
 
-YEAR = datetime.today().year
+YEAR = str(datetime.today().year)
 DATAFILES = [YEAR + '_CashContributionsExtract.csv',
              YEAR + '_ExpendituresExtract.csv',
              YEAR + '_InKindContributionsExtract.csv',
@@ -38,23 +38,23 @@ def main():
     allOrgIDs = [] # used to ensure we don't have duplicates
     # start by finding all unique organizations (by id) and adding them to allParties
     for filename in DATAFILES:
-        with open('../data/' + filename, 'r', errors='replace', newline='') as csvfile:
+        with open('data/' + filename, 'r', errors='replace', newline='') as csvfile:
             findUniqueOrgs(csv.DictReader(csvfile))
     print('>> Found ' + str(len(allParties)) + ' unique parties.')
     # add the info we have on each candidate from the Parties file
-    with open('../data/' + PARTYINFO) as datafile:
+    with open('data/' + PARTYINFO) as datafile:
         numModified = addPartyInfo(csv.DictReader(datafile))
     print('>> Modified ' + str(numModified) + ' party records with additional info.')
     print('>> Writing party data to ' + OUTFILENAME + '.')
     if OUTPUT_JSON:
-        with open('../data/' + OUTFILENAME, 'w') as datafile:
+        with open('data/' + OUTFILENAME, 'w') as datafile:
             if PRETTY_PRINT:
                 json.dump(allParties, datafile, sort_keys=True, 
                           indent=4, separators=(',', ': '))
             else:
                 json.dump(allParties, datafile)
     else: # output CSV
-        with open('../data/' + OUTFILENAME, 'w', newline='') as datafile:
+        with open('data/' + OUTFILENAME, 'w', newline='') as datafile:
             writer = csv.DictWriter(datafile, quoting=csv.QUOTE_ALL, fieldnames=HEADERS)
             writer.writeheader()
             writer.writerows(allParties)
