@@ -56,24 +56,24 @@ def main():
     modifiedRecords = False # keep track of whether we update any
     # Check if there are any contributors that need geocoding.
     print('>> Loading ' + CONTRIBS_FILE + '.')
-    with open('../data/' + CONTRIBS_FILE) as datafile:
+    with open('data/' + CONTRIBS_FILE) as datafile:
         allContributors = json.load(datafile)
     (success, modifiedRecords) = geocodeEntities(True) # True means look at Contributors
     # Check if there are any payees that need geocoding.
     print('>> Loading ' + PAYEES_FILE)
-    with open('../data/' + PAYEES_FILE) as datafile:
+    with open('data/' + PAYEES_FILE) as datafile:
         allPayees = json.load(datafile)
     # if we already had a fatal error stop trying
     if success: 
         (success, modifiedRecords) = geocodeEntities(False) # False means look at Payees
     # export the data to the files it came from (if we modified any)
     if modifiedRecords:
-        with open('../data/' + CONTRIBS_FILE, 'w') as output:
+        with open('data/' + CONTRIBS_FILE, 'w') as output:
             if PRETTY_PRINT: 
                 json.dump(allContributors, output, sort_keys=True, indent=4, separators=(',', ': '))
             else:
                 json.dump(allContributors, output)
-        with open('../data/' + PAYEES_FILE, 'w') as output:
+        with open('data/' + PAYEES_FILE, 'w') as output:
             if PRETTY_PRINT:
                 json.dump(allPayees, output, sort_keys=True, indent=4, separators=(',', ': '))
             else:
@@ -83,23 +83,23 @@ def geocodeEntities(contribsOrPayees):
     modifiedAny = False # return value
     success = True # return value
     # load state geojson
-    with (open('../data/map/' + STATE_FILE)) as f:
+    with (open('data/map/' + STATE_FILE)) as f:
         s = json.load(f)
     stateShape = shape(s['features'][0]['geometry'])
     # load counties geojson
-    with (open('../data/map/' + COUNTIES_FILE)) as f:
+    with (open('data/map/' + COUNTIES_FILE)) as f:
         c = json.load(f)
     Counties = {}
     for county in c['features']:
         Counties[county['properties']['name']] = shape(county['geometry'])
     # load senate districts geojson
-    with (open('../data/map/' + UPPER_DISTRICTS)) as f:
+    with (open('data/map/' + UPPER_DISTRICTS)) as f:
         u = json.load(f)
     senateDistricts = {}
     for district in u['geometries']:
         senateDistricts[district['district']] = shape(district)
     # load house districts geojson
-    with (open('../data/map/' + LOWER_DISTRICTS)) as f:
+    with (open('data/map/' + LOWER_DISTRICTS)) as f:
         l = json.load(f)
     houseDistricts = {}
     for district in l['geometries']:

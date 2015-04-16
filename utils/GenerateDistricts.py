@@ -17,7 +17,7 @@ import csv
 from datetime import datetime
 
 YEAR = str(datetime.today().year)
-OCDID_FILES = os.listdir('../data/ocdIDs/')
+OCDID_FILES = os.listdir('data/ocdIDs/')
 OUTFILE = YEAR + '_Districts' # file extension will be added
 HEADERS = ['ocdID', 'name']
 OUTPUT_JSON = False # otherwise CSV

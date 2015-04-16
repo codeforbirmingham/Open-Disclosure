@@ -40,7 +40,7 @@ from nameparser import HumanName
 from numpy import mean
 
 # constants
-OCDIDS = os.listdir('../data/ocdIDs/')
+OCDIDS = os.listdir('data/ocdIDs/')
 CACHEFILE = '.API_Responses_cache.json'
 API_KEY = 'YOUR_API_KEY'
 BASE_URL = 'https://www.googleapis.com/civicinfo/v2/representatives/'
@@ -53,14 +53,14 @@ def main():
     global allParties
     allParties = [] # all PACs and Candidates
     print('>> Loading data from ' + PARTIES_FILE + '...', end='')
-    with open('../data/' + PARTIES_FILE) as datafile:
+    with open('data/' + PARTIES_FILE) as datafile:
         allParties = json.load(datafile)
     print(str(len(allParties)) + ' records loaded.')
     global allOCDIDs
     allOCDIDs = []
     # pull the OpenCivicData IDs into memory
     for filename in OCDIDS:
-        with open('../data/ocdIDs/' + filename) as datafile:
+        with open('data/ocdIDs/' + filename) as datafile:
             allOCDIDs += csv.reader(datafile)
     removeUsedIDs()
     global allResponses
@@ -75,7 +75,7 @@ def main():
     print('>> Starting API calls to ' + BASE_URL + '.')
     makeAPIRequests()
     print('>> Writing party data to ' + PARTIES_FILE + '.')
-    with open('../data/' + PARTIES_FILE, 'w') as datafile:
+    with open('data/' + PARTIES_FILE, 'w') as datafile:
         if PRETTY_PRINT:
             json.dump(allParties, datafile, sort_keys=True, 
                       indent=4, separators=(',', ': '))
