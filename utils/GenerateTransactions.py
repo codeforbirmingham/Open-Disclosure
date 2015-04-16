@@ -3,7 +3,7 @@
 ########################################################################
 #
 # File: GenerateTransactions.py
-# Last Edit: 2015-04-08
+# Last Edit: 2015-04-16
 # Author: Matthew Leeds <mwl458@gmail.com>
 # License: GNU GPL <http://www.gnu.org/licenses/gpl.html>
 # Purpose: This script uses the four data files from alabamavotes.gov
@@ -17,30 +17,30 @@
 # -Receipt data will also have endorsers and source_type.
 # Everything is a string except endorsers, which is a list.
 # Output can be in either JSON or CSV format.
+# Configuration parameters are read from 'config.ini'.
 #
 ########################################################################
 
 import json
 import csv
 from datetime import datetime
-
-YEAR = str(datetime.today().year)
-DATAFILES = [YEAR + '_CashContributionsExtract.csv',
-             YEAR + '_ExpendituresExtract.csv',
-             YEAR + '_InKindContributionsExtract.csv',
-             YEAR + '_OtherReceiptsExtract.csv']
-TRANSACTEES_FILE = YEAR + '_Transactees.json'
-OUTFILE = YEAR + '_Transactions' # file extension will be added
-OUTPUT_JSON = True # otherwise output CSV
-PRETTY_PRINT = True # controls JSON output format
-OUTFILENAME = OUTFILE + ('.json' if OUTPUT_JSON else '.csv')
-HEADERS = ['type', 'transaction_type', 'name', 'transactee_id', 'party_id', 'amount', 'filed_date', 'explanation', 'purpose', 'transaction_id', 'source_type', 'amended', 'inkind_nature', 'endorsers']
+from configparser import ConfigParser
 
 def main():
+    # First read the config file.
+    config = ConfigParser()
+    config.read("config.ini")
+    DATA_DIR = config.get('GENERATE_TRANSACTIONS', 'DATA_DIR')
+    TRANSACTEES_FILE = config.get('GENERATE_TRANSACTEES', 'OUTFILE') + '.json'
+    DATAFILES = json.loads(config.get('GENERATE_TRANSACTIONS', 'DATAFILES'))
+    HEADERS = json.loads(config.get('GENERATE_TRANSACTIONS', 'HEADERS'))
+    OUTPUT_JSON = config.getboolean('GENERATE_TRANSACTIONS', 'OUTPUT_JSON')
+    OUTFILE = config.get('GENERATE_TRANSACTIONS', 'OUTFILE') + ('.json' if OUTPUT_JSON else '.csv')
+    PRETTY_PRINT = config.getboolean('GENERATE_TRANSACTIONS', 'PRETTY_PRINT')
     global allTransactees
     allTransactees = []
     # First load the Transactees
-    with open('data/' + TRANSACTEES_FILE) as datafile:
+    with open(DATA_DIR + TRANSACTEES_FILE) as datafile:
         allTransactees = json.load(datafile)
     print('>> Loaded ' + str(len(allTransactees)) + ' records from ' + TRANSACTEES_FILE + '.')
     # hard code the values of record types for each file
@@ -61,19 +61,19 @@ def main():
     allTransactions = [] # master list of Transactions
     # Now load the transaction data from each file
     for filename in DATAFILES:
-        with open('data/' + filename, errors='ignore', newline='') as datafile:
+        with open(DATA_DIR + filename, errors='ignore', newline='') as datafile:
             scrapeTransactions(csv.DictReader(datafile), recordTypes[filename])
     # output the data to a file
-    print('>> Writing ' + str(len(allTransactions)) + ' records to ' + OUTFILENAME + '.')
+    print('>> Writing ' + str(len(allTransactions)) + ' records to ' + OUTFILE + '.')
     if OUTPUT_JSON:
-        with open('data/' + OUTFILENAME, 'w') as datafile:
+        with open(DATA_DIR + OUTFILE, 'w') as datafile:
             if PRETTY_PRINT:
                 json.dump(allTransactions, datafile, sort_keys=True,
                           indent=4, separators=(',', ': '))
             else:
                 json.dump(allTransactions, datafile)
     else: # output CSV
-        with open('data/' + OUTFILENAME, 'w', newline='') as datafile:
+        with open(DATA_DIR + OUTFILE, 'w', newline='') as datafile:
             writer = csv.DictWriter(datafile, quoting=csv.QUOTE_ALL, fieldnames=HEADERS)
             writer.writeheader()
             writer.writerows(allTransactions)

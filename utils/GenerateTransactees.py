@@ -3,7 +3,7 @@
 ##############################################################################
 #
 # File: GenerateTransactees.py
-# Last Edit: 2015-04-08
+# Last Edit: 2015-04-16
 # Author: Matthew Leeds <mwl458@gmail.com>
 # License: GNU GPL <http://www.gnu.org/licenses/gpl.html>
 # Purpose: This script reads the four data files from
@@ -14,7 +14,8 @@
 # The txIDs are the unique identifiers for rows in the data files,
 # so either ReceiptID, ExpenditureID, InKindContributionID, or ContributionID
 # depending on the file. They are only unique within their own file.
-# The data format is documented on the GitHub wiki.
+# The data format is documented on the GitHub wiki. Configuration parameters
+# will be read from 'config.ini' in the current directory.
 #
 ##############################################################################
 
@@ -23,20 +24,18 @@ import json
 import csv
 from uuid import uuid4
 from datetime import datetime
-
-YEAR = str(datetime.today().year)
-DATAFILES = [YEAR + '_CashContributionsExtract.csv',
-             YEAR + '_ExpendituresExtract.csv',
-             YEAR + '_InKindContributionsExtract.csv',
-             YEAR + '_OtherReceiptsExtract.csv']
-HEADERS = ['_id', 'transactee_type', '_API_status', 'name', 'organization_type', 'address', 
-           'ContributionIDs', 'ExpenditureIDs', 'InKindContributionIDs', 'ReceiptIDs']
-OUTFILE = YEAR + '_Transactees' # file extension will be added
-OUTPUT_JSON = True # otherwise output CSV
-OUTFILENAME = OUTFILE + ('.json' if OUTPUT_JSON else '.csv')
-PRETTY_PRINT = True # controls JSON output formatting
+from configparser import ConfigParser
 
 def main():
+    # Read the config file.
+    config = ConfigParser()
+    config.read('config.ini')
+    DATA_DIR = config.get('GENERATE_TRANSACTEES', 'DATA_DIR')
+    DATAFILES = json.loads(config.get('GENERATE_TRANSACTEES', 'DATAFILES'))
+    HEADERS = json.loads(config.get('GENERATE_TRANSACTEES', 'HEADERS'))
+    OUTPUT_JSON = config.getboolean('GENERATE_TRANSACTEES', 'OUTPUT_JSON')
+    OUTFILE = config.get('GENERATE_TRANSACTEES', 'OUTFILE') + ('.json' if OUTPUT_JSON else '.csv')
+    PRETTY_PRINT = config.getboolean('GENERATE_TRANSACTEES', 'PRETTY_PRINT')
     global allTransactees
     allTransactees = [] # master list of Transactees
     # hard code the ID column, org type column, and transactee type for each file
@@ -56,18 +55,18 @@ def main():
     # load data from each source file
     for filename in DATAFILES:
         print('>> Loading data from ' + filename + '.')
-        with open('data/' + filename, 'r', errors='ignore', newline='') as csvfile:
+        with open(DATA_DIR + filename, 'r', errors='ignore', newline='') as csvfile:
             process(csv.DictReader(csvfile), recordTypes[filename])
-    print('>> Writing ' + str(len(allTransactees)) + ' records to ' + OUTFILENAME + '.')
+    print('>> Writing ' + str(len(allTransactees)) + ' records to ' + OUTFILE + '.')
     if OUTPUT_JSON:
-        with open('data/' + OUTFILENAME, 'w') as datafile:
+        with open(DATA_DIR + OUTFILE, 'w') as datafile:
             if PRETTY_PRINT:
                 json.dump(allTransactees, datafile, sort_keys=True,
                           indent=4, separators=(',', ': '))
             else:
                 json.dump(allTransactees, datafile)
     else: # output CSV
-        with open('data/' + OUTFILENAME, 'w', newline='') as datafile:
+        with open(DATA_DIR + OUTFILE, 'w', newline='') as datafile:
             writer = csv.DictWriter(datafile, quoting=csv.QUOTE_ALL, fieldnames=HEADERS)
             writer.writeheader()
             writer.writerows(allTransactees)
