@@ -24,7 +24,7 @@ from configparser import ConfigParser
 def main():
     # First read the config file.
     config = ConfigParser()
-    config.read("config.ini")
+    config.read('config.ini')
     DATA_DIR = config.get('GENERATE_PARTIES', 'DATA_DIR')
     PARTYINFO = config.get('PARTY_FETCHER', 'destination_file')
     DATAFILES = json.loads(config.get('GENERATE_PARTIES', 'DATAFILES'))

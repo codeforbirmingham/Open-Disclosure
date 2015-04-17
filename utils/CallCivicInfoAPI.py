@@ -3,7 +3,7 @@
 ###################################################################
 #
 # File: CallCivicInfoAPI.py
-# Last Edit: 2015-03-27
+# Last Edit: 2015-04-16
 # Author: Matthew Leeds <mwl458@gmail.com>
 # License: GNU GPL <http://www.gnu.org/licenses/gpl.html>
 # Purpose: This script reads the output from GenerateParties.py
@@ -19,6 +19,7 @@
 # http://opencivicdata.readthedocs.org/en/latest/ocdids.html
 # It also writes API responses to a file in case you have to 
 # run this multiple times due to request limits or errors.
+# Configuration parameters are read from 'config.ini'.
 # 
 ###################################################################
 
@@ -33,62 +34,68 @@ from urllib.parse import quote_plus
 from urllib.error import HTTPError
 from time import sleep, time
 from operator import itemgetter
+from configparser import ConfigParser
 
 # 3rd party libraries
 from fuzzywuzzy import fuzz
 from nameparser import HumanName
 from numpy import mean
 
-# constants
-OCDIDS = os.listdir('data/ocdIDs/')
-CACHEFILE = '.API_Responses_cache.json'
-API_KEY = 'YOUR_API_KEY'
-BASE_URL = 'https://www.googleapis.com/civicinfo/v2/representatives/'
-REQUEST_LIMIT = 25000
-TTL_SECONDS = 30 * 24 * 60 * 60 # API responses expire after 30 days
-PARTIES_FILE = '2014_Parties.json'
-PRETTY_PRINT = True # controls whitespace in JSON
-
 def main():
+    global config
+    config = ConfigParser()
+    config.read('config.ini')
+    if len(config.get('CALL_CIVICINFO', 'API_KEY')) == 0:
+        print('>> You must specify an API key in the config file to use the Google Civic Info API!')
+        exit(1)
+    DATA_DIR = config.get('CALL_CIVICINFO', 'DATA_DIR')
+    CACHEFILE = config.get('CALL_CIVICINFO', 'CACHEFILE')
+    PARTIES_FILE = config.get('GENERATE_PARTIES', 'OUTFILE') + '.json'
+    OCDID_DIR = config.get('CALL_CIVICINFO', 'OCDID_DIR')
+    OCDIDS = os.listdir(OCDID_DIR)
+    PRETTY_PRINT = config.getboolean('CALL_CIVICINFO', 'PRETTY_PRINT')
     global allParties
     allParties = [] # all PACs and Candidates
     print('>> Loading data from ' + PARTIES_FILE + '...', end='')
-    with open('data/' + PARTIES_FILE) as datafile:
+    with open(DATA_DIR + PARTIES_FILE) as datafile:
         allParties = json.load(datafile)
     print(str(len(allParties)) + ' records loaded.')
+    print('>> Loading OpenCivicData IDs from ' + OCDID_DIR)
     global allOCDIDs
     allOCDIDs = []
-    # pull the OpenCivicData IDs into memory
     for filename in OCDIDS:
-        with open('data/ocdIDs/' + filename) as datafile:
+        with open(OCDID_DIR + filename) as datafile:
             allOCDIDs += csv.reader(datafile)
     removeUsedIDs()
     global allResponses
     allResponses = {} # to save responses we get from Google
     # check if there's any cached data from a previous run
     try:
-        with open(CACHEFILE) as datafile:
+        with open(DATA_DIR + CACHEFILE) as datafile:
             allResponses = json.load(datafile)
     except FileNotFoundError:
         pass
     # make API requests to Google for candidate info
-    print('>> Starting API calls to ' + BASE_URL + '.')
-    makeAPIRequests()
+    print('>> Starting API calls to Google.')
+    success = makeAPIRequests()
     print('>> Writing party data to ' + PARTIES_FILE + '.')
-    with open('data/' + PARTIES_FILE, 'w') as datafile:
+    with open(DATA_DIR + PARTIES_FILE, 'w') as datafile:
         if PRETTY_PRINT:
             json.dump(allParties, datafile, sort_keys=True, 
                       indent=4, separators=(',', ': '))
         else:
             json.dump(allParties, datafile)
     print('>> Writing a copy of API responses to ' + CACHEFILE + '.')
-    with open(CACHEFILE, 'w') as datafile:
+    with open(DATA_DIR + CACHEFILE, 'w') as datafile:
         json.dump(allResponses, datafile) # just in case we need them
+    if not success: exit(1)
 
 # removes OCD IDs for which we already have fresh data
 def removeUsedIDs():
+    global config
     global allOCDIDs
     global allParties
+    TTL_SECONDS = config.getint('CALL_CIVICINFO', 'TTL_SECONDS')
     for party in allParties:
         if party['_API_status'] == 'OK' and (time() - party['_API_timestamp']) < TTL_SECONDS:
             for ocdRecord in allOCDIDs:
@@ -98,14 +105,21 @@ def removeUsedIDs():
 
 # make calls to makeAPIRequest(ocdID)
 def makeAPIRequests():
+    global config
+    global allOCDIDs
+    MAX_API_REQUESTS = config.getint('CALL_CIVICINFO', 'MAX_API_REQUESTS') 
+    VERBOSE = config.getboolean('CALL_CIVICINFO', 'VERBOSE')
     numFailures = 0
     numRequests = 0
+    success = True # return value
     # make an API request for each OCD ID if we don't already have the info
     for ocdRecord in allOCDIDs:
-        if numRequests == REQUEST_LIMIT:
-            print('>> Error: Usage quota reached (' + str(REQUEST_LIMIT) + ').')
+        if numRequests == MAX_API_REQUESTS:
+            print('>> Error: Configured API request limit reached (' + str(MAX_API_REQUESTS) + ').')
+            success = False
             break
-        print('>> Requesting data for ' + ocdRecord[1])
+        if VERBOSE: 
+            print('>> Requesting data for ' + ocdRecord[1])
         # catch any errors to ensure the data gets written to disk
         try:
             if not makeAPIRequest(ocdRecord[0]):
@@ -114,12 +128,19 @@ def makeAPIRequests():
         except Exception as e:
             print('>> Caught Error: ' + str(e))
             traceback.print_exc()
+            success = False
             break
     print('>> ' + str(numRequests) + ' requests made.')
     print('>> ' + str(numFailures) + ' requests failed.') 
+    if not success: return False
+    return (numFailures < numRequests)
 
 # make a representativeInfoByDivision query to Google
 def makeAPIRequest(ocdID):
+    global config
+    global allResponses
+    BASE_URL = config.get('CALL_CIVICINFO', 'BASE_URL')
+    API_KEY = config.get('CALL_CIVICINFO', 'API_KEY')
     # don't make the request again if we have it cached
     if ocdID in allResponses:
         reply = allResponses[ocdID]
@@ -142,6 +163,7 @@ def makeAPIRequest(ocdID):
 
 # process the reply we received, looking for matching officials in our data
 def processReply(reply, ocdID):
+    global allParties
     # we're about to use a lot of 'duct tape' to try to make Google's
     # data look more like our data
     try:
@@ -218,6 +240,7 @@ def processReply(reply, ocdID):
 
 # scrape whatever useful data we can from the reply
 def scrapeData(official, candidateOrgID, ocdID):
+    global allParties
     for party in allParties:
         if party['_id'] == candidateOrgID:
             party['_API_status'] = 'OK'

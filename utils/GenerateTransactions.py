@@ -29,7 +29,7 @@ from configparser import ConfigParser
 def main():
     # First read the config file.
     config = ConfigParser()
-    config.read("config.ini")
+    config.read('config.ini')
     DATA_DIR = config.get('GENERATE_TRANSACTIONS', 'DATA_DIR')
     TRANSACTEES_FILE = config.get('GENERATE_TRANSACTEES', 'OUTFILE') + '.json'
     DATAFILES = json.loads(config.get('GENERATE_TRANSACTIONS', 'DATAFILES'))
