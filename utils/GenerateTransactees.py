@@ -3,7 +3,6 @@
 ##############################################################################
 #
 # File: GenerateTransactees.py
-# Last Edit: 2015-04-16
 # Author: Matthew Leeds <mwl458@gmail.com>
 # License: GNU GPL <http://www.gnu.org/licenses/gpl.html>
 # Purpose: This script reads the four data files from
@@ -32,9 +31,7 @@ def main():
     config.read('config.ini')
     DATA_DIR = config.get('GENERATE_TRANSACTEES', 'DATA_DIR')
     DATAFILES = json.loads(config.get('GENERATE_TRANSACTEES', 'DATAFILES'))
-    HEADERS = json.loads(config.get('GENERATE_TRANSACTEES', 'HEADERS'))
-    OUTPUT_JSON = config.getboolean('GENERATE_TRANSACTEES', 'OUTPUT_JSON')
-    OUTFILE = config.get('GENERATE_TRANSACTEES', 'OUTFILE') + ('.json' if OUTPUT_JSON else '.csv')
+    OUTFILE = config.get('GENERATE_TRANSACTEES', 'OUTFILE')
     PRETTY_PRINT = config.getboolean('GENERATE_TRANSACTEES', 'PRETTY_PRINT')
     global allTransactees
     allTransactees = [] # master list of Transactees
@@ -54,22 +51,16 @@ def main():
             sys.exit(1)
     # load data from each source file
     for filename in DATAFILES:
-        print('>> Loading data from ' + filename + '.')
-        with open(DATA_DIR + filename, 'r', errors='ignore', newline='') as csvfile:
+        print('>> Loading data from ' + filename)
+        with open(DATA_DIR + filename, 'r', errors='replace', newline='') as csvfile:
             process(csv.DictReader(csvfile), recordTypes[filename])
-    print('>> Writing ' + str(len(allTransactees)) + ' records to ' + OUTFILE + '.')
-    if OUTPUT_JSON:
-        with open(DATA_DIR + OUTFILE, 'w') as datafile:
-            if PRETTY_PRINT:
-                json.dump(allTransactees, datafile, sort_keys=True,
-                          indent=4, separators=(',', ': '))
-            else:
-                json.dump(allTransactees, datafile)
-    else: # output CSV
-        with open(DATA_DIR + OUTFILE, 'w', newline='') as datafile:
-            writer = csv.DictWriter(datafile, quoting=csv.QUOTE_ALL, fieldnames=HEADERS)
-            writer.writeheader()
-            writer.writerows(allTransactees)
+    print('>> Writing ' + str(len(allTransactees)) + ' records to ' + OUTFILE)
+    with open(DATA_DIR + OUTFILE, 'w') as datafile:
+        if PRETTY_PRINT:
+            json.dump(allTransactees, datafile, sort_keys=True,
+                      indent=4, separators=(',', ': '))
+        else:
+            json.dump(allTransactees, datafile)
 
 # process each record, adding it to allTransactees
 # records is a csv.DictReader and recordTypes is (<id col name>, <org type col name>, <transactee type>)

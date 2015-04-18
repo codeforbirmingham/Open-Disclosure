@@ -3,14 +3,12 @@
 ###################################################################
 #
 # File: GenerateParties.py
-# Last Edit: 2015-04-16
 # Author: Matthew Leeds <mwl458@gmail.com>
 # License: GNU GPL <http://www.gnu.org/licenses/gpl.html>
 # Purpose: This script reads the data files from alabamavotes.gov
 # and finds all the unique PACs & Candidates (by OrgID).
 # It also reads the Party information from that site, and
 # cross-references it with the existing data. 
-# It can output Party data either in JSON or CSV format.
 # This data can then be expanded by CallCivicInfoAPI.py
 # Configuration parameters are read from 'config.ini'.
 #
@@ -28,9 +26,7 @@ def main():
     DATA_DIR = config.get('GENERATE_PARTIES', 'DATA_DIR')
     PARTYINFO = config.get('PARTY_FETCHER', 'destination_file')
     DATAFILES = json.loads(config.get('GENERATE_PARTIES', 'DATAFILES'))
-    HEADERS = json.loads(config.get('GENERATE_PARTIES', 'HEADERS'))
-    OUTPUT_JSON = config.getboolean('GENERATE_PARTIES', 'OUTPUT_JSON')
-    OUTFILE = config.get('GENERATE_PARTIES', 'OUTFILE') + ('.json' if OUTPUT_JSON else '.csv')
+    OUTFILE = config.get('GENERATE_PARTIES', 'OUTFILE')
     PRETTY_PRINT = config.getboolean('GENERATE_PARTIES', 'PRETTY_PRINT')
     global allParties
     allParties = [] # all PACs and Candidates
@@ -39,25 +35,19 @@ def main():
     # start by finding all unique organizations (by id) and adding them to allParties
     for filename in DATAFILES:
         with open(DATA_DIR + filename, 'r', errors='replace', newline='') as csvfile:
+            print('>> Loading data from ' + filename)
             findUniqueOrgs(csv.DictReader(csvfile))
-    print('>> Found ' + str(len(allParties)) + ' unique parties.')
     # add the info we have on each candidate from the Parties file
     with open(DATA_DIR + PARTYINFO) as datafile:
         numModified = addPartyInfo(csv.DictReader(datafile))
     print('>> Modified ' + str(numModified) + ' party records with additional info.')
-    print('>> Writing party data to ' + OUTFILE + '.')
-    if OUTPUT_JSON:
-        with open(DATA_DIR + OUTFILE, 'w') as datafile:
-            if PRETTY_PRINT:
-                json.dump(allParties, datafile, sort_keys=True, 
-                          indent=4, separators=(',', ': '))
-            else:
-                json.dump(allParties, datafile)
-    else: # output CSV
-        with open(DATA_DIR + OUTFILE, 'w', newline='') as datafile:
-            writer = csv.DictWriter(datafile, quoting=csv.QUOTE_ALL, fieldnames=HEADERS)
-            writer.writeheader()
-            writer.writerows(allParties)
+    print('>> Writing ' + str(len(allParties)) + ' records to ' + OUTFILE)
+    with open(DATA_DIR + OUTFILE, 'w') as datafile:
+        if PRETTY_PRINT:
+            json.dump(allParties, datafile, sort_keys=True, 
+                      indent=4, separators=(',', ': '))
+        else:
+            json.dump(allParties, datafile)
 
 def findUniqueOrgs(records):
     global allParties

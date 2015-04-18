@@ -66,6 +66,7 @@ class PartyFetcher:
             os.mkdir(self.destination_dir)
         os.chdir(self.destination_dir)
 
+        print('Writing party data to ' + self.destination_file)
         with open(self.destination_file, 'w', newline='') as file:
             for line in lines:
                 file.write(line + "\n")

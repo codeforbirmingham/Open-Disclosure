@@ -3,11 +3,10 @@
 ###################################################################
 #
 # File: GenerateDistricts.py
-# Last Edit: 2015-04-16
 # Author: Matthew Leeds <mwl458@gmail.com>
 # License: GNU GPL <http://www.gnu.org/licenses/gpl.html>
-# Purpose: This script combines the files in data/ocdIDs so we
-# district information in either JSON or CSV format.
+# Purpose: This script combines the files in data/ocdIDs to output
+# district information in JSON format.
 # Configuration parameters are read from 'config.ini'.
 #
 ###################################################################
@@ -25,13 +24,12 @@ def main():
     DATA_DIR = config.get('GENERATE_DISTRICTS', 'DATA_DIR')
     OCDID_DIR = config.get('GENERATE_DISTRICTS', 'OCDID_DIR')
     OCDID_FILES = os.listdir(OCDID_DIR)
-    OUTPUT_JSON = config.getboolean('GENERATE_DISTRICTS', 'OUTPUT_JSON')
-    OUTFILE = config.get('GENERATE_DISTRICTS', 'OUTFILE') + ('.json' if OUTPUT_JSON else '.csv')
-    HEADERS = json.loads(config.get('GENERATE_DISTRICTS', 'HEADERS'))
+    OUTFILE = config.get('GENERATE_DISTRICTS', 'OUTFILE')
     PRETTY_PRINT = config.getboolean('GENERATE_DISTRICTS', 'PRETTY_PRINT')
     allOCDIDs = []
     for filename in OCDID_FILES:
         with open(OCDID_DIR + filename) as datafile:
+            print('>> Loading data from ' + filename)
             allOCDIDs += csv.reader(datafile)
     districts = []
     for ocdRecord in allOCDIDs:
@@ -39,18 +37,13 @@ def main():
         thisDistrict['ocdID'] = ocdRecord[0]
         thisDistrict['name'] = ocdRecord[1]
         districts.append(thisDistrict)
-    if OUTPUT_JSON:
-        with open(DATA_DIR + OUTFILE, 'w') as datafile:
-            if PRETTY_PRINT:
-                json.dump(districts, datafile, sort_keys=True, 
-                          indent=4, separators=(',', ': '))
-            else:
-                json.dump(districts, datafile)
-    else: # output CSV
-        with open(DATA_DIR + OUTFILE, 'w') as datafile:
-            writer = csv.DictWriter(datafile, quoting=csv.QUOTE_ALL, fieldnames=HEADERS)
-            writer.writeheader()
-            writer.writerows(districts)
+    print('>> Writing ' + str(len(districts)) + ' records to ' + OUTFILE)
+    with open(DATA_DIR + OUTFILE, 'w') as datafile:
+        if PRETTY_PRINT:
+            json.dump(districts, datafile, sort_keys=True, 
+                      indent=4, separators=(',', ': '))
+        else:
+            json.dump(districts, datafile)
 
 if __name__=='__main__':
     main()

@@ -14,7 +14,7 @@ Here is a brief description of the scripts which are separated into categories b
 
 ### Step 1: Download the Data ###
 * DataFetcher.py: This downloads the four main CSV files (CashContributions, InKindContributions, Expenditures, OtherReceipts) with all the campaign finance data. That data is updated every 24 hours.
-* PartyFetcher.py: This downloads two CSV files which have information for "Active" and "Dissolved" parties (political candidates). You will need a selenium server running for this to work (get a jar from http://www.seleniumhq.org/download/ and run $ java -jar selenium-server-standalone.jar).
+* PartyFetcher.py: This downloads two CSV files which have information for "Active" and "Dissolved" parties (political candidates). You will need a selenium server jar in the current directory. Get v2.45.0 from http://www.seleniumhq.org/download/.
 
 ### Step 2: Organize the Data ###
 * GenerateTransactees.py: This looks at the four data files and identifies all the people transacting with the PACs and Candidates. For Expenditures, these are referred to as Payees. For Receipt data, they're ReceiptSources. For cash and in-kind contributions, they're Contributors. 
@@ -23,8 +23,8 @@ Here is a brief description of the scripts which are separated into categories b
 * GenerateDistricts.py: This looks at the Open Civic Data IDs in /data/ocdIDs/ and puts that in JSON format (matching each ID to its friendly name).
 
 ### Step 3: Add to the Data ###
-* CallGeocodingAPI.py: This calls Google's Geocoding API to convert street addresses to coordinates for all the contributors and payees, and locates them by district, county, etc. using the files in /data/map/.
-* CallCivicInfoAPI.py: This calls Google's Civic Information API to get information on each OCD ID in Alabama, adding to the existing data.
+* CallGeocodingAPI.py: This calls Google's Geocoding API to convert street addresses to coordinates for all the transactees, and locates them by district, county, etc. using the files in /data/map/.
+* CallCivicInfoAPI.py: This calls Google's Civic Information API to get information on each OCD ID in Alabama, adding to the existing party data.
 
 ### Step 4: Send the Data to Socrata ###
 Coming Soon...
