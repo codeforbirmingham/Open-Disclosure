@@ -34,7 +34,7 @@ def main():
     allOrgIDs = [] # used to ensure we don't have duplicates
     # start by finding all unique organizations (by id) and adding them to allParties
     for filename in DATAFILES:
-        with open(DATA_DIR + filename, 'r', errors='replace', newline='') as csvfile:
+        with open(DATA_DIR + filename, 'r', errors='ignore', newline='') as csvfile:
             print('>> Loading data from ' + filename)
             findUniqueOrgs(csv.DictReader(csvfile))
     # add the info we have on each candidate from the Parties file

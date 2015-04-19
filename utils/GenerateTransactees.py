@@ -52,7 +52,7 @@ def main():
     # load data from each source file
     for filename in DATAFILES:
         print('>> Loading data from ' + filename)
-        with open(DATA_DIR + filename, 'r', errors='replace', newline='') as csvfile:
+        with open(DATA_DIR + filename, 'r', errors='ignore', newline='') as csvfile:
             process(csv.DictReader(csvfile), recordTypes[filename])
     print('>> Writing ' + str(len(allTransactees)) + ' records to ' + OUTFILE)
     with open(DATA_DIR + OUTFILE, 'w') as datafile:

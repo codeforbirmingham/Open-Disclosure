@@ -61,7 +61,7 @@ def main():
     allTransactions = [] # master list of Transactions
     # Now load the transaction data from each file
     for filename in DATAFILES:
-        with open(DATA_DIR + filename, errors='replace', newline='') as datafile:
+        with open(DATA_DIR + filename, errors='ignore', newline='') as datafile:
             print('>> Loading data from ' + filename)
             scrapeTransactions(csv.DictReader(datafile), recordTypes[filename])
     # output the data to a file
