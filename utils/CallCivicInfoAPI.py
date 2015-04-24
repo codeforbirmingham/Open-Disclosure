@@ -105,7 +105,7 @@ def removeUsedIDs():
     global allParties
     TTL_SECONDS = config.getint('CALL_CIVICINFO', 'TTL_SECONDS')
     for party in allParties:
-        if party['_API_status'] == 'OK' and (time() - party['_API_timestamp']) < TTL_SECONDS:
+        if party['API_status'] == 'OK' and (time() - party['API_timestamp']) < TTL_SECONDS:
             # iterate over a copy so we can delete some
             for district in list(allDistricts):
                 if district['ocdID'] == party['ocdID']:
@@ -237,7 +237,7 @@ def processReply(reply, ocdID):
                     # take a simple average
                     matchProbability = mean(matchingRatios)
                     if matchProbability > 90: # arbitrary minimum threshold
-                        possibleMatches[party['_id']] = matchProbability
+                        possibleMatches[party['ID']] = matchProbability
             if len(possibleMatches) == 0:
                 continue # to next official
             else:
@@ -251,9 +251,9 @@ def processReply(reply, ocdID):
 def scrapeData(official, candidateOrgID, ocdID):
     global allParties
     for party in allParties:
-        if party['_id'] == candidateOrgID:
-            party['_API_status'] = 'OK'
-            party['_API_timestamp'] = int(time())
+        if party['ID'] == candidateOrgID:
+            party['API_status'] = 'OK'
+            party['API_timestamp'] = int(time())
             party['ocdID'] = ocdID
             try:
                 party['party'] = official['party']

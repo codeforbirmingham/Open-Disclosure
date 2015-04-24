@@ -112,12 +112,12 @@ def geocodeTransactees(googleOrOSM):
     VERBOSE = config.getboolean('CALL_GEOCODING', 'VERBOSE')
     for record in allTransactees:
         # don't touch records that have already been geocoded
-        if len(record['_API_status']) > 0:
+        if len(record['API_status']) > 0:
             continue
         # don't bother asking Google about an empty address or PO BOX, etc.
         if len(record['address']) == 0 and not checkString(record['address'], BAD_ADDRESSES):
             modifiedAny = True
-            record['_API_status'] = 'ZERO_RESULTS'
+            record['API_status'] = 'ZERO_RESULTS'
         # otherwise we should try to geocode it
         elif numAPIRequests < MAX_API_REQUESTS:
             if VERBOSE:
@@ -134,13 +134,13 @@ def geocodeTransactees(googleOrOSM):
                     success = False
                     break # give up
                 # save the status code so we don't try again (usually ZERO_RESULTS)
-                record['_API_status'] = result
+                record['API_status'] = result
             else: # success
                 record['address'] = result[1] # nicely formatted address
                 # round coordinates to 6 decimal places (~0.1m precision)
                 record['geo_data'] = [round(result[0]['lat'], 6),
                                       round(result[0]['lng'], 6)]
-                record['_API_status'] = 'OK'
+                record['API_status'] = 'OK'
                 # Now use the new information to try to find their county, district, etc.
                 record['in_state'] = 0
                 thisPoint = Point(record['geo_data'][0], record['geo_data'][1])

@@ -60,8 +60,8 @@ def findUniqueOrgs(records):
             numParties += 1
             allOrgIDs.append(record['OrgID'])
             thisOrg = {} 
-            thisOrg['_id'] = record['OrgID']
-            thisOrg['_API_status'] = '' # this field will be used by CallCivicInfo.py
+            thisOrg['ID'] = record['OrgID']
+            thisOrg['API_status'] = '' # this field will be used by CallCivicInfo.py
             if record['CommitteeType'] == 'Political Action Committee':
                 thisOrg['type'] = 'PAC'
                 rawName = record['CommitteeName']
@@ -80,7 +80,7 @@ def addPartyInfo(records):
     for record in records:
         # if the ID is in the data, add to it
         for party in allParties:
-            if party['_id'] == record['CommitteeID']:
+            if party['ID'] == record['CommitteeID']:
                 numModified += 1
                 party['name'] = record['CandidateName']
                 party['party'] = record['Party']
@@ -88,7 +88,7 @@ def addPartyInfo(records):
                 if len(record['District']) > 0: 
                     party['district'] = record['District']
                 if len(record['Place']) > 0:
-                    party['place'] = record['Place']
+                    party['place'] = record['Place'].strip()
                 party['status'] = record['CommitteeStatus']
                 break
     return numModified

@@ -106,8 +106,8 @@ def process(records, recordTypes):
             newOrg = {}
             newOrg['name'] = name
             newOrg['transactee_type'] = transacteeType
-            newOrg['_id'] = str(uuid4()).upper() # random unique id
-            newOrg['_API_status'] = '' # will be used by geocoding script
+            newOrg['ID'] = str(uuid4()).upper() # random unique id
+            newOrg['API_status'] = '' # will be used by geocoding script
             newOrg['organization_type'] = orgType
             newOrg[idType] = [txID]
             newOrg['address'] = address
