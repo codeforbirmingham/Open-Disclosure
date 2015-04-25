@@ -23,9 +23,7 @@ Once we're done installing Bower, we can pull in our dependencies!
 
 ### Using Bower to Install Dependencies
 
-Installing dependencies with Bower is super simple.
-
-First, make sure that you're in the `frontend` directory. Once you've confirmed that, install the frontend dependencies by running:
+Installing dependencies with Bower is super simple:
 
 ```
 bower install
