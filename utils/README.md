@@ -1,4 +1,4 @@
-# Open-Disclusure/utils #
+# Open-Disclosure/utils #
 This is a collection of Python scripts that download, organize, and enhance data from alabamavotes.gov. They've all been written with a focus on readability over efficiency, so keep that in mind if you contribute.
 
 ## System Requirements ##
