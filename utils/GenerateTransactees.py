@@ -90,14 +90,11 @@ def process(records, recordTypes):
         isNew = True
         # treat each nameless person as unique
         if len(name) != 0:
-            # check if they're already in allTransactees
+            # check if they're already in allTransactees (and the same type)
             for record in allTransactees[startIndex:]:
-                if record['name'] == name and record['address'] == address and record['transactee_type'] == transacteeType:
+                if record['name'] == name and record['address'] == address:
                     # add this transaction id to the existing record
-                    if idType not in record['transaction_ids']:
-                        record['transaction_ids'][idType] = [txID]
-                    else:
-                        record['transaction_ids'][idType].append(txID)
+                    record['transaction_ids'][idType].append(txID)
                     isNew = False
                     break
         if isNew: # we haven't seen them yet
