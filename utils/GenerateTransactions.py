@@ -23,6 +23,7 @@ import json
 import csv
 from datetime import datetime
 from configparser import ConfigParser
+from uuid import uuid4
 
 def main():
     # First read the config file.
@@ -97,6 +98,7 @@ def scrapeTransactions(records, recordType):
         if not foundMatch:
             print('Error: No match found for id ' + record[idCol] + ' in the transactees file.')
         # add some general information
+        thisTransaction['id'] = str(uuid4()).upper() # random unique id
         thisTransaction['party_ID'] = record['OrgID']
         thisTransaction['amount'] = record[recordType + 'Amount']
         thisTransaction['filed_date'] = record['FiledDate']
