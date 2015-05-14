@@ -237,7 +237,7 @@ def processReply(reply, ocdID):
                     # take a simple average
                     matchProbability = mean(matchingRatios)
                     if matchProbability > 90: # arbitrary minimum threshold
-                        possibleMatches[party['ID']] = matchProbability
+                        possibleMatches[party['id']] = matchProbability
             if len(possibleMatches) == 0:
                 continue # to next official
             else:
@@ -251,7 +251,7 @@ def processReply(reply, ocdID):
 def scrapeData(official, candidateOrgID, ocdID):
     global allParties
     for party in allParties:
-        if party['ID'] == candidateOrgID:
+        if party['id'] == candidateOrgID:
             party['API_status'] = 'OK'
             party['API_timestamp'] = int(time())
             party['ocdID'] = ocdID
