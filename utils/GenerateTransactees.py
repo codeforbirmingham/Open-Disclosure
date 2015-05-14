@@ -92,14 +92,12 @@ def process(records, recordTypes):
         if len(name) != 0:
             # check if they're already in allTransactees
             for record in allTransactees[startIndex:]:
-                if record['name'] == name and record['address'] == address:
-                    # if it's the same type of transactee, update it with this txID
-                    try:
-                        record[idType].append(txID)
-                    # otherwise keep looking
-                    except KeyError:
-                        continue
-                    record[idType] = list(set(record[idType])) # remove any dupes
+                if record['name'] == name and record['address'] == address and record['transactee_type'] == transacteeType:
+                    # add this transaction id to the existing record
+                    if idType not in record['transaction_ids']:
+                        record['transaction_ids'][idType] = [txID]
+                    else:
+                        record['transaction_ids'][idType].append(txID)
                     isNew = False
                     break
         if isNew: # we haven't seen them yet
@@ -109,7 +107,7 @@ def process(records, recordTypes):
             newOrg['id'] = str(uuid4()).upper() # random unique id
             newOrg['API_status'] = '' # will be used by geocoding script
             newOrg['organization_type'] = orgType
-            newOrg[idType] = [txID]
+            newOrg['transaction_ids'] = {idType : [txID]}
             newOrg['address'] = address
             allTransactees.append(newOrg)
 
