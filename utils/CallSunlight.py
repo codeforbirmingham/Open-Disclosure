@@ -4,7 +4,7 @@ import configparser
 import sunlight
 
 
-class SunlightFetcher:
+class CallSunlight:
     """
     Class responsible for fetching state specific Sunlight API Data.
     API Key is found in ~/.sunlight.key, Environment SUNLIGHT_API_KEY, or sunlight.config.api_key
@@ -26,8 +26,8 @@ class SunlightFetcher:
 
 
 def main():
-    sunlightFetcher = SunlightFetcher('config.ini')
-    sunlightFetcher.fetchData()
+    callSunlight = CallSunlight('config.ini')
+    callSunlight.fetchData()
 
 if __name__ == "__main__":
     main()
