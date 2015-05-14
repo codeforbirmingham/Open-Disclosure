@@ -1,4 +1,4 @@
-# Open-Disclusure/utils #
+# Open-Disclosure/utils #
 This is a collection of Python scripts that download, organize, and enhance data from alabamavotes.gov. They've all been written with a focus on readability over efficiency, so keep that in mind if you contribute.
 
 ## System Requirements ##
@@ -27,7 +27,7 @@ Here is a brief description of the scripts which are separated into categories b
 * CallCivicInfoAPI.py: This calls Google's Civic Information API to get information on each OCD ID in Alabama, adding to the existing party data.
 
 ### Step 4: Send the Data to Socrata ###
-Coming Soon...
+Edit the config.ini with credentials and run SendToSocrata.py.
 
 ## Next Steps ##
 At this point we need to do a lot of testing to ensure the scripts do what we think they do. Then we can upload the data to Socrata so we have an API for our frontend (and anyone else with a use for it). We will also need to set up our server to run these scripts periodically.
