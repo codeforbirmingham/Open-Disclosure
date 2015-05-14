@@ -91,7 +91,7 @@ def scrapeTransactions(records, recordType):
         for entry in allTransactees:
             # if the txID's match, copy the UUID.
             if idCol + 's' in entry and record[idCol] in entry[idCol + 's']:
-                thisTransaction['transactee_ID'] = entry['ID']
+                thisTransaction['transactee_ID'] = entry['id']
                 foundMatch = True
                 break
         if not foundMatch:
