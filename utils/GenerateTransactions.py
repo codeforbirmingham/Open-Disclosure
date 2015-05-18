@@ -8,8 +8,8 @@
 # Purpose: This script uses the four data files from alabamavotes.gov
 # and the file produced by GenerateTransactees.py (for IDs)
 # to collect every transaction formatted according to the data model.
-# The output should have party_ID, amount, filed_date, type,
-# transaction_type, transaction_ID, transactee_ID, and
+# The output should have party_id, amount, filed_date, type,
+# transaction_type, transaction_id, transactee_id, and
 # amended for all records.
 # -Expenditure data will also have explanation and purpose.
 # -InKind data will also have inkind_nature and source_type.
@@ -92,17 +92,17 @@ def scrapeTransactions(records, recordType):
         for entry in allTransactees:
             # if the txID's match, copy the UUID.
             if idCol[:-2] == entry['transaction_type'] and record[idCol] in entry['transaction_ids']:
-                thisTransaction['transactee_ID'] = entry['id']
+                thisTransaction['transactee_id'] = entry['id']
                 foundMatch = True
                 break
         if not foundMatch:
             print('Error: No match found for id ' + record[idCol] + ' in the transactees file.')
         # add some general information
         thisTransaction['id'] = str(uuid4()).upper() # random unique id
-        thisTransaction['party_ID'] = record['OrgID']
+        thisTransaction['party_id'] = record['OrgID']
         thisTransaction['amount'] = record[recordType + 'Amount']
         thisTransaction['filed_date'] = record['FiledDate']
-        thisTransaction['transaction_ID'] = record[idCol]
+        thisTransaction['transaction_id'] = record[idCol]
         thisTransaction['amended'] = record['Amended']
         # add information specific to this record type
         if recordType == 'Expenditure':
