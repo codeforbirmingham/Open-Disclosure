@@ -3,9 +3,7 @@
 
 py = python3
 
-all: download organize
-
-.PHONY: all download organize clean
+all: download organize flatten
 
 download:
 	$(py) DataFetcher.py
@@ -17,5 +15,10 @@ organize:
 	$(py) GenerateTransactions.py
 	$(py) GenerateDistricts.py
 
+flatten:
+	$(py) FlattenData.py
+
 clean:
 	-rm data/*.json data/*.csv
+
+.PHONY: all download organize clean flatten
