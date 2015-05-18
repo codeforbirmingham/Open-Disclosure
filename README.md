@@ -12,3 +12,8 @@ The project is modeled to expand on the [Open Oakland project](http://opendisclo
 Data
 ====
 The source data can be found here: http://fcpa.alabamavotes.gov/PublicSite/DataDownload.aspx
+
+
+More Info
+=========
+See the wiki for this repository and utils/README.md for more information.
