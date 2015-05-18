@@ -23,11 +23,15 @@ Here is a brief description of the scripts which are separated into categories b
 * GenerateDistricts.py: This looks at the Open Civic Data IDs in /data/ocdIDs/ and puts that in JSON format (matching each ID to its friendly name).
 
 ### Step 3: Add to the Data ###
+For this step you'll need API keys from Google and the Sunlight Foundation.
 * CallGeocodingAPI.py: This calls Google's Geocoding API to convert street addresses to coordinates for all the transactees, and locates them by district, county, etc. using the files in /data/map/.
 * CallCivicInfoAPI.py: This calls Google's Civic Information API to get information on each OCD ID in Alabama, adding to the existing party data.
 * CallSunlightAPI.py: This makes some calls to the Sunlight Foundation's API but doesn't do anything with the info (yet).
 
-### Step 4: Send the Data to Socrata ###
+### Step 4: Flatten the Data ###
+In order to import the data into Socrata, the JSON needs to be flattened. The aptly named FlattenData.py serves this purpose.
+
+### Step 5: Send the Data to Socrata ###
 Edit the config.ini with credentials and run SendToSocrata.py.
 
 ## Next Steps ##
