@@ -68,7 +68,6 @@ def process(records, recordTypes):
     global allTransactees
     # idCol = ContributionID, ExpenditureID, InKindContributionID, or ReceiptID
     idCol = recordTypes[0]
-    idType = idCol + 's'
     # orgTypeCol = ContributorType,  ReceiptSourceType, or ''
     orgTypeCol = recordTypes[1]
     # transacteeType = Contributor, Payee, or ReceiptSource
@@ -94,7 +93,7 @@ def process(records, recordTypes):
             for record in allTransactees[startIndex:]:
                 if record['name'] == name and record['address'] == address:
                     # add this transaction id to the existing record
-                    record['transaction_ids'][idType].append(txID)
+                    record['transaction_ids'].append(txID)
                     isNew = False
                     break
         if isNew: # we haven't seen them yet
@@ -104,7 +103,8 @@ def process(records, recordTypes):
             newOrg['id'] = str(uuid4()).upper() # random unique id
             newOrg['API_status'] = '' # will be used by geocoding script
             newOrg['organization_type'] = orgType
-            newOrg['transaction_ids'] = {idType : [txID]}
+            newOrg['transaction_type'] = idCol[:-2]
+            newOrg['transaction_ids'] = [txID]
             newOrg['address'] = address
             allTransactees.append(newOrg)
 
