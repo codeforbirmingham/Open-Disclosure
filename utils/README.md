@@ -4,7 +4,7 @@ This is a collection of Python scripts that download, organize, and enhance data
 ## System Requirements ##
 * Python 3.4 or later
 * a Linux environment (other UNIX may work)
-* Python libraries: shapely, fuzzywuzzy, nameparser, numpy, selenium
+* Python libraries: shapely, fuzzywuzzy, nameparser, numpy, selenium, sodapy, sunlight
 
 ## Using Make ##
 Instead of running all the scripts below manually, you can simply run "make", which currently covers Steps 1 and 2.
@@ -25,12 +25,13 @@ Here is a brief description of the scripts which are separated into categories b
 ### Step 3: Add to the Data ###
 * CallGeocodingAPI.py: This calls Google's Geocoding API to convert street addresses to coordinates for all the transactees, and locates them by district, county, etc. using the files in /data/map/.
 * CallCivicInfoAPI.py: This calls Google's Civic Information API to get information on each OCD ID in Alabama, adding to the existing party data.
+* CallSunlightAPI.py: This makes some calls to the Sunlight Foundation's API but doesn't do anything with the info (yet).
 
 ### Step 4: Send the Data to Socrata ###
 Edit the config.ini with credentials and run SendToSocrata.py.
 
 ## Next Steps ##
-At this point we need to do a lot of testing to ensure the scripts do what we think they do. Then we can upload the data to Socrata so we have an API for our frontend (and anyone else with a use for it). We will also need to set up our server to run these scripts periodically.
+We're in the process of uploading the data to Socrata so we have an API for our frontend (and anyone else with a use for it). We will also need to set up our server to run these scripts periodically. If you'd like to help, testing would be great (code review, examining data quality, etc).
 
 ## Copyleft ##
 This program is free software: you can redistribute it and/or modify
