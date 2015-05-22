@@ -66,10 +66,12 @@ def findUniqueOrgs(records):
                 thisOrg['type'] = 'PAC'
                 rawName = record['CommitteeName']
                 thisOrg['name'] = rawName.title().replace('Pac', 'PAC').replace('"', '').strip()
+                if thisOrg['name'][-3:].upper() == 'PAC': 
+                    thisOrg['name'] = thisOrg['name'][:-3] + 'PAC'
             elif record['CommitteeType'] == 'Principal Campaign Committee':
                 thisOrg['type'] = 'Candidate'
                 rawName = record['CandidateName']
-                thisOrg['name'] = rawName.title().replace('Ii', 'II').replace('Iii', 'III').replace('"', '').strip()
+                thisOrg['name'] = rawName.title().replace('Ii', 'II').replace('Iii', 'III').replace('IIi', 'III').replace('"', '').strip()
             else:
                 print('>> Error: Unknown group type: ' + record['CommitteeType'])
             allParties.append(thisOrg)
@@ -82,7 +84,6 @@ def addPartyInfo(records):
         for party in allParties:
             if party['id'] == record['CommitteeID']:
                 numModified += 1
-                party['name'] = record['CandidateName']
                 party['party'] = record['Party']
                 party['office'] = record['Office']
                 if len(record['District']) > 0: 

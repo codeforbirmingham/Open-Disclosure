@@ -76,7 +76,7 @@ def process(records, recordTypes):
     startIndex = len(allTransactees)
     for record in records:
         name = record['FirstName'] + ' ' + record['MI'] + ' ' + record['LastName'] + ' ' + record['Suffix']
-        name = name.strip().title().replace('Ii','II').replace('Iii','III').replace('  ', ' ')
+        name = name.strip().title().replace('Ii','II').replace('Iii','III').replace('IIi', 'III').replace('  ', ' ')
         if name[-3:].upper() == 'PAC':
             name = name[:-3] + 'PAC'
         address = record['Address1'] + ' ' + record['City'] + ' ' + record['State'] + ' ' + record['Zip']
