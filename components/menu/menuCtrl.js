@@ -9,8 +9,8 @@ angular.module('openDisclosure')
                 $scope.open = function () {
 
                     $modal.open({
-                        templateUrl: 'shared/aboutModal.html',
-                        controller: 'modalCtrl'
+                        templateUrl: 'components/about/aboutModal.html',
+                        controller: 'aboutModalCtrl'
                     });
 
                 };
