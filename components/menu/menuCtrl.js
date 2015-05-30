@@ -8,19 +8,10 @@ angular.module('openDisclosure')
                 //controls for modal
                 $scope.open = function () {
 
-                    var modalInstance = $modal.open({
+                    $modal.open({
                         templateUrl: 'shared/aboutModal.html',
-                        controller: 'modalCtrl',
-                        resolve: {
-                            items: function () {
-                                return $scope.items;
-                            }
-                        }
+                        controller: 'modalCtrl'
                     });
-                    
-                 $scope.close = function() {
-                     $modal.close();
-                 };
 
                 };
             }]);

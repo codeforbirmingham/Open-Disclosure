@@ -1,4 +1,6 @@
 angular.module('openDisclosure')
-    .controller('modalCtrl', ['$scope', function ($scope) {
-        
+    .controller('modalCtrl', ['$scope', '$modal', '$modalInstance', function ($scope, $modal, $modalInstance) {
+        $scope.close = function() {
+            $modalInstance.close();
+        };
     }]);
