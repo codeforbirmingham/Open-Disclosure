@@ -1,9 +1,9 @@
 # Makefile to automate downloading campaign finance data and processing it.
-# Due to usage limits, automating Geocoding API calls is a little more complicated.
+# Due to usage limits, automating API calls is a little more complicated.
 
 py = python3
 
-all: download organize enhance flatten
+all: download organize flatten
 
 download:
 	$(py) DataFetcher.py
@@ -17,7 +17,7 @@ organize:
 
 enhance:
 	$(py) CallCivicInfoAPI.py
-  
+
 flatten:
 	$(py) FlattenData.py
 

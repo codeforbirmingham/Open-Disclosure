@@ -7,7 +7,7 @@ This is a collection of Python scripts that download, organize, and enhance data
 * Python libraries: shapely, fuzzywuzzy, nameparser, numpy, selenium, sunlight, requests
 
 ## Using Make ##
-Instead of running all the scripts below manually, you can simply run "make", which covers 1-4 but doesn't do geocoding. Note that you'll need an API key configured for that step to work.
+Instead of running all the scripts below manually, you can simply run "make", which currently covers Steps 1 and 2.
 
 ## High-level Overview ##
 Here is a brief description of the scripts which are separated into categories based on when they should be run. With the exception of GenerateTransactions.py, scripts within a step can be run in any order.
