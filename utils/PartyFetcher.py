@@ -30,7 +30,8 @@ class PartyFetcher:
         self.destination_dir = self.config["PARTY_FETCHER"]["destination_dir"]
         self.destination_file = self.config["PARTY_FETCHER"]["destination_file"]
         self.server = Popen("java -jar selenium-server-standalone-2.45.0.jar", shell=True, stdout=DEVNULL, stderr=DEVNULL)
-        sleep(5) # Wait for the server to start up before connecting to it.
+        selenium_sleep_time = float(self.config["PARTY_FETCHER"]["selenium_sleep_time"])
+        sleep(selenium_sleep_time) # Wait for the server to start up before connecting to it.
         self.driver = webdriver.Remote(
             command_executor= self.config["PARTY_FETCHER"]["selenium_server"],
             desired_capabilities=DesiredCapabilities.HTMLUNITWITHJS
