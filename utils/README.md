@@ -4,7 +4,8 @@ This is a collection of Python scripts that download, organize, and enhance data
 ## System Requirements ##
 * Python 3.4 or later
 * a Linux environment (other UNIX may work)
-* Python libraries: shapely, fuzzywuzzy, nameparser, numpy, selenium, sodapy, sunlight
+* Python 3 libraries: shapely, fuzzywuzzy, nameparser, numpy, selenium, sunlight
+* Python 2 libraries: sodapy
 
 ## Using Make ##
 Instead of running all the scripts below manually, you can simply run "make", which covers 1-4 but doesn't do geocoding. Note that you'll need an API key configured for that step to work.
