@@ -6,7 +6,6 @@
     "angular": "~1.2.24",
     "bootstrap": "~3.2.0",
     "angular-route": "~1.2.24",
-    "angular-leaflet-directive": "0.7.3",
     "angular-bootstrap": "~0.12.0"
   }
 }

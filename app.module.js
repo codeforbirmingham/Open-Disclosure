@@ -1,5 +1,4 @@
 angular.module('openDisclosure', [
     'ngRoute',
-    'ui.bootstrap',
-    'leaflet-directive'
+    'ui.bootstrap'
 ]);
