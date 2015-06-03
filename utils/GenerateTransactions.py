@@ -58,6 +58,20 @@ def main():
         else:
             print('>> Unrecognized filename: ' + filename + '. Quitting.')
             sys.exit(1)
+    # First load the output file from a previous run if it's there so we use the same id values.
+    # TODO Should we look for a file for the previous year?
+    oldTransactions = []
+    try:
+        with open(DATA_DIR + OUTFILE) as datafile:
+           oldTransactions = json.load(datafile) 
+    except FileNotFoundError:
+        # This is a fresh run so new id's will be generated.
+        pass
+    # Make a dict out of oldTransactions so we have constant time access to id values
+    global transactionIDs
+    transactionIDs = {}
+    for entry in oldTransactions:
+        transactionIDs[entry['type'] + entry['transaction_id']] = entry['id']
     global allTransactions
     allTransactions = [] # master list of Transactions
     # Now load the transaction data from each file
@@ -75,6 +89,7 @@ def main():
             json.dump(allTransactions, datafile)
 
 def scrapeTransactions(records, recordType):
+    global transactionIDs
     global allTransactions
     global allTransactees
     # idCol = ContributionID, ExpenditureID, InKindContributionID, or ReceiptID
@@ -97,12 +112,15 @@ def scrapeTransactions(records, recordType):
                 break
         if not foundMatch:
             print('Error: No match found for id ' + record[idCol] + ' in the transactees file.')
-        # add some general information
-        thisTransaction['id'] = str(uuid4()).upper() # random unique id
+        thisTransaction['transaction_id'] = record[idCol]
+        # If the transaction exists in the dataset from a previous run, reuse the id.
+        try:
+            thisTransaction['id'] = transactionIDs[thisTransaction['type'] + thisTransaction['transaction_id']]
+        except KeyError:
+            thisTransaction['id'] = str(uuid4()).upper() # random unique id
         thisTransaction['party_id'] = record['OrgID']
         thisTransaction['amount'] = record[recordType + 'Amount']
         thisTransaction['filed_date'] = record['FiledDate']
-        thisTransaction['transaction_id'] = record[idCol]
         thisTransaction['amended'] = record['Amended']
         # add information specific to this record type
         if recordType == 'Expenditure':

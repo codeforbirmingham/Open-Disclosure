@@ -7,7 +7,7 @@ This is a collection of Python scripts that download, organize, and enhance data
 * Python libraries: shapely, fuzzywuzzy, nameparser, numpy, selenium, sunlight, requests
 
 ## Using Make ##
-Instead of running all the scripts below manually, you can simply run "make", which currently covers Steps 1 and 2.
+Instead of running all the scripts below manually, you can simply run "make", which currently covers Steps 1, 2, and 4. If you don't run "make clean", the generated id values for Transactions and Transactees from the previous run will be used.
 
 ## High-level Overview ##
 Here is a brief description of the scripts which are separated into categories based on when they should be run. With the exception of GenerateTransactions.py, scripts within a step can be run in any order.

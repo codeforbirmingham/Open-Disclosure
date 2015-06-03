@@ -49,6 +49,20 @@ def main():
         else:
             print('>> Unrecognized filename: ' + filename + '. Quitting.')
             sys.exit(1)
+    # Load the output file from a previous run if it's there so we have the id values.
+    oldTransactees = []
+    try:
+        with open(DATA_DIR + OUTFILE) as datafile:
+            oldTransactees = json.load(datafile)
+    except FileNotFoundError:
+        # This is a fresh run and new id's will be generated.
+        pass 
+    # Make a dict out of the oldTransactees so we have constant time access to id values.
+    global transacteeIDs
+    transacteeIDs = {}
+    for entry in oldTransactees:
+        for txID in entry['transaction_ids']:
+            transacteeIDs[entry['transaction_type'] + txID] = entry['id']
     # load data from each source file
     for filename in DATAFILES:
         print('>> Loading data from ' + filename)
@@ -65,7 +79,9 @@ def main():
 # process each record, adding it to allTransactees
 # records is a csv.DictReader and recordTypes is (<id col name>, <org type col name>, <transactee type>)
 def process(records, recordTypes):
+    global transacteeIDs
     global allTransactees
+    global oldTransactees
     # idCol = ContributionID, ExpenditureID, InKindContributionID, or ReceiptID
     idCol = recordTypes[0]
     # orgTypeCol = ContributorType,  ReceiptSourceType, or ''
@@ -99,13 +115,17 @@ def process(records, recordTypes):
         if isNew: # we haven't seen them yet
             newOrg = {}
             newOrg['name'] = name
+            newOrg['address'] = address
             newOrg['transactee_type'] = transacteeType
-            newOrg['id'] = str(uuid4()).upper() # random unique id
+            newOrg['transaction_type'] = idCol[:-2]
+            # If the transactee id was generated in a previous run, reuse it.
+            try:
+                newOrg['id'] = transacteeIDs[newOrg['transaction_type'] + txID]
+            except KeyError:
+                newOrg['id'] = str(uuid4()).upper() # random unique id
             newOrg['API_status'] = '' # will be used by geocoding script
             newOrg['organization_type'] = orgType
-            newOrg['transaction_type'] = idCol[:-2]
             newOrg['transaction_ids'] = [txID]
-            newOrg['address'] = address
             allTransactees.append(newOrg)
 
 if __name__=='__main__':
