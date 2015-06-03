@@ -11,11 +11,6 @@ angular.module('openDisclosure')
                 controller: 'candidatesCtrl',
                 controllerAs: 'candidatesCtrl'
             })
-            .when('/contributors', {
-                templateUrl: 'components/contributors/contributors.html',
-                controller: 'contributorsCtrl',
-                controllerAs: 'contributorsCtrl'
-            })
             .otherwise({
                 redirectTo: '/'
             });
