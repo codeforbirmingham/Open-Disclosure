@@ -1,49 +1,12 @@
 <div ng-controller="candidatesCtrl">
-  <div class="row headr">
-    <div class="col-xs-12 col-sm-6 pull-left">
-      <h1>Candidates</h1>
+  <h1>Candidates</h1>
+  <div class="row">
+    <div ng-repeat="candidate in candidates" class="medium-6 columns panel">
+      <h4>{{candidate.name}}</h4>
+      <h5>Total Raised</h5>
+      <p>{{candidate.contribution | currency}}</p>
+      <h5>Total Spent</h5>
+      <p>{{candidate.expenditure | currency}}</p>
     </div>
-    <div class="last_update col-xs-12 col-sm-6 pull-left">
-      <h2> updated on {{lastUpdate}}</h2>
-    </div>
-  </div>
-  <div class="row sort-order">
-    <h2>Sort By:</h2>
-    <div class="row">
-      <button class="btn btn-default" ng-repeat="param in searchParams">{{param}}</button>
-    </div>
-  </div>
-  <div ng-repeat="candidate in candidates" class="candcards panel panel-default col-lg-4 col-md-6 col-xs-12">
-      <h4 class="candname col-xs-8 pull-left">
-        <img class="candimage" ng-src="{{candidate.image}}" /> {{candidate.name}}</h4>
-      <h3 class="candstat col-xs-2 pull-right">{{candidate.poll}}%</h3>
-      <div class="row">
-        <h5 class="candpos col-xs-8">{{candidate.position}}</h5>
-      </div>
-      <div class="row" collapse="isCollapsed">
-        <table>
-          <tr>Recent Contributor</tr>
-        </table>
-      </div>
-      <div class="row">
-        <h4 class="pull-right">{{candidate.cashContributions + candidate.inKindContributions}} raised (1st)</h4>
-        <div class="progress col-xs-12">
-          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;">
-            <span class="sr-only"></span>
-          </div>
-        </div>
-      </div>
-      <div class="row" collapse="isCollapsed">
-        <h3>recent contributors</h3>
-        <ul class="list-group">
-          <li class="list-group-item">
-            <span class="badge">14</span>
-            Contributor
-          </li>
-        </ul>
-      </div>
-      <div class="row">
-        <button class="btn pull-right btn-primary" ng-click="isCollapsed = !isCollapsed">More Info</button>
-      </div>
   </div>
 </div>

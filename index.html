@@ -12,44 +12,25 @@
 
   <body>
 
-    <div id="mainmenu" class="menu-container container-fluid">
-      <div class="sidebar-header col-xs-12">
-        <div class="col-md-2 col-xs-12">
-          <a class="sidebar-brand" href="#">
-            <img class="logo" src="assets/img/cfb-logo-sml.png">
-          </a>
-        </div>
-        <div class="sitetitle col-xs-12 col-md-8">
-          <h3 class="header">Open Disclosure Alabama</h3>
-          <h4 class="subhead">A Code for Birmingham Project</h4>
-        </div>
-      </div>
-    </div>
-
-    <nav class="navbar navbar-inverse" ng-controller="menuCtrl">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainmenu-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="collapse navbar-collapse navbuttons" id="mainmenu-collapse">
-          <ul class="nav navbar-nav navlinks">
-            <li ng-class="{active: isActive('/')}">
-              <a href="#home">Home</a>
-            </li>
-            <li ng-class="{active: isActive('/candidates')}">
-              <a href="#candidates">Candidates</a>
-            </li>
-            <li ng-class="{active: isActive('/contributors')}">
-              <a href="#contributors">Contributors</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <nav class="top-bar" ng-controller="menuCtrl">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="#">Open Disclosure</a></h1>
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="left">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li ng-class="{active: isActive('/candidates')}">
+            <a href="#candidates">Candidates</a>
+          </li>
+          <li ng-class="{active: isActive('/contributors')}">
+            <a href="#contributors">Contributors</a>
+          </li>
+        </ul>
+      </section>
     </nav>
 
     <div ng-view></div>
