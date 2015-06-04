@@ -3,7 +3,6 @@
   "description": "Front end for the Open Disclosure Project",
   "private": true,
   "dependencies": {
-    "foundation": "5.5.2",
     "angular": "1.4.0",
     "angular-route": "1.4.0"
   }
