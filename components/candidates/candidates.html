@@ -1,13 +1,11 @@
-<div ng-controller="candidatesCtrl">
-  <h1>Candidates</h1>
-  <div class="row">
-    <div ng-repeat="candidate in candidates" class="medium-6 columns panel">
-      <h4>{{candidate.name}}</h4>
-      <h6>{{candidate.position}}</h6>
-      <h5>Total Raised</h5>
-      <p class="candidate-money">{{candidate.contribution | currency}}</p>
-      <h5>Total Spent</h5>
-      <p class="candidate-money">{{candidate.expenditure | currency}}</p>
-    </div>
+<h1>Candidates</h1>
+<div class="row">
+  <div ng-repeat="candidate in candidates" class="medium-6 columns panel">
+    <h4>{{candidate.name}}</h4>
+    <h6>{{candidate.position}}</h6>
+    <h5>Total Raised</h5>
+    <p class="candidate-money">{{candidate.contribution | currency}}</p>
+    <h5>Total Spent</h5>
+    <p class="candidate-money">{{candidate.expenditure | currency}}</p>
   </div>
 </div>
