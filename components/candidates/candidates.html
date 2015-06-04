@@ -3,10 +3,11 @@
   <div class="row">
     <div ng-repeat="candidate in candidates" class="medium-6 columns panel">
       <h4>{{candidate.name}}</h4>
+      <h6>{{candidate.position}}</h6>
       <h5>Total Raised</h5>
-      <p>{{candidate.contribution | currency}}</p>
+      <p class="candidate-money">{{candidate.contribution | currency}}</p>
       <h5>Total Spent</h5>
-      <p>{{candidate.expenditure | currency}}</p>
+      <p class="candidate-money">{{candidate.expenditure | currency}}</p>
     </div>
   </div>
 </div>
