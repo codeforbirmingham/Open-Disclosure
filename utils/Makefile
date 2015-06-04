@@ -21,7 +21,10 @@ enhance:
 flatten:
 	$(py) FlattenData.py
 
+upload:
+	$(py) SendToSocrata.py
+
 clean:
 	-rm data/*.json data/*.csv
 
-.PHONY: all download organize enhance flatten clean
+.PHONY: all download organize enhance flatten upload clean
