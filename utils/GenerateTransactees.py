@@ -61,7 +61,8 @@ def main():
     global transacteeIDs
     transacteeIDs = {}
     for entry in oldTransactees:
-        for txID in entry['transaction_ids']:
+        # Undo flattening
+        for txID in json.loads(entry['transaction_ids'].replace('\'', '"')):
             transacteeIDs[entry['transaction_type'] + txID] = entry['id']
     # load data from each source file
     for filename in DATAFILES:
