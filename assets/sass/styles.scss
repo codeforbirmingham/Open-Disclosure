@@ -1,5 +1,12 @@
 $primary-color: #0078a0;
 
+@media only screen and (min-width: 40.0625em) {
+  .medium-6 {
+    width: 45%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
 .candidate-money {
   font-size: 1.4rem;
 color: $primary-color !important;
