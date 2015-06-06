@@ -1,9 +1,9 @@
 <h1>Candidates</h1>
 <ul class="button-group">
-  <li><a href="#" class="button">Name</a></li>
-  <li><a href="#" class="button">Office</a></li>
-  <li><a href="#" class="button">Total Raised</a></li>
-  <li><a href="#" class="button">Total Spent</a></li>
+  <li><button ng-click="sort.name = !sort.name" ng-class="{'success': sort.name}">Name</button></li>
+  <li><button ng-click="sort.office = !sort.office" ng-class="{'success': sort.office}">Office</button></li>
+  <li><button ng-click="sort.contribution = !sort.contribution" ng-class="{'success': sort.contribution}">Total Raised</button></li>
+  <li><button ng-click="sort.expenditure = !sort.expenditure" ng-class="{'success': sort.expenditure}">Total Spent</button></li>
 </ul>
 <div class="row">
   <div ng-repeat="candidate in candidates" class="medium-6 columns panel">
