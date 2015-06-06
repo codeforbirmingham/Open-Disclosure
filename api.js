@@ -38,13 +38,15 @@ angular.module('openDisclosure').factory('Api', ['$http', '$q', function ($http,
                 transactionsIndex[x.party_id][x.type.toLowerCase()] += parseFloat(x.sum_amount);
             });
             // Add aggregated information to parties.
-            parties = parties.map(function (x) {
+            parties = parties.filter(function (x) {
+                // Filter out parties that do not have any transactions.
+                // Probably not the right thing to do.
+                return transactionsIndex.hasOwnProperty(x.id);
+            }).map(function (x) {
                 var indexEntry;
                 indexEntry = transactionsIndex[x.id];
-                if (indexEntry !== undefined) {
-                    x.contribution = indexEntry.contribution;
-                    x.expenditure = indexEntry.expenditure;
-                }
+                x.contribution = indexEntry.contribution;
+                x.expenditure = indexEntry.expenditure;
                 return x;
             });
             return parties;
