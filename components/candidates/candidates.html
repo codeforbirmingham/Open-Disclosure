@@ -1,12 +1,12 @@
 <h1>Candidates</h1>
 <ul class="button-group">
-  <li><button ng-click="sort.name = !sort.name" ng-class="{'success': sort.name}">Name</button></li>
-  <li><button ng-click="sort.office = !sort.office" ng-class="{'success': sort.office}">Office</button></li>
-  <li><button ng-click="sort.contribution = !sort.contribution" ng-class="{'success': sort.contribution}">Total Raised</button></li>
-  <li><button ng-click="sort.expenditure = !sort.expenditure" ng-class="{'success': sort.expenditure}">Total Spent</button></li>
+  <li><button ng-click="setSortField('name')" ng-class="{'success': sortField == 'name'}">Name</button></li>
+  <li><button ng-click="setSortField('office')" ng-class="{'success': sortField == 'office'}">Office</button></li>
+  <li><button ng-click="setSortField('contribution')" ng-class="{'success': sortField == 'contribution'}">Total Raised</button></li>
+  <li><button ng-click="setSortField('expenditure')" ng-class="{'success': sortField == 'expenditure'}">Total Spent</button></li>
 </ul>
 <div class="row">
-  <div ng-repeat="candidate in candidates" class="medium-6 columns panel">
+  <div ng-repeat="candidate in candidates | orderBy: getOrderBy()" class="medium-6 columns panel">
     <h4>{{candidate.name}}</h4>
     <h6>{{candidate.office}}</h6>
     <h5>Total Raised</h5>
