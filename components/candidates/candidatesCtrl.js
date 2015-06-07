@@ -1,19 +1,32 @@
 angular.module('openDisclosure')
     .controller('candidatesCtrl', ['$scope', 'Api', function ($scope, Api) {
-        $scope.sortField = 'contribution';
-        $scope.sortOrderDescending = true;
+        $scope.sortFields = [{
+            name: 'name',
+            label: 'Name'
+        }, {
+            name: 'office',
+            label: 'Office'
+        }, {
+            name: 'contribution',
+            label: 'Total Raised'
+        }, {
+            name: 'expenditure',
+            label: 'Total Spent'
+        }];
+        $scope.curSortField = 'contribution';
+        $scope.curSortOrderDesc = true;
         $scope.setSortField = function (sortField) {
-            if ($scope.sortField == sortField) {
+            if ($scope.curSortField == sortField) {
                 // Invert order.
-                $scope.sortOrderDescending = !$scope.sortOrderDescending;
+                $scope.curSortOrderDesc = !$scope.curSortOrderDesc;
             } else {
                 // Change sort field.
-                $scope.sortField = sortField;
-                $scope.sortOrderDescending = false;
+                $scope.curSortField = sortField;
+                $scope.curSortOrderDesc = false;
             }
         };
         $scope.getOrderBy = function () {
-            return $scope.sortOrderDescending ? '-' + $scope.sortField : $scope.sortField;
+            return $scope.curSortOrderDesc ? '-' + $scope.curSortField : $scope.curSortField;
         };
         Api.getCandidates().then(function (candidates) {
             $scope.candidates = candidates;

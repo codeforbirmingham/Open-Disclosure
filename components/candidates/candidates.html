@@ -1,46 +1,13 @@
 <div class="row">
   <h1>Candidates</h1>
   <ul class="button-group">
-    <li>
-        <button ng-click="setSortField('name')" ng-class="{'success': sortField == 'name'}">
-            Name
-            <span ng-if="sortField == 'name' && sortOrderDescending == true">
+    <li ng-repeat="sortField in sortFields">
+        <button ng-click="setSortField(sortField.name)" ng-class="{'success': curSortField == sortField.name}">
+            {{sortField.label}}
+            <span ng-if="curSortField == sortField.name && curSortOrderDesc == true">
                 ↓
             </span>
-            <span ng-if="sortField == 'name' && sortOrderDescending == false">
-                ↑
-            </span>
-        </button>
-    </li>
-    <li>
-        <button ng-click="setSortField('office')" ng-class="{'success': sortField == 'office'}">
-            Office
-            <span ng-if="sortField == 'office' && sortOrderDescending == true">
-                ↓
-            </span>
-            <span ng-if="sortField == 'office' && sortOrderDescending == false">
-                ↑
-            </span>
-        </button>
-    </li>
-    <li>
-        <button ng-click="setSortField('contribution')" ng-class="{'success': sortField == 'contribution'}">
-            Total Raised
-            <span ng-if="sortField == 'contribution' && sortOrderDescending == true">
-                ↓
-            </span>
-            <span ng-if="sortField == 'contribution' && sortOrderDescending == false">
-                ↑
-            </span>
-        </button>
-    </li>
-    <li>
-        <button ng-click="setSortField('expenditure')" ng-class="{'success': sortField == 'expenditure'}">
-            Total Spent
-            <span ng-if="sortField == 'expenditure' && sortOrderDescending == true">
-                ↓
-            </span>
-            <span ng-if="sortField == 'expenditure' && sortOrderDescending == false">
+            <span ng-if="curSortField == sortField.name && curSortOrderDesc == false">
                 ↑
             </span>
         </button>
