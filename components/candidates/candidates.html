@@ -1,21 +1,28 @@
 <div class="row">
   <h1>Candidates</h1>
-  <ul class="button-group">
-    <li ng-repeat="sortField in sortFields">
-        <button ng-click="setSortField(sortField.name)" ng-class="{'success': curSortField == sortField.name}">
-            {{sortField.label}}
-            <span ng-if="curSortField == sortField.name && curSortOrderDesc == true">
-                ↓
-            </span>
-            <span ng-if="curSortField == sortField.name && curSortOrderDesc == false">
-                ↑
-            </span>
-        </button>
-    </li>
-  </ul>
-  <div ng-repeat="candidate in candidates | orderBy: getOrderBy()" class="medium-6 columns panel">
+  <div class="small-12 large-4 columns">
+    <input type="text" ng-model="searchText" placeholder="Search"/>
+  </div>
+  <div class="small-12 large-8 columns">
+    <ul class="button-group">
+      <li ng-repeat="sortField in sortFields">
+          <button ng-click="setSortField(sortField.name)" ng-class="{'success': curSortField == sortField.name}">
+              {{sortField.label}}
+              <span ng-if="curSortField == sortField.name && curSortOrderDesc == true">
+                  ↓
+              </span>
+              <span ng-if="curSortField == sortField.name && curSortOrderDesc == false">
+                  ↑
+              </span>
+          </button>
+      </li>
+    </ul>
+  </div>
+  <div ng-repeat="candidate in candidates | orderBy: getOrderBy() | filter: searchText" class="medium-6 columns panel">
     <h4>{{candidate.name}}</h4>
     <h6>{{candidate.office}}</h6>
+    <p>{{candidate.party}}</p>
+    <p>{{candidate.district}}</p>
     <h5>Total Raised</h5>
     <p class="candidate-money">{{candidate.contribution | currency}}</p>
     <h5>Total Spent</h5>
