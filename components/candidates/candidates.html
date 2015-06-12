@@ -18,14 +18,24 @@
       </li>
     </ul>
   </div>
-  <div ng-repeat="candidate in candidates | orderBy: getOrderBy() | filter: searchText" class="medium-6 columns panel">
-    <h4>{{candidate.name}}</h4>
-    <h6>{{candidate.office}}</h6>
-    <p>{{candidate.party}}</p>
-    <p>{{candidate.district}}</p>
-    <h5>Total Raised</h5>
-    <p class="candidate-money">{{candidate.contribution | currency}}</p>
-    <h5>Total Spent</h5>
-    <p class="candidate-money">{{candidate.expenditure | currency}}</p>
+  <div ng-repeat="candidate in candidates | orderBy: getOrderBy() | filter: searchText" class="medium-6 columns panel candidate-card">
+    <div class="row">
+      <div class="small-6 columns">
+        <h4>{{candidate.name}}</h4>
+        <p>{{candidate.district}}</p>
+      </div>
+      <div class="small-6 columns">
+          <h6 class="right candidate-party {{candidate.party}}">{{candidate.party}}</h6>
+          <h6 class="candidate-office">{{candidate.office}}</h6>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">
+        <h5>Total Raised</h5>
+        <p class="candidate-money">{{candidate.contribution | currency}}</p>
+        <h5>Total Spent</h5>
+        <p class="candidate-money">{{candidate.expenditure | currency}}</p>
+      </div>
+    </div>
   </div>
 </div>

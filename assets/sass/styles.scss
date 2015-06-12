@@ -16,3 +16,21 @@ margin-bottom: 1rem;
 .canidate-name {
   font-size: 2rem;
 }
+
+.candidate-card {
+  height: 320px;
+  overflow-y: scroll;
+  .candidate-party {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  .Republican {
+      color: #df5555;
+    }
+    .Democrat {
+      color: #5555df;
+    }
+}
+.candidate-office {
+  text-align:right;
+}
