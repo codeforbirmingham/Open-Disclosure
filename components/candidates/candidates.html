@@ -25,8 +25,14 @@
         <p>{{candidate.district}}</p>
       </div>
       <div class="small-6 columns">
-          <h6 class="right candidate-party {{candidate.party}}">{{candidate.party}}</h6>
-          <h6 class="candidate-office">{{candidate.office}}</h6>
+        <div class="small-12 columns">
+          <div class="row">
+            <h6 class="right candidate-party {{candidate.party}}">{{candidate.party}}</h6>
+          </div>
+          <div class="row">
+              <h6 class="candidate-office">{{candidate.office}}</h6>
+            </div>
+        </div>  
       </div>
     </div>
     <div class="row">
