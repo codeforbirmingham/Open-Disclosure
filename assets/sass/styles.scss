@@ -34,3 +34,15 @@ margin-bottom: 1rem;
 .candidate-office {
   text-align:right;
 }
+.side-nav {
+  background-color: #333;
+  li {
+    a:not(.button) {
+      color: white;
+      &:focus, &:hover {
+        background: $primary-color;
+        color: white;
+      }
+    }
+  }
+}

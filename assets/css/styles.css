@@ -24,3 +24,11 @@
 
 .candidate-office {
   text-align: right; }
+
+.side-nav {
+  background-color: #333; }
+  .side-nav li a:not(.button) {
+    color: white; }
+    .side-nav li a:not(.button):focus, .side-nav li a:not(.button):hover {
+      background: #0078a0;
+      color: white; }

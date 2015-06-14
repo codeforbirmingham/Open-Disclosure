@@ -29,6 +29,14 @@
         </ul>
       </section>
     </nav>
+    <ul class="side-nav visible-for-small-only">
+      <li ng-class="{active: isActive('/')}">
+        <a href="#/">Home</a>
+      </li>
+      <li ng-class="{active: isActive('/candidates')}">
+        <a href="#/candidates">Candidates</a>
+      </li>
+    </ul>
 
     <div ng-view></div>
 
