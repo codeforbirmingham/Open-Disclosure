@@ -1,5 +1,4 @@
-## Exploratory Data Analysis of Alabama Campaign Finance Data 
-## Using R
+## Exploratory Data Analysis of Alabama Campaign Finance Data using R
 
 ### Motivation
 While the primary aim of campaign finance disclosure is to reduce

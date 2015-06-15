@@ -1,3 +1,4 @@
 utils/config.ini
 utils/data/*.json
 utils/data/*.csv
+data-exploration/data
