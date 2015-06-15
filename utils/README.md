@@ -14,7 +14,7 @@ Here is a brief description of the scripts which are separated into categories b
 
 ### Step 1: Download the Data ###
 * DataFetcher.py: This downloads the four main CSV files (CashContributions, InKindContributions, Expenditures, OtherReceipts) with all the campaign finance data. That data is updated every 24 hours.
-* PartyFetcher.py: This downloads two CSV files which have information for "Active" and "Dissolved" parties (political candidates). You will need a selenium server jar in the current directory. Get v2.45.0 from http://www.seleniumhq.org/download/.
+* PartyFetcher.py: This downloads two CSV files which have information for "Active" and "Dissolved" parties (political candidates).
 
 ### Step 2: Organize the Data ###
 * GenerateTransactees.py: This looks at the four data files and identifies all the people transacting with the PACs and Candidates. For Expenditures, these are referred to as Payees. For Receipt data, they're ReceiptSources. For cash and in-kind contributions, they're Contributors. 
