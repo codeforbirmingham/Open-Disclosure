@@ -19,7 +19,7 @@ Here is a brief description of the scripts which are separated into categories b
 ### Step 2: Organize the Data ###
 * GenerateDistricts.py: This looks at the Open Civic Data IDs in /data/ocdIDs/ and puts that in JSON format (matching each ID to its friendly name).
 * GenerateTransactees.py: This looks at the four data files and identifies all the people transacting with the PACs and Candidates. For Expenditures, these are referred to as Payees. For Receipt data, they're ReceiptSources. For cash and in-kind contributions, they're Contributors. 
-* GenerateParties.py: This looks at all the data files including the Parties and finds all the unique PACs and Candidates (using their OrgIDs). It also adds OCD IDs to some parties.
+* GenerateParties.py: This looks at all the data files including the Parties and finds all the unique PACs and Candidates (using their OrgIDs). It also adds OCD IDs to some parties. **This has to be run after GenerateDistricts.py.**
 * GenerateTransactions.py: This looks at the four data files and records every transaction. **This has to be run after GenerateTransactees.py.**
 
 ### Step 3: Add to the Data ###

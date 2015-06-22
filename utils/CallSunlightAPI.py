@@ -102,7 +102,6 @@ class CallSunlightAPI:
                 json.dump(allParties, f, indent=4, sort_keys=True, separators=(',', ': '))
             else:
                 json.dump(allParties, f)
-        #TODO process districts data, etc
 
 def main():
     callSunlight = CallSunlightAPI('config.ini')
