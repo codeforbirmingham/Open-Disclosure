@@ -58,7 +58,7 @@ def main():
         try:
             with open(DATA_DIR + filename, 'rb') as f:
                 hasher.update(f.read())
-                newHashes[filename] = hasher.getdigest()
+                newHashes[filename] = hasher.digest()
         except FileNotFoundError:
             print('>> Error: ' + filename + ' not found. Run the appropriate Generate script first.')
             sys.exit(2)
