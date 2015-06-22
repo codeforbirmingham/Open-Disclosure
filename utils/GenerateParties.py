@@ -107,6 +107,20 @@ def addPartyInfo(records):
                     party['place'] = record['Place'].strip()
                 party['status'] = record['CommitteeStatus']
                 break
+        # Otherwise it's a party with no submitted CFC data; add it anyway.
+        newParty = {}
+        newParty['id'] = record['CommitteeID']
+        normalizedName = record['CandidateName'].split(',')[1].strip() + ' ' + record['CandidateName'].split(',')[0]
+        normalizedName = normalizedName.title().replace('Ii', 'II').replace('Iii', 'III').replace('Mcc', 'McC')
+        newParty['name'] = normalizedName
+        newParty['party'] = record['Party']
+        newParty['office'] = record['Office']
+        newParty['status'] = record['CommitteeStatus']
+        if len(record['District']) > 0:
+            newParty['district'] = record['District']
+        if len(record['Place']) > 0:
+            newParty['place'] = record['Place']
+        allParties.append(newParty)
     return numModified
 
 def addDistrictIDs():
