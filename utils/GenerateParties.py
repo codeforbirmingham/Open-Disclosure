@@ -16,6 +16,7 @@
 
 import json
 import csv
+import re
 from datetime import datetime
 from configparser import ConfigParser
 
@@ -41,6 +42,9 @@ def main():
     with open(DATA_DIR + PARTYINFO) as datafile:
         numModified = addPartyInfo(csv.DictReader(datafile))
     print('>> Modified ' + str(numModified) + ' party records with additional info.')
+    # Add OCD IDs for any districts we can identify.
+    numModified = addDistrictIDs()
+    print('>> Added District IDs to ' + str(numModified) + ' records.')
     print('>> Writing ' + str(len(allParties)) + ' records to ' + OUTFILE)
     with open(DATA_DIR + OUTFILE, 'w') as datafile:
         if PRETTY_PRINT:
@@ -77,6 +81,7 @@ def findUniqueOrgs(records):
             allParties.append(thisOrg)
 
 def addPartyInfo(records):
+    global allParties
     numModified = 0
     # iterate over the records and add the info to allParties
     for record in records:
@@ -92,6 +97,21 @@ def addPartyInfo(records):
                     party['place'] = record['Place'].strip()
                 party['status'] = record['CommitteeStatus']
                 break
+    return numModified
+
+def addDistrictIDs():
+    global allParties
+    numModified = 0
+    # Add OCD IDs for anyone in the state legislature.
+    districtPattern = r'^(HOUSE|SENATE) DISTRICT \d+$'
+    for party in allParties:
+        if 'district' in party and re.match(districtPattern, party['district']) != None:
+            print(party['district'])
+            districtID = 'ocd-division/country:us/state:al/sld'
+            districtID += ('u' if 'SENATE' in party['district'] else 'l')
+            districtID += ':' + party['district'].split(' ')[-1]
+            party['ocdID'] = districtID
+            numModified += 1
     return numModified
 
 if __name__=='__main__':

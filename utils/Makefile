@@ -10,10 +10,10 @@ download:
 	$(py) PartyFetcher.py
 
 organize:
+	$(py) GenerateDistricts.py
 	$(py) GenerateTransactees.py
 	$(py) GenerateParties.py
 	$(py) GenerateTransactions.py
-	$(py) GenerateDistricts.py
 
 enhance:
 	$(py) CallCivicInfoAPI.py
