@@ -96,9 +96,9 @@ def addPartyInfo(records):
     # iterate over the records and add the info to allParties
     for record in records:
         # if the ID is in the data, add to it
+        found = False
         for party in allParties:
             if party['id'] == record['CommitteeID']:
-                numModified += 1
                 party['party'] = record['Party']
                 party['office'] = record['Office']
                 if len(record['District']) > 0: 
@@ -106,21 +106,24 @@ def addPartyInfo(records):
                 if len(record['Place']) > 0:
                     party['place'] = record['Place'].strip()
                 party['status'] = record['CommitteeStatus']
+                numModified += 1
+                found = True
                 break
-        # Otherwise it's a party with no submitted CFC data; add it anyway.
-        newParty = {}
-        newParty['id'] = record['CommitteeID']
-        normalizedName = record['CandidateName'].split(',')[1].strip() + ' ' + record['CandidateName'].split(',')[0]
-        normalizedName = normalizedName.title().replace('Ii', 'II').replace('Iii', 'III').replace('Mcc', 'McC')
-        newParty['name'] = normalizedName
-        newParty['party'] = record['Party']
-        newParty['office'] = record['Office']
-        newParty['status'] = record['CommitteeStatus']
-        if len(record['District']) > 0:
-            newParty['district'] = record['District']
-        if len(record['Place']) > 0:
-            newParty['place'] = record['Place']
-        allParties.append(newParty)
+        if not found:
+            # it's a party with no submitted CFC data; add it anyway.
+            newParty = {}
+            newParty['id'] = record['CommitteeID']
+            normalizedName = record['CandidateName'].split(',')[1].strip() + ' ' + record['CandidateName'].split(',')[0]
+            normalizedName = normalizedName.title().replace('Ii', 'II').replace('Iii', 'III').replace('Mcc', 'McC')
+            newParty['name'] = normalizedName
+            newParty['party'] = record['Party']
+            newParty['office'] = record['Office']
+            newParty['status'] = record['CommitteeStatus']
+            if len(record['District']) > 0:
+                newParty['district'] = record['District']
+            if len(record['Place']) > 0:
+                newParty['place'] = record['Place']
+            allParties.append(newParty)
     return numModified
 
 def addDistrictIDs():
