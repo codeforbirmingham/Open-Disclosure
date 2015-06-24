@@ -19,6 +19,9 @@ Data
 ====
 The source data can be found here: http://fcpa.alabamavotes.gov/PublicSite/DataDownload.aspx
 
+Frontend
+========
+The frontend is located on the gh-pages branch so that it's hosted as a GitHub Pages site [here](www.codeforbirmingham.org/Open-Disclosure).
 
 More Info
 =========

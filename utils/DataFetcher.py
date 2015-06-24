@@ -5,6 +5,7 @@ import datetime
 import os
 import urllib.request
 import zipfile
+import json
 
 class DataFetcher:
     """
@@ -21,12 +22,11 @@ class DataFetcher:
         """
         self.config = configparser.ConfigParser()
         self.config.read(config_file)
-        self.destination_dir = self.config["DATA_FETCHER"]["destination_dir"]
-        self.chunk_size = int(self.config["DATA_FETCHER"]["chunk_size"])
-        self.base_url = self.config["DATA_FETCHER"]["base_url"]
-        configYear = self.config["DATA_FETCHER"]["year"]
-        self.year = (configYear if len(configYear) > 0 else str(datetime.date.today().year))
-        self.files = [ '_'.join([self.year, file_name]) for file_name in self.config["DATA_FETCHER"]["file_names"].split(',')]
+        self.destination_dir = self.config["DATA_FETCHER"]["DATA_DIR"]
+        self.chunk_size = int(self.config["DATA_FETCHER"]["CHUNK_SIZE"])
+        self.base_url = self.config["DATA_FETCHER"]["BASE_URL"]
+        configFiles = json.loads(self.config["DATA_FETCHER"]["DATAFILES"])
+        self.files = [filename + ".zip" for filename in configFiles]
 
 
     def fetch_files(self):

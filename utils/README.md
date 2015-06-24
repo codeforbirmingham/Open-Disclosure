@@ -17,16 +17,16 @@ Here is a brief description of the scripts which are separated into categories b
 * PartyFetcher.py: This downloads two CSV files which have information for "Active" and "Dissolved" parties (political candidates).
 
 ### Step 2: Organize the Data ###
-* GenerateTransactees.py: This looks at the four data files and identifies all the people transacting with the PACs and Candidates. For Expenditures, these are referred to as Payees. For Receipt data, they're ReceiptSources. For cash and in-kind contributions, they're Contributors. 
-* GenerateParties.py: This looks at all the data files including the Parties and finds all the unique PACs and Candidates (using their OrgIDs).
-* GenerateTransactions.py: This looks at the four data files and records every transaction. **This has to be run after GenerateTransactees.py.**
 * GenerateDistricts.py: This looks at the Open Civic Data IDs in /data/ocdIDs/ and puts that in JSON format (matching each ID to its friendly name).
+* GenerateTransactees.py: This looks at the four data files and identifies all the people transacting with the PACs and Candidates. For Expenditures, these are referred to as Payees. For Receipt data, they're ReceiptSources. For cash and in-kind contributions, they're Contributors. 
+* GenerateParties.py: This looks at all the data files including the Parties and finds all the unique PACs and Candidates (using their OrgIDs). It also adds OCD IDs to some parties. **This has to be run after GenerateDistricts.py.**
+* GenerateTransactions.py: This looks at the four data files and records every transaction. **This has to be run after GenerateTransactees.py.**
 
 ### Step 3: Add to the Data ###
 For this step you'll need API keys from Google and the Sunlight Foundation.
 * CallGeocodingAPI.py: This calls Google's Geocoding API to convert street addresses to coordinates for all the transactees, and locates them by district, county, etc. using the files in /data/map/.
 * CallCivicInfoAPI.py: This calls Google's Civic Information API to get information on each OCD ID in Alabama, adding to the existing party data.
-* CallSunlightAPI.py: This makes some calls to the Sunlight Foundation's API but doesn't do anything with the info (yet).
+* CallSunlightAPI.py: This makes some calls to the Sunlight Foundation's API but doesn't do anything with the info (yet). Put the API key in ~/.sunlight.key or the environment variable SUNLIGHT\_API\_KEY.
 
 ### Step 4: Flatten the Data ###
 In order to import the data into Socrata, the JSON needs to be flattened. The aptly named FlattenData.py serves this purpose.

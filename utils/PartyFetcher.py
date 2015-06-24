@@ -27,13 +27,13 @@ class PartyFetcher:
         """
         self.config = configparser.ConfigParser()
         self.config.read(config_file)
-        self.destination_dir = self.config["PARTY_FETCHER"]["destination_dir"]
-        self.destination_file = self.config["PARTY_FETCHER"]["destination_file"]
+        self.destination_dir = self.config["PARTY_FETCHER"]["DATA_DIR"]
+        self.destination_file = self.config["PARTY_FETCHER"]["OUTFILE"]
         self.server = Popen("java -jar selenium-server-standalone-2.45.0.jar", shell=True, stdout=DEVNULL, stderr=DEVNULL)
-        selenium_sleep_time = float(self.config["PARTY_FETCHER"]["selenium_sleep_time"])
+        selenium_sleep_time = float(self.config["PARTY_FETCHER"]["SELENIUM_SLEEP_TIME"])
         sleep(selenium_sleep_time) # Wait for the server to start up before connecting to it.
         self.driver = webdriver.Remote(
-            command_executor= self.config["PARTY_FETCHER"]["selenium_server"],
+            command_executor= self.config["PARTY_FETCHER"]["SELENIUM_SERVER"],
             desired_capabilities=DesiredCapabilities.HTMLUNITWITHJS
         )
 
@@ -78,7 +78,7 @@ class PartyFetcher:
         Do the default query on the website and download the CSV data.
         :return: parsed array of CSV lines
         """
-        self.driver.get(self.config["PARTY_FETCHER"]["base_url"])
+        self.driver.get(self.config["PARTY_FETCHER"]["BASE_URL"])
 
         # Find the submit button and go to the results page
         submitBtn = self.driver.find_element_by_name("_ctl0:Content:btnSearch")
