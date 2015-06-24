@@ -26,7 +26,7 @@ def main():
     config = ConfigParser()
     config.read('config.ini')
     DATA_DIR = config.get('GENERATE_PARTIES', 'DATA_DIR')
-    PARTYINFO = config.get('PARTY_FETCHER', 'destination_file')
+    PARTYINFO = config.get('PARTY_FETCHER', 'OUTFILE')
     DISTRICTS_FILE = config.get('GENERATE_DISTRICTS', 'OUTFILE')
     DATAFILES = json.loads(config.get('GENERATE_PARTIES', 'DATAFILES'))
     OUTFILE = config.get('GENERATE_PARTIES', 'OUTFILE')

@@ -63,8 +63,8 @@ class CallSunlightAPI:
         # Look for matching parties in the existing data.
         numModified = 0
         for legislator in self.state_legislators:
-            district = ('HOUSE' if legislator['chamber'] == 'lower' else 'SENATE')
-            district += ' DISTRICT ' + legislator['district']
+            district = ('House' if legislator['chamber'] == 'lower' else 'Senate')
+            district += ' District ' + legislator['district']
             for party in allParties:
                 if 'district' in party and party['district'] == district:
                     numModified += 1
