@@ -30,26 +30,34 @@ class CallSunlightAPI:
 
     def writeData(self):
         """Write the data returned to the disk."""
-        with open(self.data_dir + 'StateLegislators.json', 'w') as f:
-            if self.pretty_print:
-                json.dump(self.state_legislators, f, indent=4, sort_keys=True, separators=(',', ': '))
-            else:
-                json.dump(self.state_legislators, f)
-        with open(self.data_dir + 'StateBills.json', 'w') as f:
-            if self.pretty_print:
-                json.dump(self.state_bills, f, indent=4, sort_keys=True, separators=(',', ': '))
-            else:
-                json.dump(self.state_bills, f)
-        with open(self.data_dir + 'StateDistricts.json', 'w') as f:
-            if self.pretty_print:
-                json.dump(self.state_districts, f, indent=4, sort_keys=True, separators=(',', ': '))
-            else:
-                json.dump(self.state_districts, f)
-        with open(self.data_dir + 'StateCommittees.json', 'w') as f:
-            if self.pretty_print:
-                json.dump(self.state_committees, f, indent=4, sort_keys=True, separators=(',', ': '))
-            else:
-                json.dump(self.state_committees, f)
+        if 'state_legislators' in self.__dict__.keys():
+            print('>> Writing ' + str(len(self.state_legislators)) + ' records to ' + self.data_dir + 'StateLegislators.json.')
+            with open(self.data_dir + 'StateLegislators.json', 'w') as f:
+                if self.pretty_print:
+                    json.dump(self.state_legislators, f, indent=4, sort_keys=True, separators=(',', ': '))
+                else:
+                    json.dump(self.state_legislators, f)
+        if 'state_bills' in self.__dict__.keys():
+            print('>> Writing ' + str(len(self.state_bills)) + ' records to ' + self.data_dir + 'StateBills.json.')
+            with open(self.data_dir + 'StateBills.json', 'w') as f:
+                if self.pretty_print:
+                    json.dump(self.state_bills, f, indent=4, sort_keys=True, separators=(',', ': '))
+                else:
+                    json.dump(self.state_bills, f)
+        if 'state_districts' in self.__dict__.keys():
+            print('>> Writing ' + str(len(self.state_districts)) + ' records to ' + self.data_dir + 'StateDistricts.json.')
+            with open(self.data_dir + 'StateDistricts.json', 'w') as f:
+                if self.pretty_print:
+                    json.dump(self.state_districts, f, indent=4, sort_keys=True, separators=(',', ': '))
+                else:
+                    json.dump(self.state_districts, f)
+        if 'state_committees' in self.__dict__.keys():
+            print('>> Writing ' + str(len(self.state_committees)) + ' records to ' + self.data_dir + 'StateCommittees.json.')
+            with open(self.data_dir + 'StateCommittees.json', 'w') as f:
+                if self.pretty_print:
+                    json.dump(self.state_committees, f, indent=4, sort_keys=True, separators=(',', ': '))
+                else:
+                    json.dump(self.state_committees, f)
 
     def processData(self):
         """Integrate the data into the party data we already have."""
@@ -66,7 +74,7 @@ class CallSunlightAPI:
             district = ('House' if legislator['chamber'] == 'lower' else 'Senate')
             district += ' District ' + legislator['district']
             for party in allParties:
-                if 'district' in party and party['district'] == district:
+                if 'district' in party and party['district'] == district and party['status'] == 'Active':
                     numModified += 1
                     # Copy some useful info from the Sunlight data (if it's there).
                     party['openstates_id'] = legislator['leg_id']
