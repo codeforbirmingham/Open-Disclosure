@@ -52,7 +52,7 @@ class CallSunlightAPI:
                 json.dump(self.state_committees, f)
 
     def processData(self):
-        """Integrate the data into the party and district data we already have."""
+        """Integrate the data into the party data we already have."""
         allParties = []
         try:
             with open(self.data_dir + self.parties_file) as f:

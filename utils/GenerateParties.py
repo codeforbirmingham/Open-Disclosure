@@ -85,7 +85,7 @@ def findUniqueOrgs(records):
             elif record['CommitteeType'] == 'Principal Campaign Committee':
                 thisOrg['type'] = 'Candidate'
                 rawName = record['CandidateName']
-                thisOrg['name'] = rawName.title().replace('Ii', 'II').replace('Iii', 'III').replace('IIi', 'III').replace('"', '').strip()
+                thisOrg['name'] = rawName.title().replace('Ii', 'II').replace('Iii', 'III').replace('"', '').replace('Mcc', 'McC').strip()
             else:
                 print('>> Error: Unknown group type: ' + record['CommitteeType'])
             allParties.append(thisOrg)
@@ -100,9 +100,9 @@ def addPartyInfo(records):
         for party in allParties:
             if party['id'] == record['CommitteeID']:
                 party['party'] = record['Party']
-                party['office'] = record['Office']
-                if len(record['District']) > 0: 
-                    party['district'] = record['District']
+                party['office'] = record['Office'].title()
+                if len(record['District']) > 0:
+                    party['district'] = record['District'].title()
                 if len(record['Place']) > 0:
                     party['place'] = record['Place'].strip()
                 party['status'] = record['CommitteeStatus']
@@ -114,15 +114,15 @@ def addPartyInfo(records):
             newParty = {}
             newParty['id'] = record['CommitteeID']
             normalizedName = record['CandidateName'].split(',')[1].strip() + ' ' + record['CandidateName'].split(',')[0]
-            normalizedName = normalizedName.title().replace('Ii', 'II').replace('Iii', 'III').replace('Mcc', 'McC')
+            normalizedName = normalizedName.title().replace('Ii', 'II').replace('Iii', 'III').replace('"', '').replace('Mcc', 'McC').strip()
             newParty['name'] = normalizedName
             newParty['party'] = record['Party']
-            newParty['office'] = record['Office']
+            newParty['office'] = record['Office'].title()
             newParty['status'] = record['CommitteeStatus']
             if len(record['District']) > 0:
-                newParty['district'] = record['District']
+                newParty['district'] = record['District'].title()
             if len(record['Place']) > 0:
-                newParty['place'] = record['Place']
+                newParty['place'] = record['Place'].strip()
             allParties.append(newParty)
     return numModified
 
@@ -131,25 +131,26 @@ def addDistrictIDs():
     global allDistricts
     numModified = 0
     # Add OCD IDs for state legislators, circuit court judges, county positions, and (lt) governors.
-    stateLegPattern = r'^(HOUSE|SENATE) DISTRICT \d+$'
-    circuitCourtPattern = r'^\d+(TH|RD|ND|ST) JUDICIAL CIRCUIT$'
-    countyPattern = r'^.+ COUNTY$'
+    stateLegPattern = r'^(House|Senate) District \d+$'
+    circuitCourtPattern = r'^\d+(Th|Rd|Nd|St) Judicial Circuit$'
+    countyPattern = r'^.+ County$'
     for party in allParties:
         recognized = False # record whether we find a match
-        if 'office' in party and (party['office'] == 'GOVERNOR' or party['office'] == 'LT. GOVERNOR'):
+        if 'office' in party and (party['office'] == 'Governor' or party['office'] == 'Lt. Governor'):
             districtID = 'ocd-division/country:us/state:al'
-            party['district'] = 'ALABAMA'
+            party['district'] = 'Alabama'
             recognized = True
         elif 'district' not in party: # ignore PACs
             continue
         if re.match(stateLegPattern, party['district']) != None:
             districtID = 'ocd-division/country:us/state:al/sld'
-            districtID += ('u' if 'SENATE' in party['district'] else 'l')
+            districtID += ('u' if 'Senate' in party['district'] else 'l')
             districtID += ':' + party['district'].split(' ')[-1]
             recognized = True
         elif re.match(circuitCourtPattern, party['district']) != None:
             districtID = 'ocd-division/country:us/state:al/circuit_court:'
             districtID += party['district'].split(' ')[0][:-2]
+            party['district'] = party['district'].replace('Th', 'th').replace('St', 'st').replace('Rd', 'rd').replace('Nd', 'nd')
             recognized = True
         elif re.match(countyPattern, party['district']) != None:
             districtID = 'ocd-division/country:us/state:al/county:'
@@ -158,9 +159,9 @@ def addDistrictIDs():
         # Add our generated ID into the data if it's valid.
         if recognized:
             # Check if the ocd ID we generated is in the official list.
-            valid = sum([d['ocdID'] == districtID for d in allDistricts])
+            valid = any([d['ocdID'] == districtID for d in allDistricts])
             if not valid:
-                print('>> Error: unrecognizable district "' + party['district'] + '"')
+                print('>> Error: unrecognizable district: "' + party['district'] + '"')
             else:
                 party['ocdID'] = districtID
                 numModified += 1
