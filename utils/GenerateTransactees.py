@@ -29,6 +29,7 @@ def main():
     # Read the config file.
     config = ConfigParser()
     config.read('config.ini')
+    YEAR = config.get('GENERATE_TRANSACTEES', 'YEAR')
     DATA_DIR = config.get('GENERATE_TRANSACTEES', 'DATA_DIR')
     DATAFILES = json.loads(config.get('GENERATE_TRANSACTEES', 'DATAFILES'))
     OUTFILE = config.get('GENERATE_TRANSACTEES', 'OUTFILE')
@@ -50,25 +51,35 @@ def main():
             print('>> Unrecognized filename: ' + filename + '. Quitting.')
             sys.exit(1)
     # Load the output file from a previous run if it's there so we have the id values.
-    oldTransactees = []
+    global existingTransactees
+    existingTransactees = []
     try:
         with open(DATA_DIR + OUTFILE) as datafile:
-            oldTransactees = json.load(datafile)
+            existingTransactees = json.load(datafile)
     except FileNotFoundError:
         # This is a fresh run and new id's will be generated.
-        pass 
-    # Make a dict out of the oldTransactees so we have constant time access to id values.
+        pass
+    if len(existingTransactees) > 0:
+        print('>> Loaded ' + str(len(existingTransactees)) + ' records from ' + OUTFILE)
+    # Make a dict out of the existingTransactees so we have constant time access to id values.
     global transacteeIDs
     transacteeIDs = {}
-    for entry in oldTransactees:
-        # Undo flattening
-        for txID in json.loads(entry['transaction_ids'].replace('\'', '"')):
-            transacteeIDs[entry['transaction_type'] + txID] = entry['id']
+    for entry in existingTransactees:
+        if isinstance(entry['transaction_ids'], str): # Undo flattening
+            txIDs = json.loads(entry['transaction_ids'].replace('\'', '"'))
+        else:
+            txIDs = entry['transaction_ids']
+        for txID in txIDs:
+            transacteeIDs[entry['filed_year'] + entry['transaction_type'] + txID] = entry['id']
     # load data from each source file
     for filename in DATAFILES:
         print('>> Loading data from ' + filename)
         with open(DATA_DIR + filename, 'r', errors='ignore', newline='') as csvfile:
-            process(csv.DictReader(csvfile), recordTypes[filename])
+            process(YEAR, csv.DictReader(csvfile), recordTypes[filename])
+    # Merge the existing records with the newly found ones (except duplicates)
+    numDuplicates = mergeExistingTransactees()
+    if len(existingTransactees) > 0:
+        print('>> Merged transactees with records from the disk; there were ' + str(numDuplicates) + ' duplicates.')
     print('>> Writing ' + str(len(allTransactees)) + ' records to ' + OUTFILE)
     with open(DATA_DIR + OUTFILE, 'w') as datafile:
         if PRETTY_PRINT:
@@ -78,11 +89,12 @@ def main():
             json.dump(allTransactees, datafile)
 
 # process each record, adding it to allTransactees
-# records is a csv.DictReader and recordTypes is (<id col name>, <org type col name>, <transactee type>)
-def process(records, recordTypes):
+# year is the year the data is from, as a string
+# records is a csv.DictReader
+# recordTypes is (<id col name>, <org type col name>, <transactee type>)
+def process(year, records, recordTypes):
     global transacteeIDs
     global allTransactees
-    global oldTransactees
     # idCol = ContributionID, ExpenditureID, InKindContributionID, or ReceiptID
     idCol = recordTypes[0]
     # orgTypeCol = ContributorType,  ReceiptSourceType, or ''
@@ -121,13 +133,25 @@ def process(records, recordTypes):
             newOrg['transaction_type'] = idCol[:-2]
             # If the transactee id was generated in a previous run, reuse it.
             try:
-                newOrg['id'] = transacteeIDs[newOrg['transaction_type'] + txID]
+                newOrg['id'] = transacteeIDs[year + newOrg['transaction_type'] + txID]
             except KeyError:
                 newOrg['id'] = str(uuid4()).upper() # random unique id
             newOrg['API_status'] = '' # will be used by geocoding script
             newOrg['organization_type'] = orgType
             newOrg['transaction_ids'] = [txID]
+            newOrg['filed_year'] = year
             allTransactees.append(newOrg)
+
+def mergeExistingTransactees():
+    global allTransactees
+    global existingTransactees
+    numDuplicates = 0
+    for transactee in existingTransactees:
+        if transactee not in allTransactees:
+            allTransactees.append(transactee)
+        else:
+            numDuplicates += 1
+    return numDuplicates
 
 if __name__=='__main__':
     main()

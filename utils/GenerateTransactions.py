@@ -29,6 +29,7 @@ def main():
     # First read the config file.
     config = ConfigParser()
     config.read('config.ini')
+    YEAR = config.get('GENERATE_TRANSACTIONS', 'YEAR')
     DATA_DIR = config.get('GENERATE_TRANSACTIONS', 'DATA_DIR')
     TRANSACTEES_FILE = config.get('GENERATE_TRANSACTEES', 'OUTFILE')
     DATAFILES = json.loads(config.get('GENERATE_TRANSACTIONS', 'DATAFILES'))
@@ -59,26 +60,32 @@ def main():
             print('>> Unrecognized filename: ' + filename + '. Quitting.')
             sys.exit(1)
     # First load the output file from a previous run if it's there so we use the same id values.
-    # TODO Should we look for a file for the previous year?
-    oldTransactions = []
+    global existingTransactions
+    existingTransactions = []
     try:
         with open(DATA_DIR + OUTFILE) as datafile:
-           oldTransactions = json.load(datafile) 
+           existingTransactions = json.load(datafile)
     except FileNotFoundError:
         # This is a fresh run so new id's will be generated.
         pass
+    if len(existingTransactions) > 0:
+        print('>> Loaded ' + str(len(existingTransactions)) + ' records from ' + OUTFILE)
     # Make a dict out of oldTransactions so we have constant time access to id values
     global transactionIDs
     transactionIDs = {}
-    for entry in oldTransactions:
-        transactionIDs[entry['type'] + entry['transaction_id']] = entry['id']
+    for entry in existingTransactions:
+        transactionIDs[entry['filed_year'] + entry['type'] + entry['transaction_id']] = entry['id']
     global allTransactions
     allTransactions = [] # master list of Transactions
     # Now load the transaction data from each file
     for filename in DATAFILES:
         with open(DATA_DIR + filename, errors='ignore', newline='') as datafile:
             print('>> Loading data from ' + filename)
-            scrapeTransactions(csv.DictReader(datafile), recordTypes[filename])
+            scrapeTransactions(YEAR, csv.DictReader(datafile), recordTypes[filename])
+    # merge the existing records with the newly found ones (except duplicates)
+    numDuplicates = mergeExistingTransactions()
+    if len(existingTransactions) > 0:
+        print('>> Merged transactions with records from the disk; there were ' + str(numDuplicates) + ' duplicates.')
     # output the data to a file
     print('>> Writing ' + str(len(allTransactions)) + ' records to ' + OUTFILE)
     with open(DATA_DIR + OUTFILE, 'w') as datafile:
@@ -88,7 +95,7 @@ def main():
         else:
             json.dump(allTransactions, datafile)
 
-def scrapeTransactions(records, recordType):
+def scrapeTransactions(year, records, recordType):
     global transactionIDs
     global allTransactions
     global allTransactees
@@ -113,9 +120,10 @@ def scrapeTransactions(records, recordType):
         if not foundMatch:
             print('Error: No match found for id ' + record[idCol] + ' in the transactees file.')
         thisTransaction['transaction_id'] = record[idCol]
+        thisTransaction['filed_year'] = year
         # If the transaction exists in the dataset from a previous run, reuse the id.
         try:
-            thisTransaction['id'] = transactionIDs[thisTransaction['type'] + thisTransaction['transaction_id']]
+            thisTransaction['id'] = transactionIDs[year + thisTransaction['type'] + thisTransaction['transaction_id']]
         except KeyError:
             thisTransaction['id'] = str(uuid4()).upper() # random unique id
         thisTransaction['party_id'] = record['OrgID']
@@ -138,6 +146,17 @@ def scrapeTransactions(records, recordType):
         elif idCol.startswith('InKindContribution'):
             thisTransaction['inkind_nature'] = record['NatureOfInKindContribution']
         allTransactions.append(thisTransaction)
+
+def mergeExistingTransactions():
+    global allTransactions
+    global existingTransactions
+    numDuplicates = 0
+    for transaction in existingTransactions:
+        if transaction not in allTransactions:
+            allTransactions.append(transaction)
+        else:
+            numDuplicates += 1
+    return numDuplicates
 
 if __name__=='__main__':
     main()

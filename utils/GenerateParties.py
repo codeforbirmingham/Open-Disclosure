@@ -8,7 +8,7 @@
 # Purpose: This script reads the data files from alabamavotes.gov
 # and finds all the unique PACs & Candidates (by OrgID).
 # It also reads the Party information from that site, and
-# cross-references it with the existing data. 
+# cross-references it with the existing data.
 # This data can then be expanded by CallCivicInfoAPI.py
 # Configuration parameters are read from 'config.ini'.
 #
@@ -31,6 +31,7 @@ def main():
     DATAFILES = json.loads(config.get('GENERATE_PARTIES', 'DATAFILES'))
     OUTFILE = config.get('GENERATE_PARTIES', 'OUTFILE')
     PRETTY_PRINT = config.getboolean('GENERATE_PARTIES', 'PRETTY_PRINT')
+    YEAR = config.get('GENERATE_PARTIES', 'YEAR')
     global allParties
     allParties = [] # all PACs and Candidates
     global allOrgIDs
@@ -39,48 +40,64 @@ def main():
     for filename in DATAFILES:
         with open(DATA_DIR + filename, 'r', errors='ignore', newline='') as csvfile:
             print('>> Loading data from ' + filename)
-            findUniqueOrgs(csv.DictReader(csvfile))
+            findUniqueOrgs(YEAR, csv.DictReader(csvfile))
+    print('>> Found ' + str(len(allParties)) + ' unique parties')
     # add the info we have on each candidate from the Parties file
     with open(DATA_DIR + PARTYINFO) as datafile:
         numModified = addPartyInfo(csv.DictReader(datafile))
-    print('>> Modified ' + str(numModified) + ' party records with additional info.')
+    print('>> Modified ' + str(numModified) + ' party records with additional info')
     # Load the OCD IDs so we know which ones are valid.
     global allDistricts
     try:
         with open(DATA_DIR + DISTRICTS_FILE) as f:
             allDistricts = json.load(f)
     except FileNotFoundError:
-        print('>> Error: ' + DISTRICTS_FILE + ' not found! Run GenerateDistricts.py first.')
+        print('>> Error: ' + DISTRICTS_FILE + ' not found! Run GenerateDistricts.py first')
         sys.exit(1)
     # Add OCD IDs for any districts we can identify.
     numModified = addDistrictIDs()
-    print('>> Added District IDs to ' + str(numModified) + ' records.')
+    print('>> Added District IDs to ' + str(numModified) + ' records')
+    # If the output file already exists, include those records (except duplicates)
+    # This way we can have records from multiple years.
+    global existingParties
+    numExisting = 0
+    try:
+        with open(DATA_DIR + OUTFILE) as datafile:
+            existingParties = json.load(datafile)
+            numExisting = len(existingParties)
+            numDuplicates = mergeExistingParties() # adds them to allParties
+    except FileNotFoundError:
+        pass
+    if numExisting > 0:
+        print('>> Merged with ' + str(numExisting) + ' party records on the disk. ', end='')
+        print('There were ' + str(numDuplicates) + ' duplicates')
     print('>> Writing ' + str(len(allParties)) + ' records to ' + OUTFILE)
     with open(DATA_DIR + OUTFILE, 'w') as datafile:
         if PRETTY_PRINT:
-            json.dump(allParties, datafile, sort_keys=True, 
+            json.dump(allParties, datafile, sort_keys=True,
                       indent=4, separators=(',', ': '))
         else:
             json.dump(allParties, datafile)
 
-def findUniqueOrgs(records):
+def findUniqueOrgs(year, records):
     global allParties
     global allOrgIDs
-    numParties = 0 
+    numParties = 0
     # iterate over the records looking for new information
     for record in records:
         # if it's a new OrgID, gather the info
         if record['OrgID'] not in allOrgIDs:
             numParties += 1
             allOrgIDs.append(record['OrgID'])
-            thisOrg = {} 
+            thisOrg = {}
             thisOrg['id'] = record['OrgID']
+            thisOrg['filed_year'] = year
             thisOrg['API_status'] = '' # this field will be used by CallCivicInfo.py
             if record['CommitteeType'] == 'Political Action Committee':
                 thisOrg['type'] = 'PAC'
                 rawName = record['CommitteeName']
                 thisOrg['name'] = rawName.title().replace('Pac', 'PAC').replace('"', '').strip()
-                if thisOrg['name'][-3:].upper() == 'PAC': 
+                if thisOrg['name'][-3:].upper() == 'PAC':
                     thisOrg['name'] = thisOrg['name'][:-3] + 'PAC'
             elif record['CommitteeType'] == 'Principal Campaign Committee':
                 thisOrg['type'] = 'Candidate'
@@ -166,6 +183,17 @@ def addDistrictIDs():
                 party['ocdID'] = districtID
                 numModified += 1
     return numModified
+
+def mergeExistingParties():
+    global allParties
+    global existingParties
+    numDuplicates = 0
+    for party in existingParties:
+        if party not in allParties:
+            allParties.append(party)
+        else:
+            numDuplicates += 1
+    return numDuplicates
 
 if __name__=='__main__':
     main()
