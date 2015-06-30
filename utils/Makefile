@@ -3,7 +3,7 @@
 
 py = python3
 
-all: download organize flatten
+all: download organize merge flatten
 
 download:
 	$(py) DataFetcher.py
@@ -18,6 +18,9 @@ organize:
 enhance:
 	$(py) CallCivicInfoAPI.py
 
+merge:
+	$(py) CompareYears.py
+
 flatten:
 	$(py) FlattenData.py
 
@@ -27,4 +30,4 @@ upload:
 clean:
 	-rm data/*.json data/*.csv
 
-.PHONY: all download organize enhance flatten upload clean
+.PHONY: all download organize enhance merge flatten upload clean
