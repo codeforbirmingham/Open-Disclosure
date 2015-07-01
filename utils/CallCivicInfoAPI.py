@@ -212,7 +212,7 @@ def processReply(reply, ocdID):
                 officialEmail = official['emails'][0]
             except KeyError:
                 pass
-            # look for a matching person with an orgID
+            # look for a matching person in our existing data
             possibleMatches = {}
             for party in allParties:
                 if party['type'] == 'Candidate':
@@ -241,17 +241,17 @@ def processReply(reply, ocdID):
             if len(possibleMatches) == 0:
                 continue # to next official
             else:
-                # find the orgID with the highest matchProbability
-                bestOrgID = max(possibleMatches.items(), key=itemgetter(1))[0]
+                # find the party id with the highest matchProbability
+                bestID = max(possibleMatches.items(), key=itemgetter(1))[0]
                 # add useful info about that official to our database
-                scrapeData(official, bestOrgID, ocdID)
+                scrapeData(official, bestID, ocdID)
     return True
 
 # scrape whatever useful data we can from the reply
-def scrapeData(official, candidateOrgID, ocdID):
+def scrapeData(official, candidateID, ocdID):
     global allParties
     for party in allParties:
-        if party['id'] == candidateOrgID:
+        if party['id'] == candidateID:
             party['API_status'] = 'OK'
             party['API_timestamp'] = int(time())
             party['ocdID'] = ocdID

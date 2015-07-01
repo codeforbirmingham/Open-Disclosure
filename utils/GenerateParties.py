@@ -20,6 +20,7 @@ import re
 import sys
 from datetime import datetime
 from configparser import ConfigParser
+from uuid import uuid4
 
 def main():
     # First read the config file.
@@ -32,6 +33,21 @@ def main():
     OUTFILE = config.get('GENERATE_PARTIES', 'OUTFILE')
     PRETTY_PRINT = config.getboolean('GENERATE_PARTIES', 'PRETTY_PRINT')
     YEAR = config.get('GENERATE_PARTIES', 'YEAR')
+    global existingParties
+    existingParties = []
+    numExisting = 0
+    try:
+        with open(DATA_DIR + OUTFILE) as datafile:
+            existingParties = json.load(datafile)
+            numExisting = len(existingParties)
+    except FileNotFoundError:
+        pass
+    if numExisting > 0:
+        print('>> Loaded ' + str(numExisting) + ' records from ' + OUTFILE)
+    global partyIDs
+    partyIDs = {}
+    for record in existingParties:
+        partyIDs[record['filed_year'] + record['type'] + record['org_id']] = record['id']
     global allParties
     allParties = [] # all PACs and Candidates
     global allOrgIDs
@@ -57,20 +73,10 @@ def main():
     # Add OCD IDs for any districts we can identify.
     numModified = addDistrictIDs()
     print('>> Added District IDs to ' + str(numModified) + ' records')
-    # If the output file already exists, include those records (except duplicates)
-    # This way we can have records from multiple years.
-    global existingParties
-    numExisting = 0
-    try:
-        with open(DATA_DIR + OUTFILE) as datafile:
-            existingParties = json.load(datafile)
-            numExisting = len(existingParties)
-            numDuplicates = mergeExistingParties() # adds them to allParties
-    except FileNotFoundError:
-        pass
+    # Merge the records found this run with ones already on the disk (except duplicates)
     if numExisting > 0:
-        print('>> Merged with ' + str(numExisting) + ' party records on the disk. ', end='')
-        print('There were ' + str(numDuplicates) + ' duplicates')
+        numDuplicates = mergeExistingParties()
+        print('>> There were ' + str(numDuplicates) + ' duplicates from existing data')
     print('>> Writing ' + str(len(allParties)) + ' records to ' + OUTFILE)
     with open(DATA_DIR + OUTFILE, 'w') as datafile:
         if PRETTY_PRINT:
@@ -82,6 +88,7 @@ def main():
 def findUniqueOrgs(year, records):
     global allParties
     global allOrgIDs
+    global partyIDs
     numParties = 0
     # iterate over the records looking for new information
     for record in records:
@@ -90,7 +97,7 @@ def findUniqueOrgs(year, records):
             numParties += 1
             allOrgIDs.append(record['OrgID'])
             thisOrg = {}
-            thisOrg['id'] = record['OrgID']
+            thisOrg['org_id'] = record['OrgID']
             thisOrg['filed_year'] = year
             thisOrg['API_status'] = '' # this field will be used by CallCivicInfo.py
             if record['CommitteeType'] == 'Political Action Committee':
@@ -105,6 +112,10 @@ def findUniqueOrgs(year, records):
                 thisOrg['name'] = rawName.title().replace('Ii', 'II').replace('Iii', 'III').replace('"', '').replace('Mcc', 'McC').strip()
             else:
                 print('>> Error: Unknown group type: ' + record['CommitteeType'])
+            try:
+                thisOrg['id'] = partyIDs[year + thisOrg['type'] + thisOrg['org_id']]
+            except KeyError:
+                thisOrg['id'] = str(uuid4()).upper() # random unique id
             allParties.append(thisOrg)
 
 def addPartyInfo(records):
@@ -115,7 +126,7 @@ def addPartyInfo(records):
         # if the ID is in the data, add to it
         found = False
         for party in allParties:
-            if party['id'] == record['CommitteeID']:
+            if party['org_id'] == record['CommitteeID']:
                 party['party'] = record['Party']
                 party['office'] = record['Office'].title()
                 if len(record['District']) > 0:
@@ -129,7 +140,10 @@ def addPartyInfo(records):
         if not found:
             # it's a party with no submitted CFC data; add it anyway.
             newParty = {}
-            newParty['id'] = record['CommitteeID']
+            newParty['filed_year'] = str(datetime.today().year)
+            newParty['id'] = str(uuid4()).upper()
+            newParty['type'] = 'Candidate'
+            newParty['org_id'] = record['CommitteeID']
             normalizedName = record['CandidateName'].split(',')[1].strip() + ' ' + record['CandidateName'].split(',')[0]
             normalizedName = normalizedName.title().replace('Ii', 'II').replace('Iii', 'III').replace('"', '').replace('Mcc', 'McC').strip()
             newParty['name'] = normalizedName

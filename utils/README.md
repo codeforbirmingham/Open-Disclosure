@@ -28,10 +28,13 @@ For this step you'll need API keys from Google and the Sunlight Foundation.
 * CallCivicInfoAPI.py: This calls Google's Civic Information API to get information on each OCD ID in Alabama, adding to the existing party data.
 * CallSunlightAPI.py: This makes some calls to the Sunlight Foundation's API but doesn't do anything with the info (yet). Put the API key in ~/.sunlight.key or the environment variable SUNLIGHT\_API\_KEY.
 
-### Step 4: Flatten the Data ###
+### Step 4: Merge data across years ###
+* CompareYears.py: Since the same transactee or party can be given different UUIDs by the scripts above when found in datasets for different years, this script identifies duplicates and merges them.
+
+### Step 5: Flatten the Data ###
 In order to import the data into Socrata, the JSON needs to be flattened. The aptly named FlattenData.py serves this purpose.
 
-### Step 5: Send the Data to Socrata ###
+### Step 6: Send the Data to Socrata ###
 Edit the config.ini with credentials and run SendToSocrata.py.
 
 ## Next Steps ##
