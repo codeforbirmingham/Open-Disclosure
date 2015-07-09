@@ -10,7 +10,7 @@
 # information (contact info, photo URL, etc.). This is added to
 # the existing data.
 # If you want to run this, make sure to get an API key from 
-# your Google Developers Console and put it in the constant below.
+# your Google Developers Console and put it in the config file.
 # Also be aware of the API usage limits.
 # For Google's documentation, see:
 # https://developers.google.com/civic-information/docs/v2
