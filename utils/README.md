@@ -4,6 +4,7 @@ This is a collection of Python scripts that download, organize, and enhance data
 ## System Requirements ##
 * Python 3.4 or later
 * a Linux environment (other UNIX may work)
+* java (openjdk will work)
 * Python libraries: shapely, fuzzywuzzy, nameparser, numpy, selenium, sunlight, requests
 
 ## Using Make ##
