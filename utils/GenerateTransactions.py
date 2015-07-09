@@ -32,6 +32,7 @@ def main():
     YEAR = config.get('GENERATE_TRANSACTIONS', 'YEAR')
     DATA_DIR = config.get('GENERATE_TRANSACTIONS', 'DATA_DIR')
     TRANSACTEES_FILE = config.get('GENERATE_TRANSACTEES', 'OUTFILE')
+    PARTIES_FILE = config.get('GENERATE_PARTIES', 'OUTFILE')
     DATAFILES = json.loads(config.get('GENERATE_TRANSACTIONS', 'DATAFILES'))
     OUTFILE = config.get('GENERATE_TRANSACTIONS', 'OUTFILE')
     PRETTY_PRINT = config.getboolean('GENERATE_TRANSACTIONS', 'PRETTY_PRINT')
@@ -45,6 +46,16 @@ def main():
         print('>> ' + TRANSACTEES_FILE + ' not found! You should run GenerateTransactees.py.')
         exit(1)
     print(str(len(allTransactees)) + ' records loaded.')
+    global allParties
+    allParties = []
+    try:
+        with open(DATA_DIR + PARTIES_FILE) as datafile:
+            print('>> Loading ' + PARTIES_FILE + '...', end='')
+            allParties = json.load(datafile)
+    except FileNotFoundError:
+        print('>> ' + PARTIES_FILE + ' not found! You should run GenerateParties.py.')
+        exit(1)
+    print(str(len(allParties)) + ' records loaded.')
     # hard code the values of record types for each file
     recordTypes = {}
     for filename in DATAFILES:
@@ -99,6 +110,7 @@ def scrapeTransactions(year, records, recordType):
     global transactionIDs
     global allTransactions
     global allTransactees
+    global allParties
     # idCol = ContributionID, ExpenditureID, InKindContributionID, or ReceiptID
     idCol = recordType + 'ID'
     # recordType = Contribution, Expenditure, or Receipt
@@ -119,6 +131,16 @@ def scrapeTransactions(year, records, recordType):
                 break
         if not foundMatch:
             print('Error: No match found for id ' + record[idCol] + ' in the transactees file.')
+        for entry in allParties:
+            foundMatch = False
+            # if the orgID's match, copy the UUID
+            #TODO fix this logic
+            if entry['filed_year'] == year and record['OrgID'] == entry['org_id']:
+                thisTransaction['party_id'] = entry['id']
+                foundMatch = True
+                break
+        if not foundMatch:
+            print('Error: No match found for id ' + record[OrgID] + ' in the parties file.')
         thisTransaction['transaction_id'] = record[idCol]
         thisTransaction['filed_year'] = year
         # If the transaction exists in the dataset from a previous run, reuse the id.
@@ -126,7 +148,6 @@ def scrapeTransactions(year, records, recordType):
             thisTransaction['id'] = transactionIDs[year + thisTransaction['type'] + thisTransaction['transaction_id']]
         except KeyError:
             thisTransaction['id'] = str(uuid4()).upper() # random unique id
-        thisTransaction['party_id'] = record['OrgID']
         thisTransaction['amount'] = record[recordType + 'Amount']
         thisTransaction['filed_date'] = record['FiledDate']
         thisTransaction['amended'] = record['Amended']
