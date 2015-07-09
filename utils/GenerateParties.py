@@ -99,7 +99,7 @@ def findUniqueOrgs(year, records):
             thisOrg = {}
             thisOrg['org_id'] = record['OrgID']
             thisOrg['filed_year'] = year
-            thisOrg['API_status'] = '' # this field will be used by CallCivicInfo.py
+            thisOrg['API_status'] = '' # this field will be used by CallSunlightAPI.py
             if record['CommitteeType'] == 'Political Action Committee':
                 thisOrg['type'] = 'PAC'
                 rawName = record['CommitteeName']
@@ -119,6 +119,7 @@ def findUniqueOrgs(year, records):
             allParties.append(thisOrg)
 
 def addPartyInfo(records):
+    #TODO include PACs when they contribute to candidates
     global allParties
     numModified = 0
     # iterate over the records and add the info to allParties

@@ -16,7 +16,7 @@ organize:
 	$(py) GenerateTransactions.py
 
 enhance:
-	$(py) CallCivicInfoAPI.py
+	$(py) CallSunlightAPI.py
 
 merge:
 	$(py) CompareYears.py
