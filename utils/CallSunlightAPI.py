@@ -95,7 +95,7 @@ class CallSunlightAPI:
                     except KeyError:
                         pass
                     try:
-                        party['photoURL'] = legislator['photo_url']
+                        party['photo_url'] = legislator['photo_url']
                     except KeyError:
                         pass
                     try:

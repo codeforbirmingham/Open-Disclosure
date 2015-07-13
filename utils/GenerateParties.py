@@ -213,11 +213,11 @@ def addDistrictIDs():
         # Add our generated ID into the data if it's valid.
         if recognized:
             # Check if the ocd ID we generated is in the official list.
-            valid = any([d['ocdID'] == districtID for d in allDistricts])
+            valid = any([d['ocd_id'] == districtID for d in allDistricts])
             if not valid:
                 print('>> Error: unrecognizable district: "' + party['district'] + '"')
             else:
-                party['ocdID'] = districtID
+                party['ocd_id'] = districtID
                 numModified += 1
     return numModified
 

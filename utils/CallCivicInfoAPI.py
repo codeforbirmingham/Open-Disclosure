@@ -108,7 +108,7 @@ def removeUsedIDs():
         if party['API_status'] == 'OK' and (time() - party['API_timestamp']) < TTL_SECONDS:
             # iterate over a copy so we can delete some
             for district in list(allDistricts):
-                if district['ocdID'] == party['ocdID']:
+                if district['ocd_id'] == party['ocd_id']:
                     allDistricts.remove(district)
                     break
 
@@ -131,7 +131,7 @@ def makeAPIRequests():
             print('>> Requesting data for ' + district['name'])
         # catch any errors to ensure the data gets written to disk
         try:
-            if not makeAPIRequest(district['ocdID']):
+            if not makeAPIRequest(district['ocd_id']):
                 numFailures += 1
             numRequests += 1
         except Exception as e:
@@ -158,7 +158,7 @@ def makeAPIRequest(ocdID):
         try:
             response = urlopen(url)
         except:
-            print('ocdID: ' + ocdID)
+            print('ocd_id: ' + ocdID)
             print('URL: ' + url)
             raise
         sleep(0.1) # go easy on their servers
@@ -254,7 +254,7 @@ def scrapeData(official, candidateID, ocdID):
         if party['id'] == candidateID:
             party['API_status'] = 'OK'
             party['API_timestamp'] = int(time())
-            party['ocdID'] = ocdID
+            party['ocd_id'] = ocdID
             try:
                 party['party'] = official['party']
             except KeyError:
@@ -272,15 +272,15 @@ def scrapeData(official, candidateID, ocdID):
             except KeyError:
                 pass
             try:
-                party['photoURL'] = official['photoUrl']
+                party['photo_url'] = official['photoUrl']
             except KeyError:
                 pass
             try:
                 for channel in official['channels']:
                     if channel['type'] == 'Facebook':
-                        party['facebookID'] = channel['id']
+                        party['facebook_id'] = channel['id']
                     elif channel['type'] == 'Twitter':
-                        party['twitterID'] = channel['id']
+                        party['twitter_id'] = channel['id']
             except KeyError:
                 pass
             break

@@ -34,7 +34,7 @@ def main():
     districts = []
     for ocdRecord in allOCDIDs:
         thisDistrict = {}
-        thisDistrict['ocdID'] = ocdRecord[0]
+        thisDistrict['ocd_id'] = ocdRecord[0]
         thisDistrict['name'] = ocdRecord[1]
         districts.append(thisDistrict)
     print('>> Writing ' + str(len(districts)) + ' records to ' + OUTFILE)
