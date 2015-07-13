@@ -52,12 +52,14 @@ def main():
     allParties = [] # all PACs and Candidates
     global allOrgIDs
     allOrgIDs = [] # used to ensure we don't have duplicates
-    # start by finding all unique organizations (by id) and adding them to allParties
+    # start by finding all unique organizations and adding them to allParties
+    numExtra = 0 # number of PACs w/o OrgIDs
     for filename in DATAFILES:
         with open(DATA_DIR + filename, 'r', errors='ignore', newline='') as csvfile:
             print('>> Loading data from ' + filename)
-            findUniqueOrgs(YEAR, csv.DictReader(csvfile))
-    print('>> Found ' + str(len(allParties)) + ' unique parties')
+            numExtra += findUniqueOrgs(YEAR, csv.DictReader(csvfile))
+    print('>> Found ' + str(len(allParties)) + ' unique parties, ' + 
+                        str(numExtra) + ' of which had no OrgID')
     # add the info we have on each candidate from the Parties file
     with open(DATA_DIR + PARTYINFO) as datafile:
         numModified = addPartyInfo(csv.DictReader(datafile))
@@ -89,12 +91,11 @@ def findUniqueOrgs(year, records):
     global allParties
     global allOrgIDs
     global partyIDs
-    numParties = 0
+    numExtra = 0
     # iterate over the records looking for new information
     for record in records:
         # if it's a new OrgID, gather the info
         if record['OrgID'] not in allOrgIDs:
-            numParties += 1
             allOrgIDs.append(record['OrgID'])
             thisOrg = {}
             thisOrg['org_id'] = record['OrgID']
@@ -103,9 +104,11 @@ def findUniqueOrgs(year, records):
             if record['CommitteeType'] == 'Political Action Committee':
                 thisOrg['type'] = 'PAC'
                 rawName = record['CommitteeName']
-                thisOrg['name'] = rawName.title().replace('Pac', 'PAC').replace('"', '').strip()
-                if thisOrg['name'][-3:].upper() == 'PAC':
-                    thisOrg['name'] = thisOrg['name'][:-3] + 'PAC'
+                normalName = rawName.title().replace('"', '').strip()
+                if normalName[-3:].upper() == 'PAC':
+                    normalName = normalName[:-3] + 'PAC'
+                normalName = normalName.replace('Political Action Committee', 'PAC')
+                thisOrg['name'] = normalName
             elif record['CommitteeType'] == 'Principal Campaign Committee':
                 thisOrg['type'] = 'Candidate'
                 rawName = record['CandidateName']
@@ -117,9 +120,28 @@ def findUniqueOrgs(year, records):
             except KeyError:
                 thisOrg['id'] = str(uuid4()).upper() # random unique id
             allParties.append(thisOrg)
-
+        # also look for PACs w/o OrgIDs (ReceiptSources or Contributors)
+        if ('ReceiptSourceType' in record and record['ReceiptSourceType'] == 'PAC') or \
+           ('ContributorType' in record and record['ContributorType'] == 'PAC'):
+            PACname = record['LastName']
+            normalizedPACname = PACname.title().replace('"', '').strip()
+            if normalizedPACname[-3:].upper() == 'PAC':
+                normalizedPACname = normalizedPACname[:-3] + 'PAC'
+            normalizedPACname = normalizedPACname.replace('Political Action Committee', 'PAC')
+            find = [normalizedPACname == party['name'] and party['type'] == 'PAC' for party in allParties]
+            if not any(find): # haven't seen them before
+                numExtra += 1
+                thisOrg = {}
+                thisOrg['name'] = normalizedPACname
+                thisOrg['type'] = 'PAC'
+                thisOrg['filed_year'] = year
+                thisOrg['API_status'] = ''
+                thisOrg['id'] = str(uuid4()).upper()
+                thisOrg['org_id'] = ''
+                allParties.append(thisOrg)
+    return numExtra
+             
 def addPartyInfo(records):
-    #TODO include PACs when they contribute to candidates
     global allParties
     numModified = 0
     # iterate over the records and add the info to allParties

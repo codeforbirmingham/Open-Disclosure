@@ -104,10 +104,11 @@ def process(year, records, recordTypes):
     # record the starting index for this type (for efficiency later)
     startIndex = len(allTransactees)
     for record in records:
+        if ('ReceiptSourceType' in record and record['ReceiptSourceType'] == 'PAC') or \
+           ('ContributorType' in record and record['ContributorType'] == 'PAC'):
+            continue # PACs are treated as Parties not Transactees
         name = record['FirstName'] + ' ' + record['MI'] + ' ' + record['LastName'] + ' ' + record['Suffix']
         name = name.strip().title().replace('Ii','II').replace('Iii','III').replace('IIi', 'III').replace('  ', ' ')
-        if name[-3:].upper() == 'PAC':
-            name = name[:-3] + 'PAC'
         address = record['Address1'] + ' ' + record['City'] + ' ' + record['State'] + ' ' + record['Zip']
         address = address.strip().replace('  ',' ')
         txID = record[idCol]

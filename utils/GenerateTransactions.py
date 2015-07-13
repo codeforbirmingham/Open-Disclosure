@@ -119,27 +119,35 @@ def scrapeTransactions(year, records, recordType):
     # for each record, scrape the data and throw it in allTransactions
     for record in records:
         thisTransaction = {}
+        thisTransaction['party_to_party'] = 0 # assume it's transactee ->/<- party
         thisTransaction['type'] = idCol[:-2] # cut off 'ID' part
         thisTransaction['transaction_type'] = record[recordType + 'Type'].strip()
-        # find their record in allTransactees and get the ID
-        foundMatch = False
+        # find their record in allTransactees or allParties and get the ID
         for entry in allTransactees:
             # if the txID's match, copy the UUID.
             if idCol[:-2] == entry['transaction_type'] and record[idCol] in entry['transaction_ids']:
                 thisTransaction['transactee_id'] = entry['id']
-                foundMatch = True
                 break
-        if not foundMatch:
-            print('Error: No match found for id ' + record[idCol] + ' in the transactees file.')
+        if 'transactee_id' not in thisTransaction:
+            # check if it's a PAC ->/<- Candidate transaction
+            PACname = record['LastName'].title().replace('"', '').strip()
+            if PACname[-3:].upper() == 'PAC':
+                PACname = PACname[:-3] + 'PAC'
+            PACname = PACname.replace('Political Action Committee', 'PAC')
+            for entry in allParties:
+                if entry['type'] == 'PAC' and entry['name'] == PACname:
+                    thisTransaction['transactee_id'] = entry['id'] # misleading, actually a Party ID
+                    thisTransaction['party_to_party'] = 1 # clarify with another field
+                    break
+        if 'transactee_id' not in thisTransaction:
+            print('Error: No match found in the transactees file.\nRecord:')
+            print(record)
         for entry in allParties:
-            foundMatch = False
-            # if the orgID's match, copy the UUID
-            #TODO fix this logic
+            # if the OrgIDs match, copy the UUID
             if entry['filed_year'] == year and record['OrgID'] == entry['org_id']:
                 thisTransaction['party_id'] = entry['id']
-                foundMatch = True
                 break
-        if not foundMatch:
+        if 'party_id' not in thisTransaction:
             print('Error: No match found for id ' + record[OrgID] + ' in the parties file.')
         thisTransaction['transaction_id'] = record[idCol]
         thisTransaction['filed_year'] = year
