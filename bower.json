@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "angular": "1.4.0",
+    "underscore": "",
     "angular-route": "1.4.0"
   }
 }
