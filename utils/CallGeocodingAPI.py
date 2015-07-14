@@ -207,7 +207,7 @@ def geocodeOSM(address):
         coords = {'lat': reply[0]['lat'], 'lng': reply[0]['lon']}
         niceAddress = reply[0]['display_name']
         result = (coords, niceAddress)
-    except:
+    except (IndexError, KeyError):
         result = 'NO_RESULTS_FOUND'
     return result
 

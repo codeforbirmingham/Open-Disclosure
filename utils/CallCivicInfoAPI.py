@@ -30,7 +30,7 @@ import csv
 from sys import exit
 from urllib.request import urlopen
 from urllib.parse import quote_plus
-from urllib.error import HTTPError
+from urllib.error import URLError
 from time import sleep, time
 from operator import itemgetter
 from configparser import ConfigParser
@@ -134,7 +134,7 @@ def makeAPIRequests():
             if not makeAPIRequest(district['ocd_id']):
                 numFailures += 1
             numRequests += 1
-        except Exception as e:
+        except URLError as e:
             print('>> Caught Error: ' + str(e))
             traceback.print_exc()
             success = False
@@ -157,7 +157,8 @@ def makeAPIRequest(ocdID):
         url = BASE_URL + quote_plus(ocdID) + '?key=' + API_KEY 
         try:
             response = urlopen(url)
-        except:
+        except URLError:
+            print('Error encountered making the following request:')
             print('ocd_id: ' + ocdID)
             print('URL: ' + url)
             raise
