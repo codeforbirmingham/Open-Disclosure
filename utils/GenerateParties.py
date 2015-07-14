@@ -33,6 +33,7 @@ def main():
     OUTFILE = config.get('GENERATE_PARTIES', 'OUTFILE')
     PRETTY_PRINT = config.getboolean('GENERATE_PARTIES', 'PRETTY_PRINT')
     YEAR = config.get('GENERATE_PARTIES', 'YEAR')
+    WHITE_LIST = json.loads(config.get('GENERATE_PARTIES', 'WHITE_LIST'))
     global existingParties
     existingParties = []
     numExisting = 0
@@ -64,6 +65,9 @@ def main():
     with open(DATA_DIR + PARTYINFO) as datafile:
         numModified = addPartyInfo(csv.DictReader(datafile))
     print('>> Modified ' + str(numModified) + ' party records with additional info')
+    # Remove parties whose office isn't in the whitelist
+    numRemoved = enforceWhiteList(WHITE_LIST)
+    print('>> Removed ' + str(numRemoved) + ' party records whose offices aren\'t in the configured white list.')
     # Load the OCD IDs so we know which ones are valid.
     global allDistricts
     try:
@@ -179,6 +183,15 @@ def addPartyInfo(records):
                 newParty['place'] = record['Place'].strip()
             allParties.append(newParty)
     return numModified
+
+def enforceWhiteList(allowed):
+    global allParties
+    numRemoved = 0
+    for party in allParties:
+        if 'office' in party and party['office'] not in allowed:
+            allParties.remove(party)
+            numRemoved += 1
+    return numRemoved
 
 def addDistrictIDs():
     global allParties
