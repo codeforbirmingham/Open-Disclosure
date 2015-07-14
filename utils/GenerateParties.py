@@ -167,6 +167,7 @@ def addPartyInfo(records):
         if not found:
             # it's a party with no submitted CFC data; add it anyway.
             newParty = {}
+            newParty['API_status'] = ''
             newParty['filed_year'] = str(datetime.today().year)
             newParty['id'] = str(uuid4()).upper()
             newParty['type'] = 'Candidate'
