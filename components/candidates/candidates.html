@@ -32,7 +32,7 @@
           <div class="row">
               <h6 class="candidate-office">{{candidate.office}}</h6>
             </div>
-        </div>  
+        </div>
       </div>
     </div>
     <div class="row">
@@ -41,6 +41,10 @@
         <p class="candidate-money">{{candidate.contribution | currency}}</p>
         <h5>Total Spent</h5>
         <p class="candidate-money">{{candidate.expenditure | currency}}</p>
+      </div>
+      <div class="small-12 columns">
+        <div class="candidate-bar" ng-style="spent(candidate.contribution, candidate.expenditure)">
+      </div>
       </div>
     </div>
   </div>

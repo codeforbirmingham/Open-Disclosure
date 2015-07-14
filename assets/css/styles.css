@@ -11,6 +11,10 @@
 .canidate-name {
   font-size: 2rem; }
 
+.candidate-bar {
+  background-color: #333;
+  height: 30px; }
+
 .candidate-card {
   height: 320px;
   overflow-y: scroll; }
