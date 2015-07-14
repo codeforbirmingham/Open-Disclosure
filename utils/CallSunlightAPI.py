@@ -15,9 +15,9 @@ class CallSunlightAPI:
     def __init__(self, config_file):
         self.config = configparser.ConfigParser()
         self.config.read(config_file)
-        self.state_code = self.config['SUNLIGHT']['STATE_CODE']
-        self.pretty_print = self.config['SUNLIGHT']['PRETTY_PRINT']
-        self.data_dir = self.config['SUNLIGHT']['DATA_DIR']
+        self.state_code = self.config['CALL_SUNLIGHT']['STATE_CODE']
+        self.pretty_print = self.config['CALL_SUNLIGHT']['PRETTY_PRINT']
+        self.data_dir = self.config['CALL_SUNLIGHT']['DATA_DIR']
         self.parties_file = self.config['GENERATE_PARTIES']['OUTFILE']
 
     def fetchData(self):
