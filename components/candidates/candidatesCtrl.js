@@ -33,7 +33,8 @@ angular.module('openDisclosure')
     });
     $scope.spent = function (contribution, expenditure) {
         return {
-          width: (100 * (expenditure / (contribution + expenditure))) + "%"
+        width : (100 * (expenditure / (contribution + expenditure))) + "%"
         };
     };
+
   }]);

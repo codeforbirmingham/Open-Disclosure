@@ -12,18 +12,25 @@ $primary-color: #0078a0;
 color: $primary-color !important;
 margin-bottom: 1rem;
 }
+p.candidate-spent {
+  margin-bottom: 0rem;
+  margin-left: 1rem;
+  overflow: visible;
+  white-space: nowrap;
+  color: lighten($primary-color, 50%);
+  padding: 0.5rem 0;
+}
 
 .canidate-name {
   font-size: 2rem;
 }
 
 .candidate-bar {
-  background-color: #333;
-  height: 30px;
+  background-color: $primary-color;
 }
 
 .candidate-card {
-  height: 320px;
+  height: 350px;
   overflow-y: scroll;
   .candidate-party {
     font-size: 1.6rem;
