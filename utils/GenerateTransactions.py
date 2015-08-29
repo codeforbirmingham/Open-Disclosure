@@ -147,8 +147,6 @@ def scrapeTransactions(year, records, recordType):
             if entry['filed_year'] == year and record['OrgID'] == entry['org_id']:
                 thisTransaction['party_id'] = entry['id']
                 break
-        if 'party_id' not in thisTransaction:
-            print('Error: No match found for id ' + record[OrgID] + ' in the parties file.')
         thisTransaction['transaction_id'] = record[idCol]
         thisTransaction['filed_year'] = year
         # If the transaction exists in the dataset from a previous run, reuse the id.
@@ -174,7 +172,8 @@ def scrapeTransactions(year, records, recordType):
                 thisTransaction['endorsers'] = endorsers
         elif idCol.startswith('InKindContribution'):
             thisTransaction['inkind_nature'] = record['NatureOfInKindContribution']
-        allTransactions.append(thisTransaction)
+        if 'party_id' in thisTransaction: # the involved party was whitelisted
+            allTransactions.append(thisTransaction)
 
 def mergeExistingTransactions():
     global allTransactions
