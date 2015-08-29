@@ -116,7 +116,7 @@ def findUniqueOrgs(year, records):
             elif record['CommitteeType'] == 'Principal Campaign Committee':
                 thisOrg['type'] = 'Candidate'
                 rawName = record['CandidateName']
-                thisOrg['name'] = rawName.title().replace('Ii', 'II').replace('Iii', 'III').replace('"', '').replace('Mcc', 'McC').strip()
+                thisOrg['name'] = rawName.title().replace('Ii', 'II').replace('Iii', 'III').replace('IIi', 'III').replace('"', '').replace('Mcc', 'McC').strip()
             else:
                 print('>> Error: Unknown group type: ' + record['CommitteeType'])
             try:
