@@ -3,6 +3,10 @@
     width: 48%;
     margin-left: 1%;
     margin-right: 1%; } }
+.datavis {
+  text-align: center;
+  margin: 5rem; }
+
 .candidate-money {
   font-size: 1.4rem;
   color: #0078a0 !important;

@@ -25,6 +25,7 @@ angular.module('openDisclosure').factory('Api', ['$http', '$q', function ($http,
             parties = results[0].data;
             transactions = results[1].data;
             // Index transactions.
+            console.log(transactions);
             transactionsIndex = {};
             transactions.forEach(function (x) {
                 if (transactionsIndex.hasOwnProperty(x.party_id) === false) {

@@ -16,7 +16,7 @@ angular.module('openDisclosure')
     $scope.curSortField = 'contribution';
     $scope.curSortOrderDesc = true;
     $scope.setSortField = function(sortField) {
-      if ($scope.curSortField == sortField) {
+      if ($scope.curSortField === sortField) {
         // Invert order.
         $scope.curSortOrderDesc = !$scope.curSortOrderDesc;
       } else {
@@ -28,13 +28,15 @@ angular.module('openDisclosure')
     $scope.getOrderBy = function() {
       return $scope.curSortOrderDesc ? '-' + $scope.curSortField : $scope.curSortField;
     };
-    Api.getCandidates().then(function(candidates) {
-      $scope.candidates = candidates;
-    });
     $scope.spent = function (contribution, expenditure) {
         return {
         width : (100 * (expenditure / (contribution + expenditure))) + "%"
         };
     };
+
+    Api.getCandidates().then(function(candidates) {
+      $scope.candidates = candidates;
+    });
+
 
   }]);
