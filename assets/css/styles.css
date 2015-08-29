@@ -16,8 +16,7 @@
   height: 30px; }
 
 .candidate-card {
-  height: 320px;
-  overflow-y: scroll; }
+  height: 320px;}
   .candidate-card .candidate-party {
     font-size: 1.6rem;
     font-weight: bold; }
