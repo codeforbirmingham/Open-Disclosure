@@ -23,7 +23,7 @@ p.candidate-spent {
   background-color: #0078a0; }
 
 .candidate-card {
-  height: 350px;
+  height: 300px;
   overflow-y: scroll; }
   .candidate-card .candidate-party {
     font-size: 1.6rem;

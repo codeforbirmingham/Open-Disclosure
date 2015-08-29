@@ -37,10 +37,14 @@
     </div>
     <div class="row">
       <div class="small-12 columns">
-        <h5>Total Raised</h5>
-        <p class="candidate-money">{{candidate.contribution | currency}}</p>
-        <h5>Total Spent</h5>
-        <p class="candidate-money">{{candidate.expenditure | currency}}</p>
+        <div class="small-6 columns">
+          <h5>Total Raised</h5>
+          <p class="candidate-money">{{candidate.contribution | currency}}</p>
+        </div>
+        <div class="small-6 columns">
+          <h5>Total Spent</h5>
+          <p class="candidate-money">{{candidate.expenditure | currency}}</p>
+        </div>
       </div>
       <div class="small-12 columns">
         <div class="candidate-bar" ng-style="spent(candidate.contribution, candidate.expenditure)">
