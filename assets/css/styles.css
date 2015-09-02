@@ -1,8 +1,77 @@
-@media only screen and (min-width: 40.0625em) {
-  .medium-6 {
-    width: 48%;
-    margin-left: 1%;
-    margin-right: 1%; } }
+body {
+  font-family: 'Kreon', sans-serif;
+  font-size: 18px; }
+
+hr {
+  text-align: center;
+  margin: 0 auto;
+  opacity: 0.5; }
+
+ul {
+  text-transform: uppercase; }
+
+ul.inline-list.right {
+  text-transform: none; }
+
+ul.inline-list.right a {
+  color: #000; }
+
+.main-wrapper h1, h2, h3, h4, h4, h6 {
+  text-align: center; }
+
+ul.inline-list.right a:hover {
+  color: rgba(0, 0, 0, 0.5); }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', 'Courier New', Courier, Monaco, mono;
+  color: #fff;
+  text-transform: uppercase; }
+
+.columns.large-centered {
+  padding-left: 5px;
+  padding-right: 5px; }
+
+.about-box {
+  color: #fff; }
+
+.black-box {
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 35px;
+  font-weight: 900; }
+
+.black-box p {
+  font-weight: 900; }
+
+.row .main-wrapper {
+  color: #fff; }
+
+.about-content {
+  background-color: #fff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); }
+
+footer p, footer a {
+  font-size: 14px; }
+
+.hero {
+  padding-bottom: 50px;
+  background-image: url("../img/alcapitol.jpg");
+  background-size: cover;
+  box-shadow: inset 0px 0px 0 2000px rgba(0, 0, 0, 0.2); }
+
+.hero-content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #EAEAEA; }
+
+.panel {
+  margin: 40px 0 40px 0;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  border: none;
+  background-color: #EAEAEA; }
+
+.large-4 img {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); }
+
 .datavis {
   text-align: center;
   margin: 5rem; }
