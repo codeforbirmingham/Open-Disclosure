@@ -11,6 +11,11 @@ angular.module('openDisclosure')
                 controller: 'candidatesCtrl',
                 controllerAs: 'candidatesCtrl'
             })
+            .when('/visualize', {
+                templateUrl: 'components/datavis/datavis.html',
+                controller: 'datavisCtrl',
+                controllerAs: 'datavisCtrl'
+            })
             .otherwise({
                 redirectTo: '/'
             });
