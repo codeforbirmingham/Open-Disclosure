@@ -11,3 +11,14 @@ The data is queried from the [Code for Birmingham Brigade Site](https://brigades
 - [Districts](https://brigades.opendatanetwork.com/dataset/Open-Disclosure-Alabama-Districts/p8kt-epji)
 - [Transactions](https://brigades.opendatanetwork.com/dataset/Open-Disclosure-Alabama-Transactions/vcap-yyfq)
 - [Transactees](https://brigades.opendatanetwork.com/dataset/Open-Disclosure-Alabama-Transactees/9xmj-xdkh)
+
+
+## Getting Started
+To setup local development environment, pull down this repo, and serve your code from a webserver and access it from localhost. In a Mac/Linux environment, the fastest way to do this is:
+
+1. cd yourAppDirectory
+
+2. Setup a local web server to serve code: 
+python -m SimpleHTTPServer
+
+3. Type localhost:8000 in your browser, and the page will show.
