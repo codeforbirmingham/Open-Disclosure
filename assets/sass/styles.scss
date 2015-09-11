@@ -23,10 +23,6 @@ ul.inline-list.right a{
 	color: #000;
 }
 
-.main-wrapper h1, h2 ,h3 , h4, h4, h6 {
-  text-align: center;
-}
-
 ul.inline-list.right a:hover {
 	color: rgba(0, 0, 0, 0.5);
 }
@@ -34,16 +30,11 @@ ul.inline-list.right a:hover {
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Raleway', 'Courier New', Courier, Monaco, mono;
   text-transform: uppercase;
-  color: #000;
 }
 
 .columns.large-centered {
 	padding-left: 5px;
 	padding-right: 5px;
-}
-
-.about-box {
-	color: #fff;
 }
 
 .black-box {
@@ -53,8 +44,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-.black-box h1, h2, h3, h4, h5, h6 {
-    color: #fff;
+#banner-text {
+  color: #fff;
+  text-align: center;
 }
 
 .row .main-wrapper {
@@ -66,7 +58,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fff;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
-
 
 footer p, footer a {
 	font-size: 14px;
@@ -101,11 +92,13 @@ footer p, footer a {
   text-align: center;
   margin: 5rem;
 }
+
 .candidate-money {
   font-size: 1.4rem;
-color: $primary-color !important;
-margin-bottom: 1rem;
+  color: $primary-color !important;
+  margin-bottom: 1rem;
 }
+
 p.candidate-spent {
   margin-bottom: 0rem;
   margin-left: 1rem;
@@ -137,9 +130,11 @@ p.candidate-spent {
       color: #5555df;
     }
 }
+
 .candidate-office {
   text-align:right;
 }
+
 .side-nav {
   background-color: #333;
   li {

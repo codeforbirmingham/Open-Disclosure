@@ -16,23 +16,16 @@ ul.inline-list.right {
 ul.inline-list.right a {
   color: #000; }
 
-.main-wrapper h1, h2, h3, h4, h4, h6 {
-  text-align: center; }
-
 ul.inline-list.right a:hover {
   color: rgba(0, 0, 0, 0.5); }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway', 'Courier New', Courier, Monaco, mono;
-  text-transform: uppercase;
-  color: #000; }
+  text-transform: uppercase; }
 
 .columns.large-centered {
   padding-left: 5px;
   padding-right: 5px; }
-
-.about-box {
-  color: #fff; }
 
 .black-box {
   background-color: rgba(0, 0, 0, 0.55);
@@ -40,8 +33,9 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 900;
   color: #fff; }
 
-.black-box h1, h2, h3, h4, h5, h6 {
-  color: #fff; }
+#banner-text {
+  color: #fff;
+  text-align: center; }
 
 .row .main-wrapper {
   color: #fff; }
