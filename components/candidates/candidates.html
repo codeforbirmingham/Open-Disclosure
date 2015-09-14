@@ -18,9 +18,10 @@
       </li>
     </ul>
   </div>
+  <div class="small-12 columns">
   <div ng-repeat="candidate in candidates | orderBy: getOrderBy() | filter: searchText" class="medium-6 columns panel candidate-card">
     <div class="row">
-      <div class="small-6 columns">
+      <div class="candidate-name small-6 columns">
         <h4>{{candidate.name}}</h4>
         <p>{{candidate.district}}</p>
       </div>
@@ -36,17 +37,16 @@
       </div>
     </div>
     <div class="row">
-      <div class="small-12 columns">
-        <div class="small-6 columns">
+        <div class="candidate-name small-6 columns">
           <h5>Total Raised</h5>
           <p class="candidate-money">{{candidate.contribution | currency}}</p>
         </div>
-        <div class="small-6 columns">
+        <div class="candidate-name small-6 columns">
           <h5>Total Spent</h5>
           <p class="candidate-money">{{candidate.expenditure | currency}}</p>
         </div>
       </div>
-      <div class="small-12 columns">
+      <div class="row">
         <div class="candidate-bar" ng-style="spent(candidate.contribution, candidate.expenditure)">
           <p class="candidate-spent">
             {{(candidate.contribution - candidate.expenditure) / candidate.contribution * 100 | limitTo:6}} %

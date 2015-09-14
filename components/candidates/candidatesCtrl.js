@@ -28,11 +28,7 @@ angular.module('openDisclosure')
     $scope.getOrderBy = function() {
       return $scope.curSortOrderDesc ? '-' + $scope.curSortField : $scope.curSortField;
     };
-    $scope.spent = function (contribution, expenditure) {
-        return {
-        width : (100 * (expenditure / (contribution + expenditure))) + "%"
-        };
-    };
+
 
     Api.getCandidates().then(function(candidates) {
       $scope.candidates = candidates;

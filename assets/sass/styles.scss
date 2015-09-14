@@ -95,8 +95,10 @@ footer p, footer a {
 }
 
 .datavis {
+	height: 300px;
+	width: 300px;
   text-align: center;
-  margin: 5rem;
+	margin: 1rem;
 }
 .candidate-money {
   font-size: 1.4rem;
@@ -112,8 +114,10 @@ p.candidate-spent {
   padding: 0.5rem 0;
 }
 
-.canidate-name {
-  font-size: 2rem;
+.candidate-name {
+	h1, h2, h3, h4, h5, h6, p {
+		text-align: left;
+	}
 }
 
 .candidate-bar {

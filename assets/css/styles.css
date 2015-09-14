@@ -73,8 +73,10 @@ footer p, footer a {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); }
 
 .datavis {
+  height: 300px;
+  width: 300px;
   text-align: center;
-  margin: 5rem; }
+  margin: 1rem; }
 
 .candidate-money {
   font-size: 1.4rem;
@@ -89,8 +91,8 @@ p.candidate-spent {
   color: #a0e7ff;
   padding: 0.5rem 0; }
 
-.canidate-name {
-  font-size: 2rem; }
+.candidate-name h1, .candidate-name h2, .candidate-name h3, .candidate-name h4, .candidate-name h5, .candidate-name h6, .candidate-name p {
+  text-align: left; }
 
 .candidate-bar {
   background-color: #0078a0; }
