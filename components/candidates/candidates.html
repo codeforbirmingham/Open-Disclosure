@@ -47,7 +47,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="candidate-bar" ng-style="spent(candidate.contribution, candidate.expenditure)">
+        <div ng-class="barColor(candidate.spent)" ng-style="spent(candidate.contribution, candidate.expenditure)">
           <p class="candidate-spent">
             {{candidate.spent | limitTo: 6}} %
           </p>

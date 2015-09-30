@@ -93,6 +93,12 @@ p.candidate-spent {
 .candidate-bar {
   background-color: #0078a0; }
 
+.candidate-bar-positive {
+  background-color: #46AF4A; }
+
+.candidate-bar-negative {
+  background-color: #F6402B; }
+
 .candidate-card {
   height: 300px;
   overflow-y: scroll; }
