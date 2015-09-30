@@ -29,7 +29,6 @@ angular.module('openDisclosure')
       return $scope.curSortOrderDesc ? '-' + $scope.curSortField : $scope.curSortField;
     };
 
-
     Api.getCandidates().then(function(candidates) {
       $scope.candidates = candidates;
     });

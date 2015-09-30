@@ -49,7 +49,7 @@
       <div class="row">
         <div class="candidate-bar" ng-style="spent(candidate.contribution, candidate.expenditure)">
           <p class="candidate-spent">
-            {{(candidate.contribution - candidate.expenditure) / candidate.contribution * 100 | limitTo:6}} %
+            {{candidate.spent | limitTo: 6}} %
           </p>
       </div>
       </div>

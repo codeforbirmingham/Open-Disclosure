@@ -43,19 +43,16 @@ angular.module('openDisclosure').factory('Api', ['$http', '$q', function ($http,
                 // Probably not the right thing to do.
                 return transactionsIndex.hasOwnProperty(x.id);
             }).map(function (x) {
+                var spent;
                 var indexEntry;
                 indexEntry = transactionsIndex[x.id];
                 x.contribution = indexEntry.contribution;
                 x.expenditure = indexEntry.expenditure;
+                x.spent = (indexEntry.contribution - indexEntry.expenditure) / indexEntry.contribution * 100;
                 return x;
             });
             return parties;
         });
-    };
-    Api.spent = function (contribution, expenditure) {
-          return {
-          width : (100 * (expenditure / (contribution + expenditure))) + "%"
-          };
     };
     return Api;
 
