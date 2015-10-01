@@ -14,11 +14,4 @@ The data is queried from the [Code for Birmingham Brigade Site](https://brigades
 
 
 ## Getting Started
-To setup local development environment, pull down this repo, and serve your code from a webserver and access it from localhost. In a Mac/Linux environment, the fastest way to do this is:
-
-1. cd yourAppDirectory
-
-2. Setup a local web server to serve code: 
-python -m SimpleHTTPServer
-
-3. Type localhost:8000 in your browser, and the page will show.
+To serve the application locally for development, run script/server and navigate to localhost:8000 in Chrome or 0.0.0.0:8000 in Firefox.
