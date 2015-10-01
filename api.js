@@ -49,6 +49,9 @@ angular.module('openDisclosure').factory('Api', ['$http', '$q', function ($http,
                 x.contribution = indexEntry.contribution;
                 x.expenditure = indexEntry.expenditure;
                 x.spent = (indexEntry.contribution - indexEntry.expenditure) / indexEntry.contribution * 100;
+                if (indexEntry.contribution === 0 || indexEntry.expenditure === 0) {
+                  x.spent = 0;
+                }
                 return x;
             });
             return parties;
