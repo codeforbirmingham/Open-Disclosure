@@ -121,7 +121,7 @@ p.candidate-spent {
     color: lighten(#F6402B, 40%);
   }
 }
-.candidate-card {
+.candidate-card .panel {
   height: 300px;
   overflow-y: scroll;
   .candidate-party {

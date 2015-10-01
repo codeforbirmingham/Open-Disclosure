@@ -116,15 +116,15 @@ p.candidate-spent {
   .candidate-bar-negative p {
     color: #fef0ef; }
 
-.candidate-card {
+.candidate-card .panel {
   height: 300px;
   overflow-y: scroll; }
-  .candidate-card .candidate-party {
+  .candidate-card .panel .candidate-party {
     font-size: 1.6rem;
     font-weight: bold; }
-  .candidate-card .Republican {
+  .candidate-card .panel .Republican {
     color: #df5555; }
-  .candidate-card .Democrat {
+  .candidate-card .panel .Democrat {
     color: #5555df; }
 
 .candidate-office {

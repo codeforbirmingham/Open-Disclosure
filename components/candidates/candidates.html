@@ -19,7 +19,8 @@
     </ul>
   </div>
   <div class="small-12 columns">
-  <div ng-repeat="candidate in candidates | orderBy: getOrderBy() | filter: searchText" class="medium-6 columns panel candidate-card">
+  <div ng-repeat="candidate in candidates | orderBy: getOrderBy() | filter: searchText" class="medium-6 columns candidate-card">
+    <div class="small-12 columns panel">
     <div class="row">
       <div class="candidate-name small-6 columns">
         <h4>{{candidate.name}}</h4>
@@ -54,5 +55,6 @@
       </div>
       </div>
     </div>
+  </div>
   </div>
 </div>
