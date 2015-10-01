@@ -19,7 +19,12 @@ ul.inline-list.right a {
 ul.inline-list.right a:hover {
   color: rgba(0, 0, 0, 0.5); }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Raleway', 'Courier New', Courier, Monaco, mono;
   text-transform: uppercase; }
 
@@ -45,25 +50,27 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fff;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); }
 
-footer p, footer a {
+footer p,
+footer a {
   font-size: 14px; }
 
 .hero {
   padding-bottom: 50px;
   background-image: url("../img/alcapitol.jpg");
   background-size: cover;
-  box-shadow: inset 0px 0px 0 2000px rgba(0, 0, 0, 0.2); }
+  background-position: 0 50%;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2); }
 
 .hero-content {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #EAEAEA; }
+  background-color: #eaeaea; }
 
 .panel {
-  margin: 40px 0 40px 0;
+  margin: 40px 0;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
   border: none;
-  background-color: #EAEAEA; }
+  background-color: #eaeaea; }
 
 .large-4 img {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); }
@@ -80,24 +87,34 @@ footer p, footer a {
   margin-bottom: 1rem; }
 
 p.candidate-spent {
-  margin-bottom: 0rem;
+  margin-bottom: 0;
   margin-left: 1rem;
   overflow: visible;
   white-space: nowrap;
   color: #a0e7ff;
   padding: 0.5rem 0; }
 
-.candidate-name h1, .candidate-name h2, .candidate-name h3, .candidate-name h4, .candidate-name h5, .candidate-name h6, .candidate-name p {
+.candidate-name h1,
+.candidate-name h2,
+.candidate-name h3,
+.candidate-name h4,
+.candidate-name h5,
+.candidate-name h6,
+.candidate-name p {
   text-align: left; }
 
 .candidate-bar {
   background-color: #0078a0; }
 
 .candidate-bar-positive {
-  background-color: #46AF4A; }
+  background-color: #0078a0; }
+  .candidate-bar-positive p {
+    color: #6ddbff; }
 
 .candidate-bar-negative {
-  background-color: #F6402B; }
+  background-color: #f6402b; }
+  .candidate-bar-negative p {
+    color: #fef0ef; }
 
 .candidate-card {
   height: 300px;
@@ -120,5 +137,3 @@ p.candidate-spent {
     .side-nav li a:not(.button):focus, .side-nav li a:not(.button):hover {
       background: #0078a0;
       color: white; }
-
-/*# sourceMappingURL=styles.css.map */
