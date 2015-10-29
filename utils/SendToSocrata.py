@@ -104,10 +104,12 @@ def sendData(filepath, resourceID):
             }
             r = requests.post(API_DOMAIN + '/resource/' + resourceID + '.json', data=json.dumps(data), headers=headers, auth=HTTPBasicAuth(USERNAME, PASSWORD))
             response = r.json()
-            print('>> Number of errors = ' + str(response['Errors']))
-            print('>> Rows deleted  = ' + str(response['Rows Deleted']))
-            print('>> Rows updated = ' + str(response['Rows Updated']))
-            print('>> Rows created = ' + str(response['Rows Created']))
+            if 'status' in response and response['status'] != 200:
+                print('>> Error: ' + str(response['status']) + ' ' + response['message'])
+            else:
+                print('>> Rows deleted  = ' + str(response['Rows Deleted']))
+                print('>> Rows updated = ' + str(response['Rows Updated']))
+                print('>> Rows created = ' + str(response['Rows Created']))
         except Timeout as e:
             print(e)
 
