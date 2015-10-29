@@ -23,12 +23,15 @@
     <div class="small-12 columns panel">
     <div class="row">
       <div class="candidate-name small-6 columns">
-        <h4>{{candidate.name}}</h4>
-        <p>{{candidate.district}}</p>
+        <div class="candidate-image" style="background-image: url({{candidate.photo_url}})">
+          <h3 class="candidate-initials"> {{initials(candidate.name, candidate.photo_url)}}</h3>
+        </div>
       </div>
       <div class="small-6 columns">
         <div class="small-12 columns">
           <div class="row">
+            <h6 class="candidate-name">{{candidate.name}}</h6>
+            <p class="candidate-district">{{candidate.district}}</p>
             <h6 class="right candidate-party {{candidate.party}}">{{candidate.party}}</h6>
           </div>
           <div class="row">

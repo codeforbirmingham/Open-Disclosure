@@ -38,10 +38,15 @@ angular.module('openDisclosure')
         return 'candidate-bar';
       }
     };
+    $scope.initials = function(name, image) {
+      if (!image) {
+        var initials = name.match(/\b([A-Z])/g).join('').substring(0, 3);
+        return initials;
+      }
+    };
 
     Api.getCandidates().then(function(candidates) {
       $scope.candidates = candidates;
     });
-
 
   }]);

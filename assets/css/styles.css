@@ -81,6 +81,21 @@ footer a {
   text-align: center;
   margin: 1rem; }
 
+.candidate-image {
+  background-position: 50% 25%;
+  border-radius: 50%;
+  width: 115px;
+  height: 115px;
+  z-index: 3;
+  background-color: #777; }
+
+.candidate-initials {
+  text-align: center;
+  padding-top: 40px;
+  font-size: 2rem;
+  color: #fff !important;
+  z-index: 0; }
+
 .candidate-money {
   font-size: 1.4rem;
   color: #0078a0 !important;
@@ -94,14 +109,12 @@ p.candidate-spent {
   color: #a0e7ff;
   padding: 0.5rem 0; }
 
-.candidate-name h1,
-.candidate-name h2,
-.candidate-name h3,
-.candidate-name h4,
-.candidate-name h5,
-.candidate-name h6,
-.candidate-name p {
-  text-align: left; }
+.candidate-name {
+  text-align: right;
+  font-weight: bold; }
+
+.candidate-district {
+  text-align: right; }
 
 .candidate-bar {
   background-color: #0078a0; }
@@ -117,11 +130,8 @@ p.candidate-spent {
     color: #fef0ef; }
 
 .candidate-card .panel {
-  height: 300px;
+  height: 350px;
   overflow-y: scroll; }
-  .candidate-card .panel .candidate-party {
-    font-size: 1.6rem;
-    font-weight: bold; }
   .candidate-card .panel .Republican {
     color: #df5555; }
   .candidate-card .panel .Democrat {
