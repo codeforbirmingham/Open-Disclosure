@@ -151,3 +151,8 @@ p.candidate-spent {
 @media only and (max-width: 500px) {
   .candidate-card .panel {
     height: 400px; } }
+
+#footer-row {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
