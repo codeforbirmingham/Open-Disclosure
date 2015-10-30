@@ -159,3 +159,9 @@ p.candidate-spent {
     }
   }
 }
+
+@media only and (max-width: 500px) {
+  .candidate-card .panel {
+    height: 400px;
+  }
+}

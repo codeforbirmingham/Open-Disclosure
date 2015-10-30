@@ -147,3 +147,7 @@ p.candidate-spent {
     .side-nav li a:not(.button):focus, .side-nav li a:not(.button):hover {
       background: #0078a0;
       color: white; }
+
+@media only and (max-width: 500px) {
+  .candidate-card .panel {
+    height: 400px; } }
