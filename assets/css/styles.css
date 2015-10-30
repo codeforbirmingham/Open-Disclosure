@@ -130,8 +130,7 @@ p.candidate-spent {
     color: #fef0ef; }
 
 .candidate-card .panel {
-  height: 350px;
-  overflow-y: scroll; }
+  height: 350px; }
   .candidate-card .panel .Republican {
     color: #df5555; }
   .candidate-card .panel .Democrat {
