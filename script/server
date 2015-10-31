@@ -7,4 +7,4 @@ set -e
 cd "$(dirname "$0")/.."
 
 # start an HTTP Server on 0.0.0.0:8000 serving the frontend
-python -m SimpleHTTPServer
+python3 -m http.server
