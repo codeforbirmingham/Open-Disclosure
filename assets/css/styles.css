@@ -82,7 +82,8 @@ footer a {
   margin: 1rem; }
 
 .candidate-image {
-  background-position: 50% 25%;
+  background-position: 45% 20%;
+  background-size: 155px;
   border-radius: 50%;
   width: 115px;
   height: 115px;
