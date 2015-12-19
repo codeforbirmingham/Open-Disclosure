@@ -9,17 +9,17 @@
 # and makes calls to Google's Civic Information API for more
 # information (contact info, photo URL, etc.). This is added to
 # the existing data.
-# If you want to run this, make sure to get an API key from 
+# If you want to run this, make sure to get an API key from
 # your Google Developers Console and put it in the config file.
 # Also be aware of the API usage limits.
 # For Google's documentation, see:
 # https://developers.google.com/civic-information/docs/v2
 # This makes use of Open Civic Data IDs:
 # http://opencivicdata.readthedocs.org/en/latest/ocdids.html
-# It also writes API responses to a file in case you have to 
+# It also writes API responses to a file in case you have to
 # run this multiple times due to request limits or errors.
 # Configuration parameters are read from 'config.ini'.
-# 
+#
 ###################################################################
 
 # system libraries
@@ -89,7 +89,7 @@ def main():
     print('>> Writing party data to ' + PARTIES_FILE)
     with open(DATA_DIR + PARTIES_FILE, 'w') as datafile:
         if PRETTY_PRINT:
-            json.dump(allParties, datafile, sort_keys=True, 
+            json.dump(allParties, datafile, sort_keys=True,
                       indent=4, separators=(',', ': '))
         else:
             json.dump(allParties, datafile)
@@ -116,7 +116,7 @@ def removeUsedIDs():
 def makeAPIRequests():
     global config
     global allDistricts
-    MAX_API_REQUESTS = config.getint('CALL_CIVICINFO', 'MAX_API_REQUESTS') 
+    MAX_API_REQUESTS = config.getint('CALL_CIVICINFO', 'MAX_API_REQUESTS')
     VERBOSE = config.getboolean('CALL_CIVICINFO', 'VERBOSE')
     numFailures = 0
     numRequests = 0
@@ -127,7 +127,7 @@ def makeAPIRequests():
             print('>> Error: Configured API request limit reached (' + str(MAX_API_REQUESTS) + ').')
             success = False
             break
-        if VERBOSE: 
+        if VERBOSE:
             print('>> Requesting data for ' + district['name'])
         # catch any errors to ensure the data gets written to disk
         try:
@@ -139,8 +139,9 @@ def makeAPIRequests():
             traceback.print_exc()
             success = False
             break
+        input()
     print('>> ' + str(numRequests) + ' requests made.')
-    print('>> ' + str(numFailures) + ' requests failed.') 
+    print('>> ' + str(numFailures) + ' requests failed.')
     if not success: return False
     return (numFailures < numRequests)
 
@@ -154,7 +155,7 @@ def makeAPIRequest(ocdID):
     if ocdID in allResponses:
         reply = allResponses[ocdID]
     else:
-        url = BASE_URL + quote_plus(ocdID) + '?key=' + API_KEY 
+        url = BASE_URL + quote_plus(ocdID) + '?key=' + API_KEY
         try:
             response = urlopen(url)
         except URLError:
@@ -179,7 +180,7 @@ def processReply(reply, ocdID):
     try:
         offices = reply['offices']
     except KeyError:
-       return False 
+       return False
     divisionName = reply['divisions'][ocdID]['name']
     if 'Alabama State Senate district' in divisionName or \
         'Alabama State House district' in divisionName:
@@ -190,10 +191,10 @@ def processReply(reply, ocdID):
             officeName = 'State Senator' # normalize
         elif 'AL State House District' in officeName:
             officeName = 'State Representative' # normalize
-        for officialIndex in office['officialIndices']: 
+        for officialIndex in office['officialIndices']:
             official = reply['officials'][officialIndex]
             originalName = HumanName(official['name'])
-            normalName = str(originalName.last) + ', ' + str(originalName.first)
+            normalName = str(originalName.first) + ' ' + str(originalName.last)
             official['name'] = normalName # so we scrape the formatted version
             normalParty, originalParty = '', ''
             # Don't fail when the data isn't there
