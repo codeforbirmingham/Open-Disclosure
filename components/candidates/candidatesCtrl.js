@@ -47,6 +47,6 @@ angular.module('openDisclosure')
 
     Api.getCandidates().then(function(candidates) {
       $scope.candidates = candidates;
+      console.log($scope.candidates);
     });
-
   }]);

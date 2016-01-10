@@ -1,12 +1,11 @@
 <div class="row">
-  <h1>Candidates</h1>
-  <div class="small-12 large-4 columns">
-    <input type="text" ng-model="searchText" placeholder="Search"/>
-  </div>
-  <div class="small-12 large-8 columns">
-    <ul class="button-group">
-      <li ng-repeat="sortField in sortFields">
-          <button ng-click="setSortField(sortField.name)" ng-class="{'success': curSortField == sortField.name}">
+    <h1>Candidates</h1>
+    <div class="small-12 large-4 columns">
+        <input type="text" ng-model="searchText" placeholder="Search" />
+    </div>
+    <div class="small-12 large-8 columns">
+        <ul class="button-group">
+            <a class="button" ng-repeat="sortField in sortFields" ng-click="setSortField(sortField.name)" ng-class="{'success': curSortField == sortField.name}">
               {{sortField.label}}
               <span ng-if="curSortField == sortField.name && curSortOrderDesc == true">
                   ↓
@@ -14,53 +13,61 @@
               <span ng-if="curSortField == sortField.name && curSortOrderDesc == false">
                   ↑
               </span>
-          </button>
-      </li>
-    </ul>
-  </div>
-  <div class="small-12 columns">
-  <div ng-repeat="candidate in candidates | orderBy: getOrderBy() | filter: searchText" class="medium-6 columns candidate-card">
-    <div class="small-12 columns panel">
-    <div class="row">
-      <div class="candidate-name small-6 columns">
-        <div class="candidate-image" style="background-image: url({{candidate.photo_url}})">
-          <h3 class="candidate-initials"> {{initials(candidate.name, candidate.photo_url)}}</h3>
-        </div>
-      </div>
-      <div class="small-6 columns">
-        <div class="small-12 columns">
-          <div class="row">
-            <h6 class="candidate-name">{{candidate.name}}</h6>
-            <p class="candidate-district">{{candidate.district}}</p>
-            <h6 class="right candidate-party {{candidate.party}}">{{candidate.party}}</h6>
-          </div>
-          <div class="row">
-              <h6 class="candidate-office">{{candidate.office}}</h6>
+          </a>
+        </ul>
+    </div>
+    <div class="small-12 columns">
+        <div ng-repeat="candidate in candidates | orderBy: getOrderBy() | filter: searchText" class="medium-6 columns candidate-card">
+            <div class="small-12 columns panel {{candidate.party}}">
+                <div class="media-object">
+                    <div class="media-object-section">
+                        <div class="thumbnail">
+                            <img src="{{candidate.photo_url}}" width="70px">
+                        </div>
+                    </div>
+                    <div class="media-object-section">
+                        <h6 class="candidate-name">{{candidate.name}}</h6>
+                        <p class="candidate-district">{{candidate.district}}</p>
+                        <h6 class="candidate-office">{{candidate.office}}</h6>
+                    </div>
+                </div>
+                <table class="candidate-table">
+                    <thead>
+                        <tr>
+                            <th>Total Raised</th>
+                            <th>Total Spent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="candidate-money">
+                                {{candidate.contribution | currency}}
+                            </td>
+                            <td class="candidate-money">
+                                {{candidate.expenditure | currency}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+<!--
+                <div class="progress" role="progressbar" tabindex="0" aria-valuenow="50" aria-valuemin="0" aria-valuetext="{{candidate.spent | limitTo: 6}} percent" aria-valuemax="100" ng-class="barColor(candidate.spent)" >
+                    <span class="progress-meter candidate-spent" >
+                        <p class="progress-meter-text">{{candidate.spent | limitTo: 6}} %</p>
+                    </span>
+                </div>
+<-->
+               <h5>Spent</h5>
+                <div class="progress alert small-12">
+                  <span class="meter" style="width: 40%">
+                      {{candidate.spent | number: 0 }} %
+                  </span>
+                  
+                </div>
+                
+                <div class="row more-info">
+                    <a class="candidate-button" href="#">more info</a>
+                </div>
             </div>
         </div>
-      </div>
     </div>
-    <div class="row">
-        <div class="candidate-name small-6 columns">
-          <h5>Total Raised</h5>
-          <p class="candidate-money">{{candidate.contribution | currency}}</p>
-        </div>
-        <div class="candidate-name small-6 columns">
-          <h5>Total Spent</h5>
-          <p class="candidate-money">{{candidate.expenditure | currency}}</p>
-        </div>
-      </div>
-      <div class="row">
-        <div ng-class="barColor(candidate.spent)" ng-style="spent(candidate.contribution, candidate.expenditure)">
-          <p class="candidate-spent">
-            {{candidate.spent | limitTo: 6}} %
-          </p>
-      </div>
-      </div>
-      <div class="row">
-        <a class="button expand candidate-button" href="#">more info</a>
-      </div>
-    </div>
-  </div>
-  </div>
 </div>

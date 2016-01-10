@@ -1,8 +1,23 @@
-<h1>Total Raised vs Total Spent</h1>
+<h1>Dig Deeper</h1>
+    <div class="small-12 large-4 columns">
+        <input type="text" ng-model="searchText" placeholder="Search" />
+    </div>
+<div class="small-12 large-8 columns">
+        <ul class="button-group">
+            <a class="button" ng-repeat="sortField in sortFields" ng-click="setSortField(sortField.name)" ng-class="{'success': curSortField == sortField.name}">
+              {{sortField.label}}
+              <span ng-if="curSortField == sortField.name && curSortOrderDesc == true">
+                  ↓
+              </span>
+              <span ng-if="curSortField == sortField.name && curSortOrderDesc == false">
+                  ↑
+              </span>
+          </a>
+        </ul>
+    </div>
+<h1>Total Raised vs Total Spent by Candidate</h1>
+<canvas id="bar" class="chart chart-bar" chart-data="data"
+  chart-labels="labels" chart-legend="true" chart-series="series"
+  chart-click="onClick" >
+</canvas> 
 
-  <div id="datavis">
-    <!-- <svg width="500" height="500">
-      <circle ng-repeat="candidate in candidates" cx="{posx}" cy="50" r="10"></circle>
-    </svg> -->
-
-  </div>

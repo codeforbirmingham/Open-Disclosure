@@ -29,6 +29,9 @@ h6 {
   font-family: 'Raleway', 'Courier New', Courier, Monaco, mono;
   text-transform: uppercase;
 }
+h1 {
+    padding: 1rem;
+}
 .columns.large-centered {
   padding-left: 5px;
   padding-right: 5px;
@@ -111,11 +114,7 @@ p.candidate-spent {
   padding: 0.5rem 0;
 }
 .candidate-name {
-    text-align: right;
     font-weight: bold;
-}
-.candidate-district{
-  text-align: right;
 }
 .candidate-bar {
   background-color: $primary-color;
@@ -132,19 +131,34 @@ p.candidate-spent {
     color: lighten(#F6402B, 40%);
   }
 }
-.candidate-card .panel {
-  height: 350px;
-  overflow-y: scroll;
 
-  .Republican {
-    color: #df5555;
-  }
-  .Democrat {
-    color: #5555df;
-  }
+.candidate-card .panel {
+  height: 370px;
+  overflow-y: scroll;
 }
-.candidate-office {
-  text-align: right;
+ .panel.Republican {
+     border: 5px solid #df5555;
+  }
+  .panel.Democrat {
+     border: 5p solid #5555df;
+  }
+.candidate-table {
+    width: 100%;
+}
+ul.menu, .top-bar {
+    background-color: #333;
+    a {
+        color: #fff;
+    }
+}
+.media-object {
+    margin-top: 1rem;
+}
+.media-object-section {
+    text-align: right;
+}
+.more-info {
+    text-align: center;
 }
 .side-nav {
   background-color: #333;

@@ -5,6 +5,9 @@
   "dependencies": {
     "angular": "1.4.0",
     "underscore": "",
-    "angular-route": "1.4.0"
+    "angular-route": "1.4.0",
+    "angular-chart.js": "~0.8.8",
+    "foundation-sites": "~6.1.1",
+    "jquery": "~2.2.0"
   }
 }

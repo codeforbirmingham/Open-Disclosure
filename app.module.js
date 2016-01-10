@@ -1,3 +1,4 @@
 angular.module('openDisclosure', [
-    'ngRoute'
+    'ngRoute',
+    'chart.js'
 ]);
