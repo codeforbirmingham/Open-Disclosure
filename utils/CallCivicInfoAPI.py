@@ -139,7 +139,6 @@ def makeAPIRequests():
             traceback.print_exc()
             success = False
             break
-        input()
     print('>> ' + str(numRequests) + ' requests made.')
     print('>> ' + str(numFailures) + ' requests failed.')
     if not success: return False
